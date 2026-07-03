@@ -1,8 +1,16 @@
 # Ao no Kiseki / Trails to Azure Save Editor
 
+[中文说明 / README_CN.md](README_CN.md)
+
 A Python/Tkinter save editor for the NISA PC release of **Ao no Kiseki / Trails to Azure**.
 
-This project adapts the offset tables and item definitions from `BZH_AO_NO_KISEKI_Savedata_Editor` to NISA `savedata.dat` files. The key discovery is that the NISA save is zstd-compressed, not encrypted. After decompression it is `0x2643C` bytes and is compatible with the original BZH offsets.
+This project adapts the offset tables and item definitions from [`424778940z/BZH_AO_NO_KISEKI_Savedata_Editor`](https://github.com/424778940z/BZH_AO_NO_KISEKI_Savedata_Editor) to NISA `savedata.dat` files. The key discovery is that the NISA save is zstd-compressed, not encrypted. After decompression it is `0x2643C` bytes and is compatible with the original BZH offsets.
+
+## Important Version And Translation Notes
+
+This editor was built and tested for the NISA PC release, **Trails to Azure**, whose executable/save layout differs from the older mainland Chinese PC release.
+
+The in-editor Chinese item names and labels are taken from the Joyoland/欢乐百世 Simplified Chinese PC release of **碧之轨迹** and the original BZH editor data. They may not perfectly match the NISA English text, nor the community Simplified Chinese localization produced with [`J31why/zeroTool`](https://github.com/J31why/zeroTool). If you are playing NISA Trails to Azure with a zeroTool-based Chinese patch, treat this editor as a save-format tool first and a name database second.
 
 ## Features
 
@@ -59,6 +67,12 @@ CLI quick edits:
 ```bash
 python ao_save_editor.py savedata.dat --mira 9999999 --sepith max --dp 400 --max-chars all --max-like
 ```
+
+## Credits
+
+Special thanks to [`424778940z/BZH_AO_NO_KISEKI_Savedata_Editor`](https://github.com/424778940z/BZH_AO_NO_KISEKI_Savedata_Editor), the original Qt/C++ save editor whose offset tables, checksum reference, item IDs, and monster manual code data made this NISA adaptation possible.
+
+Also thanks to [`J31why/zeroTool`](https://github.com/J31why/zeroTool) for the localization tooling used by the community around the NISA Crossbell releases.
 
 ## Safety
 
