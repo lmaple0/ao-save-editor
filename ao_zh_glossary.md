@@ -176,7 +176,7 @@
 | 0x0330 | 沉重货物 | event_story |
 | 0x0331 | 易碎品的小包裹 | event_story |
 | 0x0332 | 发往住宅街的送货单 | event_story |
-| 0x0333 | 发往住宅街的送货单 | event_story |
+| 0x0333 | 蓝花 | event_story |
 | 0x0334 | 结晶碎片 | event_story |
 | 0x0335 | 罗赞贝尔克人偶．C | event_story |
 | 0x0336 | 罗赞贝尔克人偶．R | event_story |
@@ -235,9 +235,9 @@
 |---|---|---|
 | 0x035F | 挡泥板 | event_car |
 | 0x0360 | 侧踏板 | event_car |
-| 0x0361 | 侧踏板 | event_car |
+| 0x0361 | 尾翼 | event_car |
 | 0x0362 | 前保险杠 | event_car |
-| 0x0363 | 前保险杠 | event_car |
+| 0x0363 | 警灯 | event_car |
 | 0x0364 | 强化轮圈 | event_car |
 | 0x0365 | HP回复装置 | event_car |
 | 0x0366 | EP回复装置 | event_car |
@@ -351,24 +351,24 @@
 | 0x00A9 | 冥王铃 | circuit_normal |
 | 0x00AA | 天王铃 | circuit_normal |
 | 0x00AB | 明王铃 | circuit_normal |
-| 0x00AC | 明王铃 | circuit_normal |
-| 0x00AD | 明王铃 | circuit_normal |
-| 0x00AE | 明王铃 | circuit_normal |
-| 0x00AF | 明王铃 | circuit_normal |
-| 0x00B0 | 明王铃 | circuit_normal |
-| 0x00B1 | 明王铃 | circuit_normal |
-| 0x00B2 | 明王铃 | circuit_normal |
-| 0x00B3 | 明王铃 | circuit_normal |
-| 0x00B4 | 明王铃 | circuit_normal |
-| 0x00B5 | 明王铃 | circuit_normal |
-| 0x00B6 | 明王铃 | circuit_normal |
-| 0x00B7 | 明王铃 | circuit_normal |
-| 0x00B8 | 明王铃 | circuit_normal |
-| 0x00B9 | 明王铃 | circuit_normal |
-| 0x00BA | 明王铃 | circuit_normal |
-| 0x00BB | 明王铃 | circuit_normal |
-| 0x00BC | 明王铃 | circuit_normal |
-| 0x00BD | 明王铃 | circuit_normal |
+| 0x00AC | 耀脉 | circuit_normal |
+| 0x00AD | 机功 | circuit_normal |
+| 0x00AE | 治愈 | circuit_normal |
+| 0x00AF | 丹精 | circuit_normal |
+| 0x00B0 | 炼气 | circuit_normal |
+| 0x00B1 | 龙眼 | circuit_normal |
+| 0x00B2 | 恶戏 | circuit_normal |
+| 0x00B3 | 脱兔 | circuit_normal |
+| 0x00B4 | 虎威 | circuit_normal |
+| 0x00B5 | 美臭 | circuit_normal |
+| 0x00B6 | 幸运 | circuit_normal |
+| 0x00B7 | 鹰目 | circuit_normal |
+| 0x00B8 | 天眼 | circuit_normal |
+| 0x00B9 | 范围 | circuit_normal |
+| 0x00BA | 情报 | circuit_normal |
+| 0x00BB | 探知 | circuit_normal |
+| 0x00BC | 缚魔 | circuit_normal |
+| 0x00BD | 幻胧 | circuit_normal |
 | 0x00BE | 毒之刃2 | circuit_normal |
 | 0x00BF | 石化之刃2 | circuit_normal |
 | 0x00C0 | 封魔之刃2 | circuit_normal |
@@ -383,28 +383,28 @@
 
 | ID | 中文名 | 原类别 |
 |---|---|---|
-| 0x00DC | 明王铃 | circuit_core |
-| 0x00DD | 明王铃 | circuit_core |
-| 0x00DE | 明王铃 | circuit_core |
-| 0x00DF | 明王铃 | circuit_core |
-| 0x00E0 | 明王铃 | circuit_core |
-| 0x00E1 | 明王铃 | circuit_core |
-| 0x00E2 | 明王铃 | circuit_core |
-| 0x00E3 | 明王铃 | circuit_core |
-| 0x00E4 | 明王铃 | circuit_core |
-| 0x00E5 | 明王铃 | circuit_core |
-| 0x00E6 | 明王铃 | circuit_core |
-| 0x00E7 | 明王铃 | circuit_core |
-| 0x00E8 | 明王铃 | circuit_core |
-| 0x00E9 | 明王铃 | circuit_core |
-| 0x00EA | 明王铃 | circuit_core |
-| 0x00EB | 明王铃 | circuit_core |
-| 0x00EC | 明王铃 | circuit_core |
-| 0x00ED | 明王铃 | circuit_core |
-| 0x00EE | 明王铃 | circuit_core |
-| 0x00EF | 明王铃 | circuit_core |
-| 0x00F0 | 明王铃 | circuit_core |
-| 0x00F1 | 明王铃 | circuit_core |
+| 0x00DC | 力量 | circuit_core |
+| 0x00DD | 盾牌 | circuit_core |
+| 0x00DE | 妖精 | circuit_core |
+| 0x00DF | 利爪 | circuit_core |
+| 0x00E0 | 白金 | circuit_core |
+| 0x00E1 | 幻象 | circuit_core |
+| 0x00E2 | 战斧 | circuit_core |
+| 0x00E3 | 法则 | circuit_core |
+| 0x00E4 | 羽翼 | circuit_core |
+| 0x00E5 | 神佑 | circuit_core |
+| 0x00E6 | 王权 | circuit_core |
+| 0x00E7 | 魅影 | circuit_core |
+| 0x00E8 | 守护 | circuit_core |
+| 0x00E9 | 无限 | circuit_core |
+| 0x00EA | 小丑 | circuit_core |
+| 0x00EB | 罪恶 | circuit_core |
+| 0x00EC | 草薤 | circuit_core |
+| 0x00ED | 纹章 | circuit_core |
+| 0x00EE | 灵猫 | circuit_core |
+| 0x00EF | 骑士 | circuit_core |
+| 0x00F0 | 贤者 | circuit_core |
+| 0x00F1 | 草薤 | circuit_core |
 
 ### 料理 (74)
 
@@ -483,7 +483,7 @@
 | 0x01D6 | 桃色紫薇 | props_cooking |
 | 0x01D7 | 粉红液体 | props_cooking |
 | 0x01D8 | 失败作[引以为戒] | props_cooking |
-| 0x01D9 | 失败作[引以为戒] | props_cooking |
+| 0x01D9 | 猫食 | props_cooking |
 
 ### 装备-服装 (34)
 
@@ -544,7 +544,7 @@
 | 0x042D | 破坏神·改 | equipment_weapon_Randy |
 | 0x042E | 终极冲击 | equipment_weapon_Randy |
 | 0x042F | 邪恶粉碎者 | equipment_weapon_Randy |
-| 0x0430 | 邪恶粉碎者 | equipment_weapon_Randy |
+| 0x0430 | 天灾 | equipment_weapon_Randy |
 | 0x0431 | 屠龙深渊 | equipment_weapon_Randy |
 
 ### 装备-武器-瓦吉 (13)
@@ -562,7 +562,7 @@
 | 0x0441 | 范式谜爪 | equipment_weapon_Lazy |
 | 0x0442 | 戒律护手 | equipment_weapon_Lazy |
 | 0x0443 | 灵光护手 | equipment_weapon_Lazy |
-| 0x0444 | 灵光护手 | equipment_weapon_Lazy |
+| 0x0444 | 乐园 | equipment_weapon_Lazy |
 | 0x0445 | 七耀圣腕 | equipment_weapon_Lazy |
 
 ### 装备-武器-缇欧 (11)
@@ -578,7 +578,7 @@
 | 0x0419 | 先导者 | equipment_weapon_Tio |
 | 0x041A | 黑暗搏动 | equipment_weapon_Tio |
 | 0x041B | 星之脉冲 | equipment_weapon_Tio |
-| 0x041C | 星之脉冲 | equipment_weapon_Tio |
+| 0x041C | 天启 | equipment_weapon_Tio |
 | 0x041D | 宇宙崩坏 | equipment_weapon_Tio |
 
 ### 装备-武器-罗伊德 (15)
@@ -605,14 +605,14 @@
 
 | ID | 中文名 | 原类别 |
 |---|---|---|
-| 0x03FD | 无限之光 | equipment_weapon_Elie |
-| 0x03FE | 无限之光 | equipment_weapon_Elie |
+| 0x03FD | 倾国 | equipment_weapon_Elie |
+| 0x03FE | 喜悦 | equipment_weapon_Elie |
 | 0x03FF | 红色樱草II | equipment_weapon_Elie |
 | 0x0400 | 丝绒之吻 | equipment_weapon_Elie |
 | 0x0401 | 纯真女皇 | equipment_weapon_Elie |
 | 0x0402 | 高洁圣女 | equipment_weapon_Elie |
 | 0x0403 | 银色密雨 | equipment_weapon_Elie |
-| 0x0404 | 银色密雨 | equipment_weapon_Elie |
+| 0x0404 | 神恩 | equipment_weapon_Elie |
 | 0x0405 | 暗灰小丑 | equipment_weapon_Elie |
 | 0x0406 | 千金·烙印 | equipment_weapon_Elie |
 | 0x0407 | 血色光辉 | equipment_weapon_Elie |
@@ -624,7 +624,7 @@
 | ID | 中文名 | 原类别 |
 |---|---|---|
 | 0x0460 | 八尺乌 | equipment_weapon_Rixia |
-| 0x0461 | 八尺乌 | equipment_weapon_Rixia |
+| 0x0461 | 黑鸫 | equipment_weapon_Rixia |
 | 0x0462 | 降魔不知火 | equipment_weapon_Rixia |
 | 0x0463 | 灵剑·奠邪 | equipment_weapon_Rixia |
 | 0x0464 | 曳影之剑 | equipment_weapon_Rixia |
@@ -644,12 +644,12 @@
 | 0x044D | 岩石尘碎 | equipment_weapon_Noel |
 | 0x044E | 闪光甲虫 | equipment_weapon_Noel |
 | 0x044F | 圣十字 | equipment_weapon_Noel |
-| 0x0450 | 圣十字 | equipment_weapon_Noel |
+| 0x0450 | 野马 | equipment_weapon_Noel |
 | 0x0451 | M8公猫 | equipment_weapon_Noel |
 | 0x0452 | 杀戮黄蜂 | equipment_weapon_Noel |
 | 0x0453 | 三重风暴 | equipment_weapon_Noel |
 | 0x0454 | 无畏之枪 | equipment_weapon_Noel |
-| 0x0455 | 无畏之枪 | equipment_weapon_Noel |
+| 0x0455 | 白隼 | equipment_weapon_Noel |
 | 0x0456 | 第五爆裂枪 | equipment_weapon_Noel |
 | 0x0457 | 挚爱恋人 | equipment_weapon_Noel |
 | 0x0458 | 雷电魔枪 | equipment_weapon_Noel |
@@ -659,11 +659,11 @@
 
 | ID | 中文名 | 原类别 |
 |---|---|---|
-| 0x0465 | 曳影之剑 | equipment_weapon_Dudley |
-| 0x0466 | 曳影之剑 | equipment_weapon_Dudley |
-| 0x0467 | 曳影之剑 | equipment_weapon_Dudley |
-| 0x0468 | 曳影之剑 | equipment_weapon_Dudley |
-| 0x0469 | 曳影之剑 | equipment_weapon_Dudley |
+| 0x0465 | 皇帝 | equipment_weapon_Dudley |
+| 0x0466 | 黑鹰 | equipment_weapon_Dudley |
+| 0x0467 | 龙神 | equipment_weapon_Dudley |
+| 0x0468 | 恶魔 | equipment_weapon_Dudley |
+| 0x0469 | 制裁 | equipment_weapon_Dudley |
 
 ### 装备-武器-通用 (1)
 
@@ -676,7 +676,7 @@
 | ID | 中文名 | 原类别 |
 |---|---|---|
 | 0x0478 | 护腿甲 | equipment_shoes |
-| 0x0640 | 护腿甲 | equipment_shoes |
+| 0x0640 | 钉鞋 | equipment_shoes |
 | 0x0641 | 远足鞋 | equipment_shoes |
 | 0x0642 | 加速跑鞋 | equipment_shoes |
 | 0x0643 | 田园鞋 | equipment_shoes |
@@ -687,7 +687,7 @@
 | 0x0648 | 白色帆布鞋 | equipment_shoes |
 | 0x0649 | 斯托雷加越野鞋 | equipment_shoes |
 | 0x064A | 檀木树脂靴 | equipment_shoes |
-| 0x064B | 檀木树脂靴 | equipment_shoes |
+| 0x064B | 黑靴 | equipment_shoes |
 | 0x064C | 纤足高跟鞋 | equipment_shoes |
 | 0x064D | 军用作战靴 | equipment_shoes |
 | 0x064E | 骑士护腿 | equipment_shoes |
@@ -767,7 +767,7 @@
 | 0x0057 | 激情之红 | equipment_jewelry |
 | 0x0058 | 常青之绿 | equipment_jewelry |
 | 0x0059 | 深邃之黄 | equipment_jewelry |
-| 0x005A | 深邃之黄 | equipment_jewelry |
+| 0x005A | 草帽 | equipment_jewelry |
 | 0x005B | 安全头盔 | equipment_jewelry |
 | 0x005C | 医用手套 | equipment_jewelry |
 | 0x005E | 睡猫硬币 | equipment_jewelry |
@@ -807,7 +807,7 @@
 | 0x0203 | 解冻暖炉 | props_normal |
 | 0x0204 | 舒缓凝胶 | props_normal |
 | 0x0205 | 冷却喷雾 | props_normal |
-| 0x0206 | 冷却喷雾 | props_normal |
+| 0x0206 | 眼药 | props_normal |
 | 0x0207 | 提神薄荷 | props_normal |
 | 0x0208 | 苏醒药 | props_normal |
 | 0x0209 | 镇静剂 | props_normal |
@@ -837,7 +837,7 @@
 |---|---|---|
 | 0x0014 | 初级杆 | fishing_rod |
 | 0x0015 | 小巧射手 | fishing_rod |
-| 0x0016 | 小巧射手 | fishing_rod |
+| 0x0016 | 竹竿 | fishing_rod |
 | 0x0017 | 钢竿侵略者 | fishing_rod |
 | 0x0018 | 水中支配者 | fishing_rod |
 
@@ -847,8 +847,8 @@
 |---|---|---|
 | 0x0186 | 鲑鱼卵 | fishing_bait |
 | 0x0187 | 熬炼丸子 | fishing_bait |
-| 0x0188 | 熬炼丸子 | fishing_bait |
-| 0x0189 | 熬炼丸子 | fishing_bait |
+| 0x0188 | 红虫 | fishing_bait |
+| 0x0189 | 蚯蚓 | fishing_bait |
 | 0x018A | 熬炼丸子DX | fishing_bait |
 | 0x018B | 虹丸EX | fishing_bait |
 | 0x018C | 垂钓大礼包 | fishing_bait |
@@ -871,7 +871,7 @@
 | 0x0138 | 清绿香草 | food |
 | 0x0139 | 胡椒粒 | food |
 | 0x013A | 热辣椒 | food |
-| 0x013B | 热辣椒 | food |
+| 0x013B | 香油 | food |
 | 0x013C | 蜂蜜糖浆 | food |
 | 0x013D | 粗碎岩盐 | food |
 | 0x013E | 新磨小麦粉 | food |
@@ -892,32 +892,32 @@
 
 | ID | 中文名 | 原类别 |
 |---|---|---|
-| 0x015E | 垂钓大礼包 | fishing_fish |
+| 0x015E | 斗鱼 | fishing_fish |
 | 0x015F | 雪花蟹 | fishing_fish |
 | 0x0160 | 蓝带神仙鱼 | fishing_fish |
 | 0x0161 | 银伞鱼 | fishing_fish |
 | 0x0162 | 阿尔摩里卡鲫鱼 | fishing_fish |
-| 0x0163 | 阿尔摩里卡鲫鱼 | fishing_fish |
+| 0x0163 | 乌龟 | fishing_fish |
 | 0x0164 | 橙河鱼 | fishing_fish |
 | 0x0165 | 岩穴鱼 | fishing_fish |
 | 0x0166 | 虹鳟鱼 | fishing_fish |
 | 0x0167 | 食人鱼 | fishing_fish |
-| 0x0168 | 食人鱼 | fishing_fish |
+| 0x0168 | 鲤鱼 | fishing_fish |
 | 0x0169 | 大口鲈鱼 | fishing_fish |
-| 0x016A | 大口鲈鱼 | fishing_fish |
+| 0x016A | 黑鲑 | fishing_fish |
 | 0x016B | 角斗鱼 | fishing_fish |
 | 0x016C | 冷水鱼 | fishing_fish |
-| 0x016D | 冷水鱼 | fishing_fish |
-| 0x016E | 冷水鱼 | fishing_fish |
+| 0x016D | 小鲵 | fishing_fish |
+| 0x016E | 鲑鱼 | fishing_fish |
 | 0x016F | 金龙鱼 | fishing_fish |
-| 0x0170 | 金龙鱼 | fishing_fish |
+| 0x0170 | 鳗鲡 | fishing_fish |
 | 0x0171 | 钢壳龟 | fishing_fish |
 | 0x0172 | 巨血蟹 | fishing_fish |
 | 0x0173 | 珍珠龙鱼 | fishing_fish |
-| 0x0174 | 珍珠龙鱼 | fishing_fish |
-| 0x0175 | 珍珠龙鱼 | fishing_fish |
-| 0x0176 | 珍珠龙鱼 | fishing_fish |
-| 0x0177 | 珍珠龙鱼 | fishing_fish |
+| 0x0174 | 巨鲶 | fishing_fish |
+| 0x0175 | 金鲑 | fishing_fish |
+| 0x0176 | 大鲵 | fishing_fish |
+| 0x0177 | 锦鲤 | fishing_fish |
 | 0x0178 | 翠耀神仙鱼 | fishing_fish |
 | 0x0179 | 琥耀岩穴鱼 | fishing_fish |
 | 0x017A | 红耀食人鱼 | fishing_fish |
