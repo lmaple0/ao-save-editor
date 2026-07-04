@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 碧之轨迹 NISA版 存档修改器 (基于 BZH_AO_NO_KISEKI_Savedata_Editor 偏移表)
 直接支持 zstd 压缩的 savedata.dat 文件。
@@ -8,8 +8,13 @@ import struct
 import os
 import sys
 import io
+import json
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
+
+APP_DIR = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
+if APP_DIR not in sys.path:
+    sys.path.insert(0, APP_DIR)
 
 try:
     import zstandard as zstd
@@ -24,6 +29,39 @@ try:
     from ao_items_db import ITEM_DB
 except ImportError:
     ITEM_DB = {}
+
+ITEM_LANGUAGE_LABELS = {
+    "zh_cn": "中文",
+    "en": "English",
+    "ja": "日本語",
+}
+
+
+def app_dir():
+    return APP_DIR
+
+
+def load_item_i18n():
+    path = os.path.join(app_dir(), "ao_item_i18n.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return {}
+    rows = data.get("items", []) if isinstance(data, dict) else []
+    result = {}
+    for row in rows:
+        try:
+            code = int(row.get("id_dec"))
+        except (TypeError, ValueError):
+            continue
+        result[code] = row
+    return result
+
+
+ITEM_I18N = load_item_i18n()
 
 # ============================================================
 # BZH 工具偏移表 (bzh_ank_se_offset_define.h)
@@ -160,11 +198,21 @@ ITEM_WRITE_ORDER = [
     [0x0014,0x0015,0x0016,0x0017,0x0018],
 ]
 
-def item_name(code):
-    """获取物品名称"""
-    if code in ITEM_DB:
-        return ITEM_DB[code][1]
-    return f"未知(0x{code:04x})"
+def item_name(code, lang="zh_cn"):
+    """获取当前语言下的物品名称，缺失时回退到中文名。"""
+    zh_name = ITEM_DB.get(code, ("", f"未知(0x{code:04x})"))[1]
+    if lang == "zh_cn":
+        return zh_name
+    localized = ITEM_I18N.get(code, {}).get(lang)
+    return localized or zh_name
+
+
+def item_search_text(code):
+    names = [ITEM_DB.get(code, ("", ""))[1]]
+    i18n = ITEM_I18N.get(code, {})
+    names.extend([i18n.get("en", ""), i18n.get("ja", "")])
+    names.append(f"0x{code:04x}")
+    return " ".join(name for name in names if name).lower()
 
 ITEM_ORDERED_CODES = tuple(code for cat_codes in ITEM_WRITE_ORDER for code in cat_codes)
 ITEM_ORDERED_SET = set(ITEM_ORDERED_CODES)
@@ -648,6 +696,17 @@ class SaveEditor(tk.Tk):
         ttk.Entry(bar, textvariable=self._search_var, width=20).pack(side="left", padx=5)
         ttk.Button(bar, text="过滤", command=self._filter_items).pack(side="left", padx=2)
         ttk.Button(bar, text="全部显示", command=self._refresh_items).pack(side="left", padx=2)
+        ttk.Label(bar, text="名称语言:").pack(side="left", padx=(12, 2))
+        self._item_lang_var = tk.StringVar(value="zh_cn:中文")
+        self._item_lang_combo = ttk.Combobox(
+            bar,
+            textvariable=self._item_lang_var,
+            values=[f"{key}:{label}" for key, label in ITEM_LANGUAGE_LABELS.items()],
+            width=12,
+            state="readonly",
+        )
+        self._item_lang_combo.pack(side="left", padx=2)
+        self._item_lang_combo.bind("<<ComboboxSelected>>", self._on_item_language_changed)
         ttk.Button(bar, text="选中 → 99", command=self._items_set_selected).pack(side="right", padx=2)
         ttk.Button(bar, text="选中 → 0", command=lambda: self._items_set_selected(0)).pack(side="right", padx=2)
 
@@ -661,6 +720,7 @@ class SaveEditor(tk.Tk):
         self._tree.column("name", width=350)
         self._tree.column("qty", width=60)
         self._tree.grid(row=1, column=0, sticky="nsew", padx=5, pady=2)
+        self._update_item_name_heading()
 
         scrollbar = ttk.Scrollbar(frm, orient="vertical", command=self._tree.yview)
         scrollbar.grid(row=1, column=1, sticky="ns")
@@ -668,27 +728,45 @@ class SaveEditor(tk.Tk):
 
         self._items_data = {}  # code -> qty
 
+    def _current_item_language(self):
+        value = self._item_lang_var.get() if hasattr(self, "_item_lang_var") else "zh_cn"
+        return value.split(":", 1)[0]
+
+    def _update_item_name_heading(self):
+        if not hasattr(self, "_tree"):
+            return
+        lang = self._current_item_language()
+        label = ITEM_LANGUAGE_LABELS.get(lang, lang)
+        self._tree.heading("name", text=f"名称 ({label})")
+
+    def _on_item_language_changed(self, _event=None):
+        self._update_item_name_heading()
+        self._filter_items()
+
     def _refresh_items(self):
         self._items_data = self.save.read_items()
+        self._search_var.set("")
         self._refresh_items_ui()
 
     def _refresh_items_ui(self):
         self._tree.delete(*self._tree.get_children())
         if self.save.data is None:
             return
+        lang = self._current_item_language()
         for code, qty in sorted(self._items_data.items()):
-            name = item_name(code)
+            name = item_name(code, lang)
             self._tree.insert("", "end", values=(f"0x{code:04x}", name, qty))
 
     def _filter_items(self):
-        keyword = self._search_var.get().lower()
+        keyword = self._search_var.get().lower().strip()
         self._tree.delete(*self._tree.get_children())
         if self.save.data is None:
             return
         self._items_data = self.save.read_items()
+        lang = self._current_item_language()
         for code, qty in sorted(self._items_data.items()):
-            name = item_name(code)
-            if keyword in name.lower() or keyword in f"0x{code:04x}":
+            name = item_name(code, lang)
+            if not keyword or keyword in item_search_text(code):
                 self._tree.insert("", "end", values=(f"0x{code:04x}", name, qty))
 
     def _items_set_selected(self, val=99):

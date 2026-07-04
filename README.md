@@ -10,7 +10,7 @@ This project adapts the offset tables and item definitions from [`424778940z/BZH
 
 This editor was built and tested for the NISA PC release, **Trails to Azure**, whose executable/save layout differs from the older mainland Chinese PC release.
 
-The in-editor Chinese item names and labels are taken from the Joyoland/欢乐百世 Simplified Chinese PC release of **碧之轨迹** and the original BZH editor data. They may not perfectly match the NISA English text, nor the community Simplified Chinese localization produced with [`J31why/zeroTool`](https://github.com/J31why/zeroTool). If you are playing NISA Trails to Azure with a zeroTool-based Chinese patch, treat this editor as a save-format tool first and a name database second.
+The in-editor Chinese item names and labels are taken from the Joyoland/欢乐百世 Simplified Chinese PC release of **碧之轨迹** and the original BZH editor data. Item names can now be displayed in Chinese, English, or Japanese when a matching ID exists in `ao_item_i18n.json`; missing translations fall back to Chinese. These names may still differ from the NISA English text or community Simplified Chinese localization produced with [`J31why/zeroTool`](https://github.com/J31why/zeroTool). If you are playing NISA Trails to Azure with a zeroTool-based Chinese patch, treat this editor as a save-format tool first and a name database second.
 
 ## Features
 
@@ -18,7 +18,7 @@ The in-editor Chinese item names and labels are taken from the Joyoland/欢乐�
 - Edit Mira, DP, medals, sepith, play time, and difficulty.
 - Edit character stat snapshots for 11 characters.
 - Edit party slots and 12 bonding values.
-- Browse, search, and rewrite the full 713-item inventory table.
+- Browse, search, and rewrite the full 713-item inventory table, with Chinese/English/Japanese item-name display where available.
 - Batch-fill consumables, ingredients, books, fish, quartz, and equipment.
 - Toggle the 7-byte achievement bitmap, with all-unlock/all-lock buttons.
 - Edit battle manual counters.
