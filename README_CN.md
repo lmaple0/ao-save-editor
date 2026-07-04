@@ -14,6 +14,12 @@
 - 使用 [`J31why/zeroTool`](https://github.com/J31why/zeroTool) 等工具制作/应用的 NISA 版中文汉化补丁文本。
 
 如果你游玩的是 NISA 版 Trails to Azure，并应用了 zeroTool 相关中文汉化补丁，请把本工具理解为“存档格式编辑器”。物品名和显示名用于辅助识别，遇到译名差异时应以物品代码、类别和游戏内实际效果为准。
+<img width="616" height="534" alt="角色属性修改" src="https://github.com/user-attachments/assets/f5dfba14-3aea-4b85-8160-c81eccddec35" />
+<img width="616" height="534" alt="物品修改" src="https://github.com/user-attachments/assets/1e9cbc55-6461-4520-93fa-edca41123b84" />
+<img width="615" height="332" alt="基本修改" src="https://github.com/user-attachments/assets/a998b5ac-59d0-4ea2-b1bf-bfc5e402b451" />
+<img width="616" height="534" alt="成就修改" src="https://github.com/user-attachments/assets/8c4d344b-bdee-4048-8ff5-9fabe61d2ffc" />
+<img width="613" height="325" alt="战斗统计修改" src="https://github.com/user-attachments/assets/3018e8b1-f410-4349-96aa-d17aa2a8b2ba" />
+
 
 ## 已实现功能
 
