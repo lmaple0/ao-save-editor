@@ -63,6 +63,29 @@ def load_item_i18n():
 
 ITEM_I18N = load_item_i18n()
 
+
+def load_achievement_i18n():
+    path = os.path.join(app_dir(), "ao_achievement_i18n.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return {}
+    rows = data.get("achievements", []) if isinstance(data, dict) else []
+    result = {}
+    for row in rows:
+        try:
+            key = (int(row.get("bitmap_part")), int(row.get("bit")))
+        except (TypeError, ValueError):
+            continue
+        result[key] = row
+    return result
+
+
+ACHIEVEMENT_I18N = load_achievement_i18n()
+
 # ============================================================
 # BZH 工具偏移表 (bzh_ank_se_offset_define.h)
 # ============================================================
@@ -213,6 +236,13 @@ def item_search_text(code):
     names.extend([i18n.get("en", ""), i18n.get("ja", "")])
     names.append(f"0x{code:04x}")
     return " ".join(name for name in names if name).lower()
+
+
+def achievement_name(part, bit, zh_name, lang="zh_cn"):
+    if lang == "zh_cn":
+        return zh_name
+    localized = ACHIEVEMENT_I18N.get((part, bit), {}).get(lang)
+    return localized or zh_name
 
 ITEM_ORDERED_CODES = tuple(code for cat_codes in ITEM_WRITE_ORDER for code in cat_codes)
 ITEM_ORDERED_SET = set(ITEM_ORDERED_CODES)
@@ -1020,7 +1050,7 @@ class SaveEditor(tk.Tk):
 
     # ---- P0: 成就标签页 ----
     def _build_achievement_tab(self, frm):
-        self._ach_vars = []  # list of (part, bit, var_name, checkbox)
+        self._ach_vars = []  # list of (part, bit, BooleanVar, checkbox)
         canvas = tk.Canvas(frm)
         scrollbar = ttk.Scrollbar(frm, orient="vertical", command=canvas.yview)
         scrollable = ttk.Frame(canvas)
@@ -1034,23 +1064,45 @@ class SaveEditor(tk.Tk):
         bar.pack(fill="x", padx=5, pady=5)
         ttk.Button(bar, text="全解锁", command=self._ach_unlock_all).pack(side="left", padx=3)
         ttk.Button(bar, text="全锁定", command=self._ach_lock_all).pack(side="left", padx=3)
+        ttk.Label(bar, text="名称语言:").pack(side="left", padx=(12, 2))
+        self._achievement_lang_var = tk.StringVar(value="zh_cn:中文")
+        self._achievement_lang_combo = ttk.Combobox(
+            bar,
+            textvariable=self._achievement_lang_var,
+            values=[f"{key}:{label}" for key, label in ITEM_LANGUAGE_LABELS.items()],
+            width=12,
+            state="readonly",
+        )
+        self._achievement_lang_combo.pack(side="left", padx=2)
+        self._achievement_lang_combo.bind("<<ComboboxSelected>>", self._on_achievement_language_changed)
 
         for part, bit, name in ACHIEVEMENT_NAMES:
             var = tk.BooleanVar()
-            cb = ttk.Checkbutton(scrollable, text=name, variable=var)
+            cb = ttk.Checkbutton(scrollable, text=achievement_name(part, bit, name, self._current_achievement_language()), variable=var)
             cb.pack(anchor="w", padx=15, pady=1)
-            self._ach_vars.append((part, bit, var))
+            self._ach_vars.append((part, bit, var, cb))
+
+    def _current_achievement_language(self):
+        value = self._achievement_lang_var.get() if hasattr(self, "_achievement_lang_var") else "zh_cn"
+        return value.split(":", 1)[0]
+
+    def _on_achievement_language_changed(self, _event=None):
+        lang = self._current_achievement_language()
+        name_by_key = {(part, bit): name for part, bit, name in ACHIEVEMENT_NAMES}
+        for part, bit, _var, checkbox in self._ach_vars:
+            zh_name = name_by_key.get((part, bit), "")
+            checkbox.configure(text=achievement_name(part, bit, zh_name, lang))
 
     def _refresh_achievements_ui(self):
         if self.save.data is None:
             return
         bits = self.save.read_achievements()
-        for part, bit, var in self._ach_vars:
+        for part, bit, var, _checkbox in self._ach_vars:
             var.set(bool(bits.get(part, [0]*8)[bit]))
 
     def _write_achievements_from_gui(self):
         bits = {i: [0]*8 for i in range(7)}
-        for part, bit, var in self._ach_vars:
+        for part, bit, var, _checkbox in self._ach_vars:
             if var.get():
                 bits[part][bit] = 1
         self.save.write_achievements(bits)

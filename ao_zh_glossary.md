@@ -7,6 +7,7 @@
 - 物品/装备/回路等存档物品 ID：713
 - 已确认 S 技存档 ID：33
 - 参考技能/魔法条目：238
+- Magic CSV 本地化条目：375
 - 角色外观 ID：21
 - 成就位：56
 
@@ -1196,64 +1197,446 @@
 
 ## 成就位
 
-| Part | Bit | 中文名 | 日文名 |
-|---|---|---|---|
-| 0 | 0 | 三星厨师 | 三ツ星シェフ |
-| 0 | 1 | 爆钓王 | 爆釣王 |
-| 0 | 2 | 宝箱猎人 | トレジャーハンター |
-| 0 | 3 | 小说爱好者 | ノベルラバー |
-| 0 | 4 | 回路收藏家 | クオーツコレクター |
-| 0 | 5 | 研制料理人 | 炎の料理人 |
-| 0 | 6 | 天眼之智者 | 天眼の識者 |
-| 0 | 7 | 市民英雄 | 市民のヒーロー |
-| 1 | 0 | 千战之志士 | 千討の志士 |
-| 1 | 1 | 历战之胜者 | 歴戦の勝者 |
-| 1 | 2 | 奋战之猛士 | 奮戦の猛者 |
-| 1 | 3 | 力战之勇士 | 力戦の勇士 |
-| 1 | 4 | 百万富翁 | 百万長者 |
-| 1 | 5 | 组合技大师 | コンビマスター |
-| 1 | 6 | D之追随者 | Dの追及者 |
-| 1 | 7 | 不拘一格的厨师 | 型破りシェフ |
-| 2 | 0 | 导力车发烧友 | カーマニア |
-| 2 | 1 | 家具收藏家 | インテリアコレクター |
-| 2 | 2 | 无双之猎士 | 無双の烈士 |
-| 2 | 3 | 最强之剑 | 至高の剣 |
-| 2 | 4 | 超一流搜查官 | 超一流捜査官 |
-| 2 | 5 | 持续的压迫 | 継続の粋人 |
-| 2 | 6 | 超绝秘技 | 超絶秘技 |
-| 2 | 7 | 雷光一闪 | 雷光一閃 |
-| 3 | 0 | 短暂的休息 | 束の間の休息 |
-| 3 | 1 | 西塞姆利亚通商会议 | 西ゼムリア通商会議 |
-| 3 | 2 | 与艾约的再会 |  |
-| 3 | 3 | D之残影 | Dの残影 |
-| 3 | 4 | 传说的搜查官 | 伝説の捜査官 |
-| 3 | 5 | 干练的搜查官 | 腕利き捜査官 |
-| 3 | 6 | 艾尼格玛II用户 | エニグマIIユーザー |
-| 3 | 7 | 至境之珠 | 至境の珠 |
-| 4 | 0 | 与莉夏的羁绊 | リーシャとの絆 |
-| 4 | 1 | 与瓦吉的羁绊 | ワジとの絆 |
-| 4 | 2 | 与诺艾尔的羁绊 | ノエルとの絆 |
-| 4 | 3 | 与达德利的羁绊 | ダドリーとの絆 |
-| 4 | 4 | 即便如此我们也… | それでも僕らは。 |
-| 4 | 5 | 跨越虚幻的乐园 | 偽りの楽土を越えて |
-| 4 | 6 | 命运未卜的克洛斯贝尔 | 運命のクロスベル |
-| 4 | 7 | 胎动～众兽的狂欢节 | 胎動～獣たちの謝肉祭 |
-| 5 | 0 | 连战连胜 | 連戦連破 |
-| 5 | 1 | 绚烂攻击 | 絢爛攻守 |
-| 5 | 2 | 百花迎击 | 百花迎撃 |
-| 5 | 3 | 刚之追随者 | 鋼に届きし者 |
-| 5 | 4 | 红之讨伐者 | 紅の討伐者 |
-| 5 | 5 | 与兰迪的羁绊 | ランディとの絆 |
-| 5 | 6 | 与缇欧的羁绊 | ティオとの絆 |
-| 5 | 7 | 与艾莉的羁绊 | エリィとの絆 |
-| 6 | 0 | 绮耀之贤士 | 七耀の賢士 |
-| 6 | 1 | 怪物射击大师 | ホラーバスター |
-| 6 | 2 | 波波碰大师 | ポムっと！マスター |
-| 6 | 3 | 传承的思念～不断的羁绊 | 届いた想い、繋がる絆 |
-| 6 | 4 | 解明真相者 | 解き明かせし者 |
-| 6 | 5 | 爆裂果敢 | 爆裂果敢 |
-| 6 | 6 | 赶紧杀绝 | 滅絶淘汰 |
-| 6 | 7 | 霸头歼灭 | 八頭撃滅 |
+| Part | Bit | 游戏成就ID | 中文名 | 英文名 | 日文名 | 英文描述 | 日文描述 |
+|---|---|---|---|---|---|---|---|
+| 0 | 0 | 10 | 三星厨师 | Serve and Perfect | 三ツ星シェフ | Created all supreme dishes. | 全ての大成功料理を作成した。 |
+| 0 | 1 | 8 | 爆钓王 | Undebaitable Angler | 爆釣王 | Caught all fish. | 全ての魚を釣った。 |
+| 0 | 2 | 4 | 宝箱猎人 | Trails to Treazure | トレジャーハンター | Opened every treasure chest. | 全ての宝箱を開いた。 |
+| 0 | 3 | 3 | 小说爱好者 | Walking on Sunshine | ノベルラバー | Collected all volumes of Sunshine Agn㍉s. | 『陽溜まりのアニエス』を全巻集めた。 |
+| 0 | 4 | 5 | 回路收藏家 | Order in the Quartz | クオーツコレクター | Collected all quartz. | 全てのクオーツを集めた。 |
+| 0 | 5 | 9 | 研制料理人 | Zhang Hui Would Be Proud | 炎の料理人 | Obtained all recipes. | 全てのレシピを集めた。 |
+| 0 | 6 | 1 | 天眼之智者 | Superlative Slaying Squad | 天眼の識者 | Collected all information in the Combat Notebook. | 戦闘手帳の全情報を集めた。 |
+| 0 | 7 | 2 | 市民英雄 | Hometown Hero | 市民のヒーロー | Completed all quests. | 全ての支援要請を達成した。 |
+| 1 | 0 | 19 | 千战之志士 | Writ of Habeas Corpses | 千討の志士 | Defeated over 2,000 enemies. | 敵を２０００体以上倒した。 |
+| 1 | 1 | 18 | 历战之胜者 | Voluntary Monslaughter | 歴戦の勝者 | Achieved 1,000 victories in battle. | 戦闘勝利回数１０００回達成。 |
+| 1 | 2 | 17 | 奋战之猛士 | Right to Remain Violent | 奮戦の猛者 | Achieved 500 victories in battle. | 戦闘勝利回数５００回達成。 |
+| 1 | 3 | 16 | 力战之勇士 | Petty Monst-emeanor | 力戦の勇士 | Achieved 100 victories in battle. | 戦闘勝利回数１００回達成。 |
+| 1 | 4 | 12 | 百万富翁 | Mira Mira on the Wall | 百万長者 | Had one million mira or more. | 所持金が1,000,000ミラ以上になった。 |
+| 1 | 5 | 32 | 组合技大师 | Co-op Clobbering | コンビマスター | Learned every combo craft. | 全てのコンビクラフトを修得した。 |
+| 1 | 6 | 36 | D之追随者 | Terminal Diagnosis | Ｄの追及者 | Analyzed every D∴G cult terminal. | Ｄ∴Ｇ教団の端末を全て解析した。 |
+| 1 | 7 | 11 | 不拘一格的厨师 | Gehenna's Kitchen | 型破りシェフ | Created all peculiar dishes. | 全ての予想外料理を作成した。 |
+| 2 | 0 | 7 | 导力车发烧友 | Tender Loving Car | カーマニア | Collected all orbal car customization options. | 全ての導力車オプションを集めた。 |
+| 2 | 1 | 6 | 家具收藏家 | Decorated Officers | インテリアコレクター | Collected all decorations and Enigma covers. | 全ての家具とエニグマカバーを集めた。 |
+| 2 | 2 | 31 | 无双之猎士 | Peerless Heroes | 無双の烈士 | Raised Lloyd, Elie, Tio, and Randy to level 120. | ロイド、エリィ、ティオ、ランディのレベルを１２０まで上げた。 |
+| 2 | 3 | 28 | 最强之剑 | Strong Arms of the Law | 至高の剣 | Acquired the strongest weapon for any character. | 最強武器を作成した。 |
+| 2 | 4 | 33 | 超一流搜查官 | Pride of the Precinct | 超一流捜査官 | Became a 1st Class Senior Detective. | 上級捜査官・１ＳＴになった。 |
+| 2 | 5 | 13 | 持续的压迫 | The Phantom Menace | 継続の粋人 | Scored at least 4,000 points on the Horror Coaster. | プレイ時間が１００時間を越えた。 |
+| 2 | 6 | 21 | 超绝秘技 | Break It Up | 超絶秘技 | Used 100 S-Breaks. | Ｓブレイク発動回数１００回達成。 |
+| 2 | 7 | 20 | 雷光一闪 | Flash Mob | 雷光一閃 | Achieved 100 pre-emptive attacks. | 先制攻撃発生回数１００回達成。 |
+| 3 | 0 | 43 | 短暂的休息 | Rest and Revolution | 束の間の休息 | Completed the Intermission, 'A Brief Respite.' | インターミッション『束の間の休息』をクリアした。 |
+| 3 | 1 | 42 | 西塞姆利亚通商会议 | Tower of Terror | 西ゼムリア通商会議 | Completed Chapter 2, 'The West Zemuria Trade Conference.' | 第２章『西ゼムリア通商会議』をクリアした。 |
+| 3 | 2 | 41 | 与艾约的再会 | Out of Sight, Out of Mine | 予兆～新たなる日々 | Completed Chapter 1, 'Bright Skies, Gathering Storms.' | 第１章『予兆～新たなる日々』をクリアした。 |
+| 3 | 3 | 40 | D之残影 | A Demon Twice Removed | Ｄの残影 | Completed the Prologue, 'Traces of D.' | 序章『Ｄの残影』をクリアした。 |
+| 3 | 4 | 35 | 传说的搜查官 | Nightmare on East Street | 伝説の捜査官 | Completed the game on nightmare difficulty. | 難易度ナイトメアでゲームをクリアした。 |
+| 3 | 5 | 34 | 干练的搜查官 | No Hard Feelings? | 腕利き捜査官 | Completed the game on hard or nightmare difficulty. | 難易度ハード以上でゲームをクリアした。 |
+| 3 | 6 |  | 艾尼格玛II用户 | An Enigma No More | エニグマⅡユーザー | Learned how to use the Enigma II. | エニグマⅡが使えるようになった。 |
+| 3 | 7 | 29 | 至境之珠 | Masterful Artistry | 至境の珠 | Gain access to all seven master arts. | 七属性のマスターアーツを使えるようにした。 |
+| 4 | 0 | 53 | 与莉夏的羁绊 | Mao Than a Feeling | リーシャとの絆 | Forged a strong bond with Rixia. | リーシャとの絆を深めた。 |
+| 4 | 1 | 52 | 与瓦吉的羁绊 | Heavenly Host | ワジとの絆 | Forged a strong bond with Wazy. | ワジとの絆を深めた。 |
+| 4 | 2 | 51 | 与诺艾尔的羁绊 | Seeker, Found | ノエルとの絆 | Forged a strong bond with Noel. | ノエルとの絆を深めた。 |
+| 4 | 3 | 54 | 与达德利的羁绊 | Detective Do-Right | ダドリーとの絆 | Forged a strong bond with Dudley. | ダドリーとの絆を深めた。 |
+| 4 | 4 | 47 | 即便如此我们也… | From Zero to Azure | それでも僕らは。 | Completed the Finale, 'The Path We Chose.' | 終章『それでも僕らは。』をクリアした。 |
+| 4 | 5 | 46 | 跨越虚幻的乐园 | Prison of Hard Knox | 偽りの楽土を越えて | Completed the Fragments, 'Crossing False Paradise.' | 断章『偽りの楽土を越えて』をクリアした。 |
+| 4 | 6 | 45 | 命运未卜的克洛斯贝尔 | The World Beyond the Mirror | 運命のクロスベル | Completed Chapter 4, 'Crossbell's Fate.' | 第４章『運命のクロスベル』をクリアした。 |
+| 4 | 7 | 44 | 胎动～众兽的狂欢节 | The Distant Flames | 胎動～獣たちの謝肉祭 | Completed Chapter 3, 'Budding Turmoil.' | 第３章『胎動～獣たちの謝肉祭』をクリアした。 |
+| 5 | 0 | 24 | 连战连胜 | Three-peat Beat | 連戦連破 | Won a chain of three consecutive battles. | ３連チェインバトルに勝利した。 |
+| 5 | 1 | 23 | 绚烂攻击 | 4.0 Average | 絢爛攻守 | Won a battle with a tactical bonus of ×4.00 or more. | タクティカルボーナス値×４．００以上達成。 |
+| 5 | 2 | 22 | 百花迎击 | I'mma Let You Finish | 百花迎撃 | Canceled 100 enemy arts or crafts. | 敵のアーツ・技の駆動を１００回阻止した。 |
+| 5 | 3 | 39 | 刚之追随者 | Forged in Battle | 鋼に届きし者 | Brought the Steel Maiden to her knees. | 《鋼の聖女》アリアンロードの膝を付かせた。 |
+| 5 | 4 | 38 | 红之讨伐者 | One in a Vermillion | 紅の討伐者 | Defeated Vermillion. | 【ヴァーミリオン】を倒した。 |
+| 5 | 5 | 50 | 与兰迪的羁绊 | Randy for Randy | ランディとの絆 | Forged a strong bond with Randy. | ランディとの絆を深めた。 |
+| 5 | 6 | 49 | 与缇欧的羁绊 | Plato-nic Ideal | ティオとの絆 | Forged a strong bond with Tio. | ティオとの絆を深めた。 |
+| 5 | 7 | 48 | 与艾莉的羁绊 | Fine-Elie Together | エリィとの絆 | Forged a strong bond with Elie. | エリィとの絆を深めた。 |
+| 6 | 0 | 30 | 绮耀之贤士 | The Last Orbender | 七耀の賢士 | Became able to use each element's strongest art at the same time. | 七属性全ての最強攻撃アーツを使える状態にした。 |
+| 6 | 1 | 13 | 怪物射击大师 | The Phantom Menace | ホラーバスター | Scored at least 4,000 points on the Horror Coaster. | ホラーコースターで４０００ポイントを獲得した。 |
+| 6 | 2 | 14 | 波波碰大师 | Pom Party Grandmaster | ポムっと！マスター | Defeated all opponents in Pom! Pom! Party! | 『ポムっと！』で全ての対戦キャラを倒した。 |
+| 6 | 3 | 55 | 传承的思念～不断的羁绊 | The Girls Are Alright | 届いた想い、繋がる絆 | Forged a strong bond with KeA, Fran, Cecile, Ilya, and Sully. | キーア、フラン、セシル、イリア、シュリとの絆を深めた。 |
+| 6 | 4 | 37 | 解明真相者 | Grim Realization | 解き明かせし者 | Deduced Mr. Grimwood's role as the mastermind. | イアン弁護士が計画の首謀者の１人だと気付いた。 |
+| 6 | 5 | 27 | 爆裂果敢 | Burst on the Scene | 爆裂果敢 | Activated Burst 50 times. | バーストを５０回発動した。 |
+| 6 | 6 | 26 | 赶紧杀绝 | Sixteen Going on Severing | 滅絶淘汰 | Defeated 16 enemies in a single battle. | 一度の戦闘で１６体の敵を倒した。 |
+| 6 | 7 | 25 | 霸头歼灭 | Octa-GONE | 八頭撃滅 | Defeated 8 enemies at once. | 敵８体を同時に倒した。 |
+
+## Magic CSV 本地化参考
+
+> `reference_no_guess` 是 CSV 的 1-based 行号；当前不把它声明为存档战技槽位 ID。日文列来自用户提供 CSV 的原始文本，存在 mojibake，需后续复核。
+
+| CSV行 | Battle Entry | 英文名 | 英文描述 | 日文原始列 |
+|---|---|---|---|---|
+| 1 |  | Movement |  | 移動 |
+| 3 |  | Reserved |  | 予約 |
+| 4 |  | Item Use |  | アイテム使用 |
+| 6 | 4 | Reserved |  | 予約 |
+| 11 | 112 | Stone Spike | Attack - One - Petrify (10％)\\nCauses a sharp rock to shoot up from the ground. | ストーンスパイク |
+| 12 | 113 | Quake | Attack - Area (M)\\nCauses a small localized earthquake. | クエイク |
+| 13 | 114 | Gorgon Breath | Attack - Area (S) - Petrify (20％)\\nSpews petrifying gas on the enemy. | ゴルゴンブレス |
+| 14 | 115 | Gaea Titanis | Attack (Set) - Line\\nRocks shoot up at the enemy from cracked earth. | ジアータイタニス |
+| 15 | 116 | Yggdrasil | Attack (Set) - Area (L)\\nThe great tree's roots skewer the enemy in a wide area. | ユグドラシエル |
+| 16 | 117 | Gigant Rage | Attack - All\\nSummons a gigantic earth spirit from below to pulverize the ground. | ギガントレイジ |
+| 18 |  | Rune of Refuge | Party-Wide Effect\\nGrants physical immunity. Absorb 20％ of attack/craft damage dealt as HP. | 防壁のルーン |
+| 19 | 122 | Icicle Edge | Attack - One - Freeze (10％)\\nFires a sharp icicle. | アイシクルエッジ |
+| 20 | 122 | Icicle Edge | Attack - One - Freeze (10％)\\nFires a sharp icicle. | アイシクルエッジ |
+| 21 | 123 | Blue Drop | Attack - Area (S)\\nImprisons enemies in a drop of water that explodes. | ブルードロップ |
+| 22 | 124 | Ice Hammer | Attack - Area (M) - Freeze (20％)\\nDrops an icicle on enemies. | アイスハンマー |
+| 23 | 125 | Hydro Cannon | Attack (Set) - Line\\nShoots a high pressure blast of water to wash away enemies. | ハイドロカノン |
+| 24 | 126 | Diamond Dust | Attack - Area (M) - Freeze (30％)\\nProduces intense cold. | ダイアモンドダスト |
+| 25 | 127 | Genesis Flood | Attack - All\\nAn enormous tidal wave swallows all enemies. | アラウンドノア |
+| 26 | 128 | Eschaton | Attack - All - Freeze (15％)\\nSummons an archfiend of ice that emanates absolute zero. | エンドオブワールド |
+| 28 | 1 | Rune of Benevolence | Party-Wide Effect\\nHeals 50％ of max HP. Halves all incoming damage. | 慈愛のルーン |
+| 29 | 130 | Fire Bolt | Attack - One - Burn (10％)\\nShoots a flaming ball of fire. | ファイアボルト |
+| 30 | 130 | Fire Bolt | Attack - One - Burn (10％)\\nShoots a flaming ball of fire. | ファイアボルト |
+| 31 | 131 | Heatwave | Attack - Area (M)\\nCovers the earth's surface with intense heat. | ヒートウェイブ |
+| 32 | 132 | Magna Blaze | Attack - One - Burn (30％)\\nExplodes compressed lava. | マグナブレイズ |
+| 33 | 133 | Flare Butterfly | Attack - Area (L) - Burn (20％)\\nA dance of countless flaming butterflies. | フレアバタフライ |
+| 34 | 134 | Crimson Ray | Attack - One\\nAn extremely intense heat ray reduces enemies to ashes. | クリムゾンレイ |
+| 35 | 135 | Lord Inferno | Attack - All - Burn (15％)\\nSummons a tyrannical dragon to incinerate the battlefield. | ロードインフェルノ |
+| 37 | 2 | Rune of Triumph | Party-Wide Effect\\nRestores 50 CP. Attacks and crafts deal 150％ damage. | 勝利のルーン |
+| 38 | 142 | Sparkle | Attack - One - Seal (10％)\\nCalls down lightning from above. | スパークル |
+| 39 | 142 | Sparkle | Attack - One - Seal (10％)\\nCalls down lightning from above. | スパークル |
+| 40 | 143 | Aero Sickle | Attack (Set) - Line\\nGenerates a whirlwind to tear apart enemies. | エアロシックル |
+| 41 | 144 | Aerial | Attack (Set) - Area (M)\\nA powerful tornado with whirling bits of rubble. | エアリアル |
+| 42 | 145 | Spark Dyne | Attack - Area (S) - Seal (30％)\\nManipulates the weather to call down a blue lightning bolt. | スパークダイン |
+| 43 | 146 | Thunder Cyclone | Attack (Set) - Area (L) - Seal (20％)\\nCreates a lightning-filled tornado. | サンダーシクリオン |
+| 44 | 147 | Ragna Dorian | Attack - All - Seal (15％)\\nSummons a divine spear of raging storms to pierce foes. | ラグナドリオン |
+| 46 | 3 | Rune of Tempests | Party-Wide Effect\\nGrants magic reflect. Arts deal 150％ damage. | 暴風のルーン |
+| 47 | 152 | Soul Blur | Attack - One - Faint (10％)\\nEmits a time-space shaking pulse. | ソウルブラー |
+| 48 | 152 | Soul Blur | Attack - One - Faint (10％)\\nEmits a time-space shaking pulse. | ソウルブラー |
+| 49 | 154 | Death Spiral | Attack - Area (M) - K.O. (10％)\\nDemonic claws from Gehenna tear enemies apart. | デス・スパイラル |
+| 50 | 155 | Shadow Blade | Attack - Area (L) - HP Absorb\\nA demonic blade. Absorb 5％ of damage dealt as HP. | シャドーアポクリフ |
+| 51 | 153 | Calamity Edge | Attack (Line) - K.O. (20％)\\nFires an ebon blade that rends space and time. | カラミティ・エッジ |
+| 52 | 156 | Lucifen Wing | Attack - All\\nSummons enormous black wings, flattening all. | ルシフェンウィング |
+| 54 | 4 | Rune of Transience | Party-Wide Effect\\nAccelerates AT. Attacks and crafts delay the enemy. | 刹那のルーン |
+| 55 | 162 | Dark Matter | Attack (Set) - Area (L) - Suction - MOV-2\\nHigh pressure space attracts and crushes foes. | ダークマター |
+| 56 | 162 | Dark Matter | Attack (Set) - Area (L) - Suction - MOV-2\\nHigh pressure space attracts and crushes foes. | ダークマター |
+| 57 | 161 | Photon Shot | Attack - One\\nFires a heavily compressed photon bullet. | フォトンシュート |
+| 58 | 165 | Last Disaster | Attack (Set) - Line\\nA glint of light mercilessly collapses space around enemies. | ラストディザスター |
+| 59 | 164 | Golden Halo | Attack (Set) - Area (L) - DEF/ADF-25％\\nSummons seven shining magical orbs to take out foes. | ゴールドハイロゥ |
+| 60 | 166 | Reincarnation | Attack - All\\nSucks everything into a space-time rift, annihilating it. | リーンカルナシオン |
+| 62 | 5 | Rune of Providence | Party-Wide Effect\\nGrants complete immunity. Absorb 20％ of arts damage dealt as HP. | 震天のルーン |
+| 63 | 172 | Chaos Brand | Attack - One - Confuse (10％)\\nSilver swords drive enemies insane. | カオスブランド |
+| 64 | 172 | Chaos Brand | Attack - One - Confuse (10％)\\nSilver swords drive enemies insane. | カオスブランド |
+| 65 | 174 | Galion Tower | Attack - Area (L) - Blind (100％)\\nRains light arrows from a tower of illusion. | ガリオンタワー |
+| 66 | 175 | Avalon Gate | Attack - All\\nOpens heaven's gate and brings judgment's light to evil. | アヴァロンゲート |
+| 67 | 173 | Silver Thorn | Attack - Area (M) - Confuse (25％)\\nCalls forth a shower of madness-inducing blades. | シルバーソーン |
+| 68 | 176 | Argent Ark | Attack - All\\nSummons a silver ark to bombard all through its gunports. | アルジェントアーク |
+| 70 | 6 | Rune of Illusion | Party-Wide Effect\\nGrants stealth. EP consumption is halved. | 幻影のルーン |
+| 71 | 50 | Earth Pulse | Recovery - Area (L) - HP Regen\\nGrants the power of the earth to recover strength. | アースグロウ |
+| 72 | 50 | Earth Pulse | Recovery - Area (L) - HP Regen\\nGrants the power of the earth to recover strength. | アースグロウ |
+| 73 | 51 | Crest | Support - One - DEF+25％\\nGrants the protective power of the earth to an ally. | クレスト |
+| 74 | 52 | La Crest | Support - Area (M) - DEF+25％\\nGrants the protective power of the earth to allies. | ラ・クレスト |
+| 75 | 53 | Adamantine Guard | Support - Area (S) - Physical Immunity\\nPuts up a barrier which guards against one physical attack. | アダマスガード |
+| 76 | 60 | Forte | Support - One - STR+25％\\nGrants the power of fire to an ally. | フォルテ |
+| 77 | 61 | La Forte | Support - Area (M) - STR+25％\\nGrants the power of fire to allies. | ラ・フォルテ |
+| 78 | 62 | Impassion | Recovery - Area (M) - CP Regen\\nInvigorates the spirit of allies. | メルティライズ |
+| 79 | 16 | Breath | Recovery - Area (S) - HP Heal (M)\\nA cleansing breath of life heals allies. | ブレス |
+| 80 | 17 | Holy Breath | Recovery - Area (L) - HP Heal (L)\\nA holy breath of life heals a great amount. | ホーリーブレス |
+| 81 | 65 | Sylphid | Support - Area (M) - MOV+4\\nUses the power of the wind spirit to increase movement. | シルフィード |
+| 82 | 66 | Recuria | Recovery - Area (L) - Cures Ailments\\nCures ailments (except K.O.). | レキュリア |
+| 83 | 67 | Lorelei | Debilitate - All - Sleep (50％)\\nEchoes a spirit's song that causes a deep sleep. | ローレライ |
+| 84 | 70 | Chrono Down | Debilitate - Area (M) - SPD-25％\\nDecelerates time in an area. | クロノダウン |
+| 85 | 71 | Chrono Drive | Support - Area (M) - SPD+25％\\nAccelerates the flow of time in an area. | クロノドライブ |
+| 86 | 72 | Calamity Claw | Debilitate - Area (L) - MOV-3 - SPD-50％\\nDemonic claws from Gehenna grab at the feet. | カラミティクロウ |
+| 87 | 77 | Fortuna | Support - Area (L) - ATS/ADF+25％\\nGrants a blessing to allies. | フォルトゥナ |
+| 88 | 78 | A-Reflex | Support - One - Magic Reflect\\nGenerates a barrier which reflects one orbal art. | Ａ－リフレックス |
+| 89 | 18 | Celestial | Recovery - Area (L) - Revive & HP Heal (All)\\nRevives and heals all. | セレスティアル |
+| 90 | 76 | Innocence Arc | Recovery - All - Cures Stat Down\\nReturns lowered stats to normal for all. | イノセントアーク |
+| 91 | 81 | Saint | Support - One - STR/DEF+25％\\nRaises an ally's offense and defense. | セイント |
+| 92 | 83 | Hollow Sphere | Support - One - Stealth\\nConceals self by bending light around the target. | ホロウスフィア |
+| 93 | 84 | Lunar Craze | Debilitate - Area (L) - Confuse (％↑ vs. Lower Level)\\nDisplays a lunar illusion to confuse foes. | ルナ・クレイズ |
+| 94 | 82 | Zodiac | Support - All - STR/DEF+25％\\nTemporarily raises all allies' offense and defense. | ゾディアック |
+| 95 | 30 | Analyze | Support - One\\nAnalyzes and obtains enemy data. | アナライズ |
+| 96 | 10 | Tear | Recovery - One - HP Heal (S) - Cures Burn\\nHeals a small amount for one ally using the power of water. | ティア |
+| 97 | 11 | Teara | Recovery - One - HP Heal (M) - Cures Burn\\nHeals a medium amount for one ally using the power of water. | ティアラ |
+| 98 | 12 | Tearal | Recovery - One - HP Heal (L) - Cures Burn\\nHeals a large amount for one ally using the power of water. | ティアラル |
+| 99 | 54 | Aqua Mirage | Support - Area (M) - EVA+50％\\nAvoids attacks with a protective wall of water. | アクアミラージュ |
+| 100 | 55 | Cobalt Sphere | Debilitate - Area (M) - Mute (100％) - ADF-25％\\nPrevents enemies from using arts for a few turns. | コバルトスフィア |
+| 101 | 15 | Athelas | Recovery - One - Revive & HP Heal (M)\\nRevives and heals a medium amount for one ally. | アセラス |
+| 102 | 14 | Thelas | Recovery - One - Revive & HP Heal (S)\\nRevives and heals a small amount for one ally. | セラス |
+| 103 | 13 | Tear-All | Recovery - One - HP Heal (All) - Cures Burn\\nHeals all HP for one ally using the power of water. | ティア・オル |
+| 111 |  | Divided | Divide into two bodies with 1/2 HP. | 分裂した |
+| 112 |  | Called Allies |  | 仲間を呼んだ |
+| 115 | 50 | Axle Rush | Attack (Set) - Area (S)\\nWhirls around tonfas, making a series of shockwaves. | アクセルラッシュ |
+| 116 | 51 | Stun Break | Attack - One - Impede - Faint (20％)\\nShocks with a high-power current, canceling arts and crafts. | スタンブレイク |
+| 117 | 52 | Encourage | Support - Area (L) - STR+25％\\nEncourages allies, raising morale. Gives STR+25％. | 鼓舞 |
+| 118 | 53 | Brave Smash | Attack (Set) - Line - Seal (30％)\\nFocuses fighting spirit in a line. 30％ chance to seal. | ブレイブスマッシュ |
+| 119 | 54 | Burning Heart | Support - Self - STR/DEF/SPD+25％ - Nulls Ailments\\nGains immense power, but suffers faint afterwards. | バーニングハート |
+| 120 | 50 | Raging Spin | Attack (Set) - Area (M) - Suction\\nWhirls tonfas into a cyclone, pummeling enemies rapidly. | レイジングスピン |
+| 121 | 51 | Stun Break 2 | Attack - One - Impede - Faint (40％)\\nElectrocutes with a high-power current, canceling arts and crafts. | スタンブレイクⅡ |
+| 122 | 53 | Brave Smash 2 | Attack (Set) - Line - Seal (75％)\\nChannels fighting spirit into a line. 75％ chance to seal. | ブレイブスマッシュⅡ |
+| 123 | 53 | Brave Smash 2 | Attack (Set) - Line - Seal (75％)\\nChannels fighting spirit into a line. 75％ chance to seal. | ブレイブスマッシュⅡ |
+| 124 | 54 | Burning Heart 2 | Support - Self - STR/DEF/SPD+50％ - Nulls Ailments\\nGains immeasurable power, but suffers faint afterwards. | バーニングハートⅡ |
+| 125 | 50 | Triple Burst | Attack - One\\nFires three high-accuracy shots, concentrated on one point. | ３点バースト |
+| 126 | 51 | Holy Bullet | Recovery (Set) - Area (S) - HP Heal (S) - CP+20\\nRecovers allies' HP and CP in an area with a holy shot. | ホーリーバレット |
+| 127 | 52 | Wild Swan | Attack - One - Impede\\nA barrage of shots followed by a kick. Cancels arts and crafts. | ワイルドスワン |
+| 128 | 53 | Cross Mirage | Attack (Set) - Area (M)\\nSteps forward and shoots down targets, one by one. | クロスミラージュ |
+| 129 | 54 | Strike Bell | Support - Area (S) - Accelerate\\nManifests the time barrier and destroys it, advancing turns. | ストライクベル |
+| 130 | 50 | Triple Piercer | Attack (Set) - Line \\nFires three piercing precision shots from a vintage orbal rifle. | ペネトレイター |
+| 131 | 52 | Wild Swan 2 | Attack - One - Impede - Mute (50％)\\nA flurry of gunshots followed by a kick. Cancels arts and crafts. | ワイルドスワンⅡ |
+| 132 | 52 | Wild Swan 2 | Attack - One - Impede - Mute (50％)\\nA flurry of gunshots followed by a kick. Cancels arts and crafts. | ワイルドスワンⅡ |
+| 133 | 53 | Cross Mirage 2 | Attack (Set) - Area (L) - ATS-25％\\nSteps forward and rapidly shoots down targets, one by one. | クロスミラージュⅡ |
+| 134 | 50 | Analyze | Support - One - DEF/ADF-25％\\nDiscover enemy vitals, weakening them. | アナライザー |
+| 135 | 50 | Analyze | Support - One - DEF/ADF-25％\\nDiscover enemy vitals, weakening them. | アナライザー |
+| 136 | 51 | Beam Zanber | Magic Attack - Area (M)\\nSlices foes with a beam extending from an orbal staff. | ビームザンバー |
+| 137 | 52 | Summon Zeit | Support - Summon Zeit (Support Character Turn)\\nTelepathically calls Zeit using an orbal staff. | ツァイト召喚 |
+| 138 | 53 | Energy Circle | Recovery - Area (M) - HP Heal (M) - Cures Ailments/Stat Down\\nA recovery field removes ailments from allies' bodies. | エナジーサークル |
+| 139 | 54 | Absolute Zero | Magic Attack (Set) - Area (S) - Freeze (25％)\\nFires a frozen blast from a transformed orbal staff. | アブソリュートゼロ |
+| 140 | 51 | Beam Zanber 2 | Magic Attack - Area (M) - ADF-25％\\nSevers matter with a beam extending from an orbal staff. | ビームザンバーⅡ |
+| 141 | 51 | Beam Zanber 2 | Magic Attack - Area (M) - ADF-25％\\nSevers matter with a beam extending from an orbal staff. | ビームザンバーⅡ |
+| 142 | 52 | Summon Divine Wolf | Support - Summon Divine Wolf Zeit (Support Character Turn)\\nTelepathically calls Zeit using an orbal staff. | 神狼召喚 |
+| 143 | 54 | Absolute Zero 2 | Magic Attack (Set) - Area (M) - Freeze (100％)\\nRapidly fires bullets of absolute-zero ice into a wide area. | アブソリュートゼロⅡ |
+| 144 | 54 | Absolute Zero 2 | Magic Attack (Set) - Area (M) - Freeze (100％)\\nRapidly fires bullets of absolute-zero ice into a wide area. | アブソリュートゼロⅡ |
+| 145 | 50 | Power Smash | Attack - Area (S) - Delay\\nStrikes opponent with great force, delaying their next turn. | パワースマッシュ |
+| 146 | 51 | Salamander | Attack - Line - Burn (40％)\\nA dragon-like wave of flames charges to incinerate enemies. | サラマンダー |
+| 147 | 52 | Crash Bomb | Attack (Set) - Area (L) - Blind (30％)\\nThrows a flash grenade with 30％ chance to blind. | クラッシュボム |
+| 148 | 53 | War Cry | Support - Self - CP+60 - HP-30％\\nStrengthens spirit with a battle cry and trades HP for CP. | ウォークライ |
+| 149 | 54 | Death Storm | Attack (Set) - Line - K.O. (20％)\\nOverwhelms enemies with a frenzied storm, bringing death. | デスストーム |
+| 150 | 50 | Power Smash 2 | Attack - Area (M) - Delay\\nSmashes enemy vitals, greatly delaying their next turn. | パワースマッシュⅡ |
+| 151 | 51 | Salamander 2 | Attack (Set) - Line - Burn (80％)\\nReleases a dragon-like wave of flames to cremate enemies. | サラマンダーⅡ |
+| 152 | 52 | Crash Bomb 2 | Attack (Set) - Area (L) - Blind (100％)\\nThrows a powerful flash grenade guaranteed to blind foes. | クラッシュボムⅡ |
+| 153 | 53 | War Cry 2 | Support - Self - CP+150 - HP-70％\\nBolsters spirit with a mighty battle cry and trades HP for CP. | ウォークライⅡ |
+| 154 | 54 | Death Storm 2 | Attack (Set) - Line - K.O. (60％)\\nTramples enemies with a bloodthirsty storm, bringing death. | デスストームⅡ |
+| 155 | 50 | Phantom Rush | Attack - One - SPD-30％\\nRestrains an enemy with rapid strikes. | ファントムラッシュ |
+| 156 | 51 | Broadaxe | Attack (Set) - Area (S)\\nA roundhouse kick with plenty of weight behind it. | ブロードアックス |
+| 157 | 52 | Trinity Card | Attack - Area (S) - Impede\\nGracefully casts a mystical card to cancel arts and crafts. | トリニティカード |
+| 158 | 53 | Weiss Card | Recovery - One - HP Heal (L) - Cures Ailments\\nThrows a shining white card to recover an ally's HP. | ヴァイスカード |
+| 159 | 54 | Seventh Shot | Attack (Set) - Area (L) - Confuse (25％)\\nBeats down enemies with an unusual billiard ball technique. | セブンスショット |
+| 160 | 50 | Phantom Rush 2 | Attack - One - SPD-50％\\nPins down an enemy with a flurry of attacks. | ファントムラッシュⅡ |
+| 161 | 51 | Broadaxe 2 | Attack (Set) - Area (M) - MOV-3\\nA sweeping roundhouse kick aimed at enemy weak points. | ブロードアックスⅡ |
+| 162 | 52 | Trinity Card 2 | Attack - Area (L) - Impede\\nSlings a hand of enhanced cards to cancel arts and crafts. | トリニティカードⅡ |
+| 163 | 50 | Dragon Claws | Attack - Area (S)\\nDraws in foes, then slashes with a sword. | 龍爪斬 |
+| 164 | 50 | Dragon Claws | Attack - Area (S)\\nDraws in foes, then slashes with a sword. | 龍爪斬 |
+| 165 | 50 | Dragon Claws | Attack - Area (S)\\nDraws in foes, then slashes with a sword. | 龍爪斬 |
+| 166 | 51 | Exploding Talisman | Attack - One - K.O. (50％)\\nThrows a kunai with a talisman attached and detonates it. | 爆雷符 |
+| 167 | 52 | Qilingong | Support - Self - STR/SPD+50％\\nConcentrates spirit, raising STR and SPD. | 麒麟功 |
+| 168 | 53 | Falling Moon | Attack - Line\\nThrows sword like a boomerang, eradicating foes. | 崩月輪 |
+| 169 | 54 | Moonlight Butterflies | Support - Self - SPD+50％ - Stealth\\nDisappears in a group of silvery butterflies. Yin's secret skill. | 月光蝶 |
+| 170 | 50 | True Dragon Claws | Attack - Area (M) - Poison (50％)\\nDraws in many foes, then slashes with a sword. | 真・龍爪斬 |
+| 171 | 51 | True Exploding Talisman | Attack - One - K.O. (90％)\\nThrows a kunai at an enemy's vitals before detonating it. | 真・爆雷符 |
+| 172 | 53 | True Falling Moon | Attack - Line - K.O. (25％)\\nThrows sword like a boomerang, slaying unguarded foes instantly. | 真・崩月輪 |
+| 173 | 53 | True Falling Moon | Attack - Line - K.O. (25％)\\nThrows sword like a boomerang, slaying unguarded foes instantly. | 真・崩月輪 |
+| 174 | 50 | Phoenix Rush | Attack - Area (L) - Burn (25％)\\nOverruns enemy lines with spirits aflame. | 鳳凰牙 |
+| 175 | 50 | Phoenix Rush | Attack - Area (L) - Burn (25％)\\nOverruns enemy lines with spirits aflame. | 鳳凰牙 |
+| 176 | 51 | Gale-Force Fang | Attack (Set) - Line - K.O. (25％)\\nBores through foes with a razor-sharp charge. | 疾風牙 |
+| 177 | 52 | Alpha Roar | Support - All - STR/DEF-25％\\nThe Divine Wolf's roar causes enemies to falter. | 覇王吼 |
+| 178 | 50 | Gale | Attack (Set) - Area (L)\\nThrashes foes with a high-speed slice followed by a whirlwind. | 疾風 |
+| 179 | 50 | Gale | Attack (Set) - Area (L)\\nThrashes foes with a high-speed slice followed by a whirlwind. | 疾風 |
+| 180 | 50 | Gale | Attack (Set) - Area (L)\\nThrashes foes with a high-speed slice followed by a whirlwind. | 疾風 |
+| 181 | 50 | Gale | Attack (Set) - Area (L)\\nThrashes foes with a high-speed slice followed by a whirlwind. | 疾風 |
+| 182 | 50 | Gale | Attack (Set) - Area (L)\\nThrashes foes with a high-speed slice followed by a whirlwind. | 疾風 |
+| 183 | 50 | Gale | Attack (Set) - Area (L)\\nThrashes foes with a high-speed slice followed by a whirlwind. | 疾風 |
+| 184 | 50 | Gale | Attack (Set) - Area (L)\\nThrashes foes with a high-speed slice followed by a whirlwind. | 疾風 |
+| 185 | 50 | Gale | Attack (Set) - Area (L)\\nThrashes foes with a high-speed slice followed by a whirlwind. | 疾風 |
+| 186 | 51 | Avalanche Cleaver | Attack - One - Confuse (50％)\\nA single controlled slash beheads enemies. | 大雪斬 |
+| 187 | 52 | Crashing Wave | Attack (Set) - Line - K.O. (50％)\\nDraws a sword at legendary speeds, causing a shockwave. | 洸破斬 |
+| 188 | 53 | Qinggong | Support - Self - STR/SPD+50％\\nHarmonizes the spirit to reach absolute selflessness. | 軽功 |
+| 189 | 54 | Arcane Gale |  | 裏疾風 |
+| 190 | 50 | S-Grenade | Attack - Area (M) - Sleep (25％)\\nUses a grenade launcher to shoot a hypnotic gas bomb. | Ｓグレネード |
+| 191 | 50 | S-Grenade | Attack - Area (M) - Sleep (25％)\\nUses a grenade launcher to shoot a hypnotic gas bomb. | Ｓグレネード |
+| 192 | 50 | S-Grenade | Attack - Area (M) - Sleep (25％)\\nUses a grenade launcher to shoot a hypnotic gas bomb. | Ｓグレネード |
+| 193 | 50 | S-Grenade | Attack - Area (M) - Sleep (25％)\\nUses a grenade launcher to shoot a hypnotic gas bomb. | Ｓグレネード |
+| 194 | 50 | S-Grenade | Attack - Area (M) - Sleep (25％)\\nUses a grenade launcher to shoot a hypnotic gas bomb. | Ｓグレネード |
+| 195 | 50 | S-Grenade | Attack - Area (M) - Sleep (25％)\\nUses a grenade launcher to shoot a hypnotic gas bomb. | Ｓグレネード |
+| 196 | 51 | Assault Rush | Attack - One - Delay\\nEmpties magazine to delay the target's next turn. | アサルトラッシュ |
+| 197 | 52 | Electromagnetic Net | Attack - Area (M) - MOV-2\\nDeploys a net to apprehend heinous criminals. | 電磁ネット |
+| 198 | 53 | Heavy Smash | Attack - Area (S) - STR-50％\\nAttacks with a halberd, weakening enemy attacks. | ヘビースマッシュ |
+| 199 | 54 | Smart Missiles | Attack (Set) - Area (M) - Burn (25％)\\nIncinerates the battlefield with a salvo of missiles. | スマートミサイル |
+| 200 | 50 | S-Grenade 2 | Attack - Area (L) - Sleep (75％)\\nLaunches a highly-hypnotic gas bomb into a wide area. | ＳグレネードⅡ |
+| 201 | 51 | Assault Rush 2 | Attack - One - Delay\\nUnloads several magazines to greatly delay enemy actions. | アサルトラッシュⅡ |
+| 202 | 52 | Electromagnetic Net 2 | Attack - Area (M) - MOV-5\\nApprehends groups of enemies with a fortified net. | 電磁ネットⅡ |
+| 203 | 50 | Shotgun | Attack (Set) - Area (M) - DEF-25％\\nUses a powerful shotgun to eliminate armor. | ショットガン |
+| 204 | 50 | Shotgun | Attack (Set) - Area (M) - DEF-25％\\nUses a powerful shotgun to eliminate armor. | ショットガン |
+| 205 | 50 | Shotgun | Attack (Set) - Area (M) - DEF-25％\\nUses a powerful shotgun to eliminate armor. | ショットガン |
+| 206 | 51 | Tough Love | Recovery - One - HP Heal (30％) - CP+40\\nEncourages an ally with clenched fists. | 愛の鉄拳 |
+| 207 | 52 | Victory Charge | Attack - Area (S) - Delay\\nRams foes with a disciplined charge, delaying their turns. | ビクトリーチャージ |
+| 208 | 53 | Judgment Bullet | Attack - One - K.O. (100％)\\nFires a powerful magnum round, prohibited within the city. | ジャッジバレット |
+| 209 | 54 | Attack Orders | Support - Area (L) - STR/SPD+25％\\nDraws out allies' will to fight. | 号令 |
+| 210 | 50 | Shotgun 2 | Attack (Set) - Area (M) - DEF-50％\\nUses a souped-up shotgun to pulverize armor from a distance. | ショットガンⅡ |
+| 211 | 52 | Victory Charge 2 | Attack - Area (M) - Delay\\nDelivers a shoulder tackle to multiple enemies, delaying their turns. | ビクトリーチャージⅡ |
+| 212 | 52 | Victory Charge 2 | Attack - Area (M) - Delay\\nDelivers a shoulder tackle to multiple enemies, delaying their turns. | ビクトリーチャージⅡ |
+| 213 | 53 | Judgment Bullet 2 | Attack - One - K.O. (100％)\\nDoles out punishment by way of a powerful magnum bullet. | ジャッジバレットⅡ |
+| 214 | 50 | Burst Kick | Attack - One - Faint (25％)\\nA weighty kick that sends enemies flying. | バーストキック |
+| 215 | 50 | Burst Kick | Attack - One - Faint (25％)\\nA weighty kick that sends enemies flying. | バーストキック |
+| 216 | 51 | Bear Tackle | Attack - Line - Faint (25％)\\nTramples over foes with a massive body charge. | ベアタックル |
+| 217 | 52 | Whirlwind Kick | Attack - Area (M) - Faint (50％)\\nDirectly strikes the enemy's core with a high-velocity kick. | 大回転旋風脚 |
+| 218 | 53 | Matchless Power | Support - Self - STR/SPD+50％\\nA jaeger skill that temporarily enhances the senses. | 絶倫攻 |
+| 219 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 220 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 221 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 222 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 223 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 224 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 225 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 226 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 227 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 228 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 229 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 230 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 231 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 232 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 233 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 234 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 235 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 236 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 237 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 238 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 239 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 240 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 241 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 242 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 243 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 244 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 245 | 1 | Tiger Charge | Attack - One - Seal (100％)\\nOverwhelms with a barrage, then charges like a tiger. | タイガーチャージ |
+| 246 | 2 | Rising Sun | Attack - Area (M)\\nLaunches foes upward, then attacks like a dragon. | ライジングサン |
+| 247 | 3 | Meteor Breaker | Attack - Area (L)\\nConverts soul into pure fighting spirit, then assails from above. | メテオブレイカー |
+| 248 | 1 | Tiger Charge 2 | Attack - One - Seal (100％)\\nOverwhelms any enemy with a practiced series of attacks. | タイガーチャージⅡ |
+| 249 | 2 | Rising Sun 2 | Attack - Area (M)\\nLaunches foes upward, then strikes like a raging storm. | ライジングサンⅡ |
+| 250 | 1 | Aura Rain | Recovery - Area (L) - Revive & HP Heal (50％) - Cures Ailments\\nA healing rain upon allies. If max CP, HP is fully healed. | オーラレイン |
+| 251 | 2 | Aerial Cannon | Magic Attack - Area (M)\\nFires condensed energy from the air as a bullet of light. | エアリアルカノン |
+| 252 | 3 | Divine Crusade | Magic Attack - Area (L)\\nFires a volley from ornate black and white orbal guns. | デバインクルセイド |
+| 253 | 1 | Aura Rain 2 | Recovery - All - Revive & HP Heal (50％) - Cures Ailments\\nA healing rain upon allies; DEF+25％. If max CP, fully heal HP. | オーラレインⅡ |
+| 254 | 2 | Aerial Cannon 2 | Magic Attack - Area (L)\\nFires concentrated energy from the air as a hail of light. | エアリアルカノンⅡ |
+| 255 | 1 | Ether Buster | Magic Attack - Line\\nTransforms the orbal staff to fire a powerful laser beam. | エーテルバスター |
+| 256 | 2 | Zero Field | Support - All - Complete Immunity\\nProtects all allies from one attack. If max CP, two attacks. | ゼロ・フィールド |
+| 257 | 3 | Eidolon Gear | Magic Attack - Line\\nBoards a mech developed by the Epstein Foundation and ZCF. | エイドロンギア |
+| 258 | 1 | Ether Buster 2 | Magic Attack - Line\\nTransforms the orbal staff to fire a max-output laser beam. | エーテルバスターⅡ |
+| 259 | 1 | Crimson Gale | Attack - Area (M) - Burn (50％)\\nIncinerates foes with a mighty whirlwind of flames. | クリムゾンゲイル |
+| 260 | 1 | Crimson Gale | Attack - Area (M) - Burn (50％)\\nIncinerates foes with a mighty whirlwind of flames. | クリムゾンゲイル |
+| 261 | 2 | Death Scorpion | Attack - Area (L)\\nFerociously charges. The blood of the War God boils within. | デススコルピオン |
+| 262 | 3 | Berserker | Attack - Area (L)\\nDeath Scorpion's precursor. Hunts foes with a massive rifle. | ベルゼルガー |
+| 263 | 1 | Crimson Gale 2 | Attack - Area (M) - Burn (100％)\\nReduces foes to ash with a blazing firestorm. | クリムゾンゲイルⅡ |
+| 264 | 2 | Death Scorpion 2 | Attack - Area (L)\\nRuthlessly charges. The blood of the War God slaughters all. | デススコルピオンⅡ |
+| 265 | 1 | Deadly Heaven | Attack - One\\nUnleashes a series of rapid kicks to weaken and rout a foe. | デッドリーヘヴン |
+| 266 | 2 | Akashic Arm | Magic Attack - Area (L)\\nObliviates life itself with a hollow arm manifested via Stigma. | アカシックアーム |
+| 267 | 1 | Deadly Heaven 2 | Attack - One\\nUnleashes a series of gatling kicks to decimate a foe. | デッドリーヘヴンⅡ |
+| 268 | 1 | Deadly Heaven 2 | Attack - One\\nUnleashes a series of gatling kicks to decimate a foe. | デッドリーヘヴンⅡ |
+| 269 | 1 | Paraselene Dance | Attack - All\\nBinds foes with claws and lunar light. | 幻月の舞 |
+| 270 | 1 | Paraselene Dance | Attack - All\\nBinds foes with claws and lunar light. | 幻月の舞 |
+| 271 | 1 | True Paraselene Dance | Attack - All\\nBinds with claws and rends foes under the moon's glow. | 真・幻月の舞 |
+| 272 | 1 | True Paraselene Dance | Attack - All\\nBinds with claws and rends foes under the moon's glow. | 真・幻月の舞 |
+| 273 | 1 | True Paraselene Dance | Attack - All\\nBinds with claws and rends foes under the moon's glow. | 真・幻月の舞 |
+| 274 | 1 | Fujin's Fury | Attack - Area (L)\\nDraws a sword and crashes down with the might of a wind god. | 風神烈破 |
+| 275 | 1 | Fujin's Fury | Attack - Area (L)\\nDraws a sword and crashes down with the might of a wind god. | 風神烈破 |
+| 276 | 1 | Fujin's Fury | Attack - Area (L)\\nDraws a sword and crashes down with the might of a wind god. | 風神烈破 |
+| 277 | 1 | Fujin's Fury | Attack - Area (L)\\nDraws a sword and crashes down with the might of a wind god. | 風神烈破 |
+| 278 | 1 | Fujin's Fury | Attack - Area (L)\\nDraws a sword and crashes down with the might of a wind god. | 風神烈破 |
+| 279 | 1 | Fujin's Fury | Attack - Area (L)\\nDraws a sword and crashes down with the might of a wind god. | 風神烈破 |
+| 280 | 1 | Fujin's Fury | Attack - Area (L)\\nDraws a sword and crashes down with the might of a wind god. | 風神烈破 |
+| 281 | 1 | Termination Slash - Black Paragon |  | 終の太刀-黒皇- |
+| 282 | 1 | Blast Storm | Attack - Area (M)\\nUses successive heavy weaponry to rain down fire. | ブラストストーム |
+| 283 | 1 | Blast Storm | Attack - Area (M)\\nUses successive heavy weaponry to rain down fire. | ブラストストーム |
+| 284 | 1 | Blast Storm | Attack - Area (M)\\nUses successive heavy weaponry to rain down fire. | ブラストストーム |
+| 285 | 1 | Blast Storm | Attack - Area (M)\\nUses successive heavy weaponry to rain down fire. | ブラストストーム |
+| 286 | 2 | Armed Forces | Attack - Line\\nRazes the battlefield with gunfire from two armored cars. | アームドフォース |
+| 287 | 1 | Blast Storm 2 | Attack - Area (M)\\nRains down fire with every last armament available. | ブラストストームⅡ |
+| 288 | 1 | Blast Storm 2 | Attack - Area (M)\\nRains down fire with every last armament available. | ブラストストームⅡ |
+| 289 | 1 | Justice Hammer | Attack - Area (S)\\nStrikes down evil with a righteous fist brimming with fury. | ジャスティスハンマー |
+| 290 | 1 | Justice Hammer | Attack - Area (S)\\nStrikes down evil with a righteous fist brimming with fury. | ジャスティスハンマー |
+| 291 | 2 | Justice Magnum | Attack - Area (L)\\nSlams enemies with an iron fist, then sends evil skyward. | ジャスティスマグナム |
+| 292 | 1 | Justice Hammer 2 | Attack - Area (M)\\nDecimates evil with a righteous fist brimming with wrath. | ジャスティスハンマーⅡ |
+| 293 | 1 | Justice Hammer 2 | Attack - Area (M)\\nDecimates evil with a righteous fist brimming with wrath. | ジャスティスハンマーⅡ |
+| 294 | 1 | Killing Driver | Attack - One - Faint (100％)\\nA close-quarter combat technique that has felled many foes. | キリングドライバー |
+| 295 | 1 | Killing Driver | Attack - One - Faint (100％)\\nA close-quarter combat technique that has felled many foes. | キリングドライバー |
+| 296 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 297 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 298 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 299 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 300 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 301 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 302 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 303 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 304 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 305 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 306 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 307 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 308 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 309 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 310 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 311 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 312 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 313 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 314 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 315 | 10 | Extend Hearts | Support - All - STR+25％ - CP+30\\nEncourages allies with burning passion, raising STR and CP. | エクステンドハーツ |
+| 316 | 11 | Quelling Smash | Attack - Area (M) - Seal (75％)\\nDives into a group of foes and spins with tonfas. | クゥエルスマッシュ |
+| 317 | 10 | Saintly Bullet | Recovery - Area (M) - HP Heal (70％) - DEF+25％\\nFires a special bullet, restoring health and endurance. | プリーストバレット |
+| 318 | 10 | Saintly Bullet | Recovery - Area (M) - HP Heal (70％) - DEF+25％\\nFires a special bullet, restoring health and endurance. | プリーストバレット |
+| 319 | 11 | Call to Surrender | Attack - Area (M) - STR-25％\\nDebilitates enemies with rapid-fire gunshots and a kick. | コールスレンダー |
+| 320 | 10 | C-Protection | Recovery - Area (M) - HP Regen - Physical Immunity\\nExtends an orbal barrier and healing field over an area. | Ｃ・プロテクション |
+| 321 | 10 | C-Protection | Recovery - Area (M) - HP Regen - Physical Immunity\\nExtends an orbal barrier and healing field over an area. | Ｃ・プロテクション |
+| 322 | 11 | Mega Zero Cannon | Magic Attack - Line - Freeze (100％)\\nFires an absolute zero laser of immense power. | メガゼロキャノン |
+| 323 | 10 | Burning Divider | Attack - Area (M) - Burn (100％)\\nStrikes the enemy formation with a burning stun halberd. | バーンディバイド |
+| 324 | 10 | Burning Divider | Attack - Area (M) - Burn (100％)\\nStrikes the enemy formation with a burning stun halberd. | バーンディバイド |
+| 325 | 11 | Fire Drake | Attack - Area (L) - Faint (100％)\\nLets loose a volley of gunfire from his favored gun. | ファイアドレイク |
+| 326 | 10 | Wild Joker | Support - Area (M) - SPD+50％ - Accelerate\\nDeals a mystical card that destroys the time barrier. | ドロージョーカー |
+| 327 | 10 | Wild Joker | Support - Area (M) - SPD+50％ - Accelerate\\nDeals a mystical card that destroys the time barrier. | ドロージョーカー |
+| 328 | 11 | Hasta Luego | Debilitate - Area (M) - SPD-50％ - Delay\\nSlows enemies by tripping them when they least expect it. | ファントムレイター |
+| 329 | 10 | Ogre Needles | Attack - Area (M) - K.O. (50％)\\nThrows innumerable kunai coated with a deadly poison. | 鬼針 |
+| 330 | 10 | Ogre Needles | Attack - Area (M) - K.O. (50％)\\nThrows innumerable kunai coated with a deadly poison. | 鬼針 |
+| 331 | 10 | Dance of the Moon | Support - Area (M) - SPD+25％ - CP+30\\nSprinkles an incense handed down to Yin, raising SPD and CP. | 月舞 |
+| 332 | 10 | Void Fang | Attack - All - Delay\\nRuns like the wind through enemy lines. | 空牙 |
+| 333 | 10 | Void Fang | Attack - All - Delay\\nRuns like the wind through enemy lines. | 空牙 |
+| 334 | 11 | Howl | Debilitate - All - Delay - DEF-25％\\nEnemies cower at the sound of the Divine Wolf's roar. | 遠吠え |
+| 335 | 10 | Electromagnetic Net β | Attack - Area (M) - SPD-50％\\nDeploys an electromagnetic net to greatly impede movement. | 電磁ネットβ |
+| 336 | 10 | Electromagnetic Net β | Attack - Area (M) - SPD-50％\\nDeploys an electromagnetic net to greatly impede movement. | 電磁ネットβ |
+| 337 | 10 | Electromagnetic Net β | Attack - Area (M) - SPD-50％\\nDeploys an electromagnetic net to greatly impede movement. | 電磁ネットβ |
+| 338 | 10 | Electromagnetic Net β | Attack - Area (M) - SPD-50％\\nDeploys an electromagnetic net to greatly impede movement. | 電磁ネットβ |
+| 339 | 10 | Electromagnetic Net β | Attack - Area (M) - SPD-50％\\nDeploys an electromagnetic net to greatly impede movement. | 電磁ネットβ |
+| 340 | 11 | Energy Missile | Recovery - Area (M) - HP Heal (60％) - EP Heal (30％)\\nFires a special round that renews stamina and orbal energy. | エナジーミサイル |
+| 341 | 10 | Resounding Orders | Support - All - STR/SPD+50％\\nGives out a commanding order to greatly boost morale. | 大轟令 |
+| 342 | 10 | Resounding Orders | Support - All - STR/SPD+50％\\nGives out a commanding order to greatly boost morale. | 大轟令 |
+| 343 | 11 | Crack Shot | Attack - Area (M) - DEF-25％\\nShatters enemy defenses with an armor-piercing shot. | クラックショット |
+| 344 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 345 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 346 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 347 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 348 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 349 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 350 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 351 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 352 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 353 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 354 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 355 | 25 | Star Blast | #176I#177I - Attack - Area (L)\\nAttacks with a lightning bullet and a rapid charge. | スターブラスト |
+| 356 | 26 | Omega Strike | #176I#178I - Attack - Area (M)\\nSeals enemies in a barrier, then shatters it. | Ωストライク |
+| 357 | 27 | Burning Rage | #176I#179I - Attack - Area (M)\\nUnloads a barrage of attacks from both sides. | バーニングレイジ |
+| 358 | 25 | Cold Gehenna | #177I#178I - Magic Attack - Area (L) - Freeze (50％)\\nShoots a projectile of orbal energy at absolute zero. | コールドゲヘナ |
+| 359 | 26 | Riot Star | #177I#179I - Attack - Area (L)\\nPins down foes with gunfire for a coordinated assault. | ライアットスター |
+| 360 | 27 | Haken Storm | #178I#179I - Attack - Area (L)\\nAn inescapable surprise attack amplified by a temporal delay. | ハーケンストーム |
+| 361 | 28 | Brave Hearts | #176I#184I - Attack - Area (L)\\nShowcases heroic spirit through continuous pincer attacks. | ブレイブハーツ |
+| 362 | 29 | Strike Heaven | #176I#180I - Attack - Area (L)\\nHurls enemies upward and unleashes a swift assault. | ストライクヘヴン |
+| 363 | 30 | Southern Cross | #177I#184I - Attack - Area (L)\\nFires at will, riddling enemies with bullets. | サザンクロス |
+| 364 | 31 | Akashic Star | #177I#180I - Magic Attack - Area (L)\\nSummons a magical sphere to burst down onto enemies. | アカシックスター |
+| 365 | 32 | Blast Hammer | #178I#184I - Attack - Area (L)\\nReleases a charged blast of energy from a transformed orbal staff. | ブラストハンマー |
+| 366 | 33 | Sigma Ascension | #178I#180I - Magic Attack - Area (L)\\nAmbushes enemies and encircles them with bullets of light. | Σアセンション |
+| 367 | 34 | Howling Raid | #179I#184I - Attack - Area (L)\\nCoordinated attacks shake the earth and reduce foes to ash. | ハウリングレイド |
+| 368 | 35 | Last Rebellion | #179I#180I - Attack - Area (L)\\nA high-speed, bloodthirsty charge through the battlefield. | ラストリベリオン |
+| 369 | 36 | Blue Breaker | #180I#184I - Attack - Area (M)\\nStylishly seals foes in a blue barrier, then launches a fusillade. | ブルーブレイカー |
+| 370 | 37 | Twin Dragon Strike | #176I#187I - Attack - Area (L)\\nCharges in total lockstep to strike a single point. | 比翼双竜撃 |
+| 371 | 38 | Hearts of Iron | #176I#185I - Attack - Area (M)\\nFractures the earth with an assault fueled by two iron wills. | ハーツオブアイアン |
+| 372 | 25 | Star Blast 2 | #176I#177I - Attack - Area (L)\\nShocks enemies with piercing lightning and charging assault. | スターブラストⅡ |
+| 373 | 25 | Star Blast 2 | #176I#177I - Attack - Area (L)\\nShocks enemies with piercing lightning and charging assault. | スターブラストⅡ |
+| 374 | 25 | Star Blast 2 | #176I#177I - Attack - Area (L)\\nShocks enemies with piercing lightning and charging assault. | スターブラストⅡ |
+| 375 | 25 | Star Blast 2 | #176I#177I - Attack - Area (L)\\nShocks enemies with piercing lightning and charging assault. | スターブラストⅡ |
+| 376 | 26 | Omega Strike 2 | #176I#178I - Attack - Area (L)\\nSeals enemies in a stronger barrier, then obliterates it. | ΩストライクⅡ |
+| 377 | 27 | Burning Rage 2 | #176I#179I - Attack - Area (M)\\nAnnihilates enemies with a raging barrage from both sides. | バーニングレイジⅡ |
+| 378 | 28 | Brave Hearts 2 | #176I#184I - Attack - Area (L)\\nShowcases heroic spirit through explosive pincer attacks. | ブレイブハーツⅡ |
+| 379 | 28 | Brave Hearts 2 | #176I#184I - Attack - Area (L)\\nShowcases heroic spirit through explosive pincer attacks. | ブレイブハーツⅡ |
+| 380 | 28 | Brave Hearts 2 | #176I#184I - Attack - Area (L)\\nShowcases heroic spirit through explosive pincer attacks. | ブレイブハーツⅡ |
+| 381 | 28 | Brave Hearts 2 | #176I#184I - Attack - Area (L)\\nShowcases heroic spirit through explosive pincer attacks. | ブレイブハーツⅡ |
+| 382 | 29 | Strike Heaven 2 | #176I#180I - Attack - Area (L)\\nLaunches enemies skyward and unleashes lightning-fast blows. | ストライクヘヴンⅡ |
+| 383 | 39 | True Twin Dragon Strike | #176I#187I - Attack - Area (L)\\nCharges with perfect harmony to exterminate enemies. | 真・比翼双竜撃 |
+| 384 | 39 | True Twin Dragon Strike | #176I#187I - Attack - Area (L)\\nCharges with perfect harmony to exterminate enemies. | 真・比翼双竜撃 |
+| 385 | 39 | True Twin Dragon Strike | #176I#187I - Attack - Area (L)\\nCharges with perfect harmony to exterminate enemies. | 真・比翼双竜撃 |
+| 386 | 39 | True Twin Dragon Strike | #176I#187I - Attack - Area (L)\\nCharges with perfect harmony to exterminate enemies. | 真・比翼双竜撃 |
+| 387 | 39 | True Twin Dragon Strike | #176I#187I - Attack - Area (L)\\nCharges with perfect harmony to exterminate enemies. | 真・比翼双竜撃 |
+| 388 | 39 | True Twin Dragon Strike | #176I#187I - Attack - Area (L)\\nCharges with perfect harmony to exterminate enemies. | 真・比翼双竜撃 |
+| 389 | 39 | True Twin Dragon Strike | #176I#187I - Attack - Area (L)\\nCharges with perfect harmony to exterminate enemies. | 真・比翼双竜撃 |
+| 390 | 39 | True Twin Dragon Strike | #176I#187I - Attack - Area (L)\\nCharges with perfect harmony to exterminate enemies. | 真・比翼双竜撃 |
+| 391 | 40 | Hearts of Iron 2 | #176I#185I - Attack - Area (L)\\nSunders enemies, body and soul, with a unified assault. | ハーツオブアイアンⅡ |
+| 392 | 25 | Star Blast 3 | #176I#177I - Attack - Area (L)\\nBlows away foes with a lightning blast and fierce charge. | スターブラストⅢ |
+| 393 | 25 | Star Blast 3 | #176I#177I - Attack - Area (L)\\nBlows away foes with a lightning blast and fierce charge. | スターブラストⅢ |
+| 394 | 25 | Star Blast 3 | #176I#177I - Attack - Area (L)\\nBlows away foes with a lightning blast and fierce charge. | スターブラストⅢ |
+| 395 | 25 | Star Blast 3 | #176I#177I - Attack - Area (L)\\nBlows away foes with a lightning blast and fierce charge. | スターブラストⅢ |
+| 396 | 26 | Omega Strike 3 | #176I#178I - Attack - Area (L) \\nSeals enemies in an indestructible barrier, then shatters it. | ΩストライクⅢ |
+| 397 | 27 | Burning Rage 3 | #176I#179I - Attack - Area (L)\\nObliterates enemies with an unstoppable pincer attack. | バーニングレイジⅢ |
 
 ## 等级属性公式
 
