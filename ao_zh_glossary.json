@@ -13147,7 +13147,7 @@
     {
       "bitmap_part": 0,
       "bit": 5,
-      "zh_cn": "研制料理人",
+      "zh_cn": "炎之料理人",
       "en": "Zhang Hui Would Be Proud",
       "en_desc": "Obtained all recipes.",
       "ja": "炎の料理人",
@@ -13160,7 +13160,7 @@
     {
       "bitmap_part": 0,
       "bit": 6,
-      "zh_cn": "天眼之智者",
+      "zh_cn": "天眼的智者",
       "en": "Superlative Slaying Squad",
       "en_desc": "Collected all information in the Combat Notebook.",
       "ja": "天眼の識者",
@@ -13173,7 +13173,7 @@
     {
       "bitmap_part": 0,
       "bit": 7,
-      "zh_cn": "市民英雄",
+      "zh_cn": "市民的英雄",
       "en": "Hometown Hero",
       "en_desc": "Completed all quests.",
       "ja": "市民のヒーロー",
@@ -13264,7 +13264,7 @@
     {
       "bitmap_part": 1,
       "bit": 6,
-      "zh_cn": "D之追随者",
+      "zh_cn": "D之追及者",
       "en": "Terminal Diagnosis",
       "en_desc": "Analyzed every D∴G cult terminal.",
       "ja": "Ｄの追及者",
@@ -13420,7 +13420,7 @@
     {
       "bitmap_part": 3,
       "bit": 2,
-      "zh_cn": "与艾约的再会",
+      "zh_cn": "预兆~新的生活",
       "en": "Out of Sight, Out of Mine",
       "en_desc": "Completed Chapter 1, 'Bright Skies, Gathering Storms.'",
       "ja": "予兆～新たなる日々",
@@ -13472,7 +13472,7 @@
     {
       "bitmap_part": 3,
       "bit": 6,
-      "zh_cn": "艾尼格玛II用户",
+      "zh_cn": "艾尼格玛Ⅱ用户",
       "en": "An Enigma No More",
       "en_desc": "Learned how to use the Enigma II.",
       "ja": "エニグマⅡユーザー",

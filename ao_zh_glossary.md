@@ -1204,16 +1204,16 @@
 | 0 | 2 | 4 | 宝箱猎人 | Trails to Treazure | トレジャーハンター | Opened every treasure chest. | 全ての宝箱を開いた。 |
 | 0 | 3 | 3 | 小说爱好者 | Walking on Sunshine | ノベルラバー | Collected all volumes of Sunshine Agn㍉s. | 『陽溜まりのアニエス』を全巻集めた。 |
 | 0 | 4 | 5 | 回路收藏家 | Order in the Quartz | クオーツコレクター | Collected all quartz. | 全てのクオーツを集めた。 |
-| 0 | 5 | 9 | 研制料理人 | Zhang Hui Would Be Proud | 炎の料理人 | Obtained all recipes. | 全てのレシピを集めた。 |
-| 0 | 6 | 1 | 天眼之智者 | Superlative Slaying Squad | 天眼の識者 | Collected all information in the Combat Notebook. | 戦闘手帳の全情報を集めた。 |
-| 0 | 7 | 2 | 市民英雄 | Hometown Hero | 市民のヒーロー | Completed all quests. | 全ての支援要請を達成した。 |
+| 0 | 5 | 9 | 炎之料理人 | Zhang Hui Would Be Proud | 炎の料理人 | Obtained all recipes. | 全てのレシピを集めた。 |
+| 0 | 6 | 1 | 天眼的智者 | Superlative Slaying Squad | 天眼の識者 | Collected all information in the Combat Notebook. | 戦闘手帳の全情報を集めた。 |
+| 0 | 7 | 2 | 市民的英雄 | Hometown Hero | 市民のヒーロー | Completed all quests. | 全ての支援要請を達成した。 |
 | 1 | 0 | 19 | 千战之志士 | Writ of Habeas Corpses | 千討の志士 | Defeated over 2,000 enemies. | 敵を２０００体以上倒した。 |
 | 1 | 1 | 18 | 历战之胜者 | Voluntary Monslaughter | 歴戦の勝者 | Achieved 1,000 victories in battle. | 戦闘勝利回数１０００回達成。 |
 | 1 | 2 | 17 | 奋战之猛士 | Right to Remain Violent | 奮戦の猛者 | Achieved 500 victories in battle. | 戦闘勝利回数５００回達成。 |
 | 1 | 3 | 16 | 力战之勇士 | Petty Monst-emeanor | 力戦の勇士 | Achieved 100 victories in battle. | 戦闘勝利回数１００回達成。 |
 | 1 | 4 | 12 | 百万富翁 | Mira Mira on the Wall | 百万長者 | Had one million mira or more. | 所持金が1,000,000ミラ以上になった。 |
 | 1 | 5 | 32 | 组合技大师 | Co-op Clobbering | コンビマスター | Learned every combo craft. | 全てのコンビクラフトを修得した。 |
-| 1 | 6 | 36 | D之追随者 | Terminal Diagnosis | Ｄの追及者 | Analyzed every D∴G cult terminal. | Ｄ∴Ｇ教団の端末を全て解析した。 |
+| 1 | 6 | 36 | D之追及者 | Terminal Diagnosis | Ｄの追及者 | Analyzed every D∴G cult terminal. | Ｄ∴Ｇ教団の端末を全て解析した。 |
 | 1 | 7 | 11 | 不拘一格的厨师 | Gehenna's Kitchen | 型破りシェフ | Created all peculiar dishes. | 全ての予想外料理を作成した。 |
 | 2 | 0 | 7 | 导力车发烧友 | Tender Loving Car | カーマニア | Collected all orbal car customization options. | 全ての導力車オプションを集めた。 |
 | 2 | 1 | 6 | 家具收藏家 | Decorated Officers | インテリアコレクター | Collected all decorations and Enigma covers. | 全ての家具とエニグマカバーを集めた。 |
@@ -1225,11 +1225,11 @@
 | 2 | 7 | 20 | 雷光一闪 | Flash Mob | 雷光一閃 | Achieved 100 pre-emptive attacks. | 先制攻撃発生回数１００回達成。 |
 | 3 | 0 | 43 | 短暂的休息 | Rest and Revolution | 束の間の休息 | Completed the Intermission, 'A Brief Respite.' | インターミッション『束の間の休息』をクリアした。 |
 | 3 | 1 | 42 | 西塞姆利亚通商会议 | Tower of Terror | 西ゼムリア通商会議 | Completed Chapter 2, 'The West Zemuria Trade Conference.' | 第２章『西ゼムリア通商会議』をクリアした。 |
-| 3 | 2 | 41 | 与艾约的再会 | Out of Sight, Out of Mine | 予兆～新たなる日々 | Completed Chapter 1, 'Bright Skies, Gathering Storms.' | 第１章『予兆～新たなる日々』をクリアした。 |
+| 3 | 2 | 41 | 预兆~新的生活 | Out of Sight, Out of Mine | 予兆～新たなる日々 | Completed Chapter 1, 'Bright Skies, Gathering Storms.' | 第１章『予兆～新たなる日々』をクリアした。 |
 | 3 | 3 | 40 | D之残影 | A Demon Twice Removed | Ｄの残影 | Completed the Prologue, 'Traces of D.' | 序章『Ｄの残影』をクリアした。 |
 | 3 | 4 | 35 | 传说的搜查官 | Nightmare on East Street | 伝説の捜査官 | Completed the game on nightmare difficulty. | 難易度ナイトメアでゲームをクリアした。 |
 | 3 | 5 | 34 | 干练的搜查官 | No Hard Feelings? | 腕利き捜査官 | Completed the game on hard or nightmare difficulty. | 難易度ハード以上でゲームをクリアした。 |
-| 3 | 6 |  | 艾尼格玛II用户 | An Enigma No More | エニグマⅡユーザー | Learned how to use the Enigma II. | エニグマⅡが使えるようになった。 |
+| 3 | 6 |  | 艾尼格玛Ⅱ用户 | An Enigma No More | エニグマⅡユーザー | Learned how to use the Enigma II. | エニグマⅡが使えるようになった。 |
 | 3 | 7 | 29 | 至境之珠 | Masterful Artistry | 至境の珠 | Gain access to all seven master arts. | 七属性のマスターアーツを使えるようにした。 |
 | 4 | 0 | 53 | 与莉夏的羁绊 | Mao Than a Feeling | リーシャとの絆 | Forged a strong bond with Rixia. | リーシャとの絆を深めた。 |
 | 4 | 1 | 52 | 与瓦吉的羁绊 | Heavenly Host | ワジとの絆 | Forged a strong bond with Wazy. | ワジとの絆を深めた。 |
