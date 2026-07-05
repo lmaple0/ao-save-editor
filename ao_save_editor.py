@@ -61,7 +61,14 @@ def load_item_i18n():
     return result
 
 
-ITEM_I18N = load_item_i18n()
+ITEM_I18N = None
+
+
+def get_item_i18n():
+    global ITEM_I18N
+    if ITEM_I18N is None:
+        ITEM_I18N = load_item_i18n()
+    return ITEM_I18N
 
 
 def load_achievement_i18n():
@@ -84,7 +91,16 @@ def load_achievement_i18n():
     return result
 
 
-ACHIEVEMENT_I18N = load_achievement_i18n()
+ACHIEVEMENT_I18N = None
+
+
+def get_achievement_i18n():
+    global ACHIEVEMENT_I18N
+    if ACHIEVEMENT_I18N is None:
+        ACHIEVEMENT_I18N = load_achievement_i18n()
+    return ACHIEVEMENT_I18N
+
+
 APP_TITLES = {
     "zh_cn": "碧之轨迹 NISA版 存档修改器",
     "en": "Trails to Azure NISA Save Editor",
@@ -602,13 +618,13 @@ def item_name(code, lang="zh_cn"):
     zh_name = ITEM_DB.get(code, ("", f"未知(0x{code:04x})"))[1]
     if lang == "zh_cn":
         return zh_name
-    localized = ITEM_I18N.get(code, {}).get(lang)
+    localized = get_item_i18n().get(code, {}).get(lang)
     return localized or zh_name
 
 
 def item_search_text(code):
     names = [ITEM_DB.get(code, ("", ""))[1]]
-    i18n = ITEM_I18N.get(code, {})
+    i18n = get_item_i18n().get(code, {})
     names.extend([i18n.get("en", ""), i18n.get("ja", "")])
     names.append(f"0x{code:04x}")
     return " ".join(name for name in names if name).lower()
@@ -617,7 +633,7 @@ def item_search_text(code):
 def achievement_name(part, bit, zh_name, lang="zh_cn"):
     if lang == "zh_cn":
         return zh_name
-    localized = ACHIEVEMENT_I18N.get((part, bit), {}).get(lang)
+    localized = get_achievement_i18n().get((part, bit), {}).get(lang)
     return localized or zh_name
 
 
@@ -1071,7 +1087,31 @@ class SaveEditor(tk.Tk):
         self._build_quick_tab(frm_quick)
 
         self._register_localizable_widgets(self)
+        self._nb.bind("<<NotebookTabChanged>>", self._on_tab_changed)
         self._apply_ui_language(initial=True)
+
+    def _active_tab_key(self):
+        if not hasattr(self, "_nb") or not hasattr(self, "_tab_defs"):
+            return None
+        selected = self._nb.select()
+        for frame, key in self._tab_defs:
+            if str(frame) == selected:
+                return key
+        return None
+
+    def _is_active_tab(self, key):
+        return self._active_tab_key() == key
+
+    def _on_tab_changed(self, _event=None):
+        key = self._active_tab_key()
+        if key == "物品" and getattr(self, "_items_ui_dirty", True):
+            self._refresh_items_ui()
+        elif key == "成就":
+            self._refresh_achievements_ui()
+        elif key == "战斗手册":
+            self._refresh_battle_ui()
+        elif key == "角色外观":
+            self._refresh_appearance_ui()
 
     def _var(self, name):
         if name not in self._vars:
@@ -1143,7 +1183,10 @@ class SaveEditor(tk.Tk):
             self._tree.heading("code", text=self._t("代码"))
             self._tree.heading("name", text=self._t("名称"))
             self._tree.heading("qty", text=self._t("数量"))
-            self._refresh_items_ui()
+            if self._is_active_tab("物品"):
+                self._refresh_items_ui()
+            else:
+                self._items_ui_dirty = True
         if hasattr(self, "_team_labels"):
             for i, lbl in enumerate(self._team_labels):
                 lbl.config(text=self._t(f"队员 {i+1}"))
@@ -1281,6 +1324,7 @@ class SaveEditor(tk.Tk):
         self._tree.configure(yscrollcommand=scrollbar.set)
 
         self._items_data = {}  # code -> qty
+        self._items_ui_dirty = True
 
     def _current_item_language(self):
         return self._current_ui_language()
@@ -1304,13 +1348,17 @@ class SaveEditor(tk.Tk):
         self._refresh_items_ui()
 
     def _refresh_items_ui(self):
+        if not hasattr(self, "_tree"):
+            return
         self._tree.delete(*self._tree.get_children())
         if self.save.data is None:
+            self._items_ui_dirty = False
             return
         lang = self._current_item_language()
         for code, qty in sorted(self._items_data.items()):
             name = item_name(code, lang)
             self._tree.insert("", "end", values=(f"0x{code:04x}", name, qty))
+        self._items_ui_dirty = False
 
     def _filter_items(self):
         keyword = self._search_var.get().lower().strip()
@@ -1418,6 +1466,7 @@ class SaveEditor(tk.Tk):
 
         # 物品
         self._items_data = s.read_items()
+        self._items_ui_dirty = True
 
         # P0: 成就 + 战斗
         self._refresh_achievements_ui()
@@ -1425,8 +1474,9 @@ class SaveEditor(tk.Tk):
         # P1: 外观
         self._refresh_appearance_ui()
 
-        # 刷新物品列表 UI
-        self._refresh_items_ui()
+        # Treeview 行插入较慢；只在物品页可见时刷新，切到物品页时再补刷。
+        if self._is_active_tab("物品"):
+            self._refresh_items_ui()
 
     def _on_char_edit(self, offset, valtype, event):
         """角色属性编辑时写回"""
@@ -1553,7 +1603,10 @@ class SaveEditor(tk.Tk):
         for code in item_codes_for_categories("props_normal", "props_cooking", "food", "book", "fishing_bait", "fishing_fish"):
             self._items_data[code] = 99
         self.save.write_items(self._items_data)
-        self._refresh_items_ui()
+        if self._is_active_tab("物品"):
+            self._refresh_items_ui()
+        else:
+            self._items_ui_dirty = True
         self._set_status("全消耗品/食材/书籍/鱼 → 99")
 
     def _quick_max_circuits(self):
@@ -1565,7 +1618,10 @@ class SaveEditor(tk.Tk):
         for code in item_codes_for_categories("circuit_normal", "circuit_core"):
             self._items_data[code] = 99
         self.save.write_items(self._items_data)
-        self._refresh_items_ui()
+        if self._is_active_tab("物品"):
+            self._refresh_items_ui()
+        else:
+            self._items_ui_dirty = True
         self._set_status("全回路 → 99")
 
     def _quick_max_equipment(self):
@@ -1577,7 +1633,10 @@ class SaveEditor(tk.Tk):
         for code in item_codes_by_prefix("equipment", "fishing_rod"):
             self._items_data[code] = 1
         self.save.write_items(self._items_data)
-        self._refresh_items_ui()
+        if self._is_active_tab("物品"):
+            self._refresh_items_ui()
+        else:
+            self._items_ui_dirty = True
         self._set_status("全装备 → 1")
 
     # ---- P0: 成就标签页 ----

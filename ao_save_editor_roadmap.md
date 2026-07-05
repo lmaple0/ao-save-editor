@@ -18,6 +18,7 @@
 | zstd 压缩 | — | 直接读写 NISA savedata.dat |
 | GUI 全局本地化 | zh_cn / en / ja | 已实现主要控件、角色名、耀晶片、战斗统计、成就、外观、快捷操作、物品/成就数据名称切换；缺失数据回退中文 |
 | 2026-07-05 深度 review 修复 | GUI / 数据写回 / 快捷操作 | 修复角色属性写入宽度、输入框写回、未加载存档状态提示、成就语言方法引用、队员标签切换、翻译重复 key |
+| 2026-07-05 性能优化 | 打开存档 / 物品页 / 本地化数据 | 物品 Treeview 改为可见时刷新并加入 dirty flag；物品/成就 i18n JSON 改为懒加载 |
 
 ---
 
@@ -178,6 +179,8 @@
 - [x] 成就名称中/英/日显示切换（基于 `ao_achievement_i18n.json`，56/56 覆盖）
 - [x] 收录 magic CSV 战技/导力魔法英文本地化参考（`ao_magic_i18n.json`；CSV 行号不等同于存档战技槽位 ID，日文列需复核编码）
 - [x] 主要 GUI 全局多语言切换（标签页、按钮、角色、耀晶片、战斗统计、成就、外观、快捷操作、物品/成就名称）
+- [x] 打开存档时延迟刷新物品 Treeview，并缓存物品页 dirty 状态
+- [x] 物品/成就本地化 JSON 懒加载
 - [ ] 战技 / S 技编辑器本地化与技能 ID 映射确认
 - [ ] EXP 等级曲线表接入与调级 UI
 - [ ] 存档批量备份/恢复管理
@@ -198,4 +201,5 @@
 - 本地化表：`CHARACTER_NAME_I18N`、`UI_TRANSLATIONS`、`ROLE_DISPLAY_I18N` 无重复 key。
 - 样例存档：完成加载、读取物品、写回、zstd 保存、再次加载。
 - CLI：在临时存档副本验证 `--mira 123456 --dp 400 --sepith max --max-like`，保存后可再次加载并生成 `.bak`。
+- 性能：确认 `SaveData.load()` 和 `read_items()` 为毫秒级；GUI 打开存档时不再立即重建物品 Treeview。
 - GUI：当前 Codex bundled Python 缺 Tcl/Tk，未在该运行时中启动实测；需在带 Tkinter 的 Windows Python 中验证窗口交互。
