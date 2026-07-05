@@ -1079,7 +1079,9 @@ class SaveEditor(tk.Tk):
         return self._vars[name]
 
     def _lb_entry(self, parent, label, var_name, row, col, width=10):
-        ttk.Label(parent, text=label).grid(row=row, column=col*2, sticky="e", padx=2, pady=1)
+        lbl = ttk.Label(parent, text=self._t(label))
+        lbl._ui_base_text = label
+        lbl.grid(row=row, column=col*2, sticky="e", padx=2, pady=1)
         e = ttk.Entry(parent, textvariable=self._var(var_name), width=width)
         e.grid(row=row, column=col*2+1, sticky="w", padx=2, pady=1)
         return e
@@ -1183,18 +1185,18 @@ class SaveEditor(tk.Tk):
         f2 = ttk.LabelFrame(frm, text=self._t("耀晶片"))
         f2.grid(row=0, column=1, sticky="nw", padx=5, pady=5)
         for i, name in enumerate(["地","水","火","风","时","空","幻"]):
-            self._lb_entry(f2, self._t(name), f"sepith_{name}", i, 0)
+            self._lb_entry(f2, name, f"sepith_{name}", i, 0)
 
         f3 = ttk.LabelFrame(frm, text=self._t("游戏时间"))
         f3.grid(row=1, column=0, sticky="nw", padx=5, pady=5)
         self._lb_entry(f3, "总秒数", "time_s", 0, 0)
-        self._lb_entry(f3, self._t("小时"), "time_h", 1, 0)
+        self._lb_entry(f3, "小时", "time_h", 1, 0)
         self._lb_entry(f3, "分", "time_m", 2, 0)
         self._lb_entry(f3, "秒", "time_sec", 3, 0)
 
         f4 = ttk.LabelFrame(frm, text=self._t("难度 (0=Easy 1=Normal 2=Hard 3=Nightmare)"))
         f4.grid(row=1, column=1, sticky="nw", padx=5, pady=5)
-        self._lb_entry(f4, self._t("难度"), "difficulty", 0, 0, width=4)
+        self._lb_entry(f4, "难度", "difficulty", 0, 0, width=4)
 
     def _build_char_tab(self, frm):
         canvas = tk.Canvas(frm)
