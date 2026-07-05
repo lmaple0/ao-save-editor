@@ -91,6 +91,41 @@ APP_TITLES = {
     "ja": "碧の軌跡 NISA版 セーブエディタ",
 }
 
+CHARACTER_NAME_I18N = {
+    "Lloyd": {"zh_cn": "罗伊德", "en": "Lloyd", "ja": "ロイド"},
+    "Elie": {"zh_cn": "艾莉", "en": "Elie", "ja": "エリィ"},
+    "Tio": {"zh_cn": "缇欧", "en": "Tio", "ja": "ティオ"},
+    "Randy": {"zh_cn": "兰迪", "en": "Randy", "ja": "ランディ"},
+    "Wazy": {"zh_cn": "瓦吉", "en": "Wazy", "ja": "ワジ"},
+    "Rixia": {"zh_cn": "莉夏", "en": "Rixia", "ja": "リーシャ"},
+    "Zeit": {"zh_cn": "蔡特", "en": "Zeit", "ja": "ツァイト"},
+    "Arios": {"zh_cn": "亚里欧斯", "en": "Arios", "ja": "アリオス"},
+    "Noel": {"zh_cn": "诺艾尔", "en": "Noel", "ja": "ノエル"},
+    "Dudley": {"zh_cn": "达德利", "en": "Dudley", "ja": "ダドリー"},
+    "Garcia": {"zh_cn": "加尔西亚", "en": "Garcia", "ja": "ガルシア"},
+    "琪雅": {"zh_cn": "琪雅", "en": "KeA", "ja": "キーア"},
+    "艾莉": {"zh_cn": "艾莉", "en": "Elie", "ja": "エリィ"},
+    "缇欧": {"zh_cn": "缇欧", "en": "Tio", "ja": "ティオ"},
+    "兰迪": {"zh_cn": "兰迪", "en": "Randy", "ja": "ランディ"},
+    "诺艾尔": {"zh_cn": "诺艾尔", "en": "Noel", "ja": "ノエル"},
+    "瓦吉": {"zh_cn": "瓦吉", "en": "Wazy", "ja": "ワジ"},
+    "莉夏": {"zh_cn": "莉夏", "en": "Rixia", "ja": "リーシャ"},
+    "达德利": {"zh_cn": "达德利", "en": "Dudley", "ja": "ダドリー"},
+    "伊莉雅": {"zh_cn": "伊莉雅", "en": "Ilya", "ja": "イリア"},
+    "塞西尔": {"zh_cn": "塞西尔", "en": "Cecile", "ja": "セシル"},
+    "芙兰": {"zh_cn": "芙兰", "en": "Fran", "ja": "フラン"},
+    "苏莉": {"zh_cn": "苏莉", "en": "Sully", "ja": "シャーリィ"},
+    "银": {"zh_cn": "银", "en": "Silver", "ja": "銀"},
+    "秦": {"zh_cn": "秦", "en": "Xin", "ja": "シン"},
+    "雷蒙德": {"zh_cn": "雷蒙德", "en": "Raymond", "ja": "レイモンド"},
+    "罗伊德": {"zh_cn": "罗伊德", "en": "Lloyd", "ja": "ロイド"},
+    "艾约": {"zh_cn": "艾约", "en": "Ayo", "ja": "エア"},
+}
+
+
+def character_name(name, lang="zh_cn"):
+    return CHARACTER_NAME_I18N.get(name, {}).get(lang) or name
+
 
 UI_TRANSLATIONS = {
     "zh_cn": {
@@ -166,6 +201,37 @@ UI_TRANSLATIONS = {
         "全装备 → 1": "全装备 → 1",
         "已加载: ...{fdir}/{fname}  ({size} bytes)": "已加载: ...{fdir}/{fname}  ({size} bytes)",
         "已保存到: {fp}": "已保存到: {fp}",
+        "地": "地",
+        "水": "水",
+        "火": "火",
+        "风": "风",
+        "时": "时",
+        "空": "空",
+        "幻": "幻",
+        "最大HP": "最大HP",
+        "当前HP": "当前HP",
+        "等级": "等级",
+        "最大EP": "最大EP",
+        "当前EP": "当前EP",
+        "CP": "CP",
+        "EXP": "EXP",
+        "STR": "STR",
+        "DEF": "DEF",
+        "ATS": "ATS",
+        "ADF": "ADF",
+        "战斗次数": "战斗次数",
+        "失败次数": "失败次数",
+        "胜利次数": "胜利次数",
+        "逃跑次数": "逃跑次数",
+        "重试战斗次数": "重试战斗次数",
+        "S战技使用次数": "S战技使用次数",
+        "组合战技次数": "组合战技次数",
+        "先制攻击次数": "先制攻击次数",
+        "被偷袭次数": "被偷袭次数",
+        "杀敌数": "杀敌数",
+        "爆灵次数": "爆灵次数",
+        "队员 {num}": "队员 {num}",
+        "{name} LV99 满HP/EP/CP": "{name} LV99 满HP/EP/CP",
     },
     "en": {
         "打开存档 (savedata.dat)": "Open savedata.dat",
@@ -240,6 +306,37 @@ UI_TRANSLATIONS = {
         "全装备 → 1": "All equipment → 1",
         "已加载: ...{fdir}/{fname}  ({size} bytes)": "Loaded: ...{fdir}/{fname}  ({size} bytes)",
         "已保存到: {fp}": "Saved to: {fp}",
+        "地": "Earth",
+        "水": "Water",
+        "火": "Fire",
+        "风": "Wind",
+        "时": "Time",
+        "空": "Space",
+        "幻": "Mirage",
+        "最大HP": "MAX HP",
+        "当前HP": "Current HP",
+        "等级": "Level",
+        "最大EP": "MAX EP",
+        "当前EP": "Current EP",
+        "CP": "CP",
+        "EXP": "EXP",
+        "STR": "STR",
+        "DEF": "DEF",
+        "ATS": "ATS",
+        "ADF": "ADF",
+        "战斗次数": "Total Battles Fought",
+        "失败次数": "Character K.O.s Suffered",
+        "胜利次数": "Victories",
+        "逃跑次数": "Times Escaped",
+        "重试战斗次数": "Battles Retried",
+        "S战技使用次数": "S-Breaks Used",
+        "组合战技次数": "Support Crafts Used",
+        "先制攻击次数": "Party Advantages Gained",
+        "被偷袭次数": "Enemy Advantages Suffered",
+        "杀敌数": "Enemies Slain",
+        "爆灵次数": "Burst Uses",
+        "队员 {num}": "Member {num}",
+        "{name} LV99 满HP/EP/CP": "{name} Lv99 Max HP/EP/CP",
     },
     "ja": {
         "打开存档 (savedata.dat)": "セーブデータを開く (savedata.dat)",
@@ -314,6 +411,37 @@ UI_TRANSLATIONS = {
         "全装备 → 1": "装備 → 1",
         "已加载: ...{fdir}/{fname}  ({size} bytes)": "読込済み: ...{fdir}/{fname}  ({size} bytes)",
         "已保存到: {fp}": "保存先: {fp}",
+        "地": "地",
+        "水": "水",
+        "火": "火",
+        "风": "風",
+        "时": "時",
+        "空": "空",
+        "幻": "幻",
+        "最大HP": "最大HP",
+        "当前HP": "現在HP",
+        "等级": "レベル",
+        "最大EP": "MAX EP",
+        "当前EP": "現在EP",
+        "CP": "CP",
+        "EXP": "EXP",
+        "STR": "STR",
+        "DEF": "DEF",
+        "ATS": "ATS",
+        "ADF": "ADF",
+        "战斗次数": "戦闘回数",
+        "失败次数": "戦闘不能回数",
+        "胜利次数": "勝利回数",
+        "逃跑次数": "逃走回数",
+        "重试战斗次数": "再戦回数",
+        "S战技使用次数": "Sクラフト使用回数",
+        "组合战技次数": "サポートクラフト使用回数",
+        "先制攻击次数": "先制攻撃回数",
+        "被偷袭次数": "奇襲を受けた回数",
+        "杀敌数": "撃破数",
+        "爆灵次数": "バースト使用回数",
+        "队员 {num}": "メンバー {num}",
+        "{name} LV99 满HP/EP/CP": "{name} Lv99 HP/EP/CP最大",
     },
 }
 
@@ -477,7 +605,12 @@ def achievement_name(part, bit, zh_name, lang="zh_cn"):
 
 
 def ui_text(text, lang="zh_cn"):
-    return UI_TRANSLATIONS.get(lang, {}).get(text, UI_TRANSLATIONS["zh_cn"].get(text, text))
+    translated = UI_TRANSLATIONS.get(lang, {}).get(text)
+    if translated is not None:
+        return translated
+    if text in CHARACTER_NAME_I18N:
+        return character_name(text, lang)
+    return UI_TRANSLATIONS["zh_cn"].get(text, text)
 
 ITEM_ORDERED_CODES = tuple(code for cat_codes in ITEM_WRITE_ORDER for code in cat_codes)
 ITEM_ORDERED_SET = set(ITEM_ORDERED_CODES)
@@ -570,19 +703,19 @@ ROLE_DISPLAY_I18N = {
     3: {"en": "Randy", "ja": "ランディ"},
     4: {"en": "Wazy (Early)", "ja": "ワジ(初期)"},
     5: {"en": "Wazy (Late)", "ja": "ワジ(後期)"},
-    6: {"en": "Yin", "ja": "銀"},
+    6: {"en": "Silver", "ja": "銀"},
     7: {"en": "Rixia", "ja": "リーシャ"},
     8: {"en": "Zeit", "ja": "ツァイト"},
     9: {"en": "Arios", "ja": "アリオス"},
     10: {"en": "Noel", "ja": "ノエル"},
     11: {"en": "Dudley", "ja": "ダドリー"},
     12: {"en": "Garcia", "ja": "ガルシア"},
-    13: {"en": "Monster (Jumping Cat)", "ja": "魔獣(跳ね猫)"},
+    13: {"en": "Flying Feline", "ja": "魔獣(跳ね猫)"},
     14: {"en": "Arios (NPC)", "ja": "アリオス(NPC)"},
     15: {"en": "Lloyd (NPC1)", "ja": "ロイド(NPC1)"},
     16: {"en": "Lloyd (NPC2)", "ja": "ロイド(NPC2)"},
     17: {"en": "Raymond", "ja": "レイモンド"},
-    18: {"en": "Qin", "ja": "ツィン"},
+    18: {"en": "Xin", "ja": "シン"},
     19: {"en": "Shirley", "ja": "シズク"},
     20: {"en": "KeA", "ja": "キーア"},
 }
@@ -987,18 +1120,11 @@ class SaveEditor(tk.Tk):
                 self._nb.tab(frame, text=self._t(key))
         for widget in self.winfo_children():
             self._translate_widget_tree(widget, lang)
-        if hasattr(self, "_item_lang_var"):
-            self._item_lang_var.set({"zh_cn": "zh_cn:中文", "en": "en:English", "ja": "ja:日本語"}.get(lang, "zh_cn:中文"))
-            self._update_item_name_heading()
-            if hasattr(self, "_tree"):
-                self._refresh_items_ui()
-        if hasattr(self, "_achievement_lang_var"):
-            self._achievement_lang_var.set({"zh_cn": "zh_cn:中文", "en": "en:English", "ja": "ja:日本語"}.get(lang, "zh_cn:中文"))
-            self._on_achievement_language_changed()
         if hasattr(self, "_tree"):
             self._tree.heading("code", text=self._t("代码"))
-            self._tree.heading("name", text=self._t("名称") + (" (" + ITEM_LANGUAGE_LABELS.get(self._current_item_language(), self._current_item_language()) + ")"))
+            self._tree.heading("name", text=self._t("名称"))
             self._tree.heading("qty", text=self._t("数量"))
+            self._refresh_items_ui()
         if hasattr(self, "_appearance_vars"):
             self._refresh_appearance_ui()
         if hasattr(self, "_battle_vars"):
@@ -1025,27 +1151,27 @@ class SaveEditor(tk.Tk):
         frm.grid_columnconfigure(0, weight=1)
         frm.grid_columnconfigure(2, weight=1)
 
-        f1 = ttk.LabelFrame(frm, text="资源")
+        f1 = ttk.LabelFrame(frm, text=self._t("资源"))
         f1.grid(row=0, column=0, sticky="nw", padx=5, pady=5)
         self._lb_entry(f1, "Mira", "mira", 0, 0)
         self._lb_entry(f1, "DP", "dp", 1, 0)
         self._lb_entry(f1, "Medal", "medal", 2, 0)
 
-        f2 = ttk.LabelFrame(frm, text="耀晶片")
+        f2 = ttk.LabelFrame(frm, text=self._t("耀晶片"))
         f2.grid(row=0, column=1, sticky="nw", padx=5, pady=5)
         for i, name in enumerate(["地","水","火","风","时","空","幻"]):
-            self._lb_entry(f2, name, f"sepith_{name}", i, 0)
+            self._lb_entry(f2, self._t(name), f"sepith_{name}", i, 0)
 
-        f3 = ttk.LabelFrame(frm, text="游戏时间")
+        f3 = ttk.LabelFrame(frm, text=self._t("游戏时间"))
         f3.grid(row=1, column=0, sticky="nw", padx=5, pady=5)
         self._lb_entry(f3, "总秒数", "time_s", 0, 0)
         self._lb_entry(f3, "时", "time_h", 1, 0)
         self._lb_entry(f3, "分", "time_m", 2, 0)
         self._lb_entry(f3, "秒", "time_sec", 3, 0)
 
-        f4 = ttk.LabelFrame(frm, text="难度 (0=Easy 1=Normal 2=Hard 3=Nightmare)")
+        f4 = ttk.LabelFrame(frm, text=self._t("难度 (0=Easy 1=Normal 2=Hard 3=Nightmare)"))
         f4.grid(row=1, column=1, sticky="nw", padx=5, pady=5)
-        self._lb_entry(f4, "难度", "difficulty", 0, 0, width=4)
+        self._lb_entry(f4, self._t("难度"), "difficulty", 0, 0, width=4)
 
     def _build_char_tab(self, frm):
         canvas = tk.Canvas(frm)
@@ -1062,12 +1188,12 @@ class SaveEditor(tk.Tk):
                    "cp":"CP","exp":"EXP","str":"STR","def":"DEF","ats":"ATS","adf":"ADF"}
 
         # 表头
-        ttk.Label(scrollable, text="角色", width=8).grid(row=0, column=0, sticky="w")
+        ttk.Label(scrollable, text=self._t("角色"), width=8).grid(row=0, column=0, sticky="w")
         for j, a in enumerate(attrs):
-            ttk.Label(scrollable, text=attr_cn[a], width=8).grid(row=0, column=j+1)
+            ttk.Label(scrollable, text=self._t(attr_cn[a]), width=8).grid(row=0, column=j+1)
 
         for i, (name, base) in enumerate(CHAR_BASES.items()):
-            ttk.Label(scrollable, text=name, font=("", 9, "bold")).grid(row=i+1, column=0, sticky="w")
+            ttk.Label(scrollable, text=character_name(name, self._current_ui_language()), font=("", 9, "bold")).grid(row=i+1, column=0, sticky="w")
             for j, attr in enumerate(attrs):
                 vn = f"char_{name}_{attr}"
                 offset = base + CHAR_ATTR[attr]
@@ -1084,15 +1210,15 @@ class SaveEditor(tk.Tk):
                 tk.ToolTip = None  # skip; just show offset in status
 
     def _build_team_tab(self, frm):
-        f1 = ttk.LabelFrame(frm, text="队伍编成 (0=罗伊德, 1=艾莉, ..., 255=空)")
+        f1 = ttk.LabelFrame(frm, text=self._t("队伍编成 (0=罗伊德, 1=艾莉, ..., 255=空)"))
         f1.grid(row=0, column=0, sticky="nw", padx=5, pady=5)
         for i in range(8):
-            self._lb_entry(f1, f"队员 {i+1}", f"team_{i}", i, 0, width=5)
+            self._lb_entry(f1, self._t("队员 {num}", num=i+1), f"team_{i}", i, 0, width=5)
 
-        f2 = ttk.LabelFrame(frm, text="好感度 (0-? )")
+        f2 = ttk.LabelFrame(frm, text=self._t("好感度 (0-? )"))
         f2.grid(row=0, column=1, sticky="nw", padx=5, pady=5)
         for i, (name, off) in enumerate(LIKEABILITY.items()):
-            self._lb_entry(f2, name, f"like_{name}", i, 0, width=5)
+            self._lb_entry(f2, character_name(name, self._current_ui_language()), f"like_{name}", i, 0, width=5)
 
     def _build_items_tab(self, frm):
         frm.grid_columnconfigure(0, weight=1)
@@ -1101,31 +1227,20 @@ class SaveEditor(tk.Tk):
         # 搜索栏
         bar = ttk.Frame(frm)
         bar.grid(row=0, column=0, sticky="ew", padx=5, pady=2)
-        ttk.Label(bar, text="搜索:").pack(side="left")
+        ttk.Label(bar, text=self._t("搜索:")).pack(side="left")
         self._search_var = tk.StringVar()
         ttk.Entry(bar, textvariable=self._search_var, width=20).pack(side="left", padx=5)
-        ttk.Button(bar, text="过滤", command=self._filter_items).pack(side="left", padx=2)
-        ttk.Button(bar, text="全部显示", command=self._refresh_items).pack(side="left", padx=2)
-        ttk.Label(bar, text="名称语言:").pack(side="left", padx=(12, 2))
-        self._item_lang_var = tk.StringVar(value="zh_cn:中文")
-        self._item_lang_combo = ttk.Combobox(
-            bar,
-            textvariable=self._item_lang_var,
-            values=[f"{key}:{label}" for key, label in ITEM_LANGUAGE_LABELS.items()],
-            width=12,
-            state="readonly",
-        )
-        self._item_lang_combo.pack(side="left", padx=2)
-        self._item_lang_combo.bind("<<ComboboxSelected>>", self._on_item_language_changed)
-        ttk.Button(bar, text="选中 → 99", command=self._items_set_selected).pack(side="right", padx=2)
-        ttk.Button(bar, text="选中 → 0", command=lambda: self._items_set_selected(0)).pack(side="right", padx=2)
+        ttk.Button(bar, text=self._t("过滤"), command=self._filter_items).pack(side="left", padx=2)
+        ttk.Button(bar, text=self._t("全部显示"), command=self._refresh_items).pack(side="left", padx=2)
+        ttk.Button(bar, text=self._t("选中 → 99"), command=self._items_set_selected).pack(side="right", padx=2)
+        ttk.Button(bar, text=self._t("选中 → 0"), command=lambda: self._items_set_selected(0)).pack(side="right", padx=2)
 
         # Treeview
         cols = ("code", "name", "qty")
         self._tree = ttk.Treeview(frm, columns=cols, show="headings", selectmode="extended")
-        self._tree.heading("code", text="代码")
-        self._tree.heading("name", text="名称")
-        self._tree.heading("qty", text="数量")
+        self._tree.heading("code", text=self._t("代码"))
+        self._tree.heading("name", text=self._t("名称"))
+        self._tree.heading("qty", text=self._t("数量"))
         self._tree.column("code", width=70)
         self._tree.column("name", width=350)
         self._tree.column("qty", width=60)
@@ -1139,21 +1254,15 @@ class SaveEditor(tk.Tk):
         self._items_data = {}  # code -> qty
 
     def _current_item_language(self):
-        value = self._item_lang_var.get() if hasattr(self, "_item_lang_var") else None
-        if not value:
-            value = self._ui_lang_var.get() if hasattr(self, "_ui_lang_var") else "zh_cn:中文"
-        return value.split(":", 1)[0]
+        return self._current_ui_language()
 
     def _update_item_name_heading(self):
-        if not hasattr(self, "_tree"):
-            return
-        lang = self._current_item_language()
-        label = ITEM_LANGUAGE_LABELS.get(lang, lang)
-        self._tree.heading("name", text=f"名称 ({label})")
+        if hasattr(self, "_tree"):
+            self._tree.heading("name", text=self._t("名称"))
 
     def _on_item_language_changed(self, _event=None):
         self._update_item_name_heading()
-        self._filter_items()
+        self._refresh_items_ui()
 
     def _refresh_items(self):
         self._items_data = self.save.read_items()
@@ -1205,33 +1314,33 @@ class SaveEditor(tk.Tk):
     def _build_quick_tab(self, frm):
         frm.grid_columnconfigure(0, weight=1)
 
-        ttk.Label(frm, text="一键操作 (先打开存档!)", font=("", 12, "bold")).pack(pady=10)
+        ttk.Label(frm, text=self._t("一键操作 (先打开存档!)"), font=("", 12, "bold")).pack(pady=10)
 
-        f1 = ttk.LabelFrame(frm, text="Max 资源")
+        f1 = ttk.LabelFrame(frm, text=self._t("Max 资源"))
         f1.pack(padx=10, pady=5, fill="x")
-        ttk.Button(f1, text="Mira → 9,999,999", command=lambda: self._quick_set("mira", 9999999)).pack(side="left", padx=5, pady=5)
-        ttk.Button(f1, text="全耀晶片 → 9,999", command=self._quick_max_sepith).pack(side="left", padx=5, pady=5)
-        ttk.Button(f1, text="DP → 400", command=lambda: self._quick_set("dp", 400)).pack(side="left", padx=5, pady=5)
+        ttk.Button(f1, text=self._t("Mira → 9,999,999"), command=lambda: self._quick_set("mira", 9999999)).pack(side="left", padx=5, pady=5)
+        ttk.Button(f1, text=self._t("全耀晶片 → 9,999"), command=self._quick_max_sepith).pack(side="left", padx=5, pady=5)
+        ttk.Button(f1, text=self._t("DP → 400"), command=lambda: self._quick_set("dp", 400)).pack(side="left", padx=5, pady=5)
 
-        f2 = ttk.LabelFrame(frm, text="Max 队伍角色")
+        f2 = ttk.LabelFrame(frm, text=self._t("Max 队伍角色"))
         f2.pack(padx=10, pady=5, fill="x")
         for name in CHAR_BASES.keys():
-            ttk.Button(f2, text=f"{name} LV99 满HP/EP/CP",
+            ttk.Button(f2, text=self._t("{name} LV99 满HP/EP/CP", name=character_name(name, self._current_ui_language())),
                        command=lambda n=name: self._quick_max_char(n)).pack(side="left", padx=2, pady=2)
 
-        f3 = ttk.LabelFrame(frm, text="好感度一键满")
+        f3 = ttk.LabelFrame(frm, text=self._t("好感度一键满"))
         f3.pack(padx=10, pady=5, fill="x")
-        ttk.Button(f3, text="全员好感度 → 255", command=self._quick_max_like).pack(side="left", padx=5, pady=5)
+        ttk.Button(f3, text=self._t("全员好感度 → 255"), command=self._quick_max_like).pack(side="left", padx=5, pady=5)
 
-        f_items = ttk.LabelFrame(frm, text="Max 物品")
+        f_items = ttk.LabelFrame(frm, text=self._t("Max 物品"))
         f_items.pack(padx=10, pady=5, fill="x")
-        ttk.Button(f_items, text="全消耗品/食材/书籍 → 99", command=self._quick_max_consumables).pack(side="left", padx=5, pady=5)
-        ttk.Button(f_items, text="全回路 → 99 (含核心回路)", command=self._quick_max_circuits).pack(side="left", padx=5, pady=5)
-        ttk.Button(f_items, text="全装备 → 1", command=self._quick_max_equipment).pack(side="left", padx=5, pady=5)
+        ttk.Button(f_items, text=self._t("全消耗品/食材/书籍 → 99"), command=self._quick_max_consumables).pack(side="left", padx=5, pady=5)
+        ttk.Button(f_items, text=self._t("全回路 → 99 (含核心回路)"), command=self._quick_max_circuits).pack(side="left", padx=5, pady=5)
+        ttk.Button(f_items, text=self._t("全装备 → 1"), command=self._quick_max_equipment).pack(side="left", padx=5, pady=5)
 
-        f_monster = ttk.LabelFrame(frm, text="怪物图鉴")
+        f_monster = ttk.LabelFrame(frm, text=self._t("怪物图鉴"))
         f_monster.pack(padx=10, pady=5, fill="x")
-        ttk.Button(f_monster, text="一键全开怪物图鉴", command=self._unlock_all_monsters).pack(side="left", padx=5, pady=5)
+        ttk.Button(f_monster, text=self._t("一键全开怪物图鉴"), command=self._unlock_all_monsters).pack(side="left", padx=5, pady=5)
 
     # ---- 数据绑定 ----
     def _refresh_all(self):
@@ -1446,18 +1555,6 @@ class SaveEditor(tk.Tk):
         bar.pack(fill="x", padx=5, pady=5)
         ttk.Button(bar, text="全解锁", command=self._ach_unlock_all).pack(side="left", padx=3)
         ttk.Button(bar, text="全锁定", command=self._ach_lock_all).pack(side="left", padx=3)
-        ttk.Label(bar, text="名称语言:").pack(side="left", padx=(12, 2))
-        self._achievement_lang_var = tk.StringVar(value="zh_cn:中文")
-        self._achievement_lang_combo = ttk.Combobox(
-            bar,
-            textvariable=self._achievement_lang_var,
-            values=[f"{key}:{label}" for key, label in ITEM_LANGUAGE_LABELS.items()],
-            width=12,
-            state="readonly",
-        )
-        self._achievement_lang_combo.pack(side="left", padx=2)
-        self._achievement_lang_combo.bind("<<ComboboxSelected>>", self._on_achievement_language_changed)
-
         for part, bit, name in ACHIEVEMENT_NAMES:
             var = tk.BooleanVar()
             cb = ttk.Checkbutton(scrollable, text=achievement_name(part, bit, name, self._current_achievement_language()), variable=var)
@@ -1465,10 +1562,7 @@ class SaveEditor(tk.Tk):
             self._ach_vars.append((part, bit, var, cb))
 
     def _current_achievement_language(self):
-        value = self._achievement_lang_var.get() if hasattr(self, "_achievement_lang_var") else None
-        if not value:
-            value = self._ui_lang_var.get() if hasattr(self, "_ui_lang_var") else "zh_cn:中文"
-        return value.split(":", 1)[0]
+        return self._current_ui_language()
 
     def _on_achievement_language_changed(self, _event=None):
         lang = self._current_achievement_language()
@@ -1481,8 +1575,9 @@ class SaveEditor(tk.Tk):
         if self.save.data is None:
             return
         bits = self.save.read_achievements()
-        for part, bit, var, _checkbox in self._ach_vars:
+        for part, bit, var, checkbox in self._ach_vars:
             var.set(bool(bits.get(part, [0]*8)[bit]))
+        self._on_achievement_language_changed()
 
     def _write_achievements_from_gui(self):
         bits = {i: [0]*8 for i in range(7)}
@@ -1507,10 +1602,10 @@ class SaveEditor(tk.Tk):
     # ---- P0: 战斗手册标签页 ----
     def _build_battle_tab(self, frm):
         frm.grid_columnconfigure(0, weight=1)
-        ttk.Label(frm, text="战斗统计数据 (修改后保存生效)", font=("", 11, "bold")).grid(row=0, column=0, columnspan=2, pady=10)
+        ttk.Label(frm, text=self._t("战斗统计数据 (修改后保存生效)"), font=("", 11, "bold")).grid(row=0, column=0, columnspan=2, pady=10)
         self._battle_vars = {}
         for i, (name, off) in enumerate(BATTLE_STATS.items()):
-            ttk.Label(frm, text=name).grid(row=i+1, column=0, sticky="e", padx=5, pady=2)
+            ttk.Label(frm, text=self._t(name)).grid(row=i+1, column=0, sticky="e", padx=5, pady=2)
             var = tk.StringVar(value="0")
             ttk.Entry(frm, textvariable=var, width=12).grid(row=i+1, column=1, sticky="w", padx=5)
             self._battle_vars[name] = var
@@ -1533,7 +1628,7 @@ class SaveEditor(tk.Tk):
     # ---- P1: 角色外观标签页 ----
     def _build_appearance_tab(self, frm):
         frm.grid_columnconfigure(0, weight=1)
-        ttk.Label(frm, text="角色显示外观 (修改对应槽位的模型)", font=("", 11, "bold")).grid(row=0, column=0, columnspan=2, pady=10)
+        ttk.Label(frm, text=self._t("角色显示外观 (修改对应槽位的模型)"), font=("", 11, "bold")).grid(row=0, column=0, columnspan=2, pady=10)
 
         SLOT_LABELS = ["显示1","显示2","显示3","显示4","显示5","显示6",
                        "显示7","显示8","显示9","显示10","显示11","显示12"]
@@ -1542,7 +1637,7 @@ class SaveEditor(tk.Tk):
         opts = [f"{k}:{role_display_name(k, self._current_ui_language())}" for k in sorted(ROLE_DISPLAY_NAMES)]
 
         for i in range(12):
-            ttk.Label(frm, text=SLOT_LABELS[i]).grid(row=i+1, column=0, sticky="e", padx=5, pady=2)
+            ttk.Label(frm, text=self._t(SLOT_LABELS[i])).grid(row=i+1, column=0, sticky="e", padx=5, pady=2)
             var = tk.StringVar(value=f"0:{role_display_name(0, self._current_ui_language())}")
             cb = ttk.Combobox(frm, textvariable=var, values=opts, width=20, state="readonly")
             cb.grid(row=i+1, column=1, sticky="w", padx=5)

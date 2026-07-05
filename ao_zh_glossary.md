@@ -140,20 +140,20 @@
 | 0x02EA | 克洛斯贝尔时代周刊号外 | Crossbell Times - Special Edition | クロスベルタイムズ号外 | book |
 | 0x02EB | 克洛斯贝尔时代周刊⑽ | Crossbell Times - Issue 10 | クロスベルタイムズ⑩ | book |
 | 0x02EC | 克洛斯贝尔时代周刊⑾ | Crossbell Times - Issue 11 | クロスベルタイムズ⑪ | book |
-| 0x02EE | 沐浴阳光的阿尼艾斯 1卷 | Sunshine Agn㍉s - Ch. 1 | 陽溜りのアニエス　１巻 | book |
-| 0x02EF | 沐浴阳光的阿尼艾斯 2卷 | Sunshine Agn㍉s - Ch. 2 | 陽溜りのアニエス　２巻 | book |
-| 0x02F0 | 沐浴阳光的阿尼艾斯 3卷 | Sunshine Agn㍉s - Ch. 3 | 陽溜りのアニエス　３巻 | book |
-| 0x02F1 | 沐浴阳光的阿尼艾斯 4卷 | Sunshine Agn㍉s - Ch. 4 | 陽溜りのアニエス　４巻 | book |
-| 0x02F2 | 沐浴阳光的阿尼艾斯 5卷 | Sunshine Agn㍉s - Ch. 5 | 陽溜りのアニエス　５巻 | book |
-| 0x02F3 | 沐浴阳光的阿尼艾斯 6卷 | Sunshine Agn㍉s - Ch. 6 | 陽溜りのアニエス　６巻 | book |
-| 0x02F4 | 沐浴阳光的阿尼艾斯 7卷 | Sunshine Agn㍉s - Ch. 7 | 陽溜りのアニエス　７巻 | book |
-| 0x02F5 | 沐浴阳光的阿尼艾斯 8卷 | Sunshine Agn㍉s - Ch. 8 | 陽溜りのアニエス　８巻 | book |
-| 0x02F6 | 沐浴阳光的阿尼艾斯 9卷 | Sunshine Agn㍉s - Ch. 9 | 陽溜りのアニエス　９巻 | book |
-| 0x02F7 | 沐浴阳光的阿尼艾斯 10卷 | Sunshine Agn㍉s - Ch. 10 | 陽溜りのアニエス　10巻 | book |
-| 0x02F8 | 沐浴阳光的阿尼艾斯 11卷 | Sunshine Agn㍉s - Ch. 11 | 陽溜りのアニエス　11巻 | book |
-| 0x02F9 | 沐浴阳光的阿尼艾斯 12卷 | Sunshine Agn㍉s - Ch. 12 | 陽溜りのアニエス　12巻 | book |
-| 0x02FA | 沐浴阳光的阿尼艾斯 13卷 | Sunshine Agn㍉s - Ch. 13 | 陽溜りのアニエス　13巻 | book |
-| 0x02FB | 沐浴阳光的阿尼艾斯 14卷 | Sunshine Agn㍉s - Ch. 14 | 陽溜りのアニエス　14巻 | book |
+| 0x02EE | 沐浴阳光的阿尼艾斯 1卷 | Sunshine Agnes - Ch. 1 | 陽溜りのアニエス　１巻 | book |
+| 0x02EF | 沐浴阳光的阿尼艾斯 2卷 | Sunshine Agnes - Ch. 2 | 陽溜りのアニエス　２巻 | book |
+| 0x02F0 | 沐浴阳光的阿尼艾斯 3卷 | Sunshine Agnes - Ch. 3 | 陽溜りのアニエス　３巻 | book |
+| 0x02F1 | 沐浴阳光的阿尼艾斯 4卷 | Sunshine Agnes - Ch. 4 | 陽溜りのアニエス　４巻 | book |
+| 0x02F2 | 沐浴阳光的阿尼艾斯 5卷 | Sunshine Agnes - Ch. 5 | 陽溜りのアニエス　５巻 | book |
+| 0x02F3 | 沐浴阳光的阿尼艾斯 6卷 | Sunshine Agnes - Ch. 6 | 陽溜りのアニエス　６巻 | book |
+| 0x02F4 | 沐浴阳光的阿尼艾斯 7卷 | Sunshine Agnes - Ch. 7 | 陽溜りのアニエス　７巻 | book |
+| 0x02F5 | 沐浴阳光的阿尼艾斯 8卷 | Sunshine Agnes - Ch. 8 | 陽溜りのアニエス　８巻 | book |
+| 0x02F6 | 沐浴阳光的阿尼艾斯 9卷 | Sunshine Agnes - Ch. 9 | 陽溜りのアニエス　９巻 | book |
+| 0x02F7 | 沐浴阳光的阿尼艾斯 10卷 | Sunshine Agnes - Ch. 10 | 陽溜りのアニエス　10巻 | book |
+| 0x02F8 | 沐浴阳光的阿尼艾斯 11卷 | Sunshine Agnes - Ch. 11 | 陽溜りのアニエス　11巻 | book |
+| 0x02F9 | 沐浴阳光的阿尼艾斯 12卷 | Sunshine Agnes - Ch. 12 | 陽溜りのアニエス　12巻 | book |
+| 0x02FA | 沐浴阳光的阿尼艾斯 13卷 | Sunshine Agnes - Ch. 13 | 陽溜りのアニエス　13巻 | book |
+| 0x02FB | 沐浴阳光的阿尼艾斯 14卷 | Sunshine Agnes - Ch. 14 | 陽溜りのアニエス　14巻 | book |
 | 0x02FC | 幻兽调查报告书 | Cryptid Investigation Report | 幻獣調査報告書 | book |
 
 ### 事件-剧情 (47)
@@ -1202,7 +1202,7 @@
 | 0 | 0 | 10 | 三星厨师 | Serve and Perfect | 三ツ星シェフ | Created all supreme dishes. | 全ての大成功料理を作成した。 |
 | 0 | 1 | 8 | 爆钓王 | Undebaitable Angler | 爆釣王 | Caught all fish. | 全ての魚を釣った。 |
 | 0 | 2 | 4 | 宝箱猎人 | Trails to Treazure | トレジャーハンター | Opened every treasure chest. | 全ての宝箱を開いた。 |
-| 0 | 3 | 3 | 小说爱好者 | Walking on Sunshine | ノベルラバー | Collected all volumes of Sunshine Agn㍉s. | 『陽溜まりのアニエス』を全巻集めた。 |
+| 0 | 3 | 3 | 小说爱好者 | Walking on Sunshine | ノベルラバー | Collected all volumes of Sunshine Agnes. | 『陽溜まりのアニエス』を全巻集めた。 |
 | 0 | 4 | 5 | 回路收藏家 | Order in the Quartz | クオーツコレクター | Collected all quartz. | 全てのクオーツを集めた。 |
 | 0 | 5 | 9 | 炎之料理人 | Zhang Hui Would Be Proud | 炎の料理人 | Obtained all recipes. | 全てのレシピを集めた。 |
 | 0 | 6 | 1 | 天眼的智者 | Superlative Slaying Squad | 天眼の識者 | Collected all information in the Combat Notebook. | 戦闘手帳の全情報を集めた。 |
