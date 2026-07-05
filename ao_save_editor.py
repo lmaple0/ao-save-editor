@@ -85,6 +85,12 @@ def load_achievement_i18n():
 
 
 ACHIEVEMENT_I18N = load_achievement_i18n()
+APP_TITLES = {
+    "zh_cn": "碧之轨迹 NISA版 存档修改器",
+    "en": "Trails to Azure NISA Save Editor",
+    "ja": "碧の軌跡 NISA版 セーブエディタ",
+}
+
 
 UI_TRANSLATIONS = {
     "zh_cn": {
@@ -158,7 +164,7 @@ UI_TRANSLATIONS = {
         "全消耗品/食材/书籍/鱼 → 99": "全消耗品/食材/书籍/鱼 → 99",
         "全回路 → 99": "全回路 → 99",
         "全装备 → 1": "全装备 → 1",
-        "已加载: ...{fdir}/{fname}  ({len(self.save.data)} bytes)": "已加载: ...{fdir}/{fname}  ({len(self.save.data)} bytes)",
+        "已加载: ...{fdir}/{fname}  ({size} bytes)": "已加载: ...{fdir}/{fname}  ({size} bytes)",
         "已保存到: {fp}": "已保存到: {fp}",
     },
     "en": {
@@ -232,7 +238,7 @@ UI_TRANSLATIONS = {
         "全消耗品/食材/书籍/鱼 → 99": "Consumables/ingredients/books/fish → 99",
         "全回路 → 99": "All quartz → 99",
         "全装备 → 1": "All equipment → 1",
-        "已加载: ...{fdir}/{fname}  ({len(self.save.data)} bytes)": "Loaded: ...{fdir}/{fname}  ({len(self.save.data)} bytes)",
+        "已加载: ...{fdir}/{fname}  ({size} bytes)": "Loaded: ...{fdir}/{fname}  ({size} bytes)",
         "已保存到: {fp}": "Saved to: {fp}",
     },
     "ja": {
@@ -306,7 +312,7 @@ UI_TRANSLATIONS = {
         "全消耗品/食材/书籍/鱼 → 99": "消耗品/食材/書籍/魚 → 99",
         "全回路 → 99": "全クオーツ → 99",
         "全装备 → 1": "装備 → 1",
-        "已加载: ...{fdir}/{fname}  ({len(self.save.data)} bytes)": "読込済み: ...{fdir}/{fname}  ({len(self.save.data)} bytes)",
+        "已加载: ...{fdir}/{fname}  ({size} bytes)": "読込済み: ...{fdir}/{fname}  ({size} bytes)",
         "已保存到: {fp}": "保存先: {fp}",
     },
 }
@@ -556,6 +562,36 @@ ROLE_DISPLAY_NAMES = {  # ID -> 名称
     16: "罗伊德(NPC2)", 17: "雷蒙德", 18: "秦",
     19: "谢莉", 20: "琪雅",
 }
+
+ROLE_DISPLAY_I18N = {
+    0: {"en": "Lloyd", "ja": "ロイド"},
+    1: {"en": "Elie", "ja": "エリィ"},
+    2: {"en": "Tio", "ja": "ティオ"},
+    3: {"en": "Randy", "ja": "ランディ"},
+    4: {"en": "Wazy (Early)", "ja": "ワジ(初期)"},
+    5: {"en": "Wazy (Late)", "ja": "ワジ(後期)"},
+    6: {"en": "Yin", "ja": "銀"},
+    7: {"en": "Rixia", "ja": "リーシャ"},
+    8: {"en": "Zeit", "ja": "ツァイト"},
+    9: {"en": "Arios", "ja": "アリオス"},
+    10: {"en": "Noel", "ja": "ノエル"},
+    11: {"en": "Dudley", "ja": "ダドリー"},
+    12: {"en": "Garcia", "ja": "ガルシア"},
+    13: {"en": "Monster (Jumping Cat)", "ja": "魔獣(跳ね猫)"},
+    14: {"en": "Arios (NPC)", "ja": "アリオス(NPC)"},
+    15: {"en": "Lloyd (NPC1)", "ja": "ロイド(NPC1)"},
+    16: {"en": "Lloyd (NPC2)", "ja": "ロイド(NPC2)"},
+    17: {"en": "Raymond", "ja": "レイモンド"},
+    18: {"en": "Qin", "ja": "ツィン"},
+    19: {"en": "Shirley", "ja": "シズク"},
+    20: {"en": "KeA", "ja": "キーア"},
+}
+
+
+def role_display_name(role_id, lang="zh_cn"):
+    if lang == "zh_cn":
+        return ROLE_DISPLAY_NAMES.get(role_id, f"未知({role_id})")
+    return ROLE_DISPLAY_I18N.get(role_id, {}).get(lang) or ROLE_DISPLAY_NAMES.get(role_id, f"未知({role_id})")
 
 # ============================================================
 # P1: 怪物图鉴 (variable-length records)
@@ -810,54 +846,82 @@ class SaveEditor(tk.Tk):
         toolbar = ttk.Frame(self)
         toolbar.pack(fill="x", padx=5, pady=5)
 
-        ttk.Button(toolbar, text="打开存档 (savedata.dat)", command=self._open_file).pack(side="left", padx=3)
-        ttk.Button(toolbar, text="保存存档", command=self._save_file).pack(side="left", padx=3)
+        self._toolbar_open_btn = ttk.Button(toolbar, text="打开存档 (savedata.dat)", command=self._open_file)
+        self._toolbar_open_btn.pack(side="left", padx=3)
+        self._toolbar_save_btn = ttk.Button(toolbar, text="保存存档", command=self._save_file)
+        self._toolbar_save_btn.pack(side="left", padx=3)
+        self._ui_lang_label = ttk.Label(toolbar, text="语言")
+        self._ui_lang_label.pack(side="left", padx=(16, 2))
+        self._ui_lang_var = tk.StringVar(value="zh_cn:中文")
+        self._ui_lang_combo = ttk.Combobox(
+            toolbar,
+            textvariable=self._ui_lang_var,
+            values=[f"{key}:{label}" for key, label in ITEM_LANGUAGE_LABELS.items()],
+            width=12,
+            state="readonly",
+        )
+        self._ui_lang_combo.pack(side="left", padx=2)
+        self._ui_lang_combo.bind("<<ComboboxSelected>>", self._on_ui_language_changed)
         self.status_lbl = ttk.Label(toolbar, text="未加载存档")
         self.status_lbl.pack(side="left", padx=20)
+        self._status_key = "未加载存档"
+        self._status_kwargs = {}
 
         # Notebook 标签页
-        nb = ttk.Notebook(self)
-        nb.pack(fill="both", expand=True, padx=5, pady=5)
+        self._nb = ttk.Notebook(self)
+        self._nb.pack(fill="both", expand=True, padx=5, pady=5)
+        self._tab_defs = []
 
         # 标签1: 基本
-        frm_basic = ttk.Frame(nb)
-        nb.add(frm_basic, text="基本 / Mira")
+        frm_basic = ttk.Frame(self._nb)
+        self._nb.add(frm_basic, text="基本 / Mira")
+        self._tab_defs.append((frm_basic, "基本 / Mira"))
         self._build_basic_tab(frm_basic)
 
         # 标签2: 角色
-        frm_char = ttk.Frame(nb)
-        nb.add(frm_char, text="角色属性")
+        frm_char = ttk.Frame(self._nb)
+        self._nb.add(frm_char, text="角色属性")
+        self._tab_defs.append((frm_char, "角色属性"))
         self._build_char_tab(frm_char)
 
         # 标签3: 队伍 & 好感
-        frm_team = ttk.Frame(nb)
-        nb.add(frm_team, text="队伍 / 好感度")
+        frm_team = ttk.Frame(self._nb)
+        self._nb.add(frm_team, text="队伍 / 好感度")
+        self._tab_defs.append((frm_team, "队伍 / 好感度"))
         self._build_team_tab(frm_team)
 
         # 标签4: 物品
-        frm_items = ttk.Frame(nb)
-        nb.add(frm_items, text="物品")
+        frm_items = ttk.Frame(self._nb)
+        self._nb.add(frm_items, text="物品")
+        self._tab_defs.append((frm_items, "物品"))
         self._build_items_tab(frm_items)
 
         # 标签5: 成就
-        frm_ach = ttk.Frame(nb)
-        nb.add(frm_ach, text="成就")
+        frm_ach = ttk.Frame(self._nb)
+        self._nb.add(frm_ach, text="成就")
+        self._tab_defs.append((frm_ach, "成就"))
         self._build_achievement_tab(frm_ach)
 
         # 标签6: 战斗手册
-        frm_btl = ttk.Frame(nb)
-        nb.add(frm_btl, text="战斗手册")
+        frm_btl = ttk.Frame(self._nb)
+        self._nb.add(frm_btl, text="战斗手册")
+        self._tab_defs.append((frm_btl, "战斗手册"))
         self._build_battle_tab(frm_btl)
 
         # 标签7: 外观
-        frm_app = ttk.Frame(nb)
-        nb.add(frm_app, text="角色外观")
+        frm_app = ttk.Frame(self._nb)
+        self._nb.add(frm_app, text="角色外观")
+        self._tab_defs.append((frm_app, "角色外观"))
         self._build_appearance_tab(frm_app)
 
         # 标签8: 快捷操作
-        frm_quick = ttk.Frame(nb)
-        nb.add(frm_quick, text="快捷操作")
+        frm_quick = ttk.Frame(self._nb)
+        self._nb.add(frm_quick, text="快捷操作")
+        self._tab_defs.append((frm_quick, "快捷操作"))
         self._build_quick_tab(frm_quick)
+
+        self._register_localizable_widgets(self)
+        self._apply_ui_language(initial=True)
 
     def _var(self, name):
         if name not in self._vars:
@@ -869,6 +933,93 @@ class SaveEditor(tk.Tk):
         e = ttk.Entry(parent, textvariable=self._var(var_name), width=width)
         e.grid(row=row, column=col*2+1, sticky="w", padx=2, pady=1)
         return e
+
+    def _current_ui_language(self):
+        value = self._ui_lang_var.get() if hasattr(self, "_ui_lang_var") else "zh_cn"
+        return value.split(":", 1)[0]
+
+    def _on_ui_language_changed(self, _event=None):
+        self._apply_ui_language()
+
+    def _t(self, text, **kwargs):
+        msg = ui_text(text, self._current_ui_language())
+        return msg.format(**kwargs) if kwargs else msg
+
+    def _set_status(self, text, **kwargs):
+        self._status_key = text
+        self._status_kwargs = kwargs
+        self.status_lbl.config(text=self._t(text, **kwargs))
+
+    def _render_status(self):
+        key = getattr(self, "_status_key", "未加载存档")
+        kwargs = getattr(self, "_status_kwargs", {})
+        self.status_lbl.config(text=self._t(key, **kwargs))
+
+    def _register_localizable_widgets(self, widget):
+        try:
+            current = widget.cget("text")
+        except Exception:
+            current = None
+        if isinstance(current, str) and current and not hasattr(widget, "_ui_base_text"):
+            widget._ui_base_text = current
+        try:
+            children = widget.winfo_children()
+        except Exception:
+            children = []
+        for child in children:
+            self._register_localizable_widgets(child)
+
+    def _apply_ui_language(self, initial=False):
+        lang = self._current_ui_language()
+        self.title(APP_TITLES.get(lang, APP_TITLES["zh_cn"]))
+        if hasattr(self, "_ui_lang_var"):
+            self._ui_lang_var.set({"zh_cn": "zh_cn:中文", "en": "en:English", "ja": "ja:日本語"}.get(lang, "zh_cn:中文"))
+        if hasattr(self, "_ui_lang_label"):
+            self._ui_lang_label.config(text=self._t("语言"))
+        if hasattr(self, "_toolbar_open_btn"):
+            self._toolbar_open_btn.config(text=self._t("打开存档 (savedata.dat)"))
+        if hasattr(self, "_toolbar_save_btn"):
+            self._toolbar_save_btn.config(text=self._t("保存存档"))
+        if hasattr(self, "status_lbl") and not initial:
+            self._render_status()
+        if hasattr(self, "_tab_defs"):
+            for frame, key in self._tab_defs:
+                self._nb.tab(frame, text=self._t(key))
+        for widget in self.winfo_children():
+            self._translate_widget_tree(widget, lang)
+        if hasattr(self, "_item_lang_var"):
+            self._item_lang_var.set({"zh_cn": "zh_cn:中文", "en": "en:English", "ja": "ja:日本語"}.get(lang, "zh_cn:中文"))
+            self._update_item_name_heading()
+            if hasattr(self, "_tree"):
+                self._refresh_items_ui()
+        if hasattr(self, "_achievement_lang_var"):
+            self._achievement_lang_var.set({"zh_cn": "zh_cn:中文", "en": "en:English", "ja": "ja:日本語"}.get(lang, "zh_cn:中文"))
+            self._on_achievement_language_changed()
+        if hasattr(self, "_tree"):
+            self._tree.heading("code", text=self._t("代码"))
+            self._tree.heading("name", text=self._t("名称") + (" (" + ITEM_LANGUAGE_LABELS.get(self._current_item_language(), self._current_item_language()) + ")"))
+            self._tree.heading("qty", text=self._t("数量"))
+        if hasattr(self, "_appearance_vars"):
+            self._refresh_appearance_ui()
+        if hasattr(self, "_battle_vars"):
+            self._refresh_battle_ui()
+        if hasattr(self, "_ach_vars"):
+            self._refresh_achievements_ui()
+        self.update_idletasks()
+
+    def _translate_widget_tree(self, widget, lang):
+        base = getattr(widget, "_ui_base_text", None)
+        if base and widget is not getattr(self, "status_lbl", None):
+            try:
+                widget.config(text=ui_text(base, lang))
+            except Exception:
+                pass
+        try:
+            children = widget.winfo_children()
+        except Exception:
+            children = []
+        for child in children:
+            self._translate_widget_tree(child, lang)
 
     def _build_basic_tab(self, frm):
         frm.grid_columnconfigure(0, weight=1)
@@ -988,7 +1139,9 @@ class SaveEditor(tk.Tk):
         self._items_data = {}  # code -> qty
 
     def _current_item_language(self):
-        value = self._item_lang_var.get() if hasattr(self, "_item_lang_var") else "zh_cn"
+        value = self._item_lang_var.get() if hasattr(self, "_item_lang_var") else None
+        if not value:
+            value = self._ui_lang_var.get() if hasattr(self, "_ui_lang_var") else "zh_cn:中文"
         return value.split(":", 1)[0]
 
     def _update_item_name_heading(self):
@@ -1203,13 +1356,13 @@ class SaveEditor(tk.Tk):
     def _quick_set(self, varname, val):
         self._var(varname).set(str(val))
         self._write_all_from_gui()
-        self.status_lbl.config(text=f"已设置 {varname} = {val}")
+        self._set_status("已设置 {varname} = {val}", varname=varname, val=val)
 
     def _quick_max_sepith(self):
         for name in SEPITH_OFFSETS:
             self._var(f"sepith_{name}").set("9999")
         self._write_all_from_gui()
-        self.status_lbl.config(text="全耀晶片 → 9999")
+        self._set_status("全耀晶片 → 9999")
 
     def _quick_max_char(self, name):
         try:
@@ -1232,7 +1385,7 @@ class SaveEditor(tk.Tk):
         s.write_u16(base + CHAR_ATTR["ats"], 9999)
         s.write_u16(base + CHAR_ATTR["adf"], 9999)
         self._refresh_all()
-        self.status_lbl.config(text=f"{name} 已满属性")
+        self._set_status("{name} 已满属性", name=name)
 
     def _quick_max_like(self):
         s = self.save
@@ -1241,7 +1394,7 @@ class SaveEditor(tk.Tk):
         for off in LIKEABILITY.values():
             s.write_u8(off, 255)
         self._refresh_all()
-        self.status_lbl.config(text="全员好感度 → 255")
+        self._set_status("全员好感度 → 255")
 
     # ---- 物品快捷 ----
     def _quick_max_consumables(self):
@@ -1253,7 +1406,7 @@ class SaveEditor(tk.Tk):
             self._items_data[code] = 99
         self.save.write_items(self._items_data)
         self._refresh_items_ui()
-        self.status_lbl.config(text="全消耗品/食材/书籍/鱼 → 99")
+        self._set_status("全消耗品/食材/书籍/鱼 → 99")
 
     def _quick_max_circuits(self):
         """全回路(普通+核心)设 99，并补齐缺失条目。"""
@@ -1264,7 +1417,7 @@ class SaveEditor(tk.Tk):
             self._items_data[code] = 99
         self.save.write_items(self._items_data)
         self._refresh_items_ui()
-        self.status_lbl.config(text="全回路 → 99")
+        self._set_status("全回路 → 99")
 
     def _quick_max_equipment(self):
         """全装备(武器/服装/鞋子/饰品)设 1，并补齐缺失条目。"""
@@ -1275,7 +1428,7 @@ class SaveEditor(tk.Tk):
             self._items_data[code] = 1
         self.save.write_items(self._items_data)
         self._refresh_items_ui()
-        self.status_lbl.config(text="全装备 → 1")
+        self._set_status("全装备 → 1")
 
     # ---- P0: 成就标签页 ----
     def _build_achievement_tab(self, frm):
@@ -1312,7 +1465,9 @@ class SaveEditor(tk.Tk):
             self._ach_vars.append((part, bit, var, cb))
 
     def _current_achievement_language(self):
-        value = self._achievement_lang_var.get() if hasattr(self, "_achievement_lang_var") else "zh_cn"
+        value = self._achievement_lang_var.get() if hasattr(self, "_achievement_lang_var") else None
+        if not value:
+            value = self._ui_lang_var.get() if hasattr(self, "_ui_lang_var") else "zh_cn:中文"
         return value.split(":", 1)[0]
 
     def _on_achievement_language_changed(self, _event=None):
@@ -1341,13 +1496,13 @@ class SaveEditor(tk.Tk):
         bits = {i: [1]*8 for i in range(7)}
         self.save.write_achievements(bits)
         self._refresh_achievements_ui()
-        self.status_lbl.config(text="全成就已解锁")
+        self._set_status("全成就已解锁")
 
     def _ach_lock_all(self):
         bits = {i: [0]*8 for i in range(7)}
         self.save.write_achievements(bits)
         self._refresh_achievements_ui()
-        self.status_lbl.config(text="全成就已锁定")
+        self._set_status("全成就已锁定")
 
     # ---- P0: 战斗手册标签页 ----
     def _build_battle_tab(self, frm):
@@ -1383,22 +1538,29 @@ class SaveEditor(tk.Tk):
         SLOT_LABELS = ["显示1","显示2","显示3","显示4","显示5","显示6",
                        "显示7","显示8","显示9","显示10","显示11","显示12"]
         self._appearance_vars = []
-        opts = [f"{k}:{v}" for k, v in sorted(ROLE_DISPLAY_NAMES.items())]
+        self._appearance_combos = []
+        opts = [f"{k}:{role_display_name(k, self._current_ui_language())}" for k in sorted(ROLE_DISPLAY_NAMES)]
 
         for i in range(12):
             ttk.Label(frm, text=SLOT_LABELS[i]).grid(row=i+1, column=0, sticky="e", padx=5, pady=2)
-            var = tk.StringVar(value="0:罗伊德")
+            var = tk.StringVar(value=f"0:{role_display_name(0, self._current_ui_language())}")
             cb = ttk.Combobox(frm, textvariable=var, values=opts, width=20, state="readonly")
             cb.grid(row=i+1, column=1, sticky="w", padx=5)
             self._appearance_vars.append((ROLE_DISPLAY_OFFSETS[i], var))
+            self._appearance_combos.append(cb)
 
     def _refresh_appearance_ui(self):
         if self.save.data is None:
             return
+        lang = self._current_ui_language()
         for off, var in self._appearance_vars:
             val = self.save.read_u16(off)
-            name = ROLE_DISPLAY_NAMES.get(val, f"未知({val})")
+            name = role_display_name(val, lang)
             var.set(f"{val}:{name}")
+        if hasattr(self, "_appearance_combos"):
+            opts = [f"{k}:{role_display_name(k, lang)}" for k in sorted(ROLE_DISPLAY_NAMES)]
+            for cb in self._appearance_combos:
+                cb.configure(values=opts)
 
     def _write_appearance_from_gui(self):
         if self.save.data is None:
@@ -1415,13 +1577,13 @@ class SaveEditor(tk.Tk):
         if self.save.data is None:
             return
         self.save.unlock_all_monsters()
-        self.status_lbl.config(text="怪物图鉴已全开 · 请保存存档")
+        self._set_status("怪物图鉴已全开 · 请保存存档")
 
     # ---- 快捷操作 ----
 
     def _open_file(self):
         fp = filedialog.askopenfilename(
-            title="选择 savedata.dat",
+            title=self._t("选择 savedata.dat"),
             filetypes=[("savedata.dat", "*.dat"), ("所有文件", "*.*")]
         )
         if not fp:
@@ -1429,23 +1591,23 @@ class SaveEditor(tk.Tk):
         try:
             loaded = self.save.load(fp)
         except RuntimeError as exc:
-            messagebox.showerror("错误", str(exc))
+            messagebox.showerror(self._t("错误"), str(exc))
             return
         if loaded:
             self._refresh_all()
             fname = os.path.basename(fp)
             fdir = os.path.basename(os.path.dirname(fp))
-            self.status_lbl.config(text=f"已加载: ...{fdir}/{fname}  ({len(self.save.data)} bytes)")
+            self._set_status("已加载: ...{fdir}/{fname}  ({size} bytes)", fdir=fdir, fname=fname, size=len(self.save.data))
         else:
-            messagebox.showerror("错误", f"无法解析存档:\n{fp}\n\n文件可能是加密的或格式不正确。")
+            messagebox.showerror(self._t("错误"), self._t("无法解析存档:\n{fp}\n\n文件可能是加密的或格式不正确。", fp=fp))
 
     def _save_file(self):
         if self.save.data is None:
-            messagebox.showwarning("提示", "请先打开存档文件")
+            messagebox.showwarning(self._t("提示"), self._t("请先打开存档文件"))
             return
         self._write_all_from_gui()
         fp = filedialog.asksaveasfilename(
-            title="保存为",
+            title=self._t("保存为"),
             defaultextension=".dat",
             filetypes=[("savedata.dat", "*.dat")],
             initialfile="savedata.dat"
@@ -1455,10 +1617,10 @@ class SaveEditor(tk.Tk):
         try:
             self.save.save(fp)
         except (RuntimeError, ValueError, OSError) as exc:
-            messagebox.showerror("错误", str(exc))
+            messagebox.showerror(self._t("错误"), str(exc))
             return
-        self.status_lbl.config(text=f"已保存到: {fp}")
-        messagebox.showinfo("完成", f"存档已保存到:\n{fp}\n\n备份已自动创建为 .bak\n请将文件放回游戏存档目录替换原文件。")
+        self._set_status("已保存到: {fp}", fp=fp)
+        messagebox.showinfo(self._t("完成"), self._t("存档已保存到:\n{fp}\n\n备份已自动创建为 .bak\n请将文件放回游戏存档目录替换原文件。", fp=fp))
 
 
 def cli_quick_edit(filepath, mira=None, sepith=None, dp=None, max_chars=None, max_like=False):
