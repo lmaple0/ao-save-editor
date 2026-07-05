@@ -847,8 +847,37 @@ class SaveData:
 
         if len(data) < EXPECTED_SIZE:
             return False
-        self.data = bytearray(data[:EXPECTED_SIZE])
+        candidate = bytearray(data[:EXPECTED_SIZE])
+        if not self._checksum_valid(candidate):
+            return False
+        self.data = candidate
         return True
+
+    @staticmethod
+    def _calculate_checksums(data):
+        file_size_max_pos = len(data) - 1
+        savedata_sum = 0
+        pos = 0
+        while pos <= (file_size_max_pos - 0x08):
+            cache = struct.unpack_from("<I", data, pos)[0]
+            savedata_sum = (savedata_sum + cache) & 0xFFFFFFFF
+            pos += 0x04
+
+        num_chunks = ((file_size_max_pos - 0x08) // 0x04) + 0x01
+        size_checksum = (-1 * num_chunks) & 0xFFFFFFFF
+        size_checksum = (size_checksum - savedata_sum) & 0xFFFFFFFF
+        return savedata_sum, size_checksum
+
+    @staticmethod
+    def _checksum_valid(data):
+        if len(data) != EXPECTED_SIZE:
+            return False
+        expected = SaveData._calculate_checksums(data)
+        actual = (
+            struct.unpack_from("<I", data, CHECKSUM_USER)[0],
+            struct.unpack_from("<I", data, CHECKSUM_USER_SIZE)[0],
+        )
+        return actual == expected
 
     def save(self, filepath=None):
         """保存为 zstd 压缩格式。"""
@@ -880,20 +909,7 @@ class SaveData:
           file_size_checksum = -((len-1-8)/4 + 1) - file_savedata_checksum (mod 2^32)
         同时校验文件大小：0x0002643b (因为 size() == 0x2643b = 0x2643c-1)
         """
-        file_size_max_pos = len(self.data) - 1
-
-        # 1. file_savedata_checksum: 累加所有 32-bit 数值
-        savedata_sum = 0
-        pos = 0
-        while pos <= (file_size_max_pos - 0x08):
-            cache = struct.unpack_from('<I', self.data, pos)[0]
-            savedata_sum = (savedata_sum + cache) & 0xFFFFFFFF
-            pos += 0x04
-
-        # 2. file_size_checksum
-        num_chunks = ((file_size_max_pos - 0x08) // 0x04) + 0x01
-        size_checksum = (-1 * num_chunks) & 0xFFFFFFFF
-        size_checksum = (size_checksum - savedata_sum) & 0xFFFFFFFF
+        savedata_sum, size_checksum = self._calculate_checksums(self.data)
 
         # 写入两个校验和
         struct.pack_into('<I', self.data, CHECKSUM_USER, savedata_sum)
