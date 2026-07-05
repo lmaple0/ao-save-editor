@@ -120,6 +120,25 @@ CHARACTER_NAME_I18N = {
     "雷蒙德": {"zh_cn": "雷蒙德", "en": "Raymond", "ja": "レイモンド"},
     "罗伊德": {"zh_cn": "罗伊德", "en": "Lloyd", "ja": "ロイド"},
     "艾约": {"zh_cn": "艾约", "en": "Ayo", "ja": "エア"},
+    "罗伊德": {"zh_cn": "罗伊德", "en": "Lloyd", "ja": "ロイド"},
+    "艾莉": {"zh_cn": "艾莉", "en": "Elie", "ja": "エリィ"},
+    "缇欧": {"zh_cn": "缇欧", "en": "Tio", "ja": "ティオ"},
+    "兰迪": {"zh_cn": "兰迪", "en": "Randy", "ja": "ランディ"},
+    "瓦吉": {"zh_cn": "瓦吉", "en": "Wazy", "ja": "ワジ"},
+    "莉夏": {"zh_cn": "莉夏", "en": "Rixia", "ja": "リーシャ"},
+    "蔡特": {"zh_cn": "蔡特", "en": "Zeit", "ja": "ツァイト"},
+    "亚里欧斯": {"zh_cn": "亚里欧斯", "en": "Arios", "ja": "アリオス"},
+    "诺艾尔": {"zh_cn": "诺艾尔", "en": "Noel", "ja": "ノエル"},
+    "达德利": {"zh_cn": "达德利", "en": "Dudley", "ja": "ダドリー"},
+    "加尔西亚": {"zh_cn": "加尔西亚", "en": "Garcia", "ja": "ガルシア"},
+    "琪雅": {"zh_cn": "琪雅", "en": "KeA", "ja": "キーア"},
+    "伊莉雅": {"zh_cn": "伊莉雅", "en": "Ilya", "ja": "イリア"},
+    "塞西尔": {"zh_cn": "塞西尔", "en": "Cecile", "ja": "セシル"},
+    "芙兰": {"zh_cn": "芙兰", "en": "Fran", "ja": "フラン"},
+    "苏莉": {"zh_cn": "苏莉", "en": "Sully", "ja": "シャーリィ"},
+    "银": {"zh_cn": "银", "en": "Silver", "ja": "銀"},
+    "秦": {"zh_cn": "秦", "en": "Xin", "ja": "シン"},
+    "雷蒙德": {"zh_cn": "雷蒙德", "en": "Raymond", "ja": "レイモンド"},
 }
 
 
@@ -230,7 +249,14 @@ UI_TRANSLATIONS = {
         "被偷袭次数": "被偷袭次数",
         "杀敌数": "杀敌数",
         "爆灵次数": "爆灵次数",
-        "队员 {num}": "队员 {num}",
+        "队员 1": "队员 1",
+        "队员 2": "队员 2",
+        "队员 3": "队员 3",
+        "队员 4": "队员 4",
+        "队员 5": "队员 5",
+        "队员 6": "队员 6",
+        "队员 7": "队员 7",
+        "队员 8": "队员 8",
         "{name} LV99 满HP/EP/CP": "{name} LV99 满HP/EP/CP",
     },
     "en": {
@@ -335,7 +361,14 @@ UI_TRANSLATIONS = {
         "被偷袭次数": "Enemy Advantages Suffered",
         "杀敌数": "Enemies Slain",
         "爆灵次数": "Burst Uses",
-        "队员 {num}": "Member {num}",
+        "队员 1": "Party 1",
+        "队员 2": "Party 2",
+        "队员 3": "Party 3",
+        "队员 4": "Party 4",
+        "队员 5": "Party 5",
+        "队员 6": "Party 6",
+        "队员 7": "Party 7",
+        "队员 8": "Party 8",
         "{name} LV99 满HP/EP/CP": "{name} Lv99 Max HP/EP/CP",
     },
     "ja": {
@@ -440,7 +473,14 @@ UI_TRANSLATIONS = {
         "被偷袭次数": "奇襲を受けた回数",
         "杀敌数": "撃破数",
         "爆灵次数": "バースト使用回数",
-        "队员 {num}": "メンバー {num}",
+        "队员 1": "パーティー1",
+        "队员 2": "パーティー2",
+        "队员 3": "パーティー3",
+        "队员 4": "パーティー4",
+        "队员 5": "パーティー5",
+        "队员 6": "パーティー6",
+        "队员 7": "パーティー7",
+        "队员 8": "パーティー8",
         "{name} LV99 满HP/EP/CP": "{name} Lv99 HP/EP/CP最大",
     },
 }
@@ -1125,6 +1165,12 @@ class SaveEditor(tk.Tk):
             self._tree.heading("name", text=self._t("名称"))
             self._tree.heading("qty", text=self._t("数量"))
             self._refresh_items_ui()
+        if hasattr(self, "_team_labels"):
+            for i, lbl in enumerate(self._team_labels):
+                lbl.config(text=self._t("队员 {num}", num=i+1))
+        if hasattr(self, "_quick_party_buttons"):
+            for btn, name in self._quick_party_buttons:
+                btn.config(text=self._t("{name} LV99 满HP/EP/CP", name=character_name(name, lang)))
         if hasattr(self, "_appearance_vars"):
             self._refresh_appearance_ui()
         if hasattr(self, "_battle_vars"):
@@ -1212,8 +1258,12 @@ class SaveEditor(tk.Tk):
     def _build_team_tab(self, frm):
         f1 = ttk.LabelFrame(frm, text=self._t("队伍编成 (0=罗伊德, 1=艾莉, ..., 255=空)"))
         f1.grid(row=0, column=0, sticky="nw", padx=5, pady=5)
+        self._team_labels = []
         for i in range(8):
-            self._lb_entry(f1, self._t("队员 {num}", num=i+1), f"team_{i}", i, 0, width=5)
+            lbl = ttk.Label(f1, text=self._t("队员 {num}", num=i+1))
+            lbl.grid(row=i, column=0, sticky="e", padx=2, pady=1)
+            ttk.Entry(f1, textvariable=self._var(f"team_{i}"), width=5).grid(row=i, column=1, sticky="w", padx=2, pady=1)
+            self._team_labels.append(lbl)
 
         f2 = ttk.LabelFrame(frm, text=self._t("好感度 (0-? )"))
         f2.grid(row=0, column=1, sticky="nw", padx=5, pady=5)
@@ -1324,9 +1374,12 @@ class SaveEditor(tk.Tk):
 
         f2 = ttk.LabelFrame(frm, text=self._t("Max 队伍角色"))
         f2.pack(padx=10, pady=5, fill="x")
+        self._quick_party_buttons = []
         for name in CHAR_BASES.keys():
-            ttk.Button(f2, text=self._t("{name} LV99 满HP/EP/CP", name=character_name(name, self._current_ui_language())),
-                       command=lambda n=name: self._quick_max_char(n)).pack(side="left", padx=2, pady=2)
+            btn = ttk.Button(f2, text=self._t("{name} LV99 满HP/EP/CP", name=character_name(name, self._current_ui_language())),
+                             command=lambda n=name: self._quick_max_char(n))
+            btn.pack(side="left", padx=2, pady=2)
+            self._quick_party_buttons.append((btn, name))
 
         f3 = ttk.LabelFrame(frm, text=self._t("好感度一键满"))
         f3.pack(padx=10, pady=5, fill="x")
@@ -1561,11 +1614,8 @@ class SaveEditor(tk.Tk):
             cb.pack(anchor="w", padx=15, pady=1)
             self._ach_vars.append((part, bit, var, cb))
 
-    def _current_achievement_language(self):
-        return self._current_ui_language()
-
     def _on_achievement_language_changed(self, _event=None):
-        lang = self._current_achievement_language()
+        lang = self._current_ui_language()
         name_by_key = {(part, bit): name for part, bit, name in ACHIEVEMENT_NAMES}
         for part, bit, _var, checkbox in self._ach_vars:
             zh_name = name_by_key.get((part, bit), "")
