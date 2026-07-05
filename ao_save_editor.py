@@ -1256,9 +1256,10 @@ class SaveEditor(tk.Tk):
                    "cp":"CP","exp":"EXP","str":"STR","def":"DEF","ats":"ATS","adf":"ADF"}
 
         # 表头
-        ttk.Label(scrollable, text=self._t("角色"), width=8).grid(row=0, column=0, sticky="w")
+        header_widths = {"hp": 10, "max_ep": 9, "ep": 10, "exp": 9}
+        ttk.Label(scrollable, text=self._t("角色"), width=10).grid(row=0, column=0, sticky="w")
         for j, a in enumerate(attrs):
-            ttk.Label(scrollable, text=self._t(attr_cn[a]), width=8).grid(row=0, column=j+1)
+            ttk.Label(scrollable, text=self._t(attr_cn[a]), width=header_widths.get(a, 8)).grid(row=0, column=j+1)
 
         for i, (name, base) in enumerate(CHAR_BASES.items()):
             ttk.Label(scrollable, text=character_name(name, self._current_ui_language()), font=("", 9, "bold")).grid(row=i+1, column=0, sticky="w")
