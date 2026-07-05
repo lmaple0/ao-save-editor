@@ -103,23 +103,6 @@ CHARACTER_NAME_I18N = {
     "Noel": {"zh_cn": "诺艾尔", "en": "Noel", "ja": "ノエル"},
     "Dudley": {"zh_cn": "达德利", "en": "Dudley", "ja": "ダドリー"},
     "Garcia": {"zh_cn": "加尔西亚", "en": "Garcia", "ja": "ガルシア"},
-    "琪雅": {"zh_cn": "琪雅", "en": "KeA", "ja": "キーア"},
-    "艾莉": {"zh_cn": "艾莉", "en": "Elie", "ja": "エリィ"},
-    "缇欧": {"zh_cn": "缇欧", "en": "Tio", "ja": "ティオ"},
-    "兰迪": {"zh_cn": "兰迪", "en": "Randy", "ja": "ランディ"},
-    "诺艾尔": {"zh_cn": "诺艾尔", "en": "Noel", "ja": "ノエル"},
-    "瓦吉": {"zh_cn": "瓦吉", "en": "Wazy", "ja": "ワジ"},
-    "莉夏": {"zh_cn": "莉夏", "en": "Rixia", "ja": "リーシャ"},
-    "达德利": {"zh_cn": "达德利", "en": "Dudley", "ja": "ダドリー"},
-    "伊莉雅": {"zh_cn": "伊莉雅", "en": "Ilya", "ja": "イリア"},
-    "塞西尔": {"zh_cn": "塞西尔", "en": "Cecile", "ja": "セシル"},
-    "芙兰": {"zh_cn": "芙兰", "en": "Fran", "ja": "フラン"},
-    "苏莉": {"zh_cn": "苏莉", "en": "Sully", "ja": "シャーリィ"},
-    "银": {"zh_cn": "银", "en": "Silver", "ja": "銀"},
-    "秦": {"zh_cn": "秦", "en": "Xin", "ja": "シン"},
-    "雷蒙德": {"zh_cn": "雷蒙德", "en": "Raymond", "ja": "レイモンド"},
-    "罗伊德": {"zh_cn": "罗伊德", "en": "Lloyd", "ja": "ロイド"},
-    "艾约": {"zh_cn": "艾约", "en": "Ayo", "ja": "エア"},
     "罗伊德": {"zh_cn": "罗伊德", "en": "Lloyd", "ja": "ロイド"},
     "艾莉": {"zh_cn": "艾莉", "en": "Elie", "ja": "エリィ"},
     "缇欧": {"zh_cn": "缇欧", "en": "Tio", "ja": "ティオ"},
@@ -198,7 +181,7 @@ UI_TRANSLATIONS = {
         "显示5": "显示5", "显示6": "显示6", "显示7": "显示7", "显示8": "显示8",
         "显示9": "显示9", "显示10": "显示10", "显示11": "显示11", "显示12": "显示12",
         "Mira": "Mira", "DP": "DP", "Medal": "Medal",
-        "总秒数": "总秒数", "时": "时", "分": "分", "秒": "秒",
+        "总秒数": "总秒数", "小时": "时", "分": "分", "秒": "秒",
         "难度": "难度",
         "全成就已解锁": "全成就已解锁",
         "全成就已锁定": "全成就已锁定",
@@ -214,10 +197,8 @@ UI_TRANSLATIONS = {
         "已设置 {varname} = {val}": "已设置 {varname} = {val}",
         "全耀晶片 → 9999": "全耀晶片 → 9999",
         "{name} 已满属性": "{name} 已满属性",
-        "全员好感度 → 255": "全员好感度 → 255",
         "全消耗品/食材/书籍/鱼 → 99": "全消耗品/食材/书籍/鱼 → 99",
         "全回路 → 99": "全回路 → 99",
-        "全装备 → 1": "全装备 → 1",
         "已加载: ...{fdir}/{fname}  ({size} bytes)": "已加载: ...{fdir}/{fname}  ({size} bytes)",
         "已保存到: {fp}": "已保存到: {fp}",
         "地": "地",
@@ -310,7 +291,7 @@ UI_TRANSLATIONS = {
         "显示5": "Slot 5", "显示6": "Slot 6", "显示7": "Slot 7", "显示8": "Slot 8",
         "显示9": "Slot 9", "显示10": "Slot 10", "显示11": "Slot 11", "显示12": "Slot 12",
         "Mira": "Mira", "DP": "DP", "Medal": "Medal",
-        "总秒数": "Total seconds", "时": "h", "分": "m", "秒": "s",
+        "总秒数": "Total seconds", "小时": "h", "分": "m", "秒": "s",
         "难度": "Difficulty",
         "全成就已解锁": "All achievements unlocked",
         "全成就已锁定": "All achievements locked",
@@ -326,10 +307,8 @@ UI_TRANSLATIONS = {
         "已设置 {varname} = {val}": "Set {varname} = {val}",
         "全耀晶片 → 9999": "All Sepith → 9999",
         "{name} 已满属性": "{name} maxed",
-        "全员好感度 → 255": "All bond values → 255",
         "全消耗品/食材/书籍/鱼 → 99": "Consumables/ingredients/books/fish → 99",
         "全回路 → 99": "All quartz → 99",
-        "全装备 → 1": "All equipment → 1",
         "已加载: ...{fdir}/{fname}  ({size} bytes)": "Loaded: ...{fdir}/{fname}  ({size} bytes)",
         "已保存到: {fp}": "Saved to: {fp}",
         "地": "Earth",
@@ -422,7 +401,7 @@ UI_TRANSLATIONS = {
         "显示5": "スロット5", "显示6": "スロット6", "显示7": "スロット7", "显示8": "スロット8",
         "显示9": "スロット9", "显示10": "スロット10", "显示11": "スロット11", "显示12": "スロット12",
         "Mira": "ミラ", "DP": "DP", "Medal": "メダル",
-        "总秒数": "合計秒", "时": "時", "分": "分", "秒": "秒",
+        "总秒数": "合計秒", "小时": "時", "分": "分", "秒": "秒",
         "难度": "難易度",
         "全成就已解锁": "実績を全解除",
         "全成就已锁定": "実績を全固定",
@@ -438,10 +417,8 @@ UI_TRANSLATIONS = {
         "已设置 {varname} = {val}": "{varname} = {val} に設定",
         "全耀晶片 → 9999": "全セピス → 9999",
         "{name} 已满属性": "{name} 最大化",
-        "全员好感度 → 255": "全員絆値 → 255",
         "全消耗品/食材/书籍/鱼 → 99": "消耗品/食材/書籍/魚 → 99",
         "全回路 → 99": "全クオーツ → 99",
-        "全装备 → 1": "装備 → 1",
         "已加载: ...{fdir}/{fname}  ({size} bytes)": "読込済み: ...{fdir}/{fname}  ({size} bytes)",
         "已保存到: {fp}": "保存先: {fp}",
         "地": "地",
@@ -588,7 +565,7 @@ ITEM_WRITE_ORDER = [
     [0x0465,0x0466,0x0467,0x0468,0x0469],
     # 武器 - 亚里欧斯
     [0x046a],
-    # 武器 - 赛特
+    # 武器 - 蔡特
     [0x046f,0x0474],
     # 装备 - 服装
     [0x0477,0x05dc,0x05dd,0x05de,0x05df,0x05e0,0x05e1,0x05e2,0x05e3,0x05e4,0x05e5,0x05e6,0x05e7,0x05e8,0x05e9,0x05ea,0x05eb,0x05ec,0x05ed,0x05ee,0x05ef,0x05f0,0x05f1,0x05f2,0x05f3,0x05f4,0x05f5,0x05f6,0x05f7,0x05f8,0x05f9,0x05fa,0x05fb,0x05fc],
@@ -818,7 +795,7 @@ MONSTER_CODES = (
 
 TEAM_NAMES = {
     0: "罗伊德", 1: "艾莉", 2: "缇欧", 3: "兰迪",
-    4: "瓦吉", 5: "莉夏", 6: "赛特", 7: "亚里欧斯",
+    4: "瓦吉", 5: "莉夏", 6: "蔡特", 7: "亚里欧斯",
     8: "诺艾尔", 9: "达德利", 10: "加尔西亚",
     255: "(空)"
 }
@@ -1167,7 +1144,7 @@ class SaveEditor(tk.Tk):
             self._refresh_items_ui()
         if hasattr(self, "_team_labels"):
             for i, lbl in enumerate(self._team_labels):
-                lbl.config(text=self._t("队员 {num}", num=i+1))
+                lbl.config(text=self._t(f"队员 {i+1}"))
         if hasattr(self, "_quick_party_buttons"):
             for btn, name in self._quick_party_buttons:
                 btn.config(text=self._t("{name} LV99 满HP/EP/CP", name=character_name(name, lang)))
@@ -1211,7 +1188,7 @@ class SaveEditor(tk.Tk):
         f3 = ttk.LabelFrame(frm, text=self._t("游戏时间"))
         f3.grid(row=1, column=0, sticky="nw", padx=5, pady=5)
         self._lb_entry(f3, "总秒数", "time_s", 0, 0)
-        self._lb_entry(f3, "时", "time_h", 1, 0)
+        self._lb_entry(f3, self._t("小时"), "time_h", 1, 0)
         self._lb_entry(f3, "分", "time_m", 2, 0)
         self._lb_entry(f3, "秒", "time_sec", 3, 0)
 
@@ -1251,7 +1228,7 @@ class SaveEditor(tk.Tk):
                     w = 6
                 e = ttk.Entry(scrollable, textvariable=self._var(vn), width=w)
                 e.grid(row=i+1, column=j+1, padx=1)
-                e.bind("<FocusOut>", lambda ev, o=offset, vt="u32": self._on_char_edit(o, vt, ev))
+                e.bind("<FocusOut>", lambda ev, o=offset, vt=("u32" if attr in ("max_hp", "hp", "exp") else "u16"): self._on_char_edit(o, vt, ev))
                 # 悬停提示偏移量
                 tk.ToolTip = None  # skip; just show offset in status
 
@@ -1260,7 +1237,7 @@ class SaveEditor(tk.Tk):
         f1.grid(row=0, column=0, sticky="nw", padx=5, pady=5)
         self._team_labels = []
         for i in range(8):
-            lbl = ttk.Label(f1, text=self._t("队员 {num}", num=i+1))
+            lbl = ttk.Label(f1, text=self._t(f"队员 {i+1}"))
             lbl.grid(row=i, column=0, sticky="e", padx=2, pady=1)
             ttk.Entry(f1, textvariable=self._var(f"team_{i}"), width=5).grid(row=i, column=1, sticky="w", padx=2, pady=1)
             self._team_labels.append(lbl)
@@ -1315,8 +1292,13 @@ class SaveEditor(tk.Tk):
         self._refresh_items_ui()
 
     def _refresh_items(self):
-        self._items_data = self.save.read_items()
         self._search_var.set("")
+        if self.save.data is None:
+            self._items_data = {}
+            self._refresh_items_ui()
+            self._set_status("请先打开存档文件")
+            return
+        self._items_data = self.save.read_items()
         self._refresh_items_ui()
 
     def _refresh_items_ui(self):
@@ -1342,6 +1324,7 @@ class SaveEditor(tk.Tk):
 
     def _items_set_selected(self, val=99):
         if self.save.data is None:
+            self._set_status("请先打开存档文件")
             return
         if not self._items_data:
             self._items_data = self.save.read_items()
@@ -1353,6 +1336,8 @@ class SaveEditor(tk.Tk):
         self.save.write_items(self._items_data)
 
     def _write_items_from_gui(self):
+        if self.save.data is None:
+            return
         # 同步 Treeview 中的修改
         for iid in self._tree.get_children():
             vals = self._tree.item(iid, "values")
@@ -1445,19 +1430,10 @@ class SaveEditor(tk.Tk):
         """角色属性编辑时写回"""
         if self.save.data is None:
             return
-        widget = event.widget
-        varname = widget.cget("textvariable")
-        if isinstance(varname, str):
-            sv = self._var(varname if varname else "")
-            try:
-                val = int(sv.get())
-            except ValueError:
-                return
-        else:
-            try:
-                val = int(widget.get())
-            except ValueError:
-                return
+        try:
+            val = int(event.widget.get())
+        except ValueError:
+            return
         if valtype == "u32":
             self.save.write_u32(offset, val)
         else:
@@ -1516,11 +1492,17 @@ class SaveEditor(tk.Tk):
         self._write_appearance_from_gui()
 
     def _quick_set(self, varname, val):
+        if self.save.data is None:
+            self._set_status("请先打开存档文件")
+            return
         self._var(varname).set(str(val))
         self._write_all_from_gui()
         self._set_status("已设置 {varname} = {val}", varname=varname, val=val)
 
     def _quick_max_sepith(self):
+        if self.save.data is None:
+            self._set_status("请先打开存档文件")
+            return
         for name in SEPITH_OFFSETS:
             self._var(f"sepith_{name}").set("9999")
         self._write_all_from_gui()
@@ -1533,8 +1515,8 @@ class SaveEditor(tk.Tk):
             return
         s = self.save
         if s.data is None:
+            self._set_status("请先打开存档文件")
             return
-        lv = max(s.read_u16(base + CHAR_ATTR["lv"]), 1)
         hp = 99999
         s.write_u16(base + CHAR_ATTR["lv"], 99)
         s.write_u32(base + CHAR_ATTR["max_hp"], hp)
@@ -1547,11 +1529,12 @@ class SaveEditor(tk.Tk):
         s.write_u16(base + CHAR_ATTR["ats"], 9999)
         s.write_u16(base + CHAR_ATTR["adf"], 9999)
         self._refresh_all()
-        self._set_status("{name} 已满属性", name=name)
+        self._set_status("{name} 已满属性", name=character_name(name, self._current_ui_language()))
 
     def _quick_max_like(self):
         s = self.save
         if s.data is None:
+            self._set_status("请先打开存档文件")
             return
         for off in LIKEABILITY.values():
             s.write_u8(off, 255)
@@ -1562,6 +1545,7 @@ class SaveEditor(tk.Tk):
     def _quick_max_consumables(self):
         """消耗品、食材、书籍等设 99，并补齐缺失条目。"""
         if self.save.data is None:
+            self._set_status("请先打开存档文件")
             return
         self._items_data = self.save.read_items()
         for code in item_codes_for_categories("props_normal", "props_cooking", "food", "book", "fishing_bait", "fishing_fish"):
@@ -1573,6 +1557,7 @@ class SaveEditor(tk.Tk):
     def _quick_max_circuits(self):
         """全回路(普通+核心)设 99，并补齐缺失条目。"""
         if self.save.data is None:
+            self._set_status("请先打开存档文件")
             return
         self._items_data = self.save.read_items()
         for code in item_codes_for_categories("circuit_normal", "circuit_core"):
@@ -1584,6 +1569,7 @@ class SaveEditor(tk.Tk):
     def _quick_max_equipment(self):
         """全装备(武器/服装/鞋子/饰品)设 1，并补齐缺失条目。"""
         if self.save.data is None:
+            self._set_status("请先打开存档文件")
             return
         self._items_data = self.save.read_items()
         for code in item_codes_by_prefix("equipment", "fishing_rod"):
@@ -1610,7 +1596,7 @@ class SaveEditor(tk.Tk):
         ttk.Button(bar, text="全锁定", command=self._ach_lock_all).pack(side="left", padx=3)
         for part, bit, name in ACHIEVEMENT_NAMES:
             var = tk.BooleanVar()
-            cb = ttk.Checkbutton(scrollable, text=achievement_name(part, bit, name, self._current_achievement_language()), variable=var)
+            cb = ttk.Checkbutton(scrollable, text=achievement_name(part, bit, name, self._current_ui_language()), variable=var)
             cb.pack(anchor="w", padx=15, pady=1)
             self._ach_vars.append((part, bit, var, cb))
 
@@ -1637,6 +1623,9 @@ class SaveEditor(tk.Tk):
         self.save.write_achievements(bits)
 
     def _ach_unlock_all(self):
+        if self.save.data is None:
+            self._set_status("请先打开存档文件")
+            return
         self._write_achievements_from_gui()
         bits = {i: [1]*8 for i in range(7)}
         self.save.write_achievements(bits)
@@ -1644,6 +1633,9 @@ class SaveEditor(tk.Tk):
         self._set_status("全成就已解锁")
 
     def _ach_lock_all(self):
+        if self.save.data is None:
+            self._set_status("请先打开存档文件")
+            return
         bits = {i: [0]*8 for i in range(7)}
         self.save.write_achievements(bits)
         self._refresh_achievements_ui()
@@ -1720,6 +1712,7 @@ class SaveEditor(tk.Tk):
     # ---- P1: 怪物图鉴一键全开 ----
     def _unlock_all_monsters(self):
         if self.save.data is None:
+            self._set_status("请先打开存档文件")
             return
         self.save.unlock_all_monsters()
         self._set_status("怪物图鉴已全开 · 请保存存档")
