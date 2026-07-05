@@ -16,6 +16,8 @@
 | 队伍编成 | 0x1AFE0~0x1AFEE | 8 个队员槽 (u16 角色 ID) |
 | 校验和 | 0x26434 / 0x26438 | BZH 累加和算法 |
 | zstd 压缩 | — | 直接读写 NISA savedata.dat |
+| GUI 全局本地化 | zh_cn / en / ja | 已实现主要控件、角色名、耀晶片、战斗统计、成就、外观、快捷操作、物品/成就数据名称切换；缺失数据回退中文 |
+| 2026-07-05 深度 review 修复 | GUI / 数据写回 / 快捷操作 | 修复角色属性写入宽度、输入框写回、未加载存档状态提示、成就语言方法引用、队员标签切换、翻译重复 key |
 
 ---
 
@@ -175,10 +177,25 @@
 - [x] 物品名称中/英/日显示切换（基于 `ao_item_i18n.json`，缺失项回退中文）
 - [x] 成就名称中/英/日显示切换（基于 `ao_achievement_i18n.json`，56/56 覆盖）
 - [x] 收录 magic CSV 战技/导力魔法英文本地化参考（`ao_magic_i18n.json`；CSV 行号不等同于存档战技槽位 ID，日文列需复核编码）
-- [ ] 完整多语言界面（菜单、按钮、角色、技能等运行时文本）
+- [x] 主要 GUI 全局多语言切换（标签页、按钮、角色、耀晶片、战斗统计、成就、外观、快捷操作、物品/成就名称）
+- [ ] 战技 / S 技编辑器本地化与技能 ID 映射确认
+- [ ] EXP 等级曲线表接入与调级 UI
 - [ ] 存档批量备份/恢复管理
 - [ ] NISA / CLE 存档格式互相转换（参考 CS3 方法：替换前 3 行十六进制）
 
 ---
 
 最后更新: 2026-07-05
+
+
+---
+
+## 最近验证记录
+
+### 2026-07-05 深度 review 后验证
+
+- `py_compile`：workspace 与 publish package 的 `ao_save_editor.py` 均通过。
+- 本地化表：`CHARACTER_NAME_I18N`、`UI_TRANSLATIONS`、`ROLE_DISPLAY_I18N` 无重复 key。
+- 样例存档：完成加载、读取物品、写回、zstd 保存、再次加载。
+- CLI：在临时存档副本验证 `--mira 123456 --dp 400 --sepith max --max-like`，保存后可再次加载并生成 `.bak`。
+- GUI：当前 Codex bundled Python 缺 Tcl/Tk，未在该运行时中启动实测；需在带 Tkinter 的 Windows Python 中验证窗口交互。

@@ -10,7 +10,7 @@ This project adapts the offset tables and item definitions from [`424778940z/BZH
 
 This editor was built and tested for the NISA PC release, **Trails to Azure**, whose executable/save layout differs from the older mainland Chinese PC release.
 
-The in-editor Chinese item names and labels are taken from the Joyoland/欢乐百世 Simplified Chinese PC release of **碧之轨迹** and the original BZH editor data. Item and achievement names can now be displayed in Chinese, English, or Japanese when matching localization data exists in `ao_item_i18n.json` and `ao_achievement_i18n.json`; missing translations fall back to Chinese. These names may still differ from the NISA English text or community Simplified Chinese localization produced with [`J31why/zeroTool`](https://github.com/J31why/zeroTool). If you are playing NISA Trails to Azure with a zeroTool-based Chinese patch, treat this editor as a save-format tool first and a name database second.
+The in-editor Chinese item names and labels are taken from the Joyoland/欢乐百世 Simplified Chinese PC release of **碧之轨迹** and the original BZH editor data. The GUI now supports a global Chinese/English/Japanese language switch for tabs, buttons, character labels, sepith labels, battle counters, achievements, appearance names, quick actions, and item/achievement names where matching localization data exists. Missing translations fall back to Chinese. These names may still differ from the NISA English text or community Simplified Chinese localization produced with [`J31why/zeroTool`](https://github.com/J31why/zeroTool). If you are playing NISA Trails to Azure with a zeroTool-based Chinese patch, treat this editor as a save-format tool first and a name database second.
 
 ## Features
 
@@ -18,6 +18,7 @@ The in-editor Chinese item names and labels are taken from the Joyoland/欢乐�
 - Edit Mira, DP, medals, sepith, play time, and difficulty.
 - Edit character stat snapshots for 11 characters.
 - Edit party slots and 12 bonding values.
+- Switch the GUI globally between Chinese, English, and Japanese for implemented labels and data names.
 - Browse, search, and rewrite the full 713-item inventory table, with Chinese/English/Japanese item-name display where available.
 - Toggle the 7-byte achievement bitmap, with all-unlock/all-lock buttons and Chinese/English/Japanese achievement-name display.
 - Batch-fill consumables, ingredients, books, fish, quartz, and equipment.
@@ -26,6 +27,25 @@ The in-editor Chinese item names and labels are taken from the Joyoland/欢乐�
 - Unlock all monster manual records using the real BZH monster code table.
 - Recalculate the BZH 32-bit additive save checksum before writing.
 - Create a `.bak` backup when saving over an existing file.
+
+## Current Implementation Notes
+
+The latest review fixed several data-safety and localization bugs:
+
+- Character stat edits now write `u32` only for HP/EXP fields and `u16` for level, EP, CP, STR, DEF, ATS, and ADF.
+- Character stat entry edits now read the active entry value directly instead of looking up an invalid Tk variable name.
+- Quick actions, item refresh, achievement lock/unlock, and monster-manual unlock now report a clear status when no save file is loaded.
+- The global language switch no longer uses duplicate translation keys for sepith Time and play-time hours.
+- Party slot labels and quick-action character names are refreshed through the global language selector.
+
+Validation performed on the publish package:
+
+- `py_compile` passes for both workspace and publish copies.
+- Localization dictionaries were checked for duplicate keys.
+- A sample save was loaded, item data was read/written, saved as zstd, and loaded again.
+- CLI quick edit was tested on a temporary save copy with `--mira`, `--dp`, `--sepith max`, and `--max-like`.
+
+GUI launch was not verified inside the Codex bundled Python runtime because that runtime lacks Tcl/Tk. Use a normal Windows Python installation with Tkinter for GUI use.
 
 ## Localization Data
 
