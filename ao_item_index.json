@@ -1,0 +1,7145 @@
+{
+  "meta": {
+    "source": [
+      "C:\\Users\\Maple\\WorkBuddy\\20260501181603\\tools\\ao_save_editor\\workspace\\ao_zh_glossary.json",
+      "C:\\Users\\Maple\\Downloads\\ao_data_cn.xlsx"
+    ],
+    "notes": [
+      "Runtime item index for the save editor.",
+      "zh_joyoland comes from ao_zh_glossary.json.",
+      "zh_cle is intentionally conservative: props, weapons, normal quartz aliases, and core quartz aliases only."
+    ]
+  },
+  "items": [
+    {
+      "id_dec": 1,
+      "id_hex": "0x0001",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "调查手册",
+      "zh_cle": null,
+      "en": "Detective Notebook",
+      "ja": "捜査手帳"
+    },
+    {
+      "id_dec": 2,
+      "id_hex": "0x0002",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "料理手册",
+      "zh_cle": null,
+      "en": "Recipe Notebook",
+      "ja": "料理手帳"
+    },
+    {
+      "id_dec": 3,
+      "id_hex": "0x0003",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "钓鱼手册",
+      "zh_cle": null,
+      "en": "Fishing Notebook",
+      "ja": "釣り手帳"
+    },
+    {
+      "id_dec": 4,
+      "id_hex": "0x0004",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "战斗手册",
+      "zh_cle": null,
+      "en": "Combat Notebook",
+      "ja": "戦闘手帳"
+    },
+    {
+      "id_dec": 5,
+      "id_hex": "0x0005",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "自治州地图",
+      "zh_cle": null,
+      "en": "State Map",
+      "ja": "自治州の地図"
+    },
+    {
+      "id_dec": 6,
+      "id_hex": "0x0006",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔市的地图",
+      "zh_cle": null,
+      "en": "Crossbell City Map",
+      "ja": "クロスベル市の地図"
+    },
+    {
+      "id_dec": 9,
+      "id_hex": "0x0009",
+      "category": "equipment_weapon_generic",
+      "category_zh": "装备-武器-通用",
+      "zh_joyoland": "练习用武器",
+      "zh_cle": null,
+      "en": "Practice Weapon",
+      "ja": "練習用武器"
+    },
+    {
+      "id_dec": 10,
+      "id_hex": "0x000A",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "战术书·击",
+      "zh_cle": null,
+      "en": "Craft Book - Strike",
+      "ja": "戦術書・撃"
+    },
+    {
+      "id_dec": 11,
+      "id_hex": "0x000B",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "战术书·十",
+      "zh_cle": null,
+      "en": "Craft Book - Cross",
+      "ja": "戦術書・十"
+    },
+    {
+      "id_dec": 12,
+      "id_hex": "0x000C",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "战术书·苍",
+      "zh_cle": null,
+      "en": "Craft Book - Blue",
+      "ja": "戦術書・蒼"
+    },
+    {
+      "id_dec": 13,
+      "id_hex": "0x000D",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "战术书·袭",
+      "zh_cle": null,
+      "en": "Craft Book - Raid",
+      "ja": "戦術書・襲"
+    },
+    {
+      "id_dec": 14,
+      "id_hex": "0x000E",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "战术书·虚",
+      "zh_cle": null,
+      "en": "Craft Book - Akasha",
+      "ja": "戦術書・虚"
+    },
+    {
+      "id_dec": 15,
+      "id_hex": "0x000F",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "战术书·爆",
+      "zh_cle": null,
+      "en": "Craft Book - Blast",
+      "ja": "戦術書・爆"
+    },
+    {
+      "id_dec": 16,
+      "id_hex": "0x0010",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "战术书·里",
+      "zh_cle": null,
+      "en": "Craft Book - Rebel",
+      "ja": "戦術書・裏"
+    },
+    {
+      "id_dec": 17,
+      "id_hex": "0x0011",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "战术书·升",
+      "zh_cle": null,
+      "en": "Craft Book - Ascend",
+      "ja": "戦術書・昇"
+    },
+    {
+      "id_dec": 20,
+      "id_hex": "0x0014",
+      "category": "fishing_rod",
+      "category_zh": "钓具-钓竿",
+      "zh_joyoland": "初级杆",
+      "zh_cle": null,
+      "en": "Primary Rod",
+      "ja": "プライマリロッド"
+    },
+    {
+      "id_dec": 21,
+      "id_hex": "0x0015",
+      "category": "fishing_rod",
+      "category_zh": "钓具-钓竿",
+      "zh_joyoland": "小巧射手",
+      "zh_cle": null,
+      "en": "Little Shooter",
+      "ja": "リトルシューター"
+    },
+    {
+      "id_dec": 22,
+      "id_hex": "0x0016",
+      "category": "fishing_rod",
+      "category_zh": "钓具-钓竿",
+      "zh_joyoland": "竹竿",
+      "zh_cle": null,
+      "en": "Bamboo Rod",
+      "ja": "竹竿"
+    },
+    {
+      "id_dec": 23,
+      "id_hex": "0x0017",
+      "category": "fishing_rod",
+      "category_zh": "钓具-钓竿",
+      "zh_joyoland": "钢竿侵略者",
+      "zh_cle": null,
+      "en": "Viking Rod",
+      "ja": "剛竿バイキング"
+    },
+    {
+      "id_dec": 24,
+      "id_hex": "0x0018",
+      "category": "fishing_rod",
+      "category_zh": "钓具-钓竿",
+      "zh_joyoland": "水中支配者",
+      "zh_cle": null,
+      "en": "Aqua Ruler",
+      "ja": "アクアルーラー"
+    },
+    {
+      "id_dec": 30,
+      "id_hex": "0x001E",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "珊瑚戒指+",
+      "zh_cle": null,
+      "en": "Coral Ring+",
+      "ja": "コーラルリング＋"
+    },
+    {
+      "id_dec": 31,
+      "id_hex": "0x001F",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "英雄戒指+",
+      "zh_cle": null,
+      "en": "Marble Ring+",
+      "ja": "マーブルリング＋"
+    },
+    {
+      "id_dec": 32,
+      "id_hex": "0x0020",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "夜光眼镜+",
+      "zh_cle": null,
+      "en": "Luminous Glasses+",
+      "ja": "ルミナスグラス＋"
+    },
+    {
+      "id_dec": 33,
+      "id_hex": "0x0021",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "凉爽项链+",
+      "zh_cle": null,
+      "en": "Cool Necklace+",
+      "ja": "クールネックレス＋"
+    },
+    {
+      "id_dec": 34,
+      "id_hex": "0x0022",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "打火机+",
+      "zh_cle": null,
+      "en": "Lighter+",
+      "ja": "フレイムジッポー＋"
+    },
+    {
+      "id_dec": 35,
+      "id_hex": "0x0023",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "幻彩围巾+",
+      "zh_cle": null,
+      "en": "Mystic Stole+",
+      "ja": "ミスティストール＋"
+    },
+    {
+      "id_dec": 36,
+      "id_hex": "0x0024",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "叮当耳环+",
+      "zh_cle": null,
+      "en": "Tinkle Earrings+",
+      "ja": "ティンクルピアス＋"
+    },
+    {
+      "id_dec": 37,
+      "id_hex": "0x0025",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "钢手镯+",
+      "zh_cle": null,
+      "en": "Steel Wrist+",
+      "ja": "スティールリスト＋"
+    },
+    {
+      "id_dec": 38,
+      "id_hex": "0x0026",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "花之瓶+",
+      "zh_cle": null,
+      "en": "Floral Bottle+",
+      "ja": "フローラルボトル＋"
+    },
+    {
+      "id_dec": 39,
+      "id_hex": "0x0027",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "坚硬肉干",
+      "zh_cle": null,
+      "en": "Hard Jerky",
+      "ja": "ハードジャーキー"
+    },
+    {
+      "id_dec": 40,
+      "id_hex": "0x0028",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "海刃奖牌",
+      "zh_cle": null,
+      "en": "Ocean Edge's Medal",
+      "ja": "海刃のメダル"
+    },
+    {
+      "id_dec": 41,
+      "id_hex": "0x0029",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "水狂奖牌",
+      "zh_cle": null,
+      "en": "Crazy Wave's Medal",
+      "ja": "水狂のメダル"
+    },
+    {
+      "id_dec": 42,
+      "id_hex": "0x002A",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "龙宫奖牌",
+      "zh_cle": null,
+      "en": "Dragon Princess' Medal",
+      "ja": "竜宮のメダル"
+    },
+    {
+      "id_dec": 43,
+      "id_hex": "0x002B",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "银螭奖牌",
+      "zh_cle": null,
+      "en": "Silver Orca's Medal",
+      "ja": "銀鯱のメダル"
+    },
+    {
+      "id_dec": 44,
+      "id_hex": "0x002C",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "钓皇奖牌",
+      "zh_cle": null,
+      "en": "Fishing Emperor's Medal",
+      "ja": "釣皇のメダル"
+    },
+    {
+      "id_dec": 45,
+      "id_hex": "0x002D",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "狙击枪管",
+      "zh_cle": null,
+      "en": "Sniper Barrel",
+      "ja": "スナイパーバレル"
+    },
+    {
+      "id_dec": 46,
+      "id_hex": "0x002E",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "影丸头巾",
+      "zh_cle": null,
+      "en": "Kagemaru Hood",
+      "ja": "カゲマル頭巾"
+    },
+    {
+      "id_dec": 47,
+      "id_hex": "0x002F",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "咪西尾巴",
+      "zh_cle": null,
+      "en": "Mishy Tail",
+      "ja": "みっしぃテイル"
+    },
+    {
+      "id_dec": 48,
+      "id_hex": "0x0030",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "咪西帽子",
+      "zh_cle": null,
+      "en": "Mishy Hat",
+      "ja": "みっしぃキャップ"
+    },
+    {
+      "id_dec": 49,
+      "id_hex": "0x0031",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "咪雪爪子",
+      "zh_cle": null,
+      "en": "Mishette Paws",
+      "ja": "みーしぇハンド"
+    },
+    {
+      "id_dec": 50,
+      "id_hex": "0x0032",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "咪雪缎带",
+      "zh_cle": null,
+      "en": "Mishette Ribbon",
+      "ja": "みーしぇリボン"
+    },
+    {
+      "id_dec": 51,
+      "id_hex": "0x0033",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "进击刻印",
+      "zh_cle": null,
+      "en": "Rush Emblem",
+      "ja": "進撃の刻印"
+    },
+    {
+      "id_dec": 52,
+      "id_hex": "0x0034",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "超·必胜扎头巾",
+      "zh_cle": null,
+      "en": "True Gladiator Headband",
+      "ja": "超・必勝ハチマキ"
+    },
+    {
+      "id_dec": 53,
+      "id_hex": "0x0035",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "超·斗魂腰带",
+      "zh_cle": null,
+      "en": "True Gladiator Belt",
+      "ja": "超・闘魂ベルト"
+    },
+    {
+      "id_dec": 54,
+      "id_hex": "0x0036",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "正义徽章",
+      "zh_cle": null,
+      "en": "Medal of Justice",
+      "ja": "正義の徽章"
+    },
+    {
+      "id_dec": 55,
+      "id_hex": "0x0037",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "幸运刻印",
+      "zh_cle": null,
+      "en": "Luck Emblem",
+      "ja": "幸運の刻印"
+    },
+    {
+      "id_dec": 56,
+      "id_hex": "0x0038",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "光晓之冠",
+      "zh_cle": null,
+      "en": "Dawn Crown",
+      "ja": "光暁の冠"
+    },
+    {
+      "id_dec": 57,
+      "id_hex": "0x0039",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "盘古之冠",
+      "zh_cle": null,
+      "en": "Creator's Crown",
+      "ja": "盤古の冠"
+    },
+    {
+      "id_dec": 58,
+      "id_hex": "0x003A",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "馥郁香波",
+      "zh_cle": null,
+      "en": "Rich Fragrance",
+      "ja": "リッチフレグランス"
+    },
+    {
+      "id_dec": 60,
+      "id_hex": "0x003C",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "银胸针",
+      "zh_cle": null,
+      "en": "Silver Brooch",
+      "ja": "シルバーブローチ"
+    },
+    {
+      "id_dec": 61,
+      "id_hex": "0x003D",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "珊瑚戒指",
+      "zh_cle": null,
+      "en": "Coral Ring",
+      "ja": "コーラルリング"
+    },
+    {
+      "id_dec": 62,
+      "id_hex": "0x003E",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "英雄戒指",
+      "zh_cle": null,
+      "en": "Marble Ring",
+      "ja": "マーブルリング"
+    },
+    {
+      "id_dec": 63,
+      "id_hex": "0x003F",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "夜光眼镜",
+      "zh_cle": null,
+      "en": "Luminous Glasses",
+      "ja": "ルミナスグラス"
+    },
+    {
+      "id_dec": 64,
+      "id_hex": "0x0040",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "凉爽项链",
+      "zh_cle": null,
+      "en": "Cool Necklace",
+      "ja": "クールネックレス"
+    },
+    {
+      "id_dec": 65,
+      "id_hex": "0x0041",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "打火机",
+      "zh_cle": null,
+      "en": "Lighter",
+      "ja": "フレイムジッポー"
+    },
+    {
+      "id_dec": 66,
+      "id_hex": "0x0042",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "幻彩围巾",
+      "zh_cle": null,
+      "en": "Mystic Stole",
+      "ja": "ミスティストール"
+    },
+    {
+      "id_dec": 67,
+      "id_hex": "0x0043",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "叮当耳环",
+      "zh_cle": null,
+      "en": "Tinkle Earrings",
+      "ja": "ティンクルピアス"
+    },
+    {
+      "id_dec": 68,
+      "id_hex": "0x0044",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "钢手镯",
+      "zh_cle": null,
+      "en": "Steel Wrist",
+      "ja": "スティールリスト"
+    },
+    {
+      "id_dec": 69,
+      "id_hex": "0x0045",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "花之瓶",
+      "zh_cle": null,
+      "en": "Floral Bottle",
+      "ja": "フローラルボトル"
+    },
+    {
+      "id_dec": 70,
+      "id_hex": "0x0046",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "神圣之链",
+      "zh_cle": null,
+      "en": "Holy Chain",
+      "ja": "ホーリーチェイン"
+    },
+    {
+      "id_dec": 71,
+      "id_hex": "0x0047",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "云之使者",
+      "zh_cle": null,
+      "en": "Meghaduta",
+      "ja": "メーガドゥータ"
+    },
+    {
+      "id_dec": 72,
+      "id_hex": "0x0048",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "月亮灵摆",
+      "zh_cle": null,
+      "en": "Lunar Pendulum",
+      "ja": "ルナーペンデュラム"
+    },
+    {
+      "id_dec": 73,
+      "id_hex": "0x0049",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "太阳灵摆",
+      "zh_cle": null,
+      "en": "Solar Pendulum",
+      "ja": "サニーペンデュラム"
+    },
+    {
+      "id_dec": 74,
+      "id_hex": "0x004A",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "星辰灵摆",
+      "zh_cle": null,
+      "en": "Stellar Pendulum",
+      "ja": "スターペンデュラム"
+    },
+    {
+      "id_dec": 75,
+      "id_hex": "0x004B",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "加长枪管",
+      "zh_cle": null,
+      "en": "Long Barrel",
+      "ja": "ロングバレル"
+    },
+    {
+      "id_dec": 76,
+      "id_hex": "0x004C",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "规律徽章",
+      "zh_cle": null,
+      "en": "Medal of Order",
+      "ja": "規律の徽章"
+    },
+    {
+      "id_dec": 77,
+      "id_hex": "0x004D",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "勇气徽章",
+      "zh_cle": null,
+      "en": "Medal of Valor",
+      "ja": "勇気の徽章"
+    },
+    {
+      "id_dec": 78,
+      "id_hex": "0x004E",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "闪光徽章",
+      "zh_cle": null,
+      "en": "Medal of Luster",
+      "ja": "閃光の徽章"
+    },
+    {
+      "id_dec": 79,
+      "id_hex": "0x004F",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "必胜扎头巾",
+      "zh_cle": null,
+      "en": "Gladiator Headband",
+      "ja": "必勝ハチマキ"
+    },
+    {
+      "id_dec": 80,
+      "id_hex": "0x0050",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "斗魂腰带",
+      "zh_cle": null,
+      "en": "Gladiator Belt",
+      "ja": "闘魂ベルト"
+    },
+    {
+      "id_dec": 81,
+      "id_hex": "0x0051",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "星杯挂坠",
+      "zh_cle": null,
+      "en": "Grail Locket",
+      "ja": "グラールロケット"
+    },
+    {
+      "id_dec": 82,
+      "id_hex": "0x0052",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "银之链",
+      "zh_cle": null,
+      "en": "Silver Chain",
+      "ja": "シルバーチェイン"
+    },
+    {
+      "id_dec": 83,
+      "id_hex": "0x0053",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "月灵玉",
+      "zh_cle": null,
+      "en": "Lunar Spirit Bead",
+      "ja": "月霊玉"
+    },
+    {
+      "id_dec": 84,
+      "id_hex": "0x0054",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "咪雪挂饰",
+      "zh_cle": null,
+      "en": "Mishette Strap",
+      "ja": "みーしぇストラップ"
+    },
+    {
+      "id_dec": 85,
+      "id_hex": "0x0055",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "土人偶",
+      "zh_cle": null,
+      "en": "Emergency Puppet",
+      "ja": "土壇場マペット"
+    },
+    {
+      "id_dec": 86,
+      "id_hex": "0x0056",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "寂静之蓝",
+      "zh_cle": null,
+      "en": "Still Blue",
+      "ja": "サイレンスブルー"
+    },
+    {
+      "id_dec": 87,
+      "id_hex": "0x0057",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "激情之红",
+      "zh_cle": null,
+      "en": "Passionate Rouge",
+      "ja": "パシオンルージュ"
+    },
+    {
+      "id_dec": 88,
+      "id_hex": "0x0058",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "常青之绿",
+      "zh_cle": null,
+      "en": "Evergreen",
+      "ja": "エヴァーグリーン"
+    },
+    {
+      "id_dec": 89,
+      "id_hex": "0x0059",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "深邃之黄",
+      "zh_cle": null,
+      "en": "Deep Ocher",
+      "ja": "ディープオーカー"
+    },
+    {
+      "id_dec": 90,
+      "id_hex": "0x005A",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "草帽",
+      "zh_cle": null,
+      "en": "Straw Hat",
+      "ja": "麦わら帽子"
+    },
+    {
+      "id_dec": 91,
+      "id_hex": "0x005B",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "安全头盔",
+      "zh_cle": null,
+      "en": "Protective Helmet",
+      "ja": "安全ヘルメット"
+    },
+    {
+      "id_dec": 92,
+      "id_hex": "0x005C",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "医用手套",
+      "zh_cle": null,
+      "en": "Surgical Gloves",
+      "ja": "オペ用手袋"
+    },
+    {
+      "id_dec": 94,
+      "id_hex": "0x005E",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "睡猫硬币",
+      "zh_cle": null,
+      "en": "Sleepy Cat Coin",
+      "ja": "眠り猫のコイン"
+    },
+    {
+      "id_dec": 95,
+      "id_hex": "0x005F",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "跳蛙硬币",
+      "zh_cle": null,
+      "en": "Leaping Frog Coin",
+      "ja": "跳び蛙のコイン"
+    },
+    {
+      "id_dec": 97,
+      "id_hex": "0x0061",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "神圣挂坠",
+      "zh_cle": null,
+      "en": "Holy Locket",
+      "ja": "ホーリーロケット"
+    },
+    {
+      "id_dec": 99,
+      "id_hex": "0x0063",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "五彩风车",
+      "zh_cle": null,
+      "en": "Colorful Pinwheel",
+      "ja": "カラフル風車"
+    },
+    {
+      "id_dec": 100,
+      "id_hex": "0x0064",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "HP1",
+      "zh_cle": "HP1",
+      "en": "HP 1",
+      "ja": "ＨＰ１"
+    },
+    {
+      "id_dec": 101,
+      "id_hex": "0x0065",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "HP2",
+      "zh_cle": "HP2",
+      "en": "HP 2",
+      "ja": "ＨＰ２"
+    },
+    {
+      "id_dec": 102,
+      "id_hex": "0x0066",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "HP3",
+      "zh_cle": "HP3",
+      "en": "HP 3",
+      "ja": "ＨＰ３"
+    },
+    {
+      "id_dec": 103,
+      "id_hex": "0x0067",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "水耀珠",
+      "zh_cle": "水耀珠",
+      "en": "Water Gem",
+      "ja": "水耀珠"
+    },
+    {
+      "id_dec": 104,
+      "id_hex": "0x0068",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "EP1",
+      "zh_cle": "EP1",
+      "en": "EP 1",
+      "ja": "ＥＰ１"
+    },
+    {
+      "id_dec": 105,
+      "id_hex": "0x0069",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "EP2",
+      "zh_cle": "EP2",
+      "en": "EP 2",
+      "ja": "ＥＰ２"
+    },
+    {
+      "id_dec": 106,
+      "id_hex": "0x006A",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "EP3",
+      "zh_cle": "EP3",
+      "en": "EP 3",
+      "ja": "ＥＰ３"
+    },
+    {
+      "id_dec": 107,
+      "id_hex": "0x006B",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "银耀珠",
+      "zh_cle": "银耀珠",
+      "en": "Silver Gem",
+      "ja": "銀耀珠"
+    },
+    {
+      "id_dec": 108,
+      "id_hex": "0x006C",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "攻击1",
+      "zh_cle": "攻击1",
+      "en": "Attack 1",
+      "ja": "攻撃１"
+    },
+    {
+      "id_dec": 109,
+      "id_hex": "0x006D",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "攻击2",
+      "zh_cle": "攻击2",
+      "en": "Attack 2",
+      "ja": "攻撃２"
+    },
+    {
+      "id_dec": 110,
+      "id_hex": "0x006E",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "攻击3",
+      "zh_cle": "攻击3",
+      "en": "Attack 3",
+      "ja": "攻撃３"
+    },
+    {
+      "id_dec": 111,
+      "id_hex": "0x006F",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "红耀珠",
+      "zh_cle": "红耀珠",
+      "en": "Ruby Gem",
+      "ja": "紅耀珠"
+    },
+    {
+      "id_dec": 112,
+      "id_hex": "0x0070",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "防御1",
+      "zh_cle": "防御1",
+      "en": "Defense 1",
+      "ja": "防御１"
+    },
+    {
+      "id_dec": 113,
+      "id_hex": "0x0071",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "防御2",
+      "zh_cle": "防御2",
+      "en": "Defense 2",
+      "ja": "防御２"
+    },
+    {
+      "id_dec": 114,
+      "id_hex": "0x0072",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "防御3",
+      "zh_cle": "防御3",
+      "en": "Defense 3",
+      "ja": "防御３"
+    },
+    {
+      "id_dec": 115,
+      "id_hex": "0x0073",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "琥耀珠",
+      "zh_cle": "琥耀珠",
+      "en": "Topaz Gem",
+      "ja": "琥耀珠"
+    },
+    {
+      "id_dec": 116,
+      "id_hex": "0x0074",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "精神1",
+      "zh_cle": "精神1",
+      "en": "Mind 1",
+      "ja": "精神１"
+    },
+    {
+      "id_dec": 117,
+      "id_hex": "0x0075",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "精神2",
+      "zh_cle": "精神2",
+      "en": "Mind 2",
+      "ja": "精神２"
+    },
+    {
+      "id_dec": 118,
+      "id_hex": "0x0076",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "精神3",
+      "zh_cle": "精神3",
+      "en": "Mind 3",
+      "ja": "精神３"
+    },
+    {
+      "id_dec": 119,
+      "id_hex": "0x0077",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "白耀珠",
+      "zh_cle": "白耀珠",
+      "en": "Pearl Gem",
+      "ja": "白耀珠"
+    },
+    {
+      "id_dec": 120,
+      "id_hex": "0x0078",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "魔防1",
+      "zh_cle": "魔防1",
+      "en": "Shield 1",
+      "ja": "魔防１"
+    },
+    {
+      "id_dec": 121,
+      "id_hex": "0x0079",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "魔防2",
+      "zh_cle": "魔防2",
+      "en": "Shield 2",
+      "ja": "魔防２"
+    },
+    {
+      "id_dec": 122,
+      "id_hex": "0x007A",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "魔防3",
+      "zh_cle": "魔防3",
+      "en": "Shield 3",
+      "ja": "魔防３"
+    },
+    {
+      "id_dec": 123,
+      "id_hex": "0x007B",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "苍耀珠",
+      "zh_cle": "苍耀珠",
+      "en": "Sapphire Gem",
+      "ja": "蒼耀珠"
+    },
+    {
+      "id_dec": 124,
+      "id_hex": "0x007C",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "命中1",
+      "zh_cle": "命中1",
+      "en": "Hit 1",
+      "ja": "命中１"
+    },
+    {
+      "id_dec": 125,
+      "id_hex": "0x007D",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "命中2",
+      "zh_cle": "命中2",
+      "en": "Hit 2",
+      "ja": "命中２"
+    },
+    {
+      "id_dec": 126,
+      "id_hex": "0x007E",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "命中3",
+      "zh_cle": "命中3",
+      "en": "Hit 3",
+      "ja": "命中３"
+    },
+    {
+      "id_dec": 127,
+      "id_hex": "0x007F",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "光耀珠",
+      "zh_cle": "光耀珠",
+      "en": "Light Gem",
+      "ja": "光耀珠"
+    },
+    {
+      "id_dec": 128,
+      "id_hex": "0x0080",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "回避1",
+      "zh_cle": "回避1",
+      "en": "Evade 1",
+      "ja": "回避１"
+    },
+    {
+      "id_dec": 129,
+      "id_hex": "0x0081",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "回避2",
+      "zh_cle": "回避2",
+      "en": "Evade 2",
+      "ja": "回避２"
+    },
+    {
+      "id_dec": 130,
+      "id_hex": "0x0082",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "回避3",
+      "zh_cle": "回避3",
+      "en": "Evade 3",
+      "ja": "回避３"
+    },
+    {
+      "id_dec": 131,
+      "id_hex": "0x0083",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "翠耀珠",
+      "zh_cle": "翠耀珠",
+      "en": "Emerald Gem",
+      "ja": "翠耀珠"
+    },
+    {
+      "id_dec": 132,
+      "id_hex": "0x0084",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "移动1",
+      "zh_cle": "移动1",
+      "en": "Move 1",
+      "ja": "移動１"
+    },
+    {
+      "id_dec": 133,
+      "id_hex": "0x0085",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "移动2",
+      "zh_cle": "移动2",
+      "en": "Move 2",
+      "ja": "移動２"
+    },
+    {
+      "id_dec": 134,
+      "id_hex": "0x0086",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "风耀珠",
+      "zh_cle": "风耀珠",
+      "en": "Wind Gem",
+      "ja": "風耀珠"
+    },
+    {
+      "id_dec": 135,
+      "id_hex": "0x0087",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "-----",
+      "zh_cle": null,
+      "en": "-----",
+      "ja": "-----"
+    },
+    {
+      "id_dec": 136,
+      "id_hex": "0x0088",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "行动力1",
+      "zh_cle": "行动力1",
+      "en": "Action 1",
+      "ja": "行動力１"
+    },
+    {
+      "id_dec": 137,
+      "id_hex": "0x0089",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "行动力2",
+      "zh_cle": "行动力2",
+      "en": "Action 2",
+      "ja": "行動力２"
+    },
+    {
+      "id_dec": 138,
+      "id_hex": "0x008A",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "行动力3",
+      "zh_cle": "行动力3",
+      "en": "Action 3",
+      "ja": "行動力３"
+    },
+    {
+      "id_dec": 139,
+      "id_hex": "0x008B",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "黑耀珠",
+      "zh_cle": "黑耀珠",
+      "en": "Onyx Gem",
+      "ja": "黒耀珠"
+    },
+    {
+      "id_dec": 140,
+      "id_hex": "0x008C",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "妨害1",
+      "zh_cle": "妨碍1",
+      "en": "Impede 1",
+      "ja": "妨害１"
+    },
+    {
+      "id_dec": 141,
+      "id_hex": "0x008D",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "妨害2",
+      "zh_cle": "妨碍2",
+      "en": "Impede 2",
+      "ja": "妨害２"
+    },
+    {
+      "id_dec": 142,
+      "id_hex": "0x008E",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "绝耀珠",
+      "zh_cle": "绝耀珠",
+      "en": "Rift Gem",
+      "ja": "絶耀珠"
+    },
+    {
+      "id_dec": 143,
+      "id_hex": "0x008F",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "驱动1",
+      "zh_cle": "驱动1",
+      "en": "Cast 1",
+      "ja": "駆動１"
+    },
+    {
+      "id_dec": 144,
+      "id_hex": "0x0090",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "驱动2",
+      "zh_cle": "驱动2",
+      "en": "Cast 2",
+      "ja": "駆動２"
+    },
+    {
+      "id_dec": 145,
+      "id_hex": "0x0091",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "刻耀珠",
+      "zh_cle": "刻耀珠",
+      "en": "Time Gem",
+      "ja": "刻耀珠"
+    },
+    {
+      "id_dec": 146,
+      "id_hex": "0x0092",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "省EP1",
+      "zh_cle": "省EP1",
+      "en": "EP Cut 1",
+      "ja": "省ＥＰ１"
+    },
+    {
+      "id_dec": 147,
+      "id_hex": "0x0093",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "省EP2",
+      "zh_cle": "省EP2",
+      "en": "EP Cut 2",
+      "ja": "省ＥＰ２"
+    },
+    {
+      "id_dec": 148,
+      "id_hex": "0x0094",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "省EP3",
+      "zh_cle": "省EP3",
+      "en": "EP Cut 3",
+      "ja": "省ＥＰ３"
+    },
+    {
+      "id_dec": 149,
+      "id_hex": "0x0095",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "金耀珠",
+      "zh_cle": "金耀珠",
+      "en": "Gold Gem",
+      "ja": "金耀珠"
+    },
+    {
+      "id_dec": 150,
+      "id_hex": "0x0096",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "毒之刃",
+      "zh_cle": "毒之刃",
+      "en": "Poison",
+      "ja": "毒の刃"
+    },
+    {
+      "id_dec": 151,
+      "id_hex": "0x0097",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "石化之刃",
+      "zh_cle": "石化之刃",
+      "en": "Petrify",
+      "ja": "石化の刃"
+    },
+    {
+      "id_dec": 152,
+      "id_hex": "0x0098",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "封魔之刃",
+      "zh_cle": "封魔之刃",
+      "en": "Mute",
+      "ja": "封魔の刃"
+    },
+    {
+      "id_dec": 153,
+      "id_hex": "0x0099",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "冻结之刃",
+      "zh_cle": "冻结之刃",
+      "en": "Freeze",
+      "ja": "凍結の刃"
+    },
+    {
+      "id_dec": 154,
+      "id_hex": "0x009A",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "封技之刃",
+      "zh_cle": "封技之刃",
+      "en": "Seal",
+      "ja": "封技の刃"
+    },
+    {
+      "id_dec": 155,
+      "id_hex": "0x009B",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "炎伤之刃",
+      "zh_cle": "炎伤之刃",
+      "en": "Burn",
+      "ja": "炎傷の刃"
+    },
+    {
+      "id_dec": 156,
+      "id_hex": "0x009C",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "暗之刃",
+      "zh_cle": "黑暗之刃",
+      "en": "Blind",
+      "ja": "暗闇の刃"
+    },
+    {
+      "id_dec": 157,
+      "id_hex": "0x009D",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "睡眠之刃",
+      "zh_cle": "睡眠之刃",
+      "en": "Sleep",
+      "ja": "睡眠の刃"
+    },
+    {
+      "id_dec": 158,
+      "id_hex": "0x009E",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "混乱之刃",
+      "zh_cle": "混乱之刃",
+      "en": "Confuse",
+      "ja": "混乱の刃"
+    },
+    {
+      "id_dec": 159,
+      "id_hex": "0x009F",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "破剑之牙",
+      "zh_cle": "破剑之牙",
+      "en": "Sword Breaker",
+      "ja": "破剣の牙"
+    },
+    {
+      "id_dec": 160,
+      "id_hex": "0x00A0",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "破盾之牙",
+      "zh_cle": "破盾之牙",
+      "en": "Shield Breaker",
+      "ja": "破盾の牙"
+    },
+    {
+      "id_dec": 161,
+      "id_hex": "0x00A1",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "破言之牙",
+      "zh_cle": "破言之牙",
+      "en": "Voice Breaker",
+      "ja": "破言の牙"
+    },
+    {
+      "id_dec": 162,
+      "id_hex": "0x00A2",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "破灵之牙",
+      "zh_cle": "破灵之牙",
+      "en": "Spirit Breaker",
+      "ja": "破霊の牙"
+    },
+    {
+      "id_dec": 163,
+      "id_hex": "0x00A3",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "破迅之牙",
+      "zh_cle": "破迅之牙",
+      "en": "Speed Breaker",
+      "ja": "破迅の牙"
+    },
+    {
+      "id_dec": 164,
+      "id_hex": "0x00A4",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "破脚之牙",
+      "zh_cle": "破足之牙",
+      "en": "Leg Breaker",
+      "ja": "破脚の牙"
+    },
+    {
+      "id_dec": 165,
+      "id_hex": "0x00A5",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "镇星铃",
+      "zh_cle": "镇星铃",
+      "en": "Saturn Bell",
+      "ja": "鎮星鈴"
+    },
+    {
+      "id_dec": 166,
+      "id_hex": "0x00A6",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "辰星铃",
+      "zh_cle": "辰星铃",
+      "en": "Mercury Bell",
+      "ja": "辰星鈴"
+    },
+    {
+      "id_dec": 167,
+      "id_hex": "0x00A7",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "焰星铃",
+      "zh_cle": "焰星铃",
+      "en": "Mars Bell",
+      "ja": "焔星鈴"
+    },
+    {
+      "id_dec": 168,
+      "id_hex": "0x00A8",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "岁星铃",
+      "zh_cle": "岁星铃",
+      "en": "Jupiter Bell",
+      "ja": "歳星鈴"
+    },
+    {
+      "id_dec": 169,
+      "id_hex": "0x00A9",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "冥王铃",
+      "zh_cle": "冥王铃",
+      "en": "Pluto Bell",
+      "ja": "冥王鈴"
+    },
+    {
+      "id_dec": 170,
+      "id_hex": "0x00AA",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "天王铃",
+      "zh_cle": "天王铃",
+      "en": "Uranus Bell",
+      "ja": "天王鈴"
+    },
+    {
+      "id_dec": 171,
+      "id_hex": "0x00AB",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "明王铃",
+      "zh_cle": "明王铃",
+      "en": "Venus Bell",
+      "ja": "明王鈴"
+    },
+    {
+      "id_dec": 172,
+      "id_hex": "0x00AC",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "耀脉",
+      "zh_cle": "耀脈",
+      "en": "Septium Vein",
+      "ja": "耀脈"
+    },
+    {
+      "id_dec": 173,
+      "id_hex": "0x00AD",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "机功",
+      "zh_cle": "机功",
+      "en": "Ingenuity",
+      "ja": "機功"
+    },
+    {
+      "id_dec": 174,
+      "id_hex": "0x00AE",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "治愈",
+      "zh_cle": "治愈",
+      "en": "Heal",
+      "ja": "治癒"
+    },
+    {
+      "id_dec": 175,
+      "id_hex": "0x00AF",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "丹精",
+      "zh_cle": "真心",
+      "en": "Effort",
+      "ja": "丹精"
+    },
+    {
+      "id_dec": 176,
+      "id_hex": "0x00B0",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "炼气",
+      "zh_cle": "练气",
+      "en": "Invigorate",
+      "ja": "練気"
+    },
+    {
+      "id_dec": 177,
+      "id_hex": "0x00B1",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "龙眼",
+      "zh_cle": "龙眼",
+      "en": "Dragon Vision",
+      "ja": "龍眼"
+    },
+    {
+      "id_dec": 178,
+      "id_hex": "0x00B2",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "恶戏",
+      "zh_cle": "捉弄",
+      "en": "Prankster",
+      "ja": "悪戯"
+    },
+    {
+      "id_dec": 179,
+      "id_hex": "0x00B3",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "脱兔",
+      "zh_cle": "脱兔",
+      "en": "Hare",
+      "ja": "脱兎"
+    },
+    {
+      "id_dec": 180,
+      "id_hex": "0x00B4",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "虎威",
+      "zh_cle": "虎威",
+      "en": "Intimidation",
+      "ja": "虎威"
+    },
+    {
+      "id_dec": 181,
+      "id_hex": "0x00B5",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "美臭",
+      "zh_cle": "异香",
+      "en": "Scent",
+      "ja": "美臭"
+    },
+    {
+      "id_dec": 182,
+      "id_hex": "0x00B6",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "幸运",
+      "zh_cle": "幸运",
+      "en": "Luck",
+      "ja": "幸運"
+    },
+    {
+      "id_dec": 183,
+      "id_hex": "0x00B7",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "鹰目",
+      "zh_cle": "鹰眼",
+      "en": "Eagle Eye",
+      "ja": "鷹目"
+    },
+    {
+      "id_dec": 184,
+      "id_hex": "0x00B8",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "天眼",
+      "zh_cle": "天眼",
+      "en": "Heaven's Eye",
+      "ja": "天眼"
+    },
+    {
+      "id_dec": 185,
+      "id_hex": "0x00B9",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "范围",
+      "zh_cle": "范围",
+      "en": "Range",
+      "ja": "範囲"
+    },
+    {
+      "id_dec": 186,
+      "id_hex": "0x00BA",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "情报",
+      "zh_cle": "情报",
+      "en": "Information",
+      "ja": "情報"
+    },
+    {
+      "id_dec": 187,
+      "id_hex": "0x00BB",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "探知",
+      "zh_cle": "探知",
+      "en": "Detection",
+      "ja": "探知"
+    },
+    {
+      "id_dec": 188,
+      "id_hex": "0x00BC",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "缚魔",
+      "zh_cle": "缚魔",
+      "en": "Shackle",
+      "ja": "縛魔"
+    },
+    {
+      "id_dec": 189,
+      "id_hex": "0x00BD",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "幻胧",
+      "zh_cle": "幻胧",
+      "en": "Shroud",
+      "ja": "幻朧"
+    },
+    {
+      "id_dec": 190,
+      "id_hex": "0x00BE",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "毒之刃2",
+      "zh_cle": "毒之刃2",
+      "en": "Poison 2",
+      "ja": "毒の刃２"
+    },
+    {
+      "id_dec": 191,
+      "id_hex": "0x00BF",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "石化之刃2",
+      "zh_cle": "石化之刃2",
+      "en": "Petrify 2",
+      "ja": "石化の刃２"
+    },
+    {
+      "id_dec": 192,
+      "id_hex": "0x00C0",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "封魔之刃2",
+      "zh_cle": "封魔之刃2",
+      "en": "Mute 2",
+      "ja": "封魔の刃２"
+    },
+    {
+      "id_dec": 193,
+      "id_hex": "0x00C1",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "冻结之刃2",
+      "zh_cle": "冻结之刃2",
+      "en": "Freeze 2",
+      "ja": "凍結の刃２"
+    },
+    {
+      "id_dec": 194,
+      "id_hex": "0x00C2",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "封技之刃2",
+      "zh_cle": "封技之刃2",
+      "en": "Seal 2",
+      "ja": "封技の刃２"
+    },
+    {
+      "id_dec": 195,
+      "id_hex": "0x00C3",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "炎伤之刃2",
+      "zh_cle": "炎伤之刃2",
+      "en": "Burn 2",
+      "ja": "炎傷の刃２"
+    },
+    {
+      "id_dec": 196,
+      "id_hex": "0x00C4",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "暗之刃2",
+      "zh_cle": "黑暗之刃2",
+      "en": "Blind 2",
+      "ja": "暗闇の刃２"
+    },
+    {
+      "id_dec": 197,
+      "id_hex": "0x00C5",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "睡眠之刃2",
+      "zh_cle": "睡眠之刃2",
+      "en": "Sleep 2",
+      "ja": "睡眠の刃２"
+    },
+    {
+      "id_dec": 198,
+      "id_hex": "0x00C6",
+      "category": "circuit_normal",
+      "category_zh": "回路-普通",
+      "zh_joyoland": "混乱之刃2",
+      "zh_cle": "混乱之刃2",
+      "en": "Confuse 2",
+      "ja": "混乱の刃２"
+    },
+    {
+      "id_dec": 203,
+      "id_hex": "0x00CB",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "物理吸收",
+      "zh_cle": null,
+      "en": null,
+      "ja": null
+    },
+    {
+      "id_dec": 204,
+      "id_hex": "0x00CC",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "魔法吸收",
+      "zh_cle": null,
+      "en": null,
+      "ja": null
+    },
+    {
+      "id_dec": 205,
+      "id_hex": "0x00CD",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "物理反射",
+      "zh_cle": null,
+      "en": null,
+      "ja": null
+    },
+    {
+      "id_dec": 206,
+      "id_hex": "0x00CE",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "魔法反射",
+      "zh_cle": null,
+      "en": "",
+      "ja": ""
+    },
+    {
+      "id_dec": 207,
+      "id_hex": "0x00CF",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "100%毒之刃",
+      "zh_cle": null,
+      "en": "100％ Poison",
+      "ja": "100毒の刃"
+    },
+    {
+      "id_dec": 208,
+      "id_hex": "0x00D0",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "100%石化之刃",
+      "zh_cle": null,
+      "en": "100％ Petrify",
+      "ja": "100石化の刃"
+    },
+    {
+      "id_dec": 209,
+      "id_hex": "0x00D1",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "100%封魔之刃",
+      "zh_cle": null,
+      "en": "100％ Mute",
+      "ja": "100封魔の刃"
+    },
+    {
+      "id_dec": 210,
+      "id_hex": "0x00D2",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "100%冻结之刃",
+      "zh_cle": null,
+      "en": "100％ Freeze",
+      "ja": "100凍結の刃"
+    },
+    {
+      "id_dec": 211,
+      "id_hex": "0x00D3",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "100%封技之刃",
+      "zh_cle": null,
+      "en": "100％ Seal",
+      "ja": "100封技の刃"
+    },
+    {
+      "id_dec": 212,
+      "id_hex": "0x00D4",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "100%炎伤之刃",
+      "zh_cle": null,
+      "en": "100％ Burn",
+      "ja": "100炎傷の刃"
+    },
+    {
+      "id_dec": 213,
+      "id_hex": "0x00D5",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "100%黑暗之刃",
+      "zh_cle": null,
+      "en": "100％ Blind",
+      "ja": "100暗闇の刃"
+    },
+    {
+      "id_dec": 214,
+      "id_hex": "0x00D6",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "100%睡眠之刃",
+      "zh_cle": null,
+      "en": "100％ Blind",
+      "ja": "100睡眠の刃"
+    },
+    {
+      "id_dec": 215,
+      "id_hex": "0x00D7",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "100%混乱之刃",
+      "zh_cle": null,
+      "en": "100％ Confuse",
+      "ja": "100混乱の刃"
+    },
+    {
+      "id_dec": 216,
+      "id_hex": "0x00D8",
+      "category": "circuit_debug",
+      "category_zh": "回路-Debug/未确认",
+      "zh_joyoland": "100%即死之刃",
+      "zh_cle": null,
+      "en": "100％ Deathblow",
+      "ja": "100即死の刃"
+    },
+    {
+      "id_dec": 220,
+      "id_hex": "0x00DC",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "力量",
+      "zh_cle": "力量",
+      "en": "Force",
+      "ja": "フォース"
+    },
+    {
+      "id_dec": 221,
+      "id_hex": "0x00DD",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "盾牌",
+      "zh_cle": "护盾",
+      "en": "Shield",
+      "ja": "シールド"
+    },
+    {
+      "id_dec": 222,
+      "id_hex": "0x00DE",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "妖精",
+      "zh_cle": "妖精",
+      "en": "Pixie",
+      "ja": "ピクシィ"
+    },
+    {
+      "id_dec": 223,
+      "id_hex": "0x00DF",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "利爪",
+      "zh_cle": "利爪",
+      "en": "Crow",
+      "ja": "クロウ"
+    },
+    {
+      "id_dec": 224,
+      "id_hex": "0x00E0",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "白金",
+      "zh_cle": "白金",
+      "en": "Platinum",
+      "ja": "プラチナ"
+    },
+    {
+      "id_dec": 225,
+      "id_hex": "0x00E1",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "幻象",
+      "zh_cle": "幻象",
+      "en": "Mirage",
+      "ja": "ミラージュ"
+    },
+    {
+      "id_dec": 226,
+      "id_hex": "0x00E2",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "战斧",
+      "zh_cle": "战斧",
+      "en": "Axe",
+      "ja": "アックス"
+    },
+    {
+      "id_dec": 227,
+      "id_hex": "0x00E3",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "法则",
+      "zh_cle": "圣典",
+      "en": "Canon",
+      "ja": "カノン"
+    },
+    {
+      "id_dec": 228,
+      "id_hex": "0x00E4",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "羽翼",
+      "zh_cle": "羽翼",
+      "en": "Wing",
+      "ja": "ウィング"
+    },
+    {
+      "id_dec": 229,
+      "id_hex": "0x00E5",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "神佑",
+      "zh_cle": "神盾",
+      "en": "Aegis",
+      "ja": "イージス"
+    },
+    {
+      "id_dec": 230,
+      "id_hex": "0x00E6",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "王权",
+      "zh_cle": "权杖",
+      "en": "Scepter",
+      "ja": "セプター"
+    },
+    {
+      "id_dec": 231,
+      "id_hex": "0x00E7",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "魅影",
+      "zh_cle": "魅影",
+      "en": "Phantom",
+      "ja": "ファントム"
+    },
+    {
+      "id_dec": 232,
+      "id_hex": "0x00E8",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "守护",
+      "zh_cle": "坚守",
+      "en": "Keeper",
+      "ja": "キーパー"
+    },
+    {
+      "id_dec": 233,
+      "id_hex": "0x00E9",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "无限",
+      "zh_cle": "永恒",
+      "en": "Moebius",
+      "ja": "メビウス"
+    },
+    {
+      "id_dec": 234,
+      "id_hex": "0x00EA",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "小丑",
+      "zh_cle": "小丑",
+      "en": "Juggler",
+      "ja": "ジャグラー"
+    },
+    {
+      "id_dec": 235,
+      "id_hex": "0x00EB",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "罪恶",
+      "zh_cle": "罪恶",
+      "en": "Criminal",
+      "ja": "クリミナル"
+    },
+    {
+      "id_dec": 236,
+      "id_hex": "0x00EC",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "草薤",
+      "zh_cle": "草薙",
+      "en": "Kusanagi",
+      "ja": "クサナギ"
+    },
+    {
+      "id_dec": 237,
+      "id_hex": "0x00ED",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "纹章",
+      "zh_cle": "纹章",
+      "en": "Emblem",
+      "ja": "エンブレム"
+    },
+    {
+      "id_dec": 238,
+      "id_hex": "0x00EE",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "灵猫",
+      "zh_cle": "灵猫",
+      "en": "Katze",
+      "ja": "カッツェ"
+    },
+    {
+      "id_dec": 239,
+      "id_hex": "0x00EF",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "骑士",
+      "zh_cle": "骑兵",
+      "en": "Chevalier",
+      "ja": "シュバリエ"
+    },
+    {
+      "id_dec": 240,
+      "id_hex": "0x00F0",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "贤者",
+      "zh_cle": "智者",
+      "en": "Magius",
+      "ja": "マギウス"
+    },
+    {
+      "id_dec": 241,
+      "id_hex": "0x00F1",
+      "category": "circuit_core",
+      "category_zh": "回路-核心",
+      "zh_joyoland": "草薤",
+      "zh_cle": "草薙",
+      "en": "Kusanagi",
+      "ja": "クサナギ"
+    },
+    {
+      "id_dec": 300,
+      "id_hex": "0x012C",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "魔兽兽肉",
+      "zh_cle": null,
+      "en": "Beast Flesh",
+      "ja": "魔獣の獣肉"
+    },
+    {
+      "id_dec": 301,
+      "id_hex": "0x012D",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "魔兽鱼肉",
+      "zh_cle": null,
+      "en": "Fish Fillet",
+      "ja": "魔獣の魚肉"
+    },
+    {
+      "id_dec": 302,
+      "id_hex": "0x012E",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "魔兽之壳",
+      "zh_cle": null,
+      "en": "Chitinous Shell",
+      "ja": "魔獣の殻"
+    },
+    {
+      "id_dec": 303,
+      "id_hex": "0x012F",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "魔兽之卵",
+      "zh_cle": null,
+      "en": "Monster Egg",
+      "ja": "魔獣の卵"
+    },
+    {
+      "id_dec": 304,
+      "id_hex": "0x0130",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "魔兽羽翼",
+      "zh_cle": null,
+      "en": "Savory Pinion",
+      "ja": "魔獣の羽"
+    },
+    {
+      "id_dec": 305,
+      "id_hex": "0x0131",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "魔兽之种",
+      "zh_cle": null,
+      "en": "Prickly Seed",
+      "ja": "魔獣の種"
+    },
+    {
+      "id_dec": 306,
+      "id_hex": "0x0132",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "魔兽明胶",
+      "zh_cle": null,
+      "en": "Clear Gelatin",
+      "ja": "魔獣のゼラチン"
+    },
+    {
+      "id_dec": 308,
+      "id_hex": "0x0134",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "发芽糙米",
+      "zh_cle": null,
+      "en": "Sprouted Brown Rice",
+      "ja": "発芽玄米"
+    },
+    {
+      "id_dec": 309,
+      "id_hex": "0x0135",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "五谷味增",
+      "zh_cle": null,
+      "en": "Five-Colored Miso",
+      "ja": "五穀味噌"
+    },
+    {
+      "id_dec": 310,
+      "id_hex": "0x0136",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "百药精酒",
+      "zh_cle": null,
+      "en": "Healthy Liquor",
+      "ja": "百薬精酒"
+    },
+    {
+      "id_dec": 311,
+      "id_hex": "0x0137",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "朝摘香叶",
+      "zh_cle": null,
+      "en": "Fresh-Picked Leaf",
+      "ja": "朝摘みリーフ"
+    },
+    {
+      "id_dec": 312,
+      "id_hex": "0x0138",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "清绿香草",
+      "zh_cle": null,
+      "en": "Green Herb",
+      "ja": "グリーンハーブ"
+    },
+    {
+      "id_dec": 313,
+      "id_hex": "0x0139",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "胡椒粒",
+      "zh_cle": null,
+      "en": "Cracked Pepper",
+      "ja": "粒コショウ"
+    },
+    {
+      "id_dec": 314,
+      "id_hex": "0x013A",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "热辣椒",
+      "zh_cle": null,
+      "en": "Hot Pepper",
+      "ja": "ホットペッパー"
+    },
+    {
+      "id_dec": 315,
+      "id_hex": "0x013B",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "香油",
+      "zh_cle": null,
+      "en": "Sesame Oil",
+      "ja": "セサミオイル"
+    },
+    {
+      "id_dec": 316,
+      "id_hex": "0x013C",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "蜂蜜糖浆",
+      "zh_cle": null,
+      "en": "Honey Syrup",
+      "ja": "ハニーシロップ"
+    },
+    {
+      "id_dec": 317,
+      "id_hex": "0x013D",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "粗碎岩盐",
+      "zh_cle": null,
+      "en": "Kibbled Salt",
+      "ja": "粗挽き岩塩"
+    },
+    {
+      "id_dec": 318,
+      "id_hex": "0x013E",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "新磨小麦粉",
+      "zh_cle": null,
+      "en": "Milled Flour",
+      "ja": "挽きたて小麦粉"
+    },
+    {
+      "id_dec": 319,
+      "id_hex": "0x013F",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "新鲜牛奶",
+      "zh_cle": null,
+      "en": "Fresh Milk",
+      "ja": "新鮮ミルク"
+    },
+    {
+      "id_dec": 320,
+      "id_hex": "0x0140",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "新鲜奶酪",
+      "zh_cle": null,
+      "en": "Sharp Cheese",
+      "ja": "できたてチーズ"
+    },
+    {
+      "id_dec": 321,
+      "id_hex": "0x0141",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "新鲜鸡蛋",
+      "zh_cle": null,
+      "en": "Fresh Egg",
+      "ja": "とれたて卵"
+    },
+    {
+      "id_dec": 322,
+      "id_hex": "0x0142",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "铃铛草莓",
+      "zh_cle": null,
+      "en": "Bellberry",
+      "ja": "ベルベリー"
+    },
+    {
+      "id_dec": 323,
+      "id_hex": "0x0143",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "黑暗菇",
+      "zh_cle": null,
+      "en": "Dark Mushroom",
+      "ja": "暗闇茸"
+    },
+    {
+      "id_dec": 324,
+      "id_hex": "0x0144",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "七彩豆",
+      "zh_cle": null,
+      "en": "Seven-Colored Beans",
+      "ja": "七彩豆"
+    },
+    {
+      "id_dec": 325,
+      "id_hex": "0x0145",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "国王马铃薯",
+      "zh_cle": null,
+      "en": "King Potato",
+      "ja": "王様ポテト"
+    },
+    {
+      "id_dec": 326,
+      "id_hex": "0x0146",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "万能青葱",
+      "zh_cle": null,
+      "en": "Versatile Onion",
+      "ja": "万能ネギ"
+    },
+    {
+      "id_dec": 327,
+      "id_hex": "0x0147",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "迷你胡萝卜",
+      "zh_cle": null,
+      "en": "Petite Carrot",
+      "ja": "プチキャロット"
+    },
+    {
+      "id_dec": 328,
+      "id_hex": "0x0148",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "苦西红柿",
+      "zh_cle": null,
+      "en": "Acerbic Tomato",
+      "ja": "にがトマト"
+    },
+    {
+      "id_dec": 329,
+      "id_hex": "0x0149",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "雪花里脊肉",
+      "zh_cle": null,
+      "en": "Marbled Steak",
+      "ja": "霜降りヒレ肉"
+    },
+    {
+      "id_dec": 330,
+      "id_hex": "0x014A",
+      "category": "food",
+      "category_zh": "食材",
+      "zh_joyoland": "新鲜白鱼肉",
+      "zh_cle": null,
+      "en": "Tender Whitefish",
+      "ja": "プリプリ白身"
+    },
+    {
+      "id_dec": 350,
+      "id_hex": "0x015E",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "斗鱼",
+      "zh_cle": null,
+      "en": "Fighter",
+      "ja": "ファイタ"
+    },
+    {
+      "id_dec": 351,
+      "id_hex": "0x015F",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "雪花蟹",
+      "zh_cle": null,
+      "en": "Snow Crab",
+      "ja": "スノーシュラブ"
+    },
+    {
+      "id_dec": 352,
+      "id_hex": "0x0160",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "蓝带神仙鱼",
+      "zh_cle": null,
+      "en": "Azelfish",
+      "ja": "エーゼル"
+    },
+    {
+      "id_dec": 353,
+      "id_hex": "0x0161",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "银伞鱼",
+      "zh_cle": null,
+      "en": "Kasagin",
+      "ja": "カサギン"
+    },
+    {
+      "id_dec": 354,
+      "id_hex": "0x0162",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "阿尔摩里卡鲫鱼",
+      "zh_cle": null,
+      "en": "Armorican Carp",
+      "ja": "アルモリカブナ"
+    },
+    {
+      "id_dec": 355,
+      "id_hex": "0x0163",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "乌龟",
+      "zh_cle": null,
+      "en": "Turtle",
+      "ja": "トタス"
+    },
+    {
+      "id_dec": 356,
+      "id_hex": "0x0164",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "橙河鱼",
+      "zh_cle": null,
+      "en": "Tiger Rockfish",
+      "ja": "オロショ"
+    },
+    {
+      "id_dec": 357,
+      "id_hex": "0x0165",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "岩穴鱼",
+      "zh_cle": null,
+      "en": "Rockeater",
+      "ja": "ロック"
+    },
+    {
+      "id_dec": 358,
+      "id_hex": "0x0166",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "虹鳟鱼",
+      "zh_cle": null,
+      "en": "Rainbow Trout",
+      "ja": "レインボウ"
+    },
+    {
+      "id_dec": 359,
+      "id_hex": "0x0167",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "食人鱼",
+      "zh_cle": null,
+      "en": "Piranha",
+      "ja": "ピラーニャ"
+    },
+    {
+      "id_dec": 360,
+      "id_hex": "0x0168",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "鲤鱼",
+      "zh_cle": null,
+      "en": "Carp",
+      "ja": "カルプ"
+    },
+    {
+      "id_dec": 361,
+      "id_hex": "0x0169",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "大口鲈鱼",
+      "zh_cle": null,
+      "en": "Gluttonous Bass",
+      "ja": "グラトンバス"
+    },
+    {
+      "id_dec": 362,
+      "id_hex": "0x016A",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "黑鲑",
+      "zh_cle": null,
+      "en": "Trout",
+      "ja": "トラード"
+    },
+    {
+      "id_dec": 363,
+      "id_hex": "0x016B",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "角斗鱼",
+      "zh_cle": null,
+      "en": "Gladiator",
+      "ja": "グラディエタ"
+    },
+    {
+      "id_dec": 364,
+      "id_hex": "0x016C",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "冷水鱼",
+      "zh_cle": null,
+      "en": "Raineater",
+      "ja": "レイニー"
+    },
+    {
+      "id_dec": 365,
+      "id_hex": "0x016D",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "小鲵",
+      "zh_cle": null,
+      "en": "Salamander",
+      "ja": "サンショ"
+    },
+    {
+      "id_dec": 366,
+      "id_hex": "0x016E",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "鲑鱼",
+      "zh_cle": null,
+      "en": "Salmon",
+      "ja": "サモーナ"
+    },
+    {
+      "id_dec": 367,
+      "id_hex": "0x016F",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "金龙鱼",
+      "zh_cle": null,
+      "en": "Arowana",
+      "ja": "アローナ"
+    },
+    {
+      "id_dec": 368,
+      "id_hex": "0x0170",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "鳗鲡",
+      "zh_cle": null,
+      "en": "Eel",
+      "ja": "イール"
+    },
+    {
+      "id_dec": 369,
+      "id_hex": "0x0171",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "钢壳龟",
+      "zh_cle": null,
+      "en": "Adamanturtle",
+      "ja": "アダマンタス"
+    },
+    {
+      "id_dec": 370,
+      "id_hex": "0x0172",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "巨血蟹",
+      "zh_cle": null,
+      "en": "Queen Crab",
+      "ja": "クインシザー"
+    },
+    {
+      "id_dec": 371,
+      "id_hex": "0x0173",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "珍珠龙鱼",
+      "zh_cle": null,
+      "en": "Pirarucu",
+      "ja": "パルルク"
+    },
+    {
+      "id_dec": 372,
+      "id_hex": "0x0174",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "巨鲶",
+      "zh_cle": null,
+      "en": "Catfish",
+      "ja": "タイタン"
+    },
+    {
+      "id_dec": 373,
+      "id_hex": "0x0175",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "金鲑",
+      "zh_cle": null,
+      "en": "Gold Salmon",
+      "ja": "ゴルドサモーナ"
+    },
+    {
+      "id_dec": 374,
+      "id_hex": "0x0176",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "大鲵",
+      "zh_cle": null,
+      "en": "Pale Salamander",
+      "ja": "オオザンショ"
+    },
+    {
+      "id_dec": 375,
+      "id_hex": "0x0177",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "锦鲤",
+      "zh_cle": null,
+      "en": "Noble Carp",
+      "ja": "ノーブルカルプ"
+    },
+    {
+      "id_dec": 376,
+      "id_hex": "0x0178",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "翠耀神仙鱼",
+      "zh_cle": null,
+      "en": "Emeraude",
+      "ja": "エメロド"
+    },
+    {
+      "id_dec": 377,
+      "id_hex": "0x0179",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "琥耀岩穴鱼",
+      "zh_cle": null,
+      "en": "Tiger Rockeater",
+      "ja": "ティガロック"
+    },
+    {
+      "id_dec": 378,
+      "id_hex": "0x017A",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "红耀食人鱼",
+      "zh_cle": null,
+      "en": "Crimson Eater",
+      "ja": "クリムゾンイータ"
+    },
+    {
+      "id_dec": 379,
+      "id_hex": "0x017B",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "苍耀巨龙鱼",
+      "zh_cle": null,
+      "en": "Bull Dragon",
+      "ja": "ブルドラゴン"
+    },
+    {
+      "id_dec": 380,
+      "id_hex": "0x017C",
+      "category": "fishing_fish",
+      "category_zh": "鱼类",
+      "zh_joyoland": "巨骨龙鱼皇",
+      "zh_cle": null,
+      "en": "Elder King",
+      "ja": "ギガルーク"
+    },
+    {
+      "id_dec": 390,
+      "id_hex": "0x0186",
+      "category": "fishing_bait",
+      "category_zh": "钓具-鱼饵",
+      "zh_joyoland": "鲑鱼卵",
+      "zh_cle": null,
+      "en": "Roe",
+      "ja": "イクラ"
+    },
+    {
+      "id_dec": 391,
+      "id_hex": "0x0187",
+      "category": "fishing_bait",
+      "category_zh": "钓具-鱼饵",
+      "zh_joyoland": "熬炼丸子",
+      "zh_cle": null,
+      "en": "Dumplings",
+      "ja": "練り団子"
+    },
+    {
+      "id_dec": 392,
+      "id_hex": "0x0188",
+      "category": "fishing_bait",
+      "category_zh": "钓具-鱼饵",
+      "zh_joyoland": "红虫",
+      "zh_cle": null,
+      "en": "Red Flies",
+      "ja": "アカムシ"
+    },
+    {
+      "id_dec": 393,
+      "id_hex": "0x0189",
+      "category": "fishing_bait",
+      "category_zh": "钓具-鱼饵",
+      "zh_joyoland": "蚯蚓",
+      "zh_cle": null,
+      "en": "Earthworm",
+      "ja": "ミミズ"
+    },
+    {
+      "id_dec": 394,
+      "id_hex": "0x018A",
+      "category": "fishing_bait",
+      "category_zh": "钓具-鱼饵",
+      "zh_joyoland": "熬炼丸子DX",
+      "zh_cle": null,
+      "en": "Deluxe Dumplings",
+      "ja": "練り団子ＤＸ"
+    },
+    {
+      "id_dec": 395,
+      "id_hex": "0x018B",
+      "category": "fishing_bait",
+      "category_zh": "钓具-鱼饵",
+      "zh_joyoland": "虹丸EX",
+      "zh_cle": null,
+      "en": "Rainbow Gem EX",
+      "ja": "虹玉ＥＸ"
+    },
+    {
+      "id_dec": 396,
+      "id_hex": "0x018C",
+      "category": "fishing_bait",
+      "category_zh": "钓具-鱼饵",
+      "zh_joyoland": "垂钓大礼包",
+      "zh_cle": null,
+      "en": "Fishing Bait Set",
+      "ja": "釣りエサセット"
+    },
+    {
+      "id_dec": 400,
+      "id_hex": "0x0190",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "天上面[日轮]",
+      "zh_cle": null,
+      "en": "Heavenly Noodles",
+      "ja": "天上麺≪日輪≫"
+    },
+    {
+      "id_dec": 401,
+      "id_hex": "0x0191",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "微苦担担面",
+      "zh_cle": "微苦担担面",
+      "en": "Peddler's Noodles",
+      "ja": "ピリ苦坦々麺"
+    },
+    {
+      "id_dec": 402,
+      "id_hex": "0x0192",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "极苦面[断头]",
+      "zh_cle": null,
+      "en": "Headsman's Noodles",
+      "ja": "極苦麺≪断頭≫"
+    },
+    {
+      "id_dec": 403,
+      "id_hex": "0x0193",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "神仙麻婆[麒麟]",
+      "zh_cle": null,
+      "en": "Immortal Mapo Tofu",
+      "ja": "神仙麻婆≪麒麟≫"
+    },
+    {
+      "id_dec": 404,
+      "id_hex": "0x0194",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "药膳麻婆豆腐",
+      "zh_cle": "药膳麻婆豆腐",
+      "en": "Medicinal Mapo Tofu",
+      "ja": "薬膳麻婆豆腐"
+    },
+    {
+      "id_dec": 405,
+      "id_hex": "0x0195",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "炼狱麻婆[阎魔]",
+      "zh_cle": null,
+      "en": "Yama's Purga-tofu",
+      "ja": "煉獄麻婆≪閻魔≫"
+    },
+    {
+      "id_dec": 406,
+      "id_hex": "0x0196",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "天下一品炒饭",
+      "zh_cle": "天下一品炒饭",
+      "en": "Peerless Fried Rice",
+      "ja": "天下一炒飯"
+    },
+    {
+      "id_dec": 407,
+      "id_hex": "0x0197",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "龙老炒饭",
+      "zh_cle": "龙老炒饭",
+      "en": "Dragon Fried Rice",
+      "ja": "龍老炒飯"
+    },
+    {
+      "id_dec": 408,
+      "id_hex": "0x0198",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "杂色锅巴饭",
+      "zh_cle": "杂色锅巴饭",
+      "en": "Scorched Fried Rice",
+      "ja": "まだら焦げ飯"
+    },
+    {
+      "id_dec": 409,
+      "id_hex": "0x0199",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "极品牛排[刚]",
+      "zh_cle": null,
+      "en": "Piquant Steak",
+      "ja": "極上ステーキ≪剛≫"
+    },
+    {
+      "id_dec": 410,
+      "id_hex": "0x019A",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "精力牛排",
+      "zh_cle": null,
+      "en": "Stamina Steak",
+      "ja": "スタミナステーキ"
+    },
+    {
+      "id_dec": 411,
+      "id_hex": "0x019B",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "顽固肉排[岩]",
+      "zh_cle": null,
+      "en": "Rock-Hard Jerky",
+      "ja": "頑固肉≪巌≫"
+    },
+    {
+      "id_dec": 412,
+      "id_hex": "0x019C",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "三日久煮炖菜",
+      "zh_cle": "三日久煮炖菜",
+      "en": "Three-Day Stew",
+      "ja": "三日煮込みシチュー"
+    },
+    {
+      "id_dec": 413,
+      "id_hex": "0x019D",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "久煮炖菜",
+      "zh_cle": "久煮炖菜",
+      "en": "Braised Stew",
+      "ja": "煮込みシチュー"
+    },
+    {
+      "id_dec": 414,
+      "id_hex": "0x019E",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "混沌久煮[浊]",
+      "zh_cle": null,
+      "en": "Abominable Stew",
+      "ja": "混沌煮込み≪濁≫"
+    },
+    {
+      "id_dec": 415,
+      "id_hex": "0x019F",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "大地锅[烂漫]",
+      "zh_cle": null,
+      "en": "Cornucopia Hotpot",
+      "ja": "大地鍋≪爛漫≫"
+    },
+    {
+      "id_dec": 416,
+      "id_hex": "0x01A0",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "大饱口福锅",
+      "zh_cle": null,
+      "en": "Bellyful Hotpot",
+      "ja": "満腹寄せ鍋"
+    },
+    {
+      "id_dec": 417,
+      "id_hex": "0x01A1",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "男人料理[山]",
+      "zh_cle": null,
+      "en": "Mountaineer's Meal",
+      "ja": "男料理≪山≫"
+    },
+    {
+      "id_dec": 418,
+      "id_hex": "0x01A2",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "天河锅[瑞云]",
+      "zh_cle": null,
+      "en": "'Cosmic Ocean' Hotpot",
+      "ja": "天河鍋≪瑞雲≫"
+    },
+    {
+      "id_dec": 419,
+      "id_hex": "0x01A3",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "芳醇潮锅",
+      "zh_cle": "芳醇潮锅",
+      "en": "'Tide of Plenty' Hotpot",
+      "ja": "芳醇潮鍋"
+    },
+    {
+      "id_dec": 420,
+      "id_hex": "0x01A4",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "男人料理[川]",
+      "zh_cle": null,
+      "en": "Riverman's Meal",
+      "ja": "男料理≪川≫"
+    },
+    {
+      "id_dec": 421,
+      "id_hex": "0x01A5",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "特快炸鱼[疾]",
+      "zh_cle": null,
+      "en": "Turbo Fry",
+      "ja": "特急フライ≪疾≫"
+    },
+    {
+      "id_dec": 422,
+      "id_hex": "0x01A6",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "炸鱼排",
+      "zh_cle": "炸鱼排",
+      "en": "Fried Fish",
+      "ja": "フライドフィッシュ"
+    },
+    {
+      "id_dec": 423,
+      "id_hex": "0x01A7",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "箭之鱼",
+      "zh_cle": null,
+      "en": "Sardineedles",
+      "ja": "フィッシュアロー"
+    },
+    {
+      "id_dec": 424,
+      "id_hex": "0x01A8",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "丰盛蛋包饭",
+      "zh_cle": null,
+      "en": "Heaping Omelet Rice",
+      "ja": "メガ盛オムライス"
+    },
+    {
+      "id_dec": 425,
+      "id_hex": "0x01A9",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "大师蛋包饭",
+      "zh_cle": "大师蛋包饭",
+      "en": "Chef's Special Omelet Rice",
+      "ja": "匠風オムライス"
+    },
+    {
+      "id_dec": 426,
+      "id_hex": "0x01AA",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "激辣炸弹蛋包饭",
+      "zh_cle": "激辣炸弹蛋包饭",
+      "en": "Spicy Bombelet Rice",
+      "ja": "激辛ボムライス"
+    },
+    {
+      "id_dec": 427,
+      "id_hex": "0x01AB",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "翠玉面[治愈]",
+      "zh_cle": null,
+      "en": "Soothing Jade Noodles",
+      "ja": "翠玉麺≪癒し≫"
+    },
+    {
+      "id_dec": 428,
+      "id_hex": "0x01AC",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "香草面",
+      "zh_cle": "香草面",
+      "en": "Herb Pasta",
+      "ja": "ハーブパスタ"
+    },
+    {
+      "id_dec": 429,
+      "id_hex": "0x01AD",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "细针面",
+      "zh_cle": "细针面",
+      "en": "Pasta Needles",
+      "ja": "ニードルパスタ"
+    },
+    {
+      "id_dec": 430,
+      "id_hex": "0x01AE",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "双层汉堡",
+      "zh_cle": null,
+      "en": "Double Burger",
+      "ja": "ダブルバーガー"
+    },
+    {
+      "id_dec": 431,
+      "id_hex": "0x01AF",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "午餐汉堡",
+      "zh_cle": null,
+      "en": "Light Burger",
+      "ja": "ライトバーガー"
+    },
+    {
+      "id_dec": 432,
+      "id_hex": "0x01B0",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "苦味汉堡",
+      "zh_cle": "苦味汉堡",
+      "en": "Bitter Burger",
+      "ja": "ビターバーガー"
+    },
+    {
+      "id_dec": 433,
+      "id_hex": "0x01B1",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "四味奶酪比萨",
+      "zh_cle": null,
+      "en": "Quattro-Cheese Pizza",
+      "ja": "クワトロチーズピザ"
+    },
+    {
+      "id_dec": 434,
+      "id_hex": "0x01B2",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "热酪比萨",
+      "zh_cle": null,
+      "en": "Piping-Hot Cheese Pizza",
+      "ja": "あつあつチーズピザ"
+    },
+    {
+      "id_dec": 435,
+      "id_hex": "0x01B3",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "四重番茄比萨",
+      "zh_cle": null,
+      "en": "Quattro-Pomodoro Pizza",
+      "ja": "クワトロトマトピザ"
+    },
+    {
+      "id_dec": 436,
+      "id_hex": "0x01B4",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "强效三明治",
+      "zh_cle": null,
+      "en": "Powerful Sandwich",
+      "ja": "パワフルサンド"
+    },
+    {
+      "id_dec": 437,
+      "id_hex": "0x01B5",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "鲜美三明治",
+      "zh_cle": "鲜美三明治",
+      "en": "Fresh Sandwich",
+      "ja": "フレッシュサンド"
+    },
+    {
+      "id_dec": 438,
+      "id_hex": "0x01B6",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "守护三明治",
+      "zh_cle": "守护三明治",
+      "en": "Warding Sandwich",
+      "ja": "プロテクサンド"
+    },
+    {
+      "id_dec": 439,
+      "id_hex": "0x01B7",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "真心饭盒[诚]",
+      "zh_cle": null,
+      "en": "Sincere Lunchbox",
+      "ja": "真心弁当≪誠≫"
+    },
+    {
+      "id_dec": 440,
+      "id_hex": "0x01B8",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "行乐午餐饭盒",
+      "zh_cle": null,
+      "en": "Picnic Lunchbox",
+      "ja": "行楽ランチボックス"
+    },
+    {
+      "id_dec": 441,
+      "id_hex": "0x01B9",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "不可思议盒饭[仰天]",
+      "zh_cle": null,
+      "en": "Surprise Lunchbox",
+      "ja": "不思議弁当≪仰天≫"
+    },
+    {
+      "id_dec": 442,
+      "id_hex": "0x01BA",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "辉煌汤",
+      "zh_cle": "辉煌汤",
+      "en": "Brilliant Soup",
+      "ja": "ブリリアントスープ"
+    },
+    {
+      "id_dec": 443,
+      "id_hex": "0x01BB",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "奶油浓汤",
+      "zh_cle": "奶油浓汤",
+      "en": "Milk Potage",
+      "ja": "ミルクポタージュ"
+    },
+    {
+      "id_dec": 444,
+      "id_hex": "0x01BC",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "奇妙汤",
+      "zh_cle": null,
+      "en": "Magica Soup",
+      "ja": "マジカスープ"
+    },
+    {
+      "id_dec": 445,
+      "id_hex": "0x01BD",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "奇幻糖果",
+      "zh_cle": "奇幻糖果",
+      "en": "Wonder Candy",
+      "ja": "ワンダーキャンディ"
+    },
+    {
+      "id_dec": 446,
+      "id_hex": "0x01BE",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "七色棉花糖",
+      "zh_cle": "七色棉花糖",
+      "en": "Rainbow Cotton Candy",
+      "ja": "七色わたあめ"
+    },
+    {
+      "id_dec": 447,
+      "id_hex": "0x01BF",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "秘密棉花糖",
+      "zh_cle": null,
+      "en": "Enigma Candy",
+      "ja": "エニグマキャンディ"
+    },
+    {
+      "id_dec": 448,
+      "id_hex": "0x01C0",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "天上甜点[夜月]",
+      "zh_cle": null,
+      "en": "Midnight Delight",
+      "ja": "天菓≪夜月≫"
+    },
+    {
+      "id_dec": 449,
+      "id_hex": "0x01C1",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "香甜巧克力蛋糕",
+      "zh_cle": null,
+      "en": "Sweet Chocolate",
+      "ja": "スイートショコラ"
+    },
+    {
+      "id_dec": 450,
+      "id_hex": "0x01C2",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "反射巧克力蛋糕",
+      "zh_cle": null,
+      "en": "Reflective Chocolate",
+      "ja": "リフレクショコラ"
+    },
+    {
+      "id_dec": 451,
+      "id_hex": "0x01C3",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "宝物甜点[白雪]",
+      "zh_cle": null,
+      "en": "White Snow Pudding",
+      "ja": "宝菓≪白雪≫"
+    },
+    {
+      "id_dec": 452,
+      "id_hex": "0x01C4",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "溜滑杏仁豆腐",
+      "zh_cle": null,
+      "en": "Smooth Almond Jelly",
+      "ja": "つるつる杏仁豆腐"
+    },
+    {
+      "id_dec": 453,
+      "id_hex": "0x01C5",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "爽弹布丁",
+      "zh_cle": "爽弹布丁",
+      "en": "Jiggly Pudding",
+      "ja": "プルプルプリン"
+    },
+    {
+      "id_dec": 454,
+      "id_hex": "0x01C6",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "冰凉甜点[七彩]",
+      "zh_cle": null,
+      "en": "Septicolored Sherbet",
+      "ja": "氷菓≪七彩≫"
+    },
+    {
+      "id_dec": 455,
+      "id_hex": "0x01C7",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "混合冰激凌",
+      "zh_cle": null,
+      "en": "Mixed Gelato",
+      "ja": "ミックスジェラート"
+    },
+    {
+      "id_dec": 456,
+      "id_hex": "0x01C8",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "痊愈冰激凌",
+      "zh_cle": null,
+      "en": "Bracing Ice Cream",
+      "ja": "リカバリアイス"
+    },
+    {
+      "id_dec": 457,
+      "id_hex": "0x01C9",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "绝品甜点[瞬动]",
+      "zh_cle": null,
+      "en": "Impulse Popcorn",
+      "ja": "絶菓≪瞬動≫"
+    },
+    {
+      "id_dec": 458,
+      "id_hex": "0x01CA",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "轻快爆米花",
+      "zh_cle": "轻快爆米花",
+      "en": "Light Popcorn",
+      "ja": "軽快ポップコーン"
+    },
+    {
+      "id_dec": 459,
+      "id_hex": "0x01CB",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "隐秘爆米花",
+      "zh_cle": null,
+      "en": "Secrecy Popcorn",
+      "ja": "隠密ポップコーン"
+    },
+    {
+      "id_dec": 460,
+      "id_hex": "0x01CC",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "玉露[绿风]",
+      "zh_cle": null,
+      "en": "Summer Breeze Blend",
+      "ja": "玉露≪緑風≫"
+    },
+    {
+      "id_dec": 461,
+      "id_hex": "0x01CD",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "考究抹茶拿铁",
+      "zh_cle": null,
+      "en": "Select Matcha Latte",
+      "ja": "こだわり抹茶ラテ"
+    },
+    {
+      "id_dec": 462,
+      "id_hex": "0x01CE",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "良药[熊竹]",
+      "zh_cle": null,
+      "en": "Potent Bamboo Remedy",
+      "ja": "良薬≪熊笹≫"
+    },
+    {
+      "id_dec": 463,
+      "id_hex": "0x01CF",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "甘露[紫绀]",
+      "zh_cle": null,
+      "en": "Periwinkle Nectar",
+      "ja": "甘露≪紫紺≫"
+    },
+    {
+      "id_dec": 464,
+      "id_hex": "0x01D0",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "铃铛草莓果汁",
+      "zh_cle": null,
+      "en": "Bellberry Juice",
+      "ja": "ベルベリージュース"
+    },
+    {
+      "id_dec": 465,
+      "id_hex": "0x01D1",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "紫色液体",
+      "zh_cle": "紫色液体",
+      "en": "Purple Liquid",
+      "ja": "パープルリキッド"
+    },
+    {
+      "id_dec": 466,
+      "id_hex": "0x01D2",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "黑茶[梦魇杀手]",
+      "zh_cle": null,
+      "en": "Nightmare Slayer",
+      "ja": "黒茶≪夢魔殺し≫"
+    },
+    {
+      "id_dec": 467,
+      "id_hex": "0x01D3",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "浓厚卡布奇诺",
+      "zh_cle": "浓厚卡布奇诺",
+      "en": "Rich Cappuccino",
+      "ja": "濃厚カプチーノ"
+    },
+    {
+      "id_dec": 468,
+      "id_hex": "0x01D4",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "褐色液体",
+      "zh_cle": "褐色液体",
+      "en": "Brown Liquid",
+      "ja": "ブラウンリキッド"
+    },
+    {
+      "id_dec": 469,
+      "id_hex": "0x01D5",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "秘水[桃源乡]",
+      "zh_cle": null,
+      "en": "Arcadian Ambrosia",
+      "ja": "秘水≪桃源郷≫"
+    },
+    {
+      "id_dec": 470,
+      "id_hex": "0x01D6",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "桃色紫薇",
+      "zh_cle": null,
+      "en": "Pinky Rose",
+      "ja": "ピンキーローズ"
+    },
+    {
+      "id_dec": 471,
+      "id_hex": "0x01D7",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "粉红液体",
+      "zh_cle": "粉红液体",
+      "en": "Pink Liquid",
+      "ja": "ももいろリキッド"
+    },
+    {
+      "id_dec": 472,
+      "id_hex": "0x01D8",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "失败作[引以为戒]",
+      "zh_cle": null,
+      "en": "A Cautionary Fail",
+      "ja": "失敗作《戒め》"
+    },
+    {
+      "id_dec": 473,
+      "id_hex": "0x01D9",
+      "category": "props_cooking",
+      "category_zh": "料理",
+      "zh_joyoland": "猫食",
+      "zh_cle": "猫食",
+      "en": "Cat Food",
+      "ja": "ねこまんま"
+    },
+    {
+      "id_dec": 500,
+      "id_hex": "0x01F4",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "回复药",
+      "zh_cle": "回复药",
+      "en": "Tear Balm",
+      "ja": "ティアの薬"
+    },
+    {
+      "id_dec": 501,
+      "id_hex": "0x01F5",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "中回复药",
+      "zh_cle": "中回复药",
+      "en": "Teara Balm",
+      "ja": "ティアラの薬"
+    },
+    {
+      "id_dec": 502,
+      "id_hex": "0x01F6",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "大回复药",
+      "zh_cle": "大回复药",
+      "en": "Tearal Balm",
+      "ja": "ティアラルの薬"
+    },
+    {
+      "id_dec": 503,
+      "id_hex": "0x01F7",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "全回复药",
+      "zh_cle": "全回复药",
+      "en": "Tear-All Balm",
+      "ja": "ティア・オルの薬"
+    },
+    {
+      "id_dec": 504,
+      "id_hex": "0x01F8",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "EP填充剂I",
+      "zh_cle": "EP填充剂Ⅰ",
+      "en": "EP Charge",
+      "ja": "ＥＰチャージⅠ"
+    },
+    {
+      "id_dec": 505,
+      "id_hex": "0x01F9",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "EP填充剂II",
+      "zh_cle": "EP填充剂Ⅱ",
+      "en": "EP Charge II",
+      "ja": "ＥＰチャージⅡ"
+    },
+    {
+      "id_dec": 506,
+      "id_hex": "0x01FA",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "EP填充剂III",
+      "zh_cle": "EP填充剂Ⅲ",
+      "en": "EP Charge III",
+      "ja": "ＥＰチャージⅢ"
+    },
+    {
+      "id_dec": 507,
+      "id_hex": "0x01FB",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "复苏药",
+      "zh_cle": "复活药",
+      "en": "Reviving Balm",
+      "ja": "セラスの薬"
+    },
+    {
+      "id_dec": 508,
+      "id_hex": "0x01FC",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "圣灵药",
+      "zh_cle": "圣灵药",
+      "en": "Celestial Balm",
+      "ja": "アセラスの薬"
+    },
+    {
+      "id_dec": 509,
+      "id_hex": "0x01FD",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "圣灵药·改",
+      "zh_cle": "圣灵药·改",
+      "en": "Celestial Balm EX",
+      "ja": "アセラスの薬・改"
+    },
+    {
+      "id_dec": 510,
+      "id_hex": "0x01FE",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "还魂粉",
+      "zh_cle": "还魂粉",
+      "en": "Zeram Powder",
+      "ja": "ゼラムパウダー"
+    },
+    {
+      "id_dec": 511,
+      "id_hex": "0x01FF",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "还魂胶囊",
+      "zh_cle": "还魂胶囊",
+      "en": "Zeram Capsule",
+      "ja": "ゼラムカプセル"
+    },
+    {
+      "id_dec": 512,
+      "id_hex": "0x0200",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "解毒药",
+      "zh_cle": "解中毒药",
+      "en": "Antidote",
+      "ja": "解毒薬"
+    },
+    {
+      "id_dec": 513,
+      "id_hex": "0x0201",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "软化膏",
+      "zh_cle": "松弛凝胶",
+      "en": "Softening Ointment",
+      "ja": "軟化リキッド"
+    },
+    {
+      "id_dec": 514,
+      "id_hex": "0x0202",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "绝缘胶带",
+      "zh_cle": "绝缘胶带",
+      "en": "Insulating Tape",
+      "ja": "絶縁テープ"
+    },
+    {
+      "id_dec": 515,
+      "id_hex": "0x0203",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "解冻暖炉",
+      "zh_cle": "眼药",
+      "en": "Warmer",
+      "ja": "解凍カイロ"
+    },
+    {
+      "id_dec": 516,
+      "id_hex": "0x0204",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "舒缓凝胶",
+      "zh_cle": "冷却喷雾",
+      "en": "Relaxant",
+      "ja": "弛緩ジェル"
+    },
+    {
+      "id_dec": 517,
+      "id_hex": "0x0205",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "冷却喷雾",
+      "zh_cle": "解冻暖暖包",
+      "en": "Cooling Spray",
+      "ja": "冷却スプレー"
+    },
+    {
+      "id_dec": 518,
+      "id_hex": "0x0206",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "眼药",
+      "zh_cle": "软化膏",
+      "en": "Eye Drop",
+      "ja": "目薬"
+    },
+    {
+      "id_dec": 519,
+      "id_hex": "0x0207",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "提神薄荷",
+      "zh_cle": "提神薄荷",
+      "en": "Mint Drop",
+      "ja": "ミントドロップ"
+    },
+    {
+      "id_dec": 520,
+      "id_hex": "0x0208",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "苏醒药",
+      "zh_cle": "苏醒药",
+      "en": "Stimulant",
+      "ja": "気付け薬"
+    },
+    {
+      "id_dec": 521,
+      "id_hex": "0x0209",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "镇静剂",
+      "zh_cle": "镇静剂",
+      "en": "Sedative",
+      "ja": "鎮静薬"
+    },
+    {
+      "id_dec": 522,
+      "id_hex": "0x020A",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "S-药片",
+      "zh_cle": "S-药锭",
+      "en": "S-Tablet",
+      "ja": "Ｓ－タブレット"
+    },
+    {
+      "id_dec": 523,
+      "id_hex": "0x020B",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "痊愈之药",
+      "zh_cle": "痊愈之药",
+      "en": "Curia Balm",
+      "ja": "キュリアの薬"
+    },
+    {
+      "id_dec": 524,
+      "id_hex": "0x020C",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "爆灵宝玉",
+      "zh_cle": "爆灵宝玉",
+      "en": "Burst Orb",
+      "ja": "バーストオーブ"
+    },
+    {
+      "id_dec": 525,
+      "id_hex": "0x020D",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "烟雾弹",
+      "zh_cle": "烟雾弹",
+      "en": "Smoke Grenade",
+      "ja": "煙り玉"
+    },
+    {
+      "id_dec": 526,
+      "id_hex": "0x020E",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "战斗探测器",
+      "zh_cle": "战斗探测器",
+      "en": "Battle Scope",
+      "ja": "バトルスコープ"
+    },
+    {
+      "id_dec": 527,
+      "id_hex": "0x020F",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "枫糖蛋糕",
+      "zh_cle": "月见玛芬蛋糕",
+      "en": "Maple Muffin",
+      "ja": "メイプルマフィン"
+    },
+    {
+      "id_dec": 528,
+      "id_hex": "0x0210",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "赏月面包",
+      "zh_cle": "奶油菠萝面包",
+      "en": "Mooncake Muffin",
+      "ja": "お月見マフィン"
+    },
+    {
+      "id_dec": 529,
+      "id_hex": "0x0211",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "奶油菠萝包",
+      "zh_cle": "贝奈特绝品",
+      "en": "Melon Cream Bread",
+      "ja": "クリームメロンパン"
+    },
+    {
+      "id_dec": 530,
+      "id_hex": "0x0212",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "贝奈特绝品",
+      "zh_cle": "极厚猪排三明治",
+      "en": "Bennet Supreme",
+      "ja": "ベネットワンダフル"
+    },
+    {
+      "id_dec": 531,
+      "id_hex": "0x0213",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "极厚猪排三明治",
+      "zh_cle": "最终旅途",
+      "en": "Thick Cutlet Sandwich",
+      "ja": "極厚カツサンド"
+    },
+    {
+      "id_dec": 532,
+      "id_hex": "0x0214",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "最终旅途",
+      "zh_cle": "枫糖玛芬蛋糕",
+      "en": "Final Stretch",
+      "ja": "ラストハイキング"
+    },
+    {
+      "id_dec": 534,
+      "id_hex": "0x0216",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "咪西包子",
+      "zh_cle": "咪西馒头",
+      "en": "Steamed Mishy Bun",
+      "ja": "みっしぃ饅頭"
+    },
+    {
+      "id_dec": 535,
+      "id_hex": "0x0217",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "咪雪丸子",
+      "zh_cle": "咪谢丸子",
+      "en": "Mishette Dumpling",
+      "ja": "みーしぇ団子"
+    },
+    {
+      "id_dec": 536,
+      "id_hex": "0x0218",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "罐装果汁",
+      "zh_cle": "罐装果汁",
+      "en": "Canned Juice",
+      "ja": "缶ジュース"
+    },
+    {
+      "id_dec": 537,
+      "id_hex": "0x0219",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "罐装咖啡",
+      "zh_cle": "罐装咖啡",
+      "en": "Canned Coffee",
+      "ja": "缶コーヒー"
+    },
+    {
+      "id_dec": 538,
+      "id_hex": "0x021A",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "强壮苦番茄猪骨汤",
+      "zh_cle": "强壮苦番茄猪骨汤",
+      "en": "Hearty Acerbic Pork Soup",
+      "ja": "強壮にがトマ豚汁"
+    },
+    {
+      "id_dec": 539,
+      "id_hex": "0x021B",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "暖心猪骨汤",
+      "zh_cle": "暖心猪骨汤",
+      "en": "Warm Miso Soup",
+      "ja": "あったか豚汁"
+    },
+    {
+      "id_dec": 540,
+      "id_hex": "0x021C",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "运动汽水X",
+      "zh_cle": "运动汽水X",
+      "en": "Sporitan X",
+      "ja": "スポリタンＸ"
+    },
+    {
+      "id_dec": 541,
+      "id_hex": "0x021D",
+      "category": "props_normal",
+      "category_zh": "道具-普通",
+      "zh_joyoland": "苦西红柿苏打",
+      "zh_cle": "苦番茄苏打",
+      "en": "Acerbic Tomato Soda",
+      "ja": "にがトマトソーダ"
+    },
+    {
+      "id_dec": 700,
+      "id_hex": "0x02BC",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊①",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 1",
+      "ja": "クロスベルタイムズ①"
+    },
+    {
+      "id_dec": 701,
+      "id_hex": "0x02BD",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊②",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 2",
+      "ja": "クロスベルタイムズ②"
+    },
+    {
+      "id_dec": 702,
+      "id_hex": "0x02BE",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊③",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 3",
+      "ja": "クロスベルタイムズ③"
+    },
+    {
+      "id_dec": 703,
+      "id_hex": "0x02BF",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊号外",
+      "zh_cle": null,
+      "en": "Crossbell Times - Special Edition",
+      "ja": "クロスベルタイムズ号外"
+    },
+    {
+      "id_dec": 704,
+      "id_hex": "0x02C0",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊④",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 4",
+      "ja": "クロスベルタイムズ④"
+    },
+    {
+      "id_dec": 705,
+      "id_hex": "0x02C1",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑤",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 5",
+      "ja": "クロスベルタイムズ⑤"
+    },
+    {
+      "id_dec": 706,
+      "id_hex": "0x02C2",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑥",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 6",
+      "ja": "クロスベルタイムズ⑥"
+    },
+    {
+      "id_dec": 707,
+      "id_hex": "0x02C3",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑦",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 7",
+      "ja": "クロスベルタイムズ⑦"
+    },
+    {
+      "id_dec": 708,
+      "id_hex": "0x02C4",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑧",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 8",
+      "ja": "クロスベルタイムズ⑧"
+    },
+    {
+      "id_dec": 710,
+      "id_hex": "0x02C6",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 1卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 1",
+      "ja": "闇医者グレン　１巻"
+    },
+    {
+      "id_dec": 711,
+      "id_hex": "0x02C7",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 2卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 2",
+      "ja": "闇医者グレン　２巻"
+    },
+    {
+      "id_dec": 712,
+      "id_hex": "0x02C8",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 3卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 3",
+      "ja": "闇医者グレン　３巻"
+    },
+    {
+      "id_dec": 713,
+      "id_hex": "0x02C9",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 4卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 4",
+      "ja": "闇医者グレン　４巻"
+    },
+    {
+      "id_dec": 714,
+      "id_hex": "0x02CA",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 5卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 5",
+      "ja": "闇医者グレン　５巻"
+    },
+    {
+      "id_dec": 715,
+      "id_hex": "0x02CB",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 6卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 6",
+      "ja": "闇医者グレン　６巻"
+    },
+    {
+      "id_dec": 716,
+      "id_hex": "0x02CC",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 7卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 7",
+      "ja": "闇医者グレン　７巻"
+    },
+    {
+      "id_dec": 717,
+      "id_hex": "0x02CD",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 8卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 8",
+      "ja": "闇医者グレン　８巻"
+    },
+    {
+      "id_dec": 718,
+      "id_hex": "0x02CE",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 9卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 9",
+      "ja": "闇医者グレン　９巻"
+    },
+    {
+      "id_dec": 719,
+      "id_hex": "0x02CF",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 10卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 10",
+      "ja": "闇医者グレン　10巻"
+    },
+    {
+      "id_dec": 720,
+      "id_hex": "0x02D0",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 11卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 11",
+      "ja": "闇医者グレン　11巻"
+    },
+    {
+      "id_dec": 721,
+      "id_hex": "0x02D1",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 12卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 12",
+      "ja": "闇医者グレン　12巻"
+    },
+    {
+      "id_dec": 722,
+      "id_hex": "0x02D2",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 13卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 13",
+      "ja": "闇医者グレン　13巻"
+    },
+    {
+      "id_dec": 723,
+      "id_hex": "0x02D3",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "黑市医生格伦 14卷",
+      "zh_cle": null,
+      "en": "Back Alley Doctor Glenn - Ch. 14",
+      "ja": "闇医者グレン　14巻"
+    },
+    {
+      "id_dec": 725,
+      "id_hex": "0x02D5",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "铁道爱好者的推荐",
+      "zh_cle": null,
+      "en": "Train Fanatic Recs",
+      "ja": "鉄道マニアのススメ"
+    },
+    {
+      "id_dec": 726,
+      "id_hex": "0x02D6",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "玛尔克与森林深处的魔女们·上",
+      "zh_cle": null,
+      "en": "Mark and the Witch - Part 1",
+      "ja": "マルクと深き森の魔女・上"
+    },
+    {
+      "id_dec": 727,
+      "id_hex": "0x02D7",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "改变大陆的美人们",
+      "zh_cle": null,
+      "en": "Women Who Changed the World",
+      "ja": "大陸を動かした美人たち"
+    },
+    {
+      "id_dec": 728,
+      "id_hex": "0x02D8",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "有效利用五分钟零散时间",
+      "zh_cle": null,
+      "en": "The Best Way to Use 5 Minutes",
+      "ja": "余った５分の有効な使い方"
+    },
+    {
+      "id_dec": 729,
+      "id_hex": "0x02D9",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔怪谈全集",
+      "zh_cle": null,
+      "en": "Paranormal Crossbell Collection",
+      "ja": "クロスベル怪奇全集"
+    },
+    {
+      "id_dec": 730,
+      "id_hex": "0x02DA",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "彩虹·Funbook",
+      "zh_cle": null,
+      "en": "Arc en Ciel Enthusiasts",
+      "ja": "アルカンシェル・ＦＢ"
+    },
+    {
+      "id_dec": 733,
+      "id_hex": "0x02DD",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "玛尔克与森林深处的魔女们·中",
+      "zh_cle": null,
+      "en": "Mark and the Witch - 2",
+      "ja": "マルクと深き森の魔女・中"
+    },
+    {
+      "id_dec": 734,
+      "id_hex": "0x02DE",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "玛尔克与森林深处的魔女们·下",
+      "zh_cle": null,
+      "en": "Mark and the Witch - 3",
+      "ja": "マルクと深き森の魔女・下"
+    },
+    {
+      "id_dec": 735,
+      "id_hex": "0x02DF",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "圣女与白狼·上",
+      "zh_cle": null,
+      "en": "Saint and White Wolf - 1",
+      "ja": "聖女と白い狼・上"
+    },
+    {
+      "id_dec": 736,
+      "id_hex": "0x02E0",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "圣女与白狼·下",
+      "zh_cle": null,
+      "en": "Saint and White Wolf - 2",
+      "ja": "聖女と白い狼・下"
+    },
+    {
+      "id_dec": 737,
+      "id_hex": "0x02E1",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑴",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 1",
+      "ja": "クロスベルタイムズ①"
+    },
+    {
+      "id_dec": 738,
+      "id_hex": "0x02E2",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑵",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 2",
+      "ja": "クロスベルタイムズ②"
+    },
+    {
+      "id_dec": 739,
+      "id_hex": "0x02E3",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑶",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 3",
+      "ja": "クロスベルタイムズ③"
+    },
+    {
+      "id_dec": 740,
+      "id_hex": "0x02E4",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑷",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 4",
+      "ja": "クロスベルタイムズ④"
+    },
+    {
+      "id_dec": 741,
+      "id_hex": "0x02E5",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑸",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 5",
+      "ja": "クロスベルタイムズ⑤"
+    },
+    {
+      "id_dec": 742,
+      "id_hex": "0x02E6",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑹",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 6",
+      "ja": "クロスベルタイムズ⑥"
+    },
+    {
+      "id_dec": 743,
+      "id_hex": "0x02E7",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑺",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 7",
+      "ja": "クロスベルタイムズ⑦"
+    },
+    {
+      "id_dec": 744,
+      "id_hex": "0x02E8",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑻",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 8",
+      "ja": "クロスベルタイムズ⑧"
+    },
+    {
+      "id_dec": 745,
+      "id_hex": "0x02E9",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑨",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 9",
+      "ja": "クロスベルタイムズ⑨"
+    },
+    {
+      "id_dec": 746,
+      "id_hex": "0x02EA",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊号外",
+      "zh_cle": null,
+      "en": "Crossbell Times - Special Edition",
+      "ja": "クロスベルタイムズ号外"
+    },
+    {
+      "id_dec": 747,
+      "id_hex": "0x02EB",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑽",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 10",
+      "ja": "クロスベルタイムズ⑩"
+    },
+    {
+      "id_dec": 748,
+      "id_hex": "0x02EC",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "克洛斯贝尔时代周刊⑾",
+      "zh_cle": null,
+      "en": "Crossbell Times - Issue 11",
+      "ja": "クロスベルタイムズ⑪"
+    },
+    {
+      "id_dec": 750,
+      "id_hex": "0x02EE",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 1卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 1",
+      "ja": "陽溜りのアニエス　１巻"
+    },
+    {
+      "id_dec": 751,
+      "id_hex": "0x02EF",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 2卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 2",
+      "ja": "陽溜りのアニエス　２巻"
+    },
+    {
+      "id_dec": 752,
+      "id_hex": "0x02F0",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 3卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 3",
+      "ja": "陽溜りのアニエス　３巻"
+    },
+    {
+      "id_dec": 753,
+      "id_hex": "0x02F1",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 4卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 4",
+      "ja": "陽溜りのアニエス　４巻"
+    },
+    {
+      "id_dec": 754,
+      "id_hex": "0x02F2",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 5卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 5",
+      "ja": "陽溜りのアニエス　５巻"
+    },
+    {
+      "id_dec": 755,
+      "id_hex": "0x02F3",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 6卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 6",
+      "ja": "陽溜りのアニエス　６巻"
+    },
+    {
+      "id_dec": 756,
+      "id_hex": "0x02F4",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 7卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 7",
+      "ja": "陽溜りのアニエス　７巻"
+    },
+    {
+      "id_dec": 757,
+      "id_hex": "0x02F5",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 8卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 8",
+      "ja": "陽溜りのアニエス　８巻"
+    },
+    {
+      "id_dec": 758,
+      "id_hex": "0x02F6",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 9卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 9",
+      "ja": "陽溜りのアニエス　９巻"
+    },
+    {
+      "id_dec": 759,
+      "id_hex": "0x02F7",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 10卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 10",
+      "ja": "陽溜りのアニエス　10巻"
+    },
+    {
+      "id_dec": 760,
+      "id_hex": "0x02F8",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 11卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 11",
+      "ja": "陽溜りのアニエス　11巻"
+    },
+    {
+      "id_dec": 761,
+      "id_hex": "0x02F9",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 12卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 12",
+      "ja": "陽溜りのアニエス　12巻"
+    },
+    {
+      "id_dec": 762,
+      "id_hex": "0x02FA",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 13卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 13",
+      "ja": "陽溜りのアニエス　13巻"
+    },
+    {
+      "id_dec": 763,
+      "id_hex": "0x02FB",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "沐浴阳光的阿尼艾斯 14卷",
+      "zh_cle": null,
+      "en": "Sunshine Agnes - Ch. 14",
+      "ja": "陽溜りのアニエス　14巻"
+    },
+    {
+      "id_dec": 764,
+      "id_hex": "0x02FC",
+      "category": "book",
+      "category_zh": "书籍/手册",
+      "zh_joyoland": "幻兽调查报告书",
+      "zh_cle": null,
+      "en": "Cryptid Investigation Report",
+      "ja": "幻獣調査報告書"
+    },
+    {
+      "id_dec": 800,
+      "id_hex": "0x0320",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "受损的警察徽章",
+      "zh_cle": null,
+      "en": "Damaged Officer Badge",
+      "ja": "傷付いた警察徽章"
+    },
+    {
+      "id_dec": 801,
+      "id_hex": "0x0321",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "伊梅尔达馆的钥匙",
+      "zh_cle": null,
+      "en": "Maison Imelda Key",
+      "ja": "メゾン・イメルダの鍵"
+    },
+    {
+      "id_dec": 802,
+      "id_hex": "0x0322",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "地下空间B区域的钥匙",
+      "zh_cle": null,
+      "en": "Geofront B Key",
+      "ja": "ジオフロントＢの鍵"
+    },
+    {
+      "id_dec": 803,
+      "id_hex": "0x0323",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "旧矿山的钥匙",
+      "zh_cle": null,
+      "en": "Old Mine Key",
+      "ja": "旧鉱山の鍵"
+    },
+    {
+      "id_dec": 804,
+      "id_hex": "0x0324",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "lBC认证卡片",
+      "zh_cle": null,
+      "en": "IBC ID Card",
+      "ja": "ＩＢＣ認証カード"
+    },
+    {
+      "id_dec": 805,
+      "id_hex": "0x0325",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "梅琳的伞",
+      "zh_cle": null,
+      "en": "Meiling's Umbrella",
+      "ja": "メイリンの傘"
+    },
+    {
+      "id_dec": 806,
+      "id_hex": "0x0326",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "IBC贵宾卡片",
+      "zh_cle": null,
+      "en": "IBC Primary Card",
+      "ja": "ＩＢＣプライマリカード"
+    },
+    {
+      "id_dec": 808,
+      "id_hex": "0x0328",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "废弃材料",
+      "zh_cle": null,
+      "en": "Scrap Metal",
+      "ja": "廃材"
+    },
+    {
+      "id_dec": 809,
+      "id_hex": "0x0329",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "纯白之石[中]",
+      "zh_cle": null,
+      "en": "Whitestone",
+      "ja": "ホワイトストーン"
+    },
+    {
+      "id_dec": 811,
+      "id_hex": "0x032B",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "纯白之石[小]",
+      "zh_cle": null,
+      "en": "Whitestone",
+      "ja": "ホワイトストーン"
+    },
+    {
+      "id_dec": 812,
+      "id_hex": "0x032C",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "纯白之石[大]",
+      "zh_cle": null,
+      "en": "Whitestone",
+      "ja": "ホワイトストーン"
+    },
+    {
+      "id_dec": 813,
+      "id_hex": "0x032D",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "尼克鲁的问诊表",
+      "zh_cle": null,
+      "en": "Nikolai's Health Survey",
+      "ja": "ニコルの問診表"
+    },
+    {
+      "id_dec": 814,
+      "id_hex": "0x032E",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "迪诺的问诊表",
+      "zh_cle": null,
+      "en": "Dino's Health Survey",
+      "ja": "ディーノの問診表"
+    },
+    {
+      "id_dec": 815,
+      "id_hex": "0x032F",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "库雷斯队员的问诊表",
+      "zh_cle": null,
+      "en": "Cless' Health Survey",
+      "ja": "クレス隊員の問診表"
+    },
+    {
+      "id_dec": 816,
+      "id_hex": "0x0330",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "沉重货物",
+      "zh_cle": null,
+      "en": "Heavy Package",
+      "ja": "重い荷物"
+    },
+    {
+      "id_dec": 817,
+      "id_hex": "0x0331",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "易碎品的小包裹",
+      "zh_cle": null,
+      "en": "Fragile Package",
+      "ja": "ワレモノの小包"
+    },
+    {
+      "id_dec": 818,
+      "id_hex": "0x0332",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "发往住宅街的送货单",
+      "zh_cle": null,
+      "en": "Shipping Label",
+      "ja": "住宅街の届け先の伝票"
+    },
+    {
+      "id_dec": 819,
+      "id_hex": "0x0333",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "蓝花",
+      "zh_cle": null,
+      "en": "Blue Flora",
+      "ja": "蒼い花"
+    },
+    {
+      "id_dec": 820,
+      "id_hex": "0x0334",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "结晶碎片",
+      "zh_cle": null,
+      "en": "Quartz Fragment",
+      "ja": "フラグメント"
+    },
+    {
+      "id_dec": 821,
+      "id_hex": "0x0335",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "罗赞贝尔克人偶．C",
+      "zh_cle": null,
+      "en": "Rosenberg Doll K",
+      "ja": "ローゼンベルク人形・Ｃ"
+    },
+    {
+      "id_dec": 822,
+      "id_hex": "0x0336",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "罗赞贝尔克人偶．R",
+      "zh_cle": null,
+      "en": "Rosenberg Doll L",
+      "ja": "ローゼンベルク人形・Ｒ"
+    },
+    {
+      "id_dec": 823,
+      "id_hex": "0x0337",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "罗赞贝尔克人偶．M",
+      "zh_cle": null,
+      "en": "Rosenberg Doll M",
+      "ja": "ローゼンベルク人形・Ｍ"
+    },
+    {
+      "id_dec": 824,
+      "id_hex": "0x0338",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "罗赞贝尔克人偶．S",
+      "zh_cle": null,
+      "en": "Rosenberg Doll S",
+      "ja": "ローゼンベルク人形・Ｓ"
+    },
+    {
+      "id_dec": 825,
+      "id_hex": "0x0339",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "波波碰！β版",
+      "zh_cle": null,
+      "en": "Pom! Pom! Party! Beta",
+      "ja": "ポムっと！β版"
+    },
+    {
+      "id_dec": 826,
+      "id_hex": "0x033A",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "小箱子",
+      "zh_cle": null,
+      "en": "Small Trunk",
+      "ja": "小さなトランク"
+    },
+    {
+      "id_dec": 830,
+      "id_hex": "0x033E",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "月之宝珠",
+      "zh_cle": null,
+      "en": "Moon Orb",
+      "ja": "月の宝珠"
+    },
+    {
+      "id_dec": 831,
+      "id_hex": "0x033F",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "星之光玉",
+      "zh_cle": null,
+      "en": "Starlight Orb",
+      "ja": "星の光玉"
+    },
+    {
+      "id_dec": 832,
+      "id_hex": "0x0340",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "苦西红柿酱",
+      "zh_cle": null,
+      "en": "Acerbic Tomato Paste",
+      "ja": "にがトマトペースト"
+    },
+    {
+      "id_dec": 833,
+      "id_hex": "0x0341",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "选秀活动特别奖纪念盾[艾莉]",
+      "zh_cle": null,
+      "en": "Pageant Keepsake Plaque",
+      "ja": "ミスコン特別賞記念盾"
+    },
+    {
+      "id_dec": 834,
+      "id_hex": "0x0342",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "选秀活动特别奖纪念盾[提欧]",
+      "zh_cle": null,
+      "en": "Pageant Keepsake Plaque",
+      "ja": "ミスコン特別賞記念盾"
+    },
+    {
+      "id_dec": 835,
+      "id_hex": "0x0343",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "选秀活动特别奖纪念盾[诺埃尔]",
+      "zh_cle": null,
+      "en": "Pageant Keepsake Plaque",
+      "ja": "ミスコン特別賞記念盾"
+    },
+    {
+      "id_dec": 836,
+      "id_hex": "0x0344",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "绀碧竿",
+      "zh_cle": null,
+      "en": "Lapis Rod",
+      "ja": "紺碧のロッド"
+    },
+    {
+      "id_dec": 837,
+      "id_hex": "0x0345",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "琥珀轴",
+      "zh_cle": null,
+      "en": "Amber Reel",
+      "ja": "琥珀のリール"
+    },
+    {
+      "id_dec": 838,
+      "id_hex": "0x0346",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "翡翠线",
+      "zh_cle": null,
+      "en": "Jade Line",
+      "ja": "翡翠のライン"
+    },
+    {
+      "id_dec": 839,
+      "id_hex": "0x0347",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "红莲钩",
+      "zh_cle": null,
+      "en": "Crimson Hook",
+      "ja": "紅蓮のフック"
+    },
+    {
+      "id_dec": 840,
+      "id_hex": "0x0348",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "迷你沙袋",
+      "zh_cle": null,
+      "en": "Light Punching Bag",
+      "ja": "ミニサンドバッグ"
+    },
+    {
+      "id_dec": 841,
+      "id_hex": "0x0349",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "特里斯坦号",
+      "zh_cle": null,
+      "en": "The Tristan",
+      "ja": "トリスタン号"
+    },
+    {
+      "id_dec": 842,
+      "id_hex": "0x034A",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "优雅衣镜",
+      "zh_cle": null,
+      "en": "Stylish Mirror",
+      "ja": "瀟洒な姿見"
+    },
+    {
+      "id_dec": 843,
+      "id_hex": "0x034B",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "八音盒",
+      "zh_cle": null,
+      "en": "Music Box",
+      "ja": "オルゴール"
+    },
+    {
+      "id_dec": 844,
+      "id_hex": "0x034C",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "影丸储蓄罐",
+      "zh_cle": null,
+      "en": "Kagemaru Bank",
+      "ja": "カゲマル貯金箱"
+    },
+    {
+      "id_dec": 845,
+      "id_hex": "0x034D",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "咪雪玩偶",
+      "zh_cle": null,
+      "en": "Mishette Doll",
+      "ja": "みーしぇぐるみ"
+    },
+    {
+      "id_dec": 846,
+      "id_hex": "0x034E",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "冲浪板",
+      "zh_cle": null,
+      "en": "Surfboard",
+      "ja": "サーフボード"
+    },
+    {
+      "id_dec": 847,
+      "id_hex": "0x034F",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "点唱机",
+      "zh_cle": null,
+      "en": "Jukebox",
+      "ja": "ジュークボックス"
+    },
+    {
+      "id_dec": 848,
+      "id_hex": "0x0350",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "竞赛旗",
+      "zh_cle": null,
+      "en": "Racing Flags",
+      "ja": "レース用フラッグ"
+    },
+    {
+      "id_dec": 849,
+      "id_hex": "0x0351",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "小径自行车",
+      "zh_cle": null,
+      "en": "Mini Velo Bike",
+      "ja": "ミニベロ自転車"
+    },
+    {
+      "id_dec": 850,
+      "id_hex": "0x0352",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "安乐椅",
+      "zh_cle": null,
+      "en": "Comfy Chair",
+      "ja": "コンフォートチェア"
+    },
+    {
+      "id_dec": 851,
+      "id_hex": "0x0353",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "迷你水族馆",
+      "zh_cle": null,
+      "en": "Miniature Aquarium",
+      "ja": "ミニ・アクアリウム"
+    },
+    {
+      "id_dec": 852,
+      "id_hex": "0x0354",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "古怪靠垫",
+      "zh_cle": null,
+      "en": "Odd Cushion",
+      "ja": "変なクッション"
+    },
+    {
+      "id_dec": 853,
+      "id_hex": "0x0355",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "波波靠垫",
+      "zh_cle": null,
+      "en": "Shining Pom Cushion",
+      "ja": "ポムクッション"
+    },
+    {
+      "id_dec": 854,
+      "id_hex": "0x0356",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "黑泰迪熊",
+      "zh_cle": null,
+      "en": "Black Teddy Bear",
+      "ja": "黒テディベア"
+    },
+    {
+      "id_dec": 855,
+      "id_hex": "0x0357",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "苦番茄人玩偶",
+      "zh_cle": null,
+      "en": "Acerbic Tomartian",
+      "ja": "にがとまとにあん"
+    },
+    {
+      "id_dec": 856,
+      "id_hex": "0x0358",
+      "category": "event_furnishing",
+      "category_zh": "事件-家具",
+      "zh_joyoland": "ZWEI2企鹅",
+      "zh_cle": null,
+      "en": "Zwei II Penguin",
+      "ja": "ＺＷＥＩ２ペンギン"
+    },
+    {
+      "id_dec": 860,
+      "id_hex": "0x035C",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "支援科车辆钥匙",
+      "zh_cle": null,
+      "en": "SSS Car Key",
+      "ja": "支援課車両のキー"
+    },
+    {
+      "id_dec": 861,
+      "id_hex": "0x035D",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "米修拉姆·奇幻乐园游乐券",
+      "zh_cle": null,
+      "en": "MWL Ticket",
+      "ja": "Ｍ・Ｗ・Ｌチケット"
+    },
+    {
+      "id_dec": 862,
+      "id_hex": "0x035E",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "临时认证卡片",
+      "zh_cle": null,
+      "en": "Temporary Access Card",
+      "ja": "一時認証カード"
+    },
+    {
+      "id_dec": 863,
+      "id_hex": "0x035F",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "挡泥板",
+      "zh_cle": null,
+      "en": "Overfender",
+      "ja": "オーバーフェンダー"
+    },
+    {
+      "id_dec": 864,
+      "id_hex": "0x0360",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "侧踏板",
+      "zh_cle": null,
+      "en": "Side Step",
+      "ja": "サイドステップ"
+    },
+    {
+      "id_dec": 865,
+      "id_hex": "0x0361",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "尾翼",
+      "zh_cle": null,
+      "en": "Rear Spoiler",
+      "ja": "リアスポイラー"
+    },
+    {
+      "id_dec": 866,
+      "id_hex": "0x0362",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "前保险杠",
+      "zh_cle": null,
+      "en": "Front Bumper",
+      "ja": "フロントバンパー"
+    },
+    {
+      "id_dec": 867,
+      "id_hex": "0x0363",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "警灯",
+      "zh_cle": null,
+      "en": "Beacon Light",
+      "ja": "パトランプ"
+    },
+    {
+      "id_dec": 868,
+      "id_hex": "0x0364",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "强化轮圈",
+      "zh_cle": null,
+      "en": "Improved Wheels",
+      "ja": "強化ホイール"
+    },
+    {
+      "id_dec": 869,
+      "id_hex": "0x0365",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "HP回复装置",
+      "zh_cle": null,
+      "en": "HP Charger",
+      "ja": "ＨＰチャージャー"
+    },
+    {
+      "id_dec": 870,
+      "id_hex": "0x0366",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "EP回复装置",
+      "zh_cle": null,
+      "en": "EP Charger",
+      "ja": "ＥＰチャージャー"
+    },
+    {
+      "id_dec": 871,
+      "id_hex": "0x0367",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "CP回复装置",
+      "zh_cle": null,
+      "en": "CP Charger",
+      "ja": "ＣＰチャージャー"
+    },
+    {
+      "id_dec": 872,
+      "id_hex": "0x0368",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "CPD主题",
+      "zh_cle": null,
+      "en": "CPD Paintwork",
+      "ja": "ＣＰＤカラー"
+    },
+    {
+      "id_dec": 873,
+      "id_hex": "0x0369",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "咪西主题",
+      "zh_cle": null,
+      "en": "Mishy Paintwork",
+      "ja": "みっしぃカラー"
+    },
+    {
+      "id_dec": 874,
+      "id_hex": "0x036A",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "人物主题E",
+      "zh_cle": null,
+      "en": "Lil' E. Paintwork",
+      "ja": "ペインカラーＥ"
+    },
+    {
+      "id_dec": 875,
+      "id_hex": "0x036B",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "人物主题T",
+      "zh_cle": null,
+      "en": "Lil' T. Paintwork",
+      "ja": "ペインカラーＴ"
+    },
+    {
+      "id_dec": 876,
+      "id_hex": "0x036C",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "天空色彩",
+      "zh_cle": null,
+      "en": "Sky Paintwork",
+      "ja": "スカイカラー"
+    },
+    {
+      "id_dec": 877,
+      "id_hex": "0x036D",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "高贵色彩",
+      "zh_cle": null,
+      "en": "Noble Paintwork",
+      "ja": "ノーブルカラー"
+    },
+    {
+      "id_dec": 878,
+      "id_hex": "0x036E",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "魅力色彩",
+      "zh_cle": null,
+      "en": "Charming Paintwork",
+      "ja": "チャームカラー"
+    },
+    {
+      "id_dec": 879,
+      "id_hex": "0x036F",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "狂野色彩",
+      "zh_cle": null,
+      "en": "Wild Paintwork",
+      "ja": "ワイルドカラー"
+    },
+    {
+      "id_dec": 880,
+      "id_hex": "0x0370",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "凉爽色彩",
+      "zh_cle": null,
+      "en": "Cool Paintwork",
+      "ja": "クールカラー"
+    },
+    {
+      "id_dec": 881,
+      "id_hex": "0x0371",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "警备色彩",
+      "zh_cle": null,
+      "en": "Guard Paintwork",
+      "ja": "ガードカラー"
+    },
+    {
+      "id_dec": 882,
+      "id_hex": "0x0372",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "轻快色彩",
+      "zh_cle": null,
+      "en": "Pop Paintwork",
+      "ja": "ポップカラー"
+    },
+    {
+      "id_dec": 883,
+      "id_hex": "0x0373",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "闪耀色彩",
+      "zh_cle": null,
+      "en": "Shiny Paintwork",
+      "ja": "シャインカラー"
+    },
+    {
+      "id_dec": 884,
+      "id_hex": "0x0374",
+      "category": "event_car",
+      "category_zh": "事件-导力车",
+      "zh_joyoland": "深暗色彩",
+      "zh_cle": null,
+      "en": "Deep Paintwork",
+      "ja": "ディープカラー"
+    },
+    {
+      "id_dec": 885,
+      "id_hex": "0x0375",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "金属探测器",
+      "zh_cle": null,
+      "en": "Metal Detector",
+      "ja": "金属探知機"
+    },
+    {
+      "id_dec": 886,
+      "id_hex": "0x0376",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "银耀石钥匙",
+      "zh_cle": null,
+      "en": "Argem Key",
+      "ja": "銀耀石の鍵"
+    },
+    {
+      "id_dec": 887,
+      "id_hex": "0x0377",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "金耀石钥匙",
+      "zh_cle": null,
+      "en": "Goldia Key",
+      "ja": "金耀石の鍵"
+    },
+    {
+      "id_dec": 888,
+      "id_hex": "0x0378",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "黑耀石钥匙",
+      "zh_cle": null,
+      "en": "Nohval Key",
+      "ja": "黒耀石の鍵"
+    },
+    {
+      "id_dec": 889,
+      "id_hex": "0x0379",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "红色卡片钥匙",
+      "zh_cle": null,
+      "en": "Red Keycard",
+      "ja": "赤いカードキー"
+    },
+    {
+      "id_dec": 910,
+      "id_hex": "0x038E",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "U材料",
+      "zh_cle": null,
+      "en": "U-Material",
+      "ja": "Ｕマテリアル"
+    },
+    {
+      "id_dec": 916,
+      "id_hex": "0x0394",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "塞姆里亚石碎片",
+      "zh_cle": null,
+      "en": "Zemurian Ore Shard",
+      "ja": "ゼムリアストーンの欠片"
+    },
+    {
+      "id_dec": 917,
+      "id_hex": "0x0395",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "神圣布料",
+      "zh_cle": null,
+      "en": "Divine Cloth",
+      "ja": "デヴァインクロス"
+    },
+    {
+      "id_dec": 918,
+      "id_hex": "0x0396",
+      "category": "event_story",
+      "category_zh": "事件-剧情",
+      "zh_joyoland": "塞姆里亚石",
+      "zh_cle": null,
+      "en": "Zemurian Ore",
+      "ja": "ゼムリアストーン"
+    },
+    {
+      "id_dec": 920,
+      "id_hex": "0x0398",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "翠耀石挂饰",
+      "zh_cle": null,
+      "en": "Green Charm",
+      "ja": "グリーンチャーム"
+    },
+    {
+      "id_dec": 921,
+      "id_hex": "0x0399",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "苍耀石挂饰",
+      "zh_cle": null,
+      "en": "Blue Charm",
+      "ja": "ブルーチャーム"
+    },
+    {
+      "id_dec": 922,
+      "id_hex": "0x039A",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "红耀石挂饰",
+      "zh_cle": null,
+      "en": "Red Charm",
+      "ja": "レッドチャーム"
+    },
+    {
+      "id_dec": 923,
+      "id_hex": "0x039B",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "琥耀石挂饰",
+      "zh_cle": null,
+      "en": "Yellow Charm",
+      "ja": "イエローチャーム"
+    },
+    {
+      "id_dec": 924,
+      "id_hex": "0x039C",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "金耀石挂饰",
+      "zh_cle": null,
+      "en": "Gold Charm",
+      "ja": "ゴールドチャーム"
+    },
+    {
+      "id_dec": 925,
+      "id_hex": "0x039D",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "修利的帽子",
+      "zh_cle": null,
+      "en": "Sully's Cap",
+      "ja": "シュリの帽子"
+    },
+    {
+      "id_dec": 926,
+      "id_hex": "0x039E",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "芙兰的护符",
+      "zh_cle": null,
+      "en": "Fran's Charm",
+      "ja": "フランのお守り"
+    },
+    {
+      "id_dec": 927,
+      "id_hex": "0x039F",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "舞姬的发饰",
+      "zh_cle": null,
+      "en": "Fervent Dancer's Hairpin",
+      "ja": "舞姫の髪飾り"
+    },
+    {
+      "id_dec": 928,
+      "id_hex": "0x03A0",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "勇士之心",
+      "zh_cle": null,
+      "en": "Valiant Heart",
+      "ja": "ヴァリアントハート"
+    },
+    {
+      "id_dec": 929,
+      "id_hex": "0x03A1",
+      "category": "equipment_jewelry",
+      "category_zh": "装备-饰品",
+      "zh_joyoland": "零之神珠",
+      "zh_cle": null,
+      "en": "Divine Zero Orb",
+      "ja": "零の神珠"
+    },
+    {
+      "id_dec": 1000,
+      "id_hex": "0x03E8",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "强力破坏者·改",
+      "zh_cle": "强力破坏者·改",
+      "en": "Hard Breaker II",
+      "ja": "ハードブレイカー改"
+    },
+    {
+      "id_dec": 1001,
+      "id_hex": "0x03E9",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "双钉棍",
+      "zh_cle": "双钉棍",
+      "en": "Twin Hammer",
+      "ja": "ツインハンマー"
+    },
+    {
+      "id_dec": 1002,
+      "id_hex": "0x03EA",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "螺纹双棍",
+      "zh_cle": "螺纹双棍",
+      "en": "Double Twister",
+      "ja": "ダブルツイスター"
+    },
+    {
+      "id_dec": 1003,
+      "id_hex": "0x03EB",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "罪恶制裁者",
+      "zh_cle": "罪犯克星",
+      "en": "Crime Buster",
+      "ja": "クライムバスター"
+    },
+    {
+      "id_dec": 1004,
+      "id_hex": "0x03EC",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "集团破坏者",
+      "zh_cle": "集团破坏者",
+      "en": "Mass Breaker",
+      "ja": "マスブレイカー"
+    },
+    {
+      "id_dec": 1005,
+      "id_hex": "0x03ED",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "猛虎棍",
+      "zh_cle": "猛虎棍",
+      "en": "Tiger Club",
+      "ja": "猛虎棍"
+    },
+    {
+      "id_dec": 1006,
+      "id_hex": "0x03EE",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "玄象棍",
+      "zh_cle": "玄象棍",
+      "en": "Phantom Club",
+      "ja": "玄象棍"
+    },
+    {
+      "id_dec": 1007,
+      "id_hex": "0x03EF",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "捕捉者",
+      "zh_cle": "捕捉者",
+      "en": "Clutch Hammer",
+      "ja": "クラッチハンマー"
+    },
+    {
+      "id_dec": 1008,
+      "id_hex": "0x03F0",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "裂地棍",
+      "zh_cle": "裂地棍",
+      "en": "Piledriver",
+      "ja": "パイルドライバー"
+    },
+    {
+      "id_dec": 1009,
+      "id_hex": "0x03F1",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "神圣五芒星",
+      "zh_cle": "钢管旋棍",
+      "en": "Pentagon",
+      "ja": "ペンタゴン"
+    },
+    {
+      "id_dec": 1010,
+      "id_hex": "0x03F2",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "七星击",
+      "zh_cle": "神圣五芒星",
+      "en": "Zero Breaker",
+      "ja": "ゼロ・ブレイカー"
+    },
+    {
+      "id_dec": 1011,
+      "id_hex": "0x03F3",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "零·破坏者",
+      "zh_cle": "七星击",
+      "en": "Seventh Nova",
+      "ja": "七星撃"
+    },
+    {
+      "id_dec": 1012,
+      "id_hex": "0x03F4",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "雷神之佑",
+      "zh_cle": "零·破坏者",
+      "en": "Mjolnir",
+      "ja": "ミョルニール"
+    },
+    {
+      "id_dec": 1013,
+      "id_hex": "0x03F5",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "无限之光",
+      "zh_cle": "雷神之佑",
+      "en": "Infinity",
+      "ja": "インフィニティ"
+    },
+    {
+      "id_dec": 1014,
+      "id_hex": "0x03F6",
+      "category": "equipment_weapon_Lloyd",
+      "category_zh": "装备-武器-罗伊德",
+      "zh_joyoland": "钢管旋棍",
+      "zh_cle": "无限之光",
+      "en": "Pipe Tonfa",
+      "ja": "パイプトンファー"
+    },
+    {
+      "id_dec": 1021,
+      "id_hex": "0x03FD",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "倾国",
+      "zh_cle": "可爱淑女",
+      "en": "Charlotte",
+      "ja": "シャルロッテ"
+    },
+    {
+      "id_dec": 1022,
+      "id_hex": "0x03FE",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "喜悦",
+      "zh_cle": "即兴剧",
+      "en": "Moliere",
+      "ja": "モリエール"
+    },
+    {
+      "id_dec": 1023,
+      "id_hex": "0x03FF",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "红色樱草II",
+      "zh_cle": "红色樱草Ⅱ",
+      "en": "Primrose 2",
+      "ja": "プリムローズⅡ"
+    },
+    {
+      "id_dec": 1024,
+      "id_hex": "0x0400",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "丝绒之吻",
+      "zh_cle": "丝绒之吻",
+      "en": "Velvet Kiss",
+      "ja": "ベルベットキス"
+    },
+    {
+      "id_dec": 1025,
+      "id_hex": "0x0401",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "纯真女皇",
+      "zh_cle": "纯真女皇",
+      "en": "Ekaterina",
+      "ja": "エカテリーナ"
+    },
+    {
+      "id_dec": 1026,
+      "id_hex": "0x0402",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "高洁圣女",
+      "zh_cle": "高洁圣女",
+      "en": "Adelheid",
+      "ja": "アーデルハイト"
+    },
+    {
+      "id_dec": 1027,
+      "id_hex": "0x0403",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "银色密雨",
+      "zh_cle": "银色密雨",
+      "en": "Silver Rain",
+      "ja": "シルバーレイン"
+    },
+    {
+      "id_dec": 1028,
+      "id_hex": "0x0404",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "神恩",
+      "zh_cle": "神恩",
+      "en": "Sacrament",
+      "ja": "サクラメント"
+    },
+    {
+      "id_dec": 1029,
+      "id_hex": "0x0405",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "暗灰小丑",
+      "zh_cle": "暗灰小丑",
+      "en": "Gray Joker",
+      "ja": "グレイジョーカー"
+    },
+    {
+      "id_dec": 1030,
+      "id_hex": "0x0406",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "千金·烙印",
+      "zh_cle": "千金·烙印",
+      "en": "Lady Brand",
+      "ja": "レディ・ブランド"
+    },
+    {
+      "id_dec": 1031,
+      "id_hex": "0x0407",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "血色光辉",
+      "zh_cle": "血色光辉",
+      "en": "Bloody Lucien",
+      "ja": "ブラッディルシアン"
+    },
+    {
+      "id_dec": 1032,
+      "id_hex": "0x0408",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "纯白圣枪",
+      "zh_cle": "纯白圣典",
+      "en": "Akkelte",
+      "ja": "アークケルテ"
+    },
+    {
+      "id_dec": 1033,
+      "id_hex": "0x0409",
+      "category": "equipment_weapon_Elie",
+      "category_zh": "装备-武器-艾莉",
+      "zh_joyoland": "能天使威光",
+      "zh_cle": "能天使之光",
+      "en": "Exis Ray",
+      "ja": "エクスシアレイ"
+    },
+    {
+      "id_dec": 1043,
+      "id_hex": "0x0413",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "探索者",
+      "zh_cle": "探索者",
+      "en": "Discovery",
+      "ja": "ディスカバリー"
+    },
+    {
+      "id_dec": 1044,
+      "id_hex": "0x0414",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "聚魔杖",
+      "zh_cle": "聚魔杖",
+      "en": "Integral",
+      "ja": "インテグラル"
+    },
+    {
+      "id_dec": 1045,
+      "id_hex": "0x0415",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "高纯能量",
+      "zh_cle": "高纯能量",
+      "en": "Scalar Rod",
+      "ja": "スカラーロッド"
+    },
+    {
+      "id_dec": 1046,
+      "id_hex": "0x0416",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "光辉之翼",
+      "zh_cle": "光辉之翼",
+      "en": "Glare Wing",
+      "ja": "グレアウィング"
+    },
+    {
+      "id_dec": 1047,
+      "id_hex": "0x0417",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "精神同步",
+      "zh_cle": "精神同步",
+      "en": "Uni-Mercator",
+      "ja": "ユニ・メルカトル"
+    },
+    {
+      "id_dec": 1048,
+      "id_hex": "0x0418",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "魔导加速器",
+      "zh_cle": "魔导加速器",
+      "en": "Accelerator",
+      "ja": "アクセラレーター"
+    },
+    {
+      "id_dec": 1049,
+      "id_hex": "0x0419",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "先导者",
+      "zh_cle": "先导者",
+      "en": "Procion",
+      "ja": "プロシオン"
+    },
+    {
+      "id_dec": 1050,
+      "id_hex": "0x041A",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "黑暗搏动",
+      "zh_cle": "黑暗搏动",
+      "en": "Dark Impulse",
+      "ja": "ダークインパルス"
+    },
+    {
+      "id_dec": 1051,
+      "id_hex": "0x041B",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "星之脉冲",
+      "zh_cle": "星之脉冲",
+      "en": "Star Pulsar",
+      "ja": "スターパルサー"
+    },
+    {
+      "id_dec": 1052,
+      "id_hex": "0x041C",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "天启",
+      "zh_cle": "天启",
+      "en": "Apocalypse",
+      "ja": "アポカリプス"
+    },
+    {
+      "id_dec": 1053,
+      "id_hex": "0x041D",
+      "category": "equipment_weapon_Tio",
+      "category_zh": "装备-武器-缇欧",
+      "zh_joyoland": "宇宙崩坏",
+      "zh_cle": "宇宙崩坏",
+      "en": "Cosmo Collapser",
+      "ja": "コスモコラプサー"
+    },
+    {
+      "id_dec": 1061,
+      "id_hex": "0x0425",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "全力冲击",
+      "zh_cle": "全力冲击",
+      "en": "Mass Impact",
+      "ja": "オールインパクト"
+    },
+    {
+      "id_dec": 1063,
+      "id_hex": "0x0427",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "格斗战斧",
+      "zh_cle": "格斗战斧",
+      "en": "Battle Axe",
+      "ja": "バトルアクス"
+    },
+    {
+      "id_dec": 1064,
+      "id_hex": "0x0428",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "巨象震慑者",
+      "zh_cle": "巨象震慑者",
+      "en": "Elephant Shocker",
+      "ja": "エレファンショッカー"
+    },
+    {
+      "id_dec": 1065,
+      "id_hex": "0x0429",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "终结粉碎者",
+      "zh_cle": "终结粉粹者",
+      "en": "Oversmasher",
+      "ja": "オーバースマッシャー"
+    },
+    {
+      "id_dec": 1066,
+      "id_hex": "0x042A",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "高热蒸汽",
+      "zh_cle": "超压蒸汽",
+      "en": "Hyper Stream",
+      "ja": "ハイパースチーム"
+    },
+    {
+      "id_dec": 1067,
+      "id_hex": "0x042B",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "白银冲击枪",
+      "zh_cle": "白银冲击",
+      "en": "Vice Shocker",
+      "ja": "ヴァイスショッカー"
+    },
+    {
+      "id_dec": 1068,
+      "id_hex": "0x042C",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "黑暗制造者",
+      "zh_cle": "黑暗制造者",
+      "en": "Darkbringer",
+      "ja": "ダークブリンガー"
+    },
+    {
+      "id_dec": 1069,
+      "id_hex": "0x042D",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "破坏神·改",
+      "zh_cle": "破坏神·改",
+      "en": "Destroyer II",
+      "ja": "デストロイヤー改"
+    },
+    {
+      "id_dec": 1070,
+      "id_hex": "0x042E",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "终极冲击",
+      "zh_cle": "终极驱动",
+      "en": "Omega Drive",
+      "ja": "オメガドライヴ"
+    },
+    {
+      "id_dec": 1071,
+      "id_hex": "0x042F",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "邪恶粉碎者",
+      "zh_cle": "邪恶粉碎者",
+      "en": "Devil Smasher",
+      "ja": "デビルスマッシャー"
+    },
+    {
+      "id_dec": 1072,
+      "id_hex": "0x0430",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "天灾",
+      "zh_cle": "天灾",
+      "en": "Catastrophe",
+      "ja": "カタストロフィ"
+    },
+    {
+      "id_dec": 1073,
+      "id_hex": "0x0431",
+      "category": "equipment_weapon_Randy",
+      "category_zh": "装备-武器-兰迪",
+      "zh_joyoland": "屠龙深渊",
+      "zh_cle": "屠龙深渊",
+      "en": "Deontic Abyss",
+      "ja": "ディノティックアビス"
+    },
+    {
+      "id_dec": 1081,
+      "id_hex": "0x0439",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "皮拳套",
+      "zh_cle": "黑鸦",
+      "en": "Leather Fists",
+      "ja": "レザーフィスト"
+    },
+    {
+      "id_dec": 1082,
+      "id_hex": "0x043A",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "罪恶拳套",
+      "zh_cle": "降魔不知火",
+      "en": "Banded Gloves",
+      "ja": "バンデットグローブ"
+    },
+    {
+      "id_dec": 1083,
+      "id_hex": "0x043B",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "合金拳套",
+      "zh_cle": "灵剑·莫邪",
+      "en": "Metal Knuckles",
+      "ja": "メタルナックル"
+    },
+    {
+      "id_dec": 1084,
+      "id_hex": "0x043C",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "音速狂潮",
+      "zh_cle": "曳影之剑",
+      "en": "Sonic Boom",
+      "ja": "ソニックブーム"
+    },
+    {
+      "id_dec": 1085,
+      "id_hex": "0x043D",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "螺旋冲击",
+      "zh_cle": "交叉火力",
+      "en": "Screwdrivers",
+      "ja": "スクリュードライバー"
+    },
+    {
+      "id_dec": 1086,
+      "id_hex": "0x043E",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "漆黑螫刺",
+      "zh_cle": "岩石尘碎",
+      "en": "Black Thorns",
+      "ja": "ブラックソーン"
+    },
+    {
+      "id_dec": 1087,
+      "id_hex": "0x043F",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "王者拳套",
+      "zh_cle": "闪光甲虫",
+      "en": "Master Gloves",
+      "ja": "マスターグローブ"
+    },
+    {
+      "id_dec": 1088,
+      "id_hex": "0x0440",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "彗星拳套",
+      "zh_cle": "圣十字",
+      "en": "Comet Fists",
+      "ja": "コメットフィスト"
+    },
+    {
+      "id_dec": 1089,
+      "id_hex": "0x0441",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "范式谜爪",
+      "zh_cle": "野马",
+      "en": "Paradigm Claws",
+      "ja": "パラダイムクロー"
+    },
+    {
+      "id_dec": 1090,
+      "id_hex": "0x0442",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "戒律护手",
+      "zh_cle": "M8雄猫",
+      "en": "Avesta",
+      "ja": "アヴェースタ"
+    },
+    {
+      "id_dec": 1091,
+      "id_hex": "0x0443",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "灵光护手",
+      "zh_cle": "杀戮黄蜂",
+      "en": "Aura Grip",
+      "ja": "オーラグリップ"
+    },
+    {
+      "id_dec": 1092,
+      "id_hex": "0x0444",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "乐园",
+      "zh_cle": "三重暴风",
+      "en": "Arcadia",
+      "ja": "アルカディア"
+    },
+    {
+      "id_dec": 1093,
+      "id_hex": "0x0445",
+      "category": "equipment_weapon_Lazy",
+      "category_zh": "装备-武器-瓦吉",
+      "zh_joyoland": "七耀圣腕",
+      "zh_cle": "无畏之枪",
+      "en": "Seventh Arm",
+      "ja": "セブンスアーム"
+    },
+    {
+      "id_dec": 1100,
+      "id_hex": "0x044C",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "交叉火力",
+      "zh_cle": "皮拳套",
+      "en": "Crossfire",
+      "ja": "クロスファイア"
+    },
+    {
+      "id_dec": 1101,
+      "id_hex": "0x044D",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "岩石尘碎",
+      "zh_cle": "罪恶拳套",
+      "en": "Ashpeter",
+      "ja": "アッシュピーター"
+    },
+    {
+      "id_dec": 1102,
+      "id_hex": "0x044E",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "闪光甲虫",
+      "zh_cle": "合金拳套",
+      "en": "Flare Beetle",
+      "ja": "フレアビートル"
+    },
+    {
+      "id_dec": 1103,
+      "id_hex": "0x044F",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "圣十字",
+      "zh_cle": "音速狂潮",
+      "en": "Crusader",
+      "ja": "クルセイダー"
+    },
+    {
+      "id_dec": 1104,
+      "id_hex": "0x0450",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "野马",
+      "zh_cle": "螺旋冲击",
+      "en": "Mustang",
+      "ja": "ムスタング"
+    },
+    {
+      "id_dec": 1105,
+      "id_hex": "0x0451",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "M8公猫",
+      "zh_cle": "漆黑蛰刺",
+      "en": "M8 Tomcat",
+      "ja": "Ｍ８トムキャット"
+    },
+    {
+      "id_dec": 1106,
+      "id_hex": "0x0452",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "杀戮黄蜂",
+      "zh_cle": "王者拳套",
+      "en": "Killer Hornet",
+      "ja": "キラーホーネット"
+    },
+    {
+      "id_dec": 1107,
+      "id_hex": "0x0453",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "三重风暴",
+      "zh_cle": "彗星拳套",
+      "en": "Delta Storm",
+      "ja": "デルタストーム"
+    },
+    {
+      "id_dec": 1108,
+      "id_hex": "0x0454",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "无畏之枪",
+      "zh_cle": "范式谜爪",
+      "en": "Dread Note",
+      "ja": "ドレッドノート"
+    },
+    {
+      "id_dec": 1109,
+      "id_hex": "0x0455",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "白隼",
+      "zh_cle": "戒律护手",
+      "en": "White Falcon",
+      "ja": "ホワイトファルコン"
+    },
+    {
+      "id_dec": 1110,
+      "id_hex": "0x0456",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "第五爆裂枪",
+      "zh_cle": "灵光护手",
+      "en": "Fifth Blaster",
+      "ja": "フィフスブラスター"
+    },
+    {
+      "id_dec": 1111,
+      "id_hex": "0x0457",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "挚爱恋人",
+      "zh_cle": "理想乡",
+      "en": "Dear Valentine",
+      "ja": "ディアバレンタイン"
+    },
+    {
+      "id_dec": 1112,
+      "id_hex": "0x0458",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "雷电魔枪",
+      "zh_cle": "七耀圣腕",
+      "en": "Caladbolg",
+      "ja": "カラドボルグ"
+    },
+    {
+      "id_dec": 1113,
+      "id_hex": "0x0459",
+      "category": "equipment_weapon_Noel",
+      "category_zh": "装备-武器-诺艾尔",
+      "zh_joyoland": "日耀弧光",
+      "zh_cle": "八尺鸟",
+      "en": "Arc Soleil",
+      "ja": "アークソレイユ"
+    },
+    {
+      "id_dec": 1120,
+      "id_hex": "0x0460",
+      "category": "equipment_weapon_Rixia",
+      "category_zh": "装备-武器-莉夏",
+      "zh_joyoland": "八尺乌",
+      "zh_cle": "白隼",
+      "en": "Yatagarasu",
+      "ja": "八咫烏"
+    },
+    {
+      "id_dec": 1121,
+      "id_hex": "0x0461",
+      "category": "equipment_weapon_Rixia",
+      "category_zh": "装备-武器-莉夏",
+      "zh_joyoland": "黑鸫",
+      "zh_cle": "第五爆裂枪",
+      "en": "Kuro Tsugumi",
+      "ja": "黒鶫"
+    },
+    {
+      "id_dec": 1122,
+      "id_hex": "0x0462",
+      "category": "equipment_weapon_Rixia",
+      "category_zh": "装备-武器-莉夏",
+      "zh_joyoland": "降魔不知火",
+      "zh_cle": "挚爱恋人",
+      "en": "Gouma Shiranui",
+      "ja": "降魔不知火"
+    },
+    {
+      "id_dec": 1123,
+      "id_hex": "0x0463",
+      "category": "equipment_weapon_Rixia",
+      "category_zh": "装备-武器-莉夏",
+      "zh_joyoland": "灵剑·奠邪",
+      "zh_cle": "雷电魔枪",
+      "en": "Bakuya",
+      "ja": "霊剣・莫邪"
+    },
+    {
+      "id_dec": 1124,
+      "id_hex": "0x0464",
+      "category": "equipment_weapon_Rixia",
+      "category_zh": "装备-武器-莉夏",
+      "zh_joyoland": "曳影之剑",
+      "zh_cle": "日耀弧光",
+      "en": "Eieinoken",
+      "ja": "曳影之剣"
+    },
+    {
+      "id_dec": 1125,
+      "id_hex": "0x0465",
+      "category": "equipment_weapon_Dudley",
+      "category_zh": "装备-武器-达德利",
+      "zh_joyoland": "皇帝",
+      "zh_cle": "帝级",
+      "en": "Imperial",
+      "ja": "インペリアル"
+    },
+    {
+      "id_dec": 1126,
+      "id_hex": "0x0466",
+      "category": "equipment_weapon_Dudley",
+      "category_zh": "装备-武器-达德利",
+      "zh_joyoland": "黑鹰",
+      "zh_cle": "黑鹰",
+      "en": "Blackhawk",
+      "ja": "ブラックホーク"
+    },
+    {
+      "id_dec": 1127,
+      "id_hex": "0x0467",
+      "category": "equipment_weapon_Dudley",
+      "category_zh": "装备-武器-达德利",
+      "zh_joyoland": "龙神",
+      "zh_cle": "光明神",
+      "en": "Hyperion",
+      "ja": "ヒューペリオン"
+    },
+    {
+      "id_dec": 1128,
+      "id_hex": "0x0468",
+      "category": "equipment_weapon_Dudley",
+      "category_zh": "装备-武器-达德利",
+      "zh_joyoland": "恶魔",
+      "zh_cle": "恶魔",
+      "en": "Diabolos",
+      "ja": "ディアボロス"
+    },
+    {
+      "id_dec": 1129,
+      "id_hex": "0x0469",
+      "category": "equipment_weapon_Dudley",
+      "category_zh": "装备-武器-达德利",
+      "zh_joyoland": "制裁",
+      "zh_cle": "制裁",
+      "en": "Himmel Trois",
+      "ja": "ヒンメルトロア"
+    },
+    {
+      "id_dec": 1130,
+      "id_hex": "0x046A",
+      "category": "equipment_weapon_Arios",
+      "category_zh": "装备-武器-亚里欧斯",
+      "zh_joyoland": "利剑『隼风』",
+      "zh_cle": "利剑【隼风】",
+      "en": "Hayakaze",
+      "ja": "利剣「隼風」"
+    },
+    {
+      "id_dec": 1135,
+      "id_hex": "0x046F",
+      "category": "equipment_weapon_Zeit",
+      "category_zh": "装备-武器-蔡特",
+      "zh_joyoland": "亚麻拳套",
+      "zh_cle": "亚麻拳套",
+      "en": "Linen Gloves",
+      "ja": "リネングローブ"
+    },
+    {
+      "id_dec": 1140,
+      "id_hex": "0x0474",
+      "category": "equipment_weapon_Zeit",
+      "category_zh": "装备-武器-蔡特",
+      "zh_joyoland": "尖钉项圈",
+      "zh_cle": "尖钉项圈",
+      "en": "Fang Collar",
+      "ja": "ファングカラー"
+    },
+    {
+      "id_dec": 1143,
+      "id_hex": "0x0477",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "皮革背带",
+      "zh_cle": null,
+      "en": "Leather Harness",
+      "ja": "レザーハーネス"
+    },
+    {
+      "id_dec": 1144,
+      "id_hex": "0x0478",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "护腿甲",
+      "zh_cle": null,
+      "en": "Protector",
+      "ja": "プロテクター"
+    },
+    {
+      "id_dec": 1500,
+      "id_hex": "0x05DC",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "纤维夹克",
+      "zh_cle": null,
+      "en": "Fiber Jacket",
+      "ja": "ファイバージャケット"
+    },
+    {
+      "id_dec": 1501,
+      "id_hex": "0x05DD",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "强化牛仔服",
+      "zh_cle": null,
+      "en": "Reinforced Denim",
+      "ja": "強化デニム"
+    },
+    {
+      "id_dec": 1502,
+      "id_hex": "0x05DE",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "弹性大衣",
+      "zh_cle": null,
+      "en": "Flexible Coat",
+      "ja": "フレキシブルコート"
+    },
+    {
+      "id_dec": 1503,
+      "id_hex": "0x05DF",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "荆棘夹克",
+      "zh_cle": null,
+      "en": "Needle Parka",
+      "ja": "ニードルパーカー"
+    },
+    {
+      "id_dec": 1504,
+      "id_hex": "0x05E0",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "水珠连衣裙",
+      "zh_cle": null,
+      "en": "Polka-Dot Dress",
+      "ja": "水玉ワンピース"
+    },
+    {
+      "id_dec": 1505,
+      "id_hex": "0x05E1",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "机动战斗服",
+      "zh_cle": null,
+      "en": "Riot Gear",
+      "ja": "リオットギア"
+    },
+    {
+      "id_dec": 1506,
+      "id_hex": "0x05E2",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "符文长袍",
+      "zh_cle": null,
+      "en": "Runic Robe",
+      "ja": "ルーンローブ"
+    },
+    {
+      "id_dec": 1507,
+      "id_hex": "0x05E3",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "野战套装",
+      "zh_cle": null,
+      "en": "Combat Suit",
+      "ja": "コンバットスーツ"
+    },
+    {
+      "id_dec": 1508,
+      "id_hex": "0x05E4",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "向日葵斗篷",
+      "zh_cle": null,
+      "en": "Sunflower Poncho",
+      "ja": "ひまわりポンチョ"
+    },
+    {
+      "id_dec": 1509,
+      "id_hex": "0x05E5",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "求生背心",
+      "zh_cle": null,
+      "en": "Survival Vest",
+      "ja": "サバイバルベスト"
+    },
+    {
+      "id_dec": 1510,
+      "id_hex": "0x05E6",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "牛仔皮衣",
+      "zh_cle": null,
+      "en": "Denim-Leather",
+      "ja": "デニムレザー"
+    },
+    {
+      "id_dec": 1511,
+      "id_hex": "0x05E7",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "影丸外套",
+      "zh_cle": null,
+      "en": "Kagemaru Haori",
+      "ja": "カゲマル羽織"
+    },
+    {
+      "id_dec": 1512,
+      "id_hex": "0x05E8",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "祭司法衣",
+      "zh_cle": null,
+      "en": "Priest Dress",
+      "ja": "プリーストドレス"
+    },
+    {
+      "id_dec": 1513,
+      "id_hex": "0x05E9",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "军风大衣",
+      "zh_cle": null,
+      "en": "Military Coat",
+      "ja": "ミリタリーコート"
+    },
+    {
+      "id_dec": 1514,
+      "id_hex": "0x05EA",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "龙华树之服",
+      "zh_cle": null,
+      "en": "Ironwood Kimono",
+      "ja": "竜華樹の帷子"
+    },
+    {
+      "id_dec": 1515,
+      "id_hex": "0x05EB",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "钛金铠甲",
+      "zh_cle": null,
+      "en": "Chitin Armor",
+      "ja": "チタンアーマー"
+    },
+    {
+      "id_dec": 1516,
+      "id_hex": "0x05EC",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "晚礼服",
+      "zh_cle": null,
+      "en": "Evening Dress",
+      "ja": "イブニングドレス"
+    },
+    {
+      "id_dec": 1517,
+      "id_hex": "0x05ED",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "神圣法袍",
+      "zh_cle": null,
+      "en": "Saint's Garb",
+      "ja": "セイントクロス"
+    },
+    {
+      "id_dec": 1518,
+      "id_hex": "0x05EE",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "邪恶胸甲",
+      "zh_cle": null,
+      "en": "Evil Guard",
+      "ja": "イビルガード"
+    },
+    {
+      "id_dec": 1519,
+      "id_hex": "0x05EF",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "七龙装甲",
+      "zh_cle": null,
+      "en": "Seven Dragons' Armor",
+      "ja": "七竜の装甲"
+    },
+    {
+      "id_dec": 1520,
+      "id_hex": "0x05F0",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "星辰羽衣",
+      "zh_cle": null,
+      "en": "Astral Raiment",
+      "ja": "星辰の羽衣"
+    },
+    {
+      "id_dec": 1521,
+      "id_hex": "0x05F1",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "暴风长袍",
+      "zh_cle": null,
+      "en": "Tempest Gown",
+      "ja": "テンペストガウン"
+    },
+    {
+      "id_dec": 1522,
+      "id_hex": "0x05F2",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "七耀神威圣铠",
+      "zh_cle": null,
+      "en": "Aegis Guard",
+      "ja": "アイギスガード"
+    },
+    {
+      "id_dec": 1523,
+      "id_hex": "0x05F3",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "七耀极星圣衣",
+      "zh_cle": null,
+      "en": "Polaris Dress",
+      "ja": "ポラリスドレス"
+    },
+    {
+      "id_dec": 1524,
+      "id_hex": "0x05F4",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "勇猛夹克",
+      "zh_cle": null,
+      "en": "Brave Jumper",
+      "ja": "ブレイブジャンパー"
+    },
+    {
+      "id_dec": 1525,
+      "id_hex": "0x05F5",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "纯净礼裙",
+      "zh_cle": null,
+      "en": "Quality Dress",
+      "ja": "クラリティドレス"
+    },
+    {
+      "id_dec": 1526,
+      "id_hex": "0x05F6",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "智慧斗篷",
+      "zh_cle": null,
+      "en": "Intellect Mantle",
+      "ja": "インテレクトマント"
+    },
+    {
+      "id_dec": 1527,
+      "id_hex": "0x05F7",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "野性大衣",
+      "zh_cle": null,
+      "en": "Wild Fur Coat",
+      "ja": "ワイルドフルコート"
+    },
+    {
+      "id_dec": 1528,
+      "id_hex": "0x05F8",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "盟约法衣",
+      "zh_cle": null,
+      "en": "Testaments Garb",
+      "ja": "テスタメントクロス"
+    },
+    {
+      "id_dec": 1529,
+      "id_hex": "0x05F9",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "增幅战斗装",
+      "zh_cle": null,
+      "en": "Extend Gear",
+      "ja": "エクステンドギア"
+    },
+    {
+      "id_dec": 1530,
+      "id_hex": "0x05FA",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "规则西装",
+      "zh_cle": null,
+      "en": "Principal Suit",
+      "ja": "プリンシパルスーツ"
+    },
+    {
+      "id_dec": 1531,
+      "id_hex": "0x05FB",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "歼天幻舞装",
+      "zh_cle": null,
+      "en": "Phantom Dress",
+      "ja": "殲天幻舞装"
+    },
+    {
+      "id_dec": 1532,
+      "id_hex": "0x05FC",
+      "category": "equipment_clothes",
+      "category_zh": "装备-服装",
+      "zh_joyoland": "动力服Z",
+      "zh_cle": null,
+      "en": "Power Suit Z",
+      "ja": "パワードスーツＺ"
+    },
+    {
+      "id_dec": 1600,
+      "id_hex": "0x0640",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "钉鞋",
+      "zh_cle": null,
+      "en": "Spike Gears",
+      "ja": "スパイクギア"
+    },
+    {
+      "id_dec": 1601,
+      "id_hex": "0x0641",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "远足鞋",
+      "zh_cle": null,
+      "en": "Trekking Boots",
+      "ja": "トレッキングブーツ"
+    },
+    {
+      "id_dec": 1602,
+      "id_hex": "0x0642",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "加速跑鞋",
+      "zh_cle": null,
+      "en": "Accel Shoes",
+      "ja": "アクセルシューズ"
+    },
+    {
+      "id_dec": 1603,
+      "id_hex": "0x0643",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "田园鞋",
+      "zh_cle": null,
+      "en": "Country Gears",
+      "ja": "カントリーギア"
+    },
+    {
+      "id_dec": 1604,
+      "id_hex": "0x0644",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "珐琅凉鞋",
+      "zh_cle": null,
+      "en": "Enamel Mules",
+      "ja": "エナメルミュール"
+    },
+    {
+      "id_dec": 1605,
+      "id_hex": "0x0645",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "军用靴",
+      "zh_cle": null,
+      "en": "Military Boots",
+      "ja": "ミリタリーブーツ"
+    },
+    {
+      "id_dec": 1606,
+      "id_hex": "0x0646",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "弹簧跑鞋",
+      "zh_cle": null,
+      "en": "Jumping Gears",
+      "ja": "ジャンピングギア"
+    },
+    {
+      "id_dec": 1607,
+      "id_hex": "0x0647",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "影丸雪踏",
+      "zh_cle": null,
+      "en": "Kagemaru Sandals",
+      "ja": "カゲマル雪駄"
+    },
+    {
+      "id_dec": 1608,
+      "id_hex": "0x0648",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "白色帆布鞋",
+      "zh_cle": null,
+      "en": "White Canvas",
+      "ja": "ホワイトキャンバス"
+    },
+    {
+      "id_dec": 1609,
+      "id_hex": "0x0649",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "斯托雷加越野鞋",
+      "zh_cle": null,
+      "en": "Tough Stregas",
+      "ja": "ストレガー・タフ"
+    },
+    {
+      "id_dec": 1610,
+      "id_hex": "0x064A",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "檀木树脂靴",
+      "zh_cle": null,
+      "en": "Ebony Boots",
+      "ja": "エボニーブーツ"
+    },
+    {
+      "id_dec": 1611,
+      "id_hex": "0x064B",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "黑靴",
+      "zh_cle": null,
+      "en": "Black Boots",
+      "ja": "ブラックブーツ"
+    },
+    {
+      "id_dec": 1612,
+      "id_hex": "0x064C",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "纤足高跟鞋",
+      "zh_cle": null,
+      "en": "Slender Heels",
+      "ja": "スレンダーヒール"
+    },
+    {
+      "id_dec": 1613,
+      "id_hex": "0x064D",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "军用作战靴",
+      "zh_cle": null,
+      "en": "Military Gear",
+      "ja": "ミリタリーギア"
+    },
+    {
+      "id_dec": 1614,
+      "id_hex": "0x064E",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "骑士护腿",
+      "zh_cle": null,
+      "en": "Knight Greaves",
+      "ja": "ナイトレガース"
+    },
+    {
+      "id_dec": 1615,
+      "id_hex": "0x064F",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "都市皮鞋",
+      "zh_cle": null,
+      "en": "City Walkers",
+      "ja": "シティウォーカー"
+    },
+    {
+      "id_dec": 1616,
+      "id_hex": "0x0650",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "柔光凉鞋",
+      "zh_cle": null,
+      "en": "Lumiere Sandals",
+      "ja": "リュミエルサンダル"
+    },
+    {
+      "id_dec": 1617,
+      "id_hex": "0x0651",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "金属强化鞋",
+      "zh_cle": null,
+      "en": "Rigid Gears",
+      "ja": "リジットギア"
+    },
+    {
+      "id_dec": 1618,
+      "id_hex": "0x0652",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "超能跑鞋",
+      "zh_cle": null,
+      "en": "Hyper Spikes",
+      "ja": "ハイパースパイク"
+    },
+    {
+      "id_dec": 1619,
+      "id_hex": "0x0653",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "辉光护腿",
+      "zh_cle": null,
+      "en": "Gray Greaves",
+      "ja": "グレアレガース"
+    },
+    {
+      "id_dec": 1620,
+      "id_hex": "0x0654",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "缭乱七彩靴",
+      "zh_cle": null,
+      "en": "Kaleido Boots",
+      "ja": "カレイドブーツ"
+    },
+    {
+      "id_dec": 1621,
+      "id_hex": "0x0655",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "虚空护腿",
+      "zh_cle": null,
+      "en": "Akashic Gears",
+      "ja": "アカシックギア"
+    },
+    {
+      "id_dec": 1622,
+      "id_hex": "0x0656",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "天神战斗靴",
+      "zh_cle": null,
+      "en": "Jupiter Teeth",
+      "ja": "ユピテルトゥース"
+    },
+    {
+      "id_dec": 1623,
+      "id_hex": "0x0657",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "神宠高跟鞋",
+      "zh_cle": null,
+      "en": "Amadeus Heels",
+      "ja": "アマデウスヒール"
+    },
+    {
+      "id_dec": 1624,
+      "id_hex": "0x0658",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "金耀翔天鞋",
+      "zh_cle": null,
+      "en": "Divine Goldias",
+      "ja": "ディバーゴルティア"
+    },
+    {
+      "id_dec": 1625,
+      "id_hex": "0x0659",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "银耀星影鞋",
+      "zh_cle": null,
+      "en": "Argem Stars",
+      "ja": "アルジェムスター"
+    },
+    {
+      "id_dec": 1626,
+      "id_hex": "0x065A",
+      "category": "equipment_shoes",
+      "category_zh": "装备-鞋子",
+      "zh_joyoland": "斯托雷加Ω",
+      "zh_cle": null,
+      "en": "Strega-Ω",
+      "ja": "ストレガーΩ"
+    }
+  ]
+}
