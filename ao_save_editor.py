@@ -9,6 +9,8 @@ import os
 import sys
 import io
 import json
+import shutil
+import tempfile
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
@@ -895,11 +897,22 @@ class SaveData:
         self._recalc_checksum()
         cctx = zstd.ZstdCompressor(level=3)
         compressed = cctx.compress(bytes(self.data))
-        bak = filepath + ".bak"
-        if os.path.exists(filepath):
-            os.replace(filepath, bak)
-        with open(filepath, "wb") as f:
-            f.write(compressed)
+        directory = os.path.dirname(os.path.abspath(filepath))
+        fd, temp_path = tempfile.mkstemp(prefix=".ao_save_editor_", suffix=".tmp", dir=directory)
+        try:
+            with os.fdopen(fd, "wb") as f:
+                f.write(compressed)
+                f.flush()
+                os.fsync(f.fileno())
+
+            # Keep the original at its path until the replacement is ready.
+            if os.path.exists(filepath):
+                shutil.copy2(filepath, filepath + ".bak")
+            os.replace(temp_path, filepath)
+            temp_path = None
+        finally:
+            if temp_path and os.path.exists(temp_path):
+                os.unlink(temp_path)
         return True
 
     def _recalc_checksum(self):

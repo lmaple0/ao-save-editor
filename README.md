@@ -10,7 +10,7 @@ This project adapts the offset tables and item definitions from [`424778940z/BZH
 
 This editor was built and tested for the NISA PC release, **Trails to Azure**, whose executable/save layout differs from the older mainland Chinese PC release.
 
-The in-editor Chinese item names and labels are taken from the Joyoland/欢乐百世 Simplified Chinese PC release of **碧之轨迹** and the original BZH editor data. The GUI now supports a global Chinese/English/Japanese language switch for tabs, buttons, character labels, sepith labels, battle counters, achievements, appearance names, quick actions, and item/achievement names where matching localization data exists. Missing translations fall back to Chinese. These names may still differ from the NISA English text or community Simplified Chinese localization produced with [`J31why/zeroTool`](https://github.com/J31why/zeroTool). If you are playing NISA Trails to Azure with a zeroTool-based Chinese patch, treat this editor as a save-format tool first and a name database second.
+The in-editor Chinese item names and labels use the Joyoland/欢乐百世 Simplified Chinese PC release of **碧之轨迹** as the default runtime layer, alongside the original BZH editor data. The structured item index also preserves conservative CLE/Clouded Leopard Chinese variants for reference, but the GUI does not currently switch to them. The GUI supports a global Chinese/English/Japanese language switch for tabs, buttons, character labels, sepith labels, battle counters, achievements, appearance names, quick actions, and item/achievement names where matching localization data exists. Missing translations fall back to Chinese. These names may still differ from the NISA English text or community Simplified Chinese localization produced with [`J31why/zeroTool`](https://github.com/J31why/zeroTool). If you are playing NISA Trails to Azure with a zeroTool-based Chinese patch, treat this editor as a save-format tool first and a name database second.
 
 ## Features
 
@@ -50,6 +50,7 @@ GUI launch was not verified inside the Codex bundled Python runtime because that
 ## Localization Data
 
 - `ao_item_i18n.json`: item names/descriptions matched by save item ID.
+- `ao_item_index.json`: structured item metadata; `zh_joyoland` is the runtime Chinese default and `zh_cle` is a conservative reference layer.
 - `ao_achievement_i18n.json`: achievement names/descriptions matched by save bitmap position and supplied game achievement ID.
 - `ao_magic_i18n.json`: English craft/orbal art rows from the supplied magic CSV. Its CSV row number is a reference row, not a confirmed save skill-slot ID; Japanese CSV text is preserved but marked for encoding review where needed.
 
