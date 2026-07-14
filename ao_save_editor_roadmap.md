@@ -1,6 +1,6 @@
 # 碧之轨迹 NISA版 存档修改器 · 功能排期计划
 
-基于 [BZH_AO_NO_KISEKI_Savedata_Editor](https://github.com/424778940z/BZH_AO_NO_KISEKI_Savedata_Editor) 原版工具 39 个偏移表 + 713 物品代码。
+基于 [BZH_AO_NO_KISEKI_Savedata_Editor](https://github.com/424778940z/BZH_AO_NO_KISEKI_Savedata_Editor) 原版工具 39 个偏移表 + 713 物品代码，并复用 [Ouroboros/Falcom ED7 Decompiler](https://github.com/Ouroboros/Falcom/tree/master/ED7/Decompiler) 的可追溯游戏数据目录。
 
 ---
 
@@ -21,6 +21,7 @@
 | 2026-07-05 性能优化 | 打开存档 / 物品页 / 本地化数据 | 物品 Treeview 改为可见时刷新并加入 dirty flag；物品/成就 i18n JSON 改为懒加载 |
 | 2026-07-05 CLE Kai 存档研究 | `039_save.bin` | 样本为高熵加密/封包形态，不能直接套 NISA 偏移；已加入 checksum 防误加载；详见 `cle_kai_save_research.md` |
 | 2026-07-15 料理手册 | `0x19C98 / 0x19C9C / 0x19CA0` | 24 道菜逐项勾选、全选/全不选、三镜像安全写入、中英日全局切换 |
+| 2026-07-15 怪物图鉴 P0 深化 | `0x1B370 ~ 0x1BCF7` | 305×8 字节记录；目录/地点搜索与 75 地点筛选、状态诊断、逐项全资料/未登记、未知/重复保护、可复现目录生成器 |
 
 ---
 
@@ -150,12 +151,17 @@
 | 9 | 亚里欧斯 | 20 | 琪雅 |
 | 10 | 诺艾尔 |  |  |
 
-### 4. 怪物图鉴全开 ✅
+### 4. 怪物图鉴目录、诊断与逐条编辑 ✅ P0 深化完成 (2026-07-15)
 
-- **偏移**: 0x1B370 ~ 0x1BCF0 (2944 字节)
-- **格式**: 变长记录 (`u32 code + u8 flag + u8 resistance + u8 stats`)
-- **工作量**: 中
-- **价值**: 中 — 建议优先做"一键全开"而非逐条编辑
+- **偏移**: `0x1B370 ~ 0x1BCF7`，共 305 个固定槽 × 8 字节；`0x1BCF0` 是最后一条记录的起始地址。
+- **记录格式**: `u32 code + u8 flag + u8 resistance + u8 stats + u8 get_item`。
+- **已验证完整资料 payload**: `08 FE FF FF`。部分状态只报告原始分类，不解释尚未验证的子位语义。
+- **参考目录**: `ao_monster_reference.json` 静态合并 `MONSTER_CODES`、Ouroboros/Falcom `t_dbmon.py` 身份层和本机 NISA 三语 `ms*.dat` 名称；305/305 覆盖，其中上游启用 283、注释待复核 22。
+- **GUI**: 独立怪物图鉴页，支持按代码、CLE 中文/日文/NISA 英文怪物名、`ms*.dat`、等级、来源和地点搜索；名称与地点随全局语言切换；提供 75 个细分地点下拉筛选；显示未登记/部分资料/全资料；可多选设为全资料或未登记。
+- **安全策略**: 未选择记录和未知代码原样保留；报告重复代码；容量不足则拒绝写入；保留快捷页一键全开。
+- **本地化来源**: 三语怪物名由本机 `data_cn/battle/dat`、`data/battle/dat`、`data/battle_us/dat` 的 `ms*.dat` 直接读取；地点由场景 `MapIndex` 对照三个本机 `t_town._dt` 表。302 项直接来自场景扫描；`ms82004`、村正、十六夜三个 MapIndex 为 0 的事件战斗使用已知本地地点标签在本机地点表中解析。每条记录保留场景文件和来源类型。
+- **可复现性**: `build_monster_reference.py --game-root <NISA游戏目录> --check` 检查生成文件是否与来源一致；`t_dbmon` 使用 AST/文本解析，不执行上游脚本。
+- **待验证**: 游戏内逐条回读、22 条上游注释映射的实际可见性，以及 4 个 payload 字节的精细语义。
 
 ---
 

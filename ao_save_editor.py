@@ -11,6 +11,8 @@ import io
 import json
 import shutil
 import tempfile
+from collections import Counter
+from dataclasses import dataclass
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
@@ -31,6 +33,11 @@ try:
     from ao_items_db import ITEM_DB
 except ImportError:
     ITEM_DB = {}
+
+try:
+    from ao_monsters_db import load_default_monster_catalog
+except ImportError:
+    load_default_monster_catalog = None
 
 ITEM_LANGUAGE_LABELS = {
     "zh_cn": "中文",
@@ -203,6 +210,32 @@ UI_TRANSLATIONS = {
         "全装备 → 1": "全装备 → 1",
         "怪物图鉴": "怪物图鉴",
         "一键全开怪物图鉴": "一键全开怪物图鉴",
+        "搜索怪物:": "搜索怪物:",
+        "地点:": "地点:",
+        "全部地点": "全部地点",
+        "地点": "地点",
+        "选中 → 全资料": "选中 → 全资料",
+        "选中 → 未登记": "选中 → 未登记",
+        "诊断": "诊断",
+        "等级": "等级",
+        "状态": "状态",
+        "来源": "来源",
+        "文件": "文件",
+        "未登记": "未登记",
+        "部分资料": "部分资料",
+        "全资料": "全资料",
+        "上游启用": "上游启用",
+        "上游注释待复核": "上游注释待复核",
+        "图鉴: 已登记 {known}/{total}，全资料 {complete}，部分资料 {partial}，未知 {unknown}，重复 {duplicates}": "图鉴: 已登记 {known}/{total}，全资料 {complete}，部分资料 {partial}，未知 {unknown}，重复 {duplicates}",
+        "怪物图鉴诊断": "怪物图鉴诊断",
+        "容量": "容量",
+        "已用记录": "已用记录",
+        "未知代码": "未知代码",
+        "重复代码": "重复代码",
+        "无": "无",
+        "请先选择怪物": "请先选择怪物",
+        "已将 {count} 个怪物设为全资料 · 请保存存档": "已将 {count} 个怪物设为全资料 · 请保存存档",
+        "已将 {count} 个怪物设为未登记 · 请保存存档": "已将 {count} 个怪物设为未登记 · 请保存存档",
         "全解锁": "全解锁",
         "全锁定": "全锁定",
         "全选": "全选",
@@ -329,6 +362,32 @@ UI_TRANSLATIONS = {
         "全装备 → 1": "All equipment → 1",
         "怪物图鉴": "Monster Manual",
         "一键全开怪物图鉴": "Unlock all monster records",
+        "搜索怪物:": "Search monsters:",
+        "地点:": "Location:",
+        "全部地点": "All locations",
+        "地点": "Location",
+        "选中 → 全资料": "Selected → Full data",
+        "选中 → 未登记": "Selected → Unregistered",
+        "诊断": "Diagnostics",
+        "等级": "Level",
+        "状态": "Status",
+        "来源": "Source",
+        "文件": "File",
+        "未登记": "Unregistered",
+        "部分资料": "Partial data",
+        "全资料": "Full data",
+        "上游启用": "Upstream active",
+        "上游注释待复核": "Upstream commented; review",
+        "图鉴: 已登记 {known}/{total}，全资料 {complete}，部分资料 {partial}，未知 {unknown}，重复 {duplicates}": "Manual: {known}/{total} registered, {complete} full, {partial} partial, {unknown} unknown, {duplicates} duplicates",
+        "怪物图鉴诊断": "Monster Manual Diagnostics",
+        "容量": "Capacity",
+        "已用记录": "Populated records",
+        "未知代码": "Unknown codes",
+        "重复代码": "Duplicate codes",
+        "无": "None",
+        "请先选择怪物": "Select one or more monsters first",
+        "已将 {count} 个怪物设为全资料 · 请保存存档": "Set {count} monsters to full data · save the file",
+        "已将 {count} 个怪物设为未登记 · 请保存存档": "Set {count} monsters to unregistered · save the file",
         "全解锁": "Unlock All",
         "全锁定": "Lock All",
         "全选": "Select All",
@@ -455,6 +514,32 @@ UI_TRANSLATIONS = {
         "全装备 → 1": "装備 → 1",
         "怪物图鉴": "魔兽图鉴",
         "一键全开怪物图鉴": "魔兽图鉴を全開放",
+        "搜索怪物:": "魔兽検索:",
+        "地点:": "場所:",
+        "全部地点": "すべての場所",
+        "地点": "場所",
+        "选中 → 全资料": "選択 → 全データ",
+        "选中 → 未登记": "選択 → 未登録",
+        "诊断": "診断",
+        "等级": "レベル",
+        "状态": "状態",
+        "来源": "出典",
+        "文件": "ファイル",
+        "未登记": "未登録",
+        "部分资料": "部分データ",
+        "全资料": "全データ",
+        "上游启用": "上流で有効",
+        "上游注释待复核": "上流でコメント化・要確認",
+        "图鉴: 已登记 {known}/{total}，全资料 {complete}，部分资料 {partial}，未知 {unknown}，重复 {duplicates}": "図鑑: 登録 {known}/{total}、全データ {complete}、部分 {partial}、不明 {unknown}、重複 {duplicates}",
+        "怪物图鉴诊断": "魔兽图鉴診断",
+        "容量": "容量",
+        "已用记录": "使用レコード",
+        "未知代码": "不明コード",
+        "重复代码": "重複コード",
+        "无": "なし",
+        "请先选择怪物": "先に魔兽を選択してください",
+        "已将 {count} 个怪物设为全资料 · 请保存存档": "{count}体を全データに設定しました · セーブしてください",
+        "已将 {count} 个怪物设为未登记 · 请保存存档": "{count}体を未登録に設定しました · セーブしてください",
         "全解锁": "全解除",
         "全锁定": "全固定",
         "全选": "すべて選択",
@@ -821,6 +906,8 @@ def role_display_name(role_id, lang="zh_cn"):
 # ============================================================
 MONSTER_START = 0x0001B370
 MONSTER_END   = 0x0001BCF0
+MONSTER_RECORD_SIZE = 8
+MONSTER_COMPLETE_PAYLOAD = bytes((0x08, 0xFE, 0xFF, 0xFF))
 
 # 来自 bzh_ank_se_code_define_manual.h 的真实怪物代码列表。存档记录必须写这些
 # u32 code；写顺序号会让游戏/原工具无法识别已解锁怪物。
@@ -865,6 +952,35 @@ MONSTER_CODES = (
     0x30085401, 0x30085501, 0x30002401, 0x30080500, 0x30003700, 0x30086500, 0x30086400, 0x30089000,
     0x30089100,
 )
+
+MONSTER_CODE_SET = frozenset(MONSTER_CODES)
+MONSTER_CATALOG = (
+    load_default_monster_catalog(app_dir())
+    if load_default_monster_catalog is not None
+    else None
+)
+
+
+@dataclass(frozen=True)
+class MonsterRecord:
+    slot: int
+    code: int
+    flag: int
+    resistance: int
+    stats: int
+    get_item: int
+
+    @property
+    def payload(self):
+        return bytes((self.flag, self.resistance, self.stats, self.get_item))
+
+    @property
+    def is_complete(self):
+        return self.payload == MONSTER_COMPLETE_PAYLOAD
+
+    def binary(self):
+        return struct.pack("<I4B", self.code, self.flag, self.resistance, self.stats, self.get_item)
+
 
 TEAM_NAMES = {
     0: "罗伊德", 1: "艾莉", 2: "缇欧", 3: "兰迪",
@@ -1080,23 +1196,76 @@ class SaveData:
             old_value = self.read_u32(offset)
             self.write_u32(offset, (old_value & ~RECIPE_BOOK_MASK) | recipe_mask)
 
-    def unlock_all_monsters(self):
-        """按 BZH 怪物代码一键解锁全部怪物图鉴。"""
-        pos = MONSTER_START
-        for code in MONSTER_CODES:
-            if pos > MONSTER_END:
-                raise ValueError("怪物图鉴记录超出存档容量")
-            self.write_u32(pos, code)
-            self.write_u8(pos + 4, 0x08)       # flag: BZH 写入已登记记录时使用 0x08
-            self.write_u8(pos + 5, 0xFE)       # resistance: 地/水/火/风/时/空/幻全开，道具位另存
-            self.write_u8(pos + 6, 0xFF)       # stats/description/sepith/resistance 等全开
-            self.write_u8(pos + 7, 0xFF)       # get_item
-            pos += 8
+    def read_monster_records(self):
+        """读取全部非空怪物图鉴记录，不丢弃未知代码或重复项。"""
+        records = []
+        slot = 0
+        for pos in range(MONSTER_START, MONSTER_END + 1, MONSTER_RECORD_SIZE):
+            code, flag, resistance, stats, get_item = struct.unpack_from("<I4B", self.data, pos)
+            if code:
+                records.append(MonsterRecord(slot, code, flag, resistance, stats, get_item))
+            slot += 1
+        return records
 
-        while pos <= MONSTER_END:
-            self.write_u32(pos, 0)
-            self.write_u32(pos + 4, 0)
-            pos += 8
+    def monster_diagnostics(self):
+        """返回图鉴的结构化诊断；只报告，不猜测部分状态位语义。"""
+        records = self.read_monster_records()
+        counts = Counter(record.code for record in records)
+        present_known = MONSTER_CODE_SET & set(counts)
+        complete = {
+            record.code
+            for record in records
+            if record.code in MONSTER_CODE_SET and record.is_complete
+        }
+        partial = present_known - complete
+        return {
+            "capacity": ((MONSTER_END - MONSTER_START) // MONSTER_RECORD_SIZE) + 1,
+            "populated": len(records),
+            "unique": len(counts),
+            "known": len(present_known),
+            "complete": len(complete),
+            "partial": len(partial),
+            "missing_codes": tuple(code for code in MONSTER_CODES if code not in present_known),
+            "partial_codes": tuple(code for code in MONSTER_CODES if code in partial),
+            "unknown_codes": tuple(sorted(code for code in counts if code not in MONSTER_CODE_SET)),
+            "duplicate_codes": tuple(sorted(code for code, count in counts.items() if count > 1)),
+        }
+
+    def _write_monster_records(self, records):
+        records = list(records)
+        capacity = ((MONSTER_END - MONSTER_START) // MONSTER_RECORD_SIZE) + 1
+        if len(records) > capacity:
+            raise ValueError(f"怪物图鉴记录超出存档容量: {len(records)} > {capacity}")
+        pos = MONSTER_START
+        for record in records:
+            binary = record.binary() if isinstance(record, MonsterRecord) else bytes(record)
+            if len(binary) != MONSTER_RECORD_SIZE:
+                raise ValueError("怪物图鉴记录必须是 8 字节")
+            self.data[pos:pos + MONSTER_RECORD_SIZE] = binary
+            pos += MONSTER_RECORD_SIZE
+        region_end = MONSTER_END + MONSTER_RECORD_SIZE
+        self.data[pos:region_end] = b"\x00" * max(0, region_end - pos)
+
+    def set_monsters_unlocked(self, codes, unlocked=True):
+        """批量设为全资料解锁或未登记，并原样保留未选择与未知记录。"""
+        requested = {int(code) for code in codes}
+        unknown_requested = requested - MONSTER_CODE_SET
+        if unknown_requested:
+            values = ", ".join(f"0x{code:08X}" for code in sorted(unknown_requested))
+            raise ValueError(f"未知怪物代码: {values}")
+
+        preserved = [record for record in self.read_monster_records() if record.code not in requested]
+        if unlocked:
+            requested_in_order = [code for code in MONSTER_CODES if code in requested]
+            preserved.extend(
+                MonsterRecord(-1, code, *MONSTER_COMPLETE_PAYLOAD)
+                for code in requested_in_order
+            )
+        self._write_monster_records(preserved)
+
+    def unlock_all_monsters(self):
+        """按 BZH 已验证的完整资料 payload 解锁全部已知怪物，并保留未知记录。"""
+        self.set_monsters_unlocked(MONSTER_CODES, True)
 
 
 # ============================================================
@@ -1107,7 +1276,7 @@ class SaveEditor(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("碧之轨迹 NISA版 存档修改器")
-        self.geometry("820x680")
+        self.geometry("1120x700")
         self.resizable(True, True)
         self.save = SaveData()
         self._vars = {}  # StringVar 缓存
@@ -1174,7 +1343,13 @@ class SaveEditor(tk.Tk):
         self._tab_defs.append((frm_recipes, "料理手册"))
         self._build_recipe_tab(frm_recipes)
 
-        # 标签6: 成就
+        # 标签6: 怪物图鉴
+        frm_monsters = ttk.Frame(self._nb)
+        self._nb.add(frm_monsters, text="怪物图鉴")
+        self._tab_defs.append((frm_monsters, "怪物图鉴"))
+        self._build_monster_tab(frm_monsters)
+
+        # 标签7: 成就
         frm_ach = ttk.Frame(self._nb)
         self._nb.add(frm_ach, text="成就")
         self._tab_defs.append((frm_ach, "成就"))
@@ -1218,6 +1393,8 @@ class SaveEditor(tk.Tk):
         key = self._active_tab_key()
         if key == "物品" and getattr(self, "_items_ui_dirty", True):
             self._refresh_items_ui()
+        elif key == "怪物图鉴" and getattr(self, "_monster_ui_dirty", True):
+            self._refresh_monster_ui()
         elif key == "成就":
             self._refresh_achievements_ui()
         elif key == "战斗手册":
@@ -1314,6 +1491,18 @@ class SaveEditor(tk.Tk):
             self._refresh_achievements_ui()
         if hasattr(self, "_recipe_vars"):
             self._refresh_recipe_names()
+        if hasattr(self, "_monster_tree"):
+            self._monster_tree.heading("code", text=self._t("代码"))
+            self._monster_tree.heading("name", text=self._t("名称"))
+            self._monster_tree.heading("level", text=self._t("等级"))
+            self._monster_tree.heading("location", text=self._t("地点"))
+            self._monster_tree.heading("status", text=self._t("状态"))
+            self._monster_tree.heading("source", text=self._t("来源"))
+            self._monster_tree.heading("file", text=self._t("文件"))
+            self._refresh_monster_location_choices()
+            self._monster_ui_dirty = True
+            if self._is_active_tab("怪物图鉴"):
+                self._refresh_monster_ui()
         self.update_idletasks()
 
     def _translate_widget_tree(self, widget, lang):
@@ -1723,8 +1912,11 @@ class SaveEditor(tk.Tk):
         self._items_data = s.read_items()
         self._items_ui_dirty = True
 
-        # P0: 成就 + 战斗
+        # P0: 手册、成就 + 战斗
         self._refresh_recipes_ui()
+        self._monster_ui_dirty = True
+        if self._is_active_tab("怪物图鉴"):
+            self._refresh_monster_ui()
         self._refresh_achievements_ui()
         self._refresh_battle_ui()
         # P1: 外观
@@ -1950,6 +2142,151 @@ class SaveEditor(tk.Tk):
     def _recipe_clear_all(self):
         self._set_all_recipes(False, "全部菜谱已取消")
 
+    # ---- P0: 怪物图鉴标签页 ----
+    def _build_monster_tab(self, frm):
+        toolbar = ttk.Frame(frm)
+        toolbar.pack(fill="x", padx=8, pady=(8, 4))
+        ttk.Label(toolbar, text=self._t("搜索怪物:")).pack(side="left", padx=(0, 3))
+        self._monster_search_var = tk.StringVar()
+        search = ttk.Entry(toolbar, textvariable=self._monster_search_var, width=28)
+        search.pack(side="left", padx=3)
+        search.bind("<Return>", lambda _event: self._refresh_monster_ui())
+        ttk.Label(toolbar, text=self._t("地点:")).pack(side="left", padx=(10, 3))
+        self._monster_location_var = tk.StringVar(value=self._t("全部地点"))
+        self._monster_location_combo = ttk.Combobox(
+            toolbar, textvariable=self._monster_location_var, width=22, state="readonly"
+        )
+        self._monster_location_combo.pack(side="left", padx=3)
+        self._monster_location_combo.bind("<<ComboboxSelected>>", lambda _event: self._refresh_monster_ui())
+        self._refresh_monster_location_choices()
+        ttk.Button(toolbar, text=self._t("过滤"), command=self._refresh_monster_ui).pack(side="left", padx=3)
+        ttk.Button(toolbar, text=self._t("全部显示"), command=self._clear_monster_filter).pack(side="left", padx=3)
+        ttk.Button(toolbar, text=self._t("选中 → 全资料"), command=lambda: self._set_selected_monsters(True)).pack(side="left", padx=(14, 3))
+        ttk.Button(toolbar, text=self._t("选中 → 未登记"), command=lambda: self._set_selected_monsters(False)).pack(side="left", padx=3)
+        ttk.Button(toolbar, text=self._t("诊断"), command=self._show_monster_diagnostics).pack(side="right", padx=3)
+
+        table = ttk.Frame(frm)
+        table.pack(fill="both", expand=True, padx=8, pady=4)
+        columns = ("code", "name", "level", "location", "status", "source", "file")
+        self._monster_tree = ttk.Treeview(table, columns=columns, show="headings", selectmode="extended")
+        widths = {"code": 105, "name": 180, "level": 55, "location": 260, "status": 85, "source": 125, "file": 95}
+        for column in columns:
+            self._monster_tree.heading(column, text=self._t({"code": "代码", "name": "名称", "level": "等级", "location": "地点", "status": "状态", "source": "来源", "file": "文件"}[column]))
+            self._monster_tree.column(column, width=widths[column], anchor="center" if column in {"code", "level", "status"} else "w")
+        scroll = ttk.Scrollbar(table, orient="vertical", command=self._monster_tree.yview)
+        self._monster_tree.configure(yscrollcommand=scroll.set)
+        self._monster_tree.pack(side="left", fill="both", expand=True)
+        scroll.pack(side="right", fill="y")
+        self._monster_summary_lbl = ttk.Label(frm, text="")
+        self._monster_summary_lbl.pack(fill="x", padx=10, pady=(2, 8))
+        self._monster_ui_dirty = True
+
+    def _refresh_monster_location_choices(self):
+        if not hasattr(self, "_monster_location_combo"):
+            return
+        lang = self._current_ui_language()
+        locations = MONSTER_CATALOG.locations(lang)
+        current = self._monster_location_var.get()
+        values = (self._t("全部地点"), *locations)
+        self._monster_location_combo.configure(values=values)
+        self._monster_location_var.set(current if current in locations else values[0])
+
+    def _clear_monster_filter(self):
+        self._monster_search_var.set("")
+        self._monster_location_var.set(self._t("全部地点"))
+        self._refresh_monster_ui()
+
+    def _monster_states(self):
+        records = self.save.read_monster_records()
+        complete = {record.code for record in records if record.code in MONSTER_CODE_SET and record.is_complete}
+        present = {record.code for record in records if record.code in MONSTER_CODE_SET}
+        return complete, present - complete
+
+    def _refresh_monster_ui(self):
+        if not hasattr(self, "_monster_tree"):
+            return
+        selected_codes = set(self._selected_monster_codes())
+        self._monster_tree.delete(*self._monster_tree.get_children())
+        if self.save.data is None:
+            self._monster_summary_lbl.config(text=self._t("未加载存档"))
+            self._monster_ui_dirty = False
+            return
+
+        complete, partial = self._monster_states()
+        query = self._monster_search_var.get()
+        lang = self._current_ui_language()
+        selected_location = self._monster_location_var.get()
+        location = selected_location if selected_location in MONSTER_CATALOG.locations(lang) else None
+        references = MONSTER_CATALOG.search(query, location, lang)
+        for record in references:
+            if record.save_code in complete:
+                status = self._t("全资料")
+            elif record.save_code in partial:
+                status = self._t("部分资料")
+            else:
+                status = self._t("未登记")
+            source = self._t("上游启用" if record.source_status == "active" else "上游注释待复核")
+            iid = record.save_code_hex
+            self._monster_tree.insert("", "end", iid=iid, values=(
+                record.save_code_hex,
+                record.name(lang) or "—",
+                record.level,
+                "、".join(record.locations(lang)),
+                status,
+                source,
+                record.ms_file,
+            ))
+            if record.save_code in selected_codes:
+                self._monster_tree.selection_add(iid)
+
+        diag = self.save.monster_diagnostics()
+        self._monster_summary_lbl.config(text=self._t(
+            "图鉴: 已登记 {known}/{total}，全资料 {complete}，部分资料 {partial}，未知 {unknown}，重复 {duplicates}",
+            known=diag["known"], total=len(MONSTER_CODES), complete=diag["complete"],
+            partial=diag["partial"], unknown=len(diag["unknown_codes"]), duplicates=len(diag["duplicate_codes"]),
+        ))
+        self._monster_ui_dirty = False
+
+    def _selected_monster_codes(self):
+        if not hasattr(self, "_monster_tree"):
+            return ()
+        return tuple(int(item, 16) for item in self._monster_tree.selection())
+
+    def _set_selected_monsters(self, unlocked):
+        if self.save.data is None:
+            self._set_status("请先打开存档文件")
+            return
+        codes = self._selected_monster_codes()
+        if not codes:
+            self._set_status("请先选择怪物")
+            return
+        try:
+            self.save.set_monsters_unlocked(codes, unlocked)
+        except ValueError as exc:
+            messagebox.showerror(self._t("错误"), str(exc))
+            return
+        self._refresh_monster_ui()
+        self._set_status(
+            "已将 {count} 个怪物设为全资料 · 请保存存档" if unlocked else "已将 {count} 个怪物设为未登记 · 请保存存档",
+            count=len(codes),
+        )
+
+    def _show_monster_diagnostics(self):
+        if self.save.data is None:
+            self._set_status("请先打开存档文件")
+            return
+        diag = self.save.monster_diagnostics()
+        format_codes = lambda values: ", ".join(f"0x{code:08X}" for code in values) or self._t("无")
+        body = "\n".join((
+            f"{self._t('容量')}: {diag['capacity']}",
+            f"{self._t('已用记录')}: {diag['populated']}",
+            f"{self._t('全资料')}: {diag['complete']}",
+            f"{self._t('部分资料')}: {diag['partial']}",
+            f"{self._t('未知代码')}: {format_codes(diag['unknown_codes'])}",
+            f"{self._t('重复代码')}: {format_codes(diag['duplicate_codes'])}",
+        ))
+        messagebox.showinfo(self._t("怪物图鉴诊断"), body)
+
     # ---- P0: 成就标签页 ----
     def _build_achievement_tab(self, frm):
         self._ach_vars = []  # list of (part, bit, BooleanVar, checkbox)
@@ -2086,7 +2423,14 @@ class SaveEditor(tk.Tk):
         if self.save.data is None:
             self._set_status("请先打开存档文件")
             return
-        self.save.unlock_all_monsters()
+        try:
+            self.save.unlock_all_monsters()
+        except ValueError as exc:
+            messagebox.showerror(self._t("错误"), str(exc))
+            return
+        self._monster_ui_dirty = True
+        if self._is_active_tab("怪物图鉴"):
+            self._refresh_monster_ui()
         self._set_status("怪物图鉴已全开 · 请保存存档")
 
     # ---- 快捷操作 ----

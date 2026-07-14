@@ -34,7 +34,7 @@
 - 修改 7 字节成就位图，支持全解锁/全锁定，成就名支持中文/英文/日文显示切换。
 - 修改战斗手册统计计数。
 - 修改 12 个角色显示外观槽位。
-- 使用真实 BZH 怪物代码表一键全开怪物图鉴。
+- 怪物图鉴支持 305 项目录浏览、名称/代码/文件/地点搜索、75 个细分地点下拉筛选、未登记/部分资料/全资料状态诊断、逐项设为全资料或未登记，以及一键全开；怪物和地点名称随全局中文/日文/英文界面切换：本机 `data_cn` 为 CLE 中文、`data` 为日文、`data/battle_us` 与 `data/text_us` 为 NISA 英文。Ouroboros/Falcom `t_dbmon.py` 只保留怪物身份、等级及启用/注释来源状态。
 - 保存前重新计算 BZH 自定义 32 位累加和校验。
 - 覆盖保存时自动创建 `.bak` 备份。
 
@@ -47,6 +47,7 @@
 - 未打开存档时，物品刷新、成就全解锁/全锁定、怪物图鉴全开和各类快捷操作会给出明确状态提示。
 - 拆分“时”在耀晶片 Time 与游戏时间小时中的不同语义，避免英文/日文翻译互相覆盖。
 - 队员槽位标签和快捷操作角色名会跟随全局语言切换刷新。
+- 怪物记录按完整 8 字节结构读取和重写；未知代码与未选择记录原样保留，容量不足时拒绝写入，不会静默丢弃。4 个状态字节只识别已验证的完整资料值 `08 FE FF FF`，暂不猜测子位语义。
 
 已完成的验证：
 
@@ -56,6 +57,7 @@
 - CLI 在临时存档副本上验证了 `--mira`、`--dp`、`--sepith max`、`--max-like`。
 - 料理手册已用 9 个真实进度存档验证 0/1/6/8/12/13/15/18/18 项读取结果，并在临时副本上完成 24 项全选、校验和重算、zstd 保存和重新加载 roundtrip。
 - 本机 Windows Python 3.13 GUI 冒烟测试已验证 24 个复选框、标签页及中文/英文/日文菜名切换。
+- 怪物目录生成器完成 305/305 存档代码、三语 `ms*.dat` 名称及三语地点覆盖校验（上游启用 283、注释待复核 22；场景直取 302、本地地点表补充 3）；23 项单元测试覆盖三语本地化、目录、名称/地点搜索、地点来源、部分/重复/未知诊断、逐项写入、全开容量保护和记录区尾边界。
 
 当前 Codex bundled Python 缺少 Tcl/Tk，因此 GUI 启动未在该运行时中实测。实际 GUI 使用建议使用带 Tkinter 的普通 Windows Python。
 
@@ -65,6 +67,7 @@
 - `ao_item_index.json`：结构化物品元数据；`zh_joyoland` 是运行时中文默认值，`zh_cle` 是保守保留的对照层。
 - `ao_achievement_i18n.json`：按存档成就位图位置匹配的成就名称/描述，并保留用户提供 JSON 中的游戏成就 ID。
 - `ao_magic_i18n.json`：来自用户提供 magic CSV 的战技/导力魔法英文行数据。这里的 CSV 行号只是参考行，不声明为已确认的存档战技槽位 ID；日文 CSV 文本已保留，但存在需要后续复核的编码问题。
+- `ao_monster_reference.json`：由 `build_monster_reference.py` 将存档代码表、Ouroboros/Falcom 身份层、本机 NISA 三语 `ms*.dat` 名称和场景地点合并生成；不执行上游 Python 文件。`build_monster_locations.py` 负责场景代码扫描和三语 MapIndex 地点解析。
 
 ## 存档格式说明
 
@@ -111,7 +114,7 @@ python ao_save_editor.py savedata.dat --mira 9999999 --sepith max --dp 400 --max
 
 特别感谢 [`424778940z/BZH_AO_NO_KISEKI_Savedata_Editor`](https://github.com/424778940z/BZH_AO_NO_KISEKI_Savedata_Editor)。本项目的 NISA 适配离不开原 Qt/C++ 存档编辑器提供的偏移表、物品 ID、校验和算法参考和怪物图鉴代码数据。
 
-也感谢 [`J31why/zeroTool`](https://github.com/J31why/zeroTool) 及其相关汉化工具生态，为 NISA 版 Crossbell 游戏的中文化提供了重要基础。
+也感谢 [`Ouroboros/Falcom`](https://github.com/Ouroboros/Falcom/tree/master/ED7/Decompiler) 提供可追溯的 ED7 数据格式、怪物状态目录和反编译工具，以及 [`J31why/zeroTool`](https://github.com/J31why/zeroTool) 及其相关汉化工具生态。
 
 ## 安全提示
 
