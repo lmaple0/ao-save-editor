@@ -39,6 +39,11 @@ try:
 except ImportError:
     load_default_monster_catalog = None
 
+try:
+    from ao_chests_db import load_default_chest_catalog
+except ImportError:
+    load_default_chest_catalog = None
+
 ITEM_LANGUAGE_LABELS = {
     "zh_cn": "中文",
     "en": "English",
@@ -209,6 +214,17 @@ UI_TRANSLATIONS = {
         "全回路 → 99 (含核心回路)": "全回路 → 99 (含核心回路)",
         "全装备 → 1": "全装备 → 1",
         "怪物图鉴": "怪物图鉴",
+        "宝箱进度": "宝箱进度",
+        "搜索宝箱:": "搜索宝箱:",
+        "地图:": "地图:",
+        "全部地图": "全部地图",
+        "仅显示缺失": "仅显示缺失",
+        "地图": "地图",
+        "坐标": "坐标",
+        "已取得": "已取得",
+        "未取得": "未取得",
+        "宝箱: 已取得 {opened}/{total}，缺失 {missing}，当前显示 {shown}": "宝箱: 已取得 {opened}/{total}，缺失 {missing}，当前显示 {shown}",
+        "宝箱坐标: X={x:.3f} Y={y:.3f} Z={z:.3f} · 触发坐标: X={tx:.3f} Y={ty:.3f} Z={tz:.3f} · 范围={range:.3f}": "宝箱坐标: X={x:.3f} Y={y:.3f} Z={z:.3f} · 触发坐标: X={tx:.3f} Y={ty:.3f} Z={tz:.3f} · 范围={range:.3f}",
         "一键全开怪物图鉴": "一键全开怪物图鉴",
         "搜索怪物:": "搜索怪物:",
         "地点:": "地点:",
@@ -361,6 +377,17 @@ UI_TRANSLATIONS = {
         "全回路 → 99 (含核心回路)": "All quartz → 99 (core quartz included)",
         "全装备 → 1": "All equipment → 1",
         "怪物图鉴": "Monster Manual",
+        "宝箱进度": "Chest Progress",
+        "搜索宝箱:": "Search chests:",
+        "地图:": "Map:",
+        "全部地图": "All maps",
+        "仅显示缺失": "Missing only",
+        "地图": "Map",
+        "坐标": "Coordinates",
+        "已取得": "Obtained",
+        "未取得": "Missing",
+        "宝箱: 已取得 {opened}/{total}，缺失 {missing}，当前显示 {shown}": "Chests: {opened}/{total} obtained, {missing} missing, {shown} shown",
+        "宝箱坐标: X={x:.3f} Y={y:.3f} Z={z:.3f} · 触发坐标: X={tx:.3f} Y={ty:.3f} Z={tz:.3f} · 范围={range:.3f}": "Chest: X={x:.3f} Y={y:.3f} Z={z:.3f} · Trigger: X={tx:.3f} Y={ty:.3f} Z={tz:.3f} · Range={range:.3f}",
         "一键全开怪物图鉴": "Unlock all monster records",
         "搜索怪物:": "Search monsters:",
         "地点:": "Location:",
@@ -513,6 +540,17 @@ UI_TRANSLATIONS = {
         "全回路 → 99 (含核心回路)": "全クオーツ → 99 (コアクオーツ含む)",
         "全装备 → 1": "装備 → 1",
         "怪物图鉴": "魔兽图鉴",
+        "宝箱进度": "宝箱進捗",
+        "搜索宝箱:": "宝箱検索:",
+        "地图:": "マップ:",
+        "全部地图": "すべてのマップ",
+        "仅显示缺失": "未取得のみ",
+        "地图": "マップ",
+        "坐标": "座標",
+        "已取得": "取得済み",
+        "未取得": "未取得",
+        "宝箱: 已取得 {opened}/{total}，缺失 {missing}，当前显示 {shown}": "宝箱: 取得 {opened}/{total}、未取得 {missing}、表示 {shown}",
+        "宝箱坐标: X={x:.3f} Y={y:.3f} Z={z:.3f} · 触发坐标: X={tx:.3f} Y={ty:.3f} Z={tz:.3f} · 范围={range:.3f}": "宝箱座標: X={x:.3f} Y={y:.3f} Z={z:.3f} · トリガー: X={tx:.3f} Y={ty:.3f} Z={tz:.3f} · 範囲={range:.3f}",
         "一键全开怪物图鉴": "魔兽图鉴を全開放",
         "搜索怪物:": "魔兽検索:",
         "地点:": "場所:",
@@ -960,6 +998,11 @@ MONSTER_CATALOG = (
     else None
 )
 
+CHEST_CATALOG = (
+    load_default_chest_catalog(app_dir())
+    if load_default_chest_catalog is not None
+    else None
+)
 
 @dataclass(frozen=True)
 class MonsterRecord:
@@ -1349,6 +1392,12 @@ class SaveEditor(tk.Tk):
         self._tab_defs.append((frm_monsters, "怪物图鉴"))
         self._build_monster_tab(frm_monsters)
 
+        # 标签7: 宝箱进度（只读）
+        frm_chests = ttk.Frame(self._nb)
+        self._nb.add(frm_chests, text="宝箱进度")
+        self._tab_defs.append((frm_chests, "宝箱进度"))
+        self._build_chest_tab(frm_chests)
+
         # 标签7: 成就
         frm_ach = ttk.Frame(self._nb)
         self._nb.add(frm_ach, text="成就")
@@ -1395,6 +1444,8 @@ class SaveEditor(tk.Tk):
             self._refresh_items_ui()
         elif key == "怪物图鉴" and getattr(self, "_monster_ui_dirty", True):
             self._refresh_monster_ui()
+        elif key == "宝箱进度" and getattr(self, "_chest_ui_dirty", True):
+            self._refresh_chest_ui()
         elif key == "成就":
             self._refresh_achievements_ui()
         elif key == "战斗手册":
@@ -1503,6 +1554,16 @@ class SaveEditor(tk.Tk):
             self._monster_ui_dirty = True
             if self._is_active_tab("怪物图鉴"):
                 self._refresh_monster_ui()
+        if hasattr(self, "_chest_tree"):
+            for column, key in {
+                "status": "状态", "map": "地图", "item": "物品",
+                "coordinates": "坐标", "file": "文件",
+            }.items():
+                self._chest_tree.heading(column, text=self._t(key))
+            self._refresh_chest_map_choices()
+            self._chest_ui_dirty = True
+            if self._is_active_tab("宝箱进度"):
+                self._refresh_chest_ui()
         self.update_idletasks()
 
     def _translate_widget_tree(self, widget, lang):
@@ -1917,6 +1978,9 @@ class SaveEditor(tk.Tk):
         self._monster_ui_dirty = True
         if self._is_active_tab("怪物图鉴"):
             self._refresh_monster_ui()
+        self._chest_ui_dirty = True
+        if self._is_active_tab("宝箱进度"):
+            self._refresh_chest_ui()
         self._refresh_achievements_ui()
         self._refresh_battle_ui()
         # P1: 外观
@@ -2286,6 +2350,132 @@ class SaveEditor(tk.Tk):
             f"{self._t('重复代码')}: {format_codes(diag['duplicate_codes'])}",
         ))
         messagebox.showinfo(self._t("怪物图鉴诊断"), body)
+
+    # ---- P0: 宝箱进度标签页（只读） ----
+    def _build_chest_tab(self, frm):
+        toolbar = ttk.Frame(frm)
+        toolbar.pack(fill="x", padx=8, pady=(8, 4))
+        ttk.Label(toolbar, text=self._t("搜索宝箱:")).pack(side="left", padx=(0, 3))
+        self._chest_search_var = tk.StringVar()
+        search = ttk.Entry(toolbar, textvariable=self._chest_search_var, width=25)
+        search.pack(side="left", padx=3)
+        search.bind("<Return>", lambda _event: self._refresh_chest_ui())
+        ttk.Label(toolbar, text=self._t("地图:")).pack(side="left", padx=(10, 3))
+        self._chest_map_var = tk.StringVar(value=self._t("全部地图"))
+        self._chest_map_combo = ttk.Combobox(
+            toolbar, textvariable=self._chest_map_var, width=28, state="readonly"
+        )
+        self._chest_map_combo.pack(side="left", padx=3)
+        self._chest_map_combo.bind("<<ComboboxSelected>>", lambda _event: self._refresh_chest_ui())
+        self._chest_missing_var = tk.BooleanVar(value=False)
+        ttk.Checkbutton(
+            toolbar, text=self._t("仅显示缺失"), variable=self._chest_missing_var,
+            command=self._refresh_chest_ui,
+        ).pack(side="left", padx=(10, 3))
+        ttk.Button(toolbar, text=self._t("过滤"), command=self._refresh_chest_ui).pack(side="left", padx=3)
+        ttk.Button(toolbar, text=self._t("全部显示"), command=self._clear_chest_filter).pack(side="left", padx=3)
+        self._refresh_chest_map_choices()
+
+        table = ttk.Frame(frm)
+        table.pack(fill="both", expand=True, padx=8, pady=4)
+        columns = ("status", "map", "item", "coordinates", "file")
+        self._chest_tree = ttk.Treeview(table, columns=columns, show="headings", selectmode="browse")
+        widths = {"status": 85, "map": 280, "item": 210, "coordinates": 285, "file": 95}
+        headings = {"status": "状态", "map": "地图", "item": "物品", "coordinates": "坐标", "file": "文件"}
+        for column in columns:
+            self._chest_tree.heading(column, text=self._t(headings[column]))
+            self._chest_tree.column(
+                column, width=widths[column],
+                anchor="center" if column in {"status", "coordinates", "file"} else "w",
+            )
+        scroll = ttk.Scrollbar(table, orient="vertical", command=self._chest_tree.yview)
+        self._chest_tree.configure(yscrollcommand=scroll.set)
+        self._chest_tree.pack(side="left", fill="both", expand=True)
+        scroll.pack(side="right", fill="y")
+        self._chest_tree.bind("<<TreeviewSelect>>", self._refresh_chest_detail)
+        self._chest_summary_lbl = ttk.Label(frm, text="")
+        self._chest_summary_lbl.pack(fill="x", padx=10, pady=(2, 2))
+        self._chest_detail_lbl = ttk.Label(frm, text="")
+        self._chest_detail_lbl.pack(fill="x", padx=10, pady=(0, 8))
+        self._chest_ui_dirty = True
+
+    def _refresh_chest_map_choices(self):
+        if not hasattr(self, "_chest_map_combo") or CHEST_CATALOG is None:
+            return
+        maps = CHEST_CATALOG.maps(self._current_ui_language())
+        current = self._chest_map_var.get()
+        values = (self._t("全部地图"), *maps)
+        self._chest_map_combo.configure(values=values)
+        self._chest_map_var.set(current if current in maps else values[0])
+
+    def _clear_chest_filter(self):
+        self._chest_search_var.set("")
+        self._chest_map_var.set(self._t("全部地图"))
+        self._chest_missing_var.set(False)
+        self._refresh_chest_ui()
+
+    @staticmethod
+    def _format_chest_coordinates(record):
+        x, y, z = record.coordinates()
+        return f"X {x:.3f} / Y {y:.3f} / Z {z:.3f}"
+
+    def _refresh_chest_ui(self):
+        if not hasattr(self, "_chest_tree"):
+            return
+        selected = self._chest_tree.selection()
+        selected_id = selected[0] if selected else None
+        self._chest_tree.delete(*self._chest_tree.get_children())
+        self._chest_detail_lbl.config(text="")
+        if self.save.data is None or CHEST_CATALOG is None:
+            self._chest_summary_lbl.config(text=self._t("未加载存档"))
+            self._chest_ui_dirty = False
+            return
+
+        lang = self._current_ui_language()
+        selected_map = self._chest_map_var.get()
+        map_name = selected_map if selected_map in CHEST_CATALOG.maps(lang) else None
+        records = CHEST_CATALOG.search(
+            self._chest_search_var.get(), map_name, self._chest_missing_var.get(),
+            self.save.data, lang,
+        )
+        for record in records:
+            opened = record.is_opened(self.save.data)
+            self._chest_tree.insert("", "end", iid=record.id, values=(
+                self._t("已取得" if opened else "未取得"),
+                record.map_name(lang),
+                record.item_name(lang),
+                self._format_chest_coordinates(record),
+                record.scene_file,
+            ))
+        if selected_id and self._chest_tree.exists(selected_id):
+            self._chest_tree.selection_set(selected_id)
+        opened, total = CHEST_CATALOG.progress(self.save.data)
+        self._chest_summary_lbl.config(text=self._t(
+            "宝箱: 已取得 {opened}/{total}，缺失 {missing}，当前显示 {shown}",
+            opened=opened, total=total, missing=total - opened, shown=len(records),
+        ))
+        self._refresh_chest_detail()
+        self._chest_ui_dirty = False
+
+    def _refresh_chest_detail(self, _event=None):
+        if not hasattr(self, "_chest_tree") or CHEST_CATALOG is None:
+            return
+        selection = self._chest_tree.selection()
+        if not selection:
+            self._chest_detail_lbl.config(text="")
+            return
+        chest_id = selection[0]
+        record = next((row for row in CHEST_CATALOG.records() if row.id == chest_id), None)
+        if record is None:
+            return
+        x, y, z = record.coordinates()
+        trigger = record.trigger
+        self._chest_detail_lbl.config(text=self._t(
+            "宝箱坐标: X={x:.3f} Y={y:.3f} Z={z:.3f} · 触发坐标: X={tx:.3f} Y={ty:.3f} Z={tz:.3f} · 范围={range:.3f}",
+            x=x, y=y, z=z,
+            tx=trigger["x"] / 1000.0, ty=trigger["y"] / 1000.0,
+            tz=trigger["z"] / 1000.0, range=trigger["range"] / 1000.0,
+        ))
 
     # ---- P0: 成就标签页 ----
     def _build_achievement_tab(self, frm):
