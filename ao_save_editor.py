@@ -157,6 +157,7 @@ UI_TRANSLATIONS = {
         "角色属性": "角色属性",
         "队伍 / 好感度": "队伍 / 好感度",
         "物品": "物品",
+        "料理手册": "料理手册",
         "成就": "成就",
         "战斗手册": "战斗手册",
         "角色外观": "角色外观",
@@ -204,6 +205,10 @@ UI_TRANSLATIONS = {
         "一键全开怪物图鉴": "一键全开怪物图鉴",
         "全解锁": "全解锁",
         "全锁定": "全锁定",
+        "全选": "全选",
+        "全不选": "全不选",
+        "全部菜谱已选中": "全部菜谱已选中",
+        "全部菜谱已取消": "全部菜谱已取消",
         "战斗统计数据 (修改后保存生效)": "战斗统计数据 (修改后保存生效)",
         "角色显示外观 (修改对应槽位的模型)": "角色显示外观 (修改对应槽位的模型)",
         "显示1": "显示1", "显示2": "显示2", "显示3": "显示3", "显示4": "显示4",
@@ -278,6 +283,7 @@ UI_TRANSLATIONS = {
         "角色属性": "Characters",
         "队伍 / 好感度": "Party / Bond",
         "物品": "Items",
+        "料理手册": "Recipe Book",
         "成就": "Achievements",
         "战斗手册": "Battle Notebook",
         "角色外观": "Appearance",
@@ -325,6 +331,10 @@ UI_TRANSLATIONS = {
         "一键全开怪物图鉴": "Unlock all monster records",
         "全解锁": "Unlock All",
         "全锁定": "Lock All",
+        "全选": "Select All",
+        "全不选": "Clear All",
+        "全部菜谱已选中": "All recipes selected",
+        "全部菜谱已取消": "All recipes cleared",
         "战斗统计数据 (修改后保存生效)": "Battle statistics (changes apply on save)",
         "角色显示外观 (修改对应槽位的模型)": "Character appearance slots (edit the model for each slot)",
         "显示1": "Slot 1", "显示2": "Slot 2", "显示3": "Slot 3", "显示4": "Slot 4",
@@ -399,6 +409,7 @@ UI_TRANSLATIONS = {
         "角色属性": "キャラクター",
         "队伍 / 好感度": "編成 / 絆",
         "物品": "アイテム",
+        "料理手册": "料理手帳",
         "成就": "実績",
         "战斗手册": "戦闘手帳",
         "角色外观": "外見",
@@ -446,6 +457,10 @@ UI_TRANSLATIONS = {
         "一键全开怪物图鉴": "魔兽图鉴を全開放",
         "全解锁": "全解除",
         "全锁定": "全固定",
+        "全选": "すべて選択",
+        "全不选": "選択解除",
+        "全部菜谱已选中": "全レシピを選択しました",
+        "全部菜谱已取消": "全レシピの選択を解除しました",
         "战斗统计数据 (修改后保存生效)": "戦闘統計 (変更は保存時に反映)",
         "角色显示外观 (修改对应槽位的模型)": "キャラ外見スロット (モデルを変更)",
         "显示1": "スロット1", "显示2": "スロット2", "显示3": "スロット3", "显示4": "スロット4",
@@ -683,6 +698,12 @@ def ui_text(text, lang="zh_cn"):
 ITEM_ORDERED_CODES = tuple(code for cat_codes in ITEM_WRITE_ORDER for code in cat_codes)
 ITEM_ORDERED_SET = set(ITEM_ORDERED_CODES)
 ITEM_QUANTITY_MAX = 99
+
+# NISA Ao stores the 24 learned recipes as three mirrored u32 bitmaps.
+# t_cook._dt indexes recipes from 1 to 24; bit 0 is reserved.
+RECIPE_BOOK_OFFSETS = (0x00019C98, 0x00019C9C, 0x00019CA0)
+RECIPE_BOOK_MASK = 0x01FFFFFE
+RECIPE_BOOK_ITEMS = tuple(0x0191 + index * 3 for index in range(24))
 
 def item_codes_for_categories(*categories):
     """按 BZH 写入顺序返回指定类别的物品代码。"""
@@ -1037,6 +1058,28 @@ class SaveData:
                     byte_val |= (1 << b)
             self.write_u8(off, byte_val)
 
+    def read_recipes(self):
+        """读取 24 道已学会菜谱；镜像不一致时保守合并已置位项。"""
+        recipe_mask = 0
+        for offset in RECIPE_BOOK_OFFSETS:
+            recipe_mask |= self.read_u32(offset) & RECIPE_BOOK_MASK
+        return [bool(recipe_mask & (1 << recipe_index)) for recipe_index in range(1, 25)]
+
+    def write_recipes(self, selected):
+        """同步写入三份料理位图，并保留各字段的非料理位。"""
+        selected = list(selected)
+        if len(selected) != len(RECIPE_BOOK_ITEMS):
+            raise ValueError(f"菜谱状态数量错误: {len(selected)} != {len(RECIPE_BOOK_ITEMS)}")
+
+        recipe_mask = 0
+        for recipe_index, enabled in enumerate(selected, start=1):
+            if enabled:
+                recipe_mask |= 1 << recipe_index
+
+        for offset in RECIPE_BOOK_OFFSETS:
+            old_value = self.read_u32(offset)
+            self.write_u32(offset, (old_value & ~RECIPE_BOOK_MASK) | recipe_mask)
+
     def unlock_all_monsters(self):
         """按 BZH 怪物代码一键解锁全部怪物图鉴。"""
         pos = MONSTER_START
@@ -1125,25 +1168,31 @@ class SaveEditor(tk.Tk):
         self._tab_defs.append((frm_items, "物品"))
         self._build_items_tab(frm_items)
 
-        # 标签5: 成就
+        # 标签5: 料理手册
+        frm_recipes = ttk.Frame(self._nb)
+        self._nb.add(frm_recipes, text="料理手册")
+        self._tab_defs.append((frm_recipes, "料理手册"))
+        self._build_recipe_tab(frm_recipes)
+
+        # 标签6: 成就
         frm_ach = ttk.Frame(self._nb)
         self._nb.add(frm_ach, text="成就")
         self._tab_defs.append((frm_ach, "成就"))
         self._build_achievement_tab(frm_ach)
 
-        # 标签6: 战斗手册
+        # 标签7: 战斗手册
         frm_btl = ttk.Frame(self._nb)
         self._nb.add(frm_btl, text="战斗手册")
         self._tab_defs.append((frm_btl, "战斗手册"))
         self._build_battle_tab(frm_btl)
 
-        # 标签7: 外观
+        # 标签8: 外观
         frm_app = ttk.Frame(self._nb)
         self._nb.add(frm_app, text="角色外观")
         self._tab_defs.append((frm_app, "角色外观"))
         self._build_appearance_tab(frm_app)
 
-        # 标签8: 快捷操作
+        # 标签9: 快捷操作
         frm_quick = ttk.Frame(self._nb)
         self._nb.add(frm_quick, text="快捷操作")
         self._tab_defs.append((frm_quick, "快捷操作"))
@@ -1263,6 +1312,8 @@ class SaveEditor(tk.Tk):
             self._refresh_battle_ui()
         if hasattr(self, "_ach_vars"):
             self._refresh_achievements_ui()
+        if hasattr(self, "_recipe_vars"):
+            self._refresh_recipe_names()
         self.update_idletasks()
 
     def _translate_widget_tree(self, widget, lang):
@@ -1673,6 +1724,7 @@ class SaveEditor(tk.Tk):
         self._items_ui_dirty = True
 
         # P0: 成就 + 战斗
+        self._refresh_recipes_ui()
         self._refresh_achievements_ui()
         self._refresh_battle_ui()
         # P1: 外观
@@ -1742,6 +1794,7 @@ class SaveEditor(tk.Tk):
         s.write_items(self._items_data)
 
         # P0: 成就 + 战斗
+        self._write_recipes_from_gui()
         self._write_achievements_from_gui()
         self._write_battle_from_gui()
         # P1: 外观
@@ -1842,6 +1895,60 @@ class SaveEditor(tk.Tk):
         else:
             self._items_ui_dirty = True
         self._set_status("全装备 → 1")
+
+    # ---- 料理手册标签页 ----
+    def _build_recipe_tab(self, frm):
+        self._recipe_vars = []  # list of (item_id, BooleanVar, checkbox)
+
+        bar = ttk.Frame(frm)
+        bar.pack(fill="x", padx=10, pady=(10, 5))
+        ttk.Button(bar, text=self._t("全选"), command=self._recipe_select_all).pack(side="left", padx=3)
+        ttk.Button(bar, text=self._t("全不选"), command=self._recipe_clear_all).pack(side="left", padx=3)
+
+        recipe_grid = ttk.Frame(frm)
+        recipe_grid.pack(fill="both", expand=True, padx=10, pady=5)
+        for column in range(3):
+            recipe_grid.grid_columnconfigure(column, weight=1, uniform="recipes")
+
+        for index, item_id in enumerate(RECIPE_BOOK_ITEMS):
+            var = tk.BooleanVar(value=False)
+            checkbox = ttk.Checkbutton(recipe_grid, variable=var)
+            checkbox.grid(row=index % 8, column=index // 8, sticky="w", padx=8, pady=5)
+            self._recipe_vars.append((item_id, var, checkbox))
+        self._refresh_recipe_names()
+
+    def _refresh_recipe_names(self):
+        lang = self._current_ui_language()
+        for index, (item_id, _var, checkbox) in enumerate(self._recipe_vars, start=1):
+            checkbox.configure(text=f"{index:02d}. {item_name(item_id, lang)}")
+
+    def _refresh_recipes_ui(self):
+        if self.save.data is None:
+            return
+        selected = self.save.read_recipes()
+        for (_item_id, var, _checkbox), enabled in zip(self._recipe_vars, selected):
+            var.set(enabled)
+        self._refresh_recipe_names()
+
+    def _write_recipes_from_gui(self):
+        if self.save.data is None:
+            return
+        self.save.write_recipes(var.get() for _item_id, var, _checkbox in self._recipe_vars)
+
+    def _set_all_recipes(self, enabled, status_key):
+        if self.save.data is None:
+            self._set_status("请先打开存档文件")
+            return
+        for _item_id, var, _checkbox in self._recipe_vars:
+            var.set(enabled)
+        self._write_recipes_from_gui()
+        self._set_status(status_key)
+
+    def _recipe_select_all(self):
+        self._set_all_recipes(True, "全部菜谱已选中")
+
+    def _recipe_clear_all(self):
+        self._set_all_recipes(False, "全部菜谱已取消")
 
     # ---- P0: 成就标签页 ----
     def _build_achievement_tab(self, frm):

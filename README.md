@@ -20,6 +20,7 @@ The in-editor Chinese item names and labels use the Joyoland/欢乐百世 Simpli
 - Edit party slots and 12 bonding values.
 - Switch the GUI globally between Chinese, English, and Japanese for implemented labels and data names.
 - Browse and search the full 713-item inventory table, replace an item by ID/name, and set any quantity from 0 to 99, with Chinese/English/Japanese item-name display where available.
+- Edit all 24 learned-recipe flags through individual checkboxes or Select All/Clear All, with globally switched Joyoland Chinese, NISA English, and Falcom Japanese recipe names.
 - Toggle the 7-byte achievement bitmap, with all-unlock/all-lock buttons and Chinese/English/Japanese achievement-name display.
 - Batch-fill consumables, ingredients, books, fish, quartz, and equipment.
 - Edit battle manual counters.
@@ -44,6 +45,8 @@ Validation performed on the publish package:
 - Localization dictionaries were checked for duplicate keys.
 - A sample save was loaded, item data was read/written, saved as zstd, and loaded again.
 - CLI quick edit was tested on a temporary save copy with `--mira`, `--dp`, `--sepith max`, and `--max-like`.
+- Recipe-book reads were verified against nine real progression saves with 0/1/6/8/12/13/15/18/18 recipes; a temporary copy also passed a 24-recipe write, checksum, zstd save, and reload roundtrip.
+- A Windows Python 3.13 GUI smoke test verified all 24 checkboxes plus Chinese/English/Japanese tab and recipe-name switching.
 
 GUI launch was not verified inside the Codex bundled Python runtime because that runtime lacks Tcl/Tk. Use a normal Windows Python installation with Tkinter for GUI use.
 
