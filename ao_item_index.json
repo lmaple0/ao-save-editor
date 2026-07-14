@@ -6,7 +6,8 @@
     ],
     "notes": [
       "Runtime item index for the save editor.",
-      "zh_joyoland comes from ao_zh_glossary.json.",
+      "zh_joyoland comes from ao_zh_glossary.json and is keyed by ID from Ouroboros/Falcom ItemNameMap.py.",
+      "Joyoland source: https://github.com/Ouroboros/Falcom/blob/master/ED7/Decompiler/GameData/ItemNameMap.py",
       "zh_cle is intentionally conservative: props, weapons, normal quartz aliases, and core quartz aliases only."
     ]
   },
@@ -86,7 +87,7 @@
       "id_hex": "0x000A",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "战术书·击",
+      "zh_joyoland": "战术书击",
       "zh_cle": null,
       "en": "Craft Book - Strike",
       "ja": "戦術書・撃"
@@ -96,7 +97,7 @@
       "id_hex": "0x000B",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "战术书·十",
+      "zh_joyoland": "战术书十",
       "zh_cle": null,
       "en": "Craft Book - Cross",
       "ja": "戦術書・十"
@@ -106,7 +107,7 @@
       "id_hex": "0x000C",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "战术书·苍",
+      "zh_joyoland": "战术书苍",
       "zh_cle": null,
       "en": "Craft Book - Blue",
       "ja": "戦術書・蒼"
@@ -116,7 +117,7 @@
       "id_hex": "0x000D",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "战术书·袭",
+      "zh_joyoland": "战术书袭",
       "zh_cle": null,
       "en": "Craft Book - Raid",
       "ja": "戦術書・襲"
@@ -126,7 +127,7 @@
       "id_hex": "0x000E",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "战术书·虚",
+      "zh_joyoland": "战术书虚",
       "zh_cle": null,
       "en": "Craft Book - Akasha",
       "ja": "戦術書・虚"
@@ -136,7 +137,7 @@
       "id_hex": "0x000F",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "战术书·爆",
+      "zh_joyoland": "战术书爆",
       "zh_cle": null,
       "en": "Craft Book - Blast",
       "ja": "戦術書・爆"
@@ -146,7 +147,7 @@
       "id_hex": "0x0010",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "战术书·里",
+      "zh_joyoland": "战术书里",
       "zh_cle": null,
       "en": "Craft Book - Rebel",
       "ja": "戦術書・裏"
@@ -156,7 +157,7 @@
       "id_hex": "0x0011",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "战术书·升",
+      "zh_joyoland": "战术书升",
       "zh_cle": null,
       "en": "Craft Book - Ascend",
       "ja": "戦術書・昇"
@@ -166,7 +167,7 @@
       "id_hex": "0x0014",
       "category": "fishing_rod",
       "category_zh": "钓具-钓竿",
-      "zh_joyoland": "初级杆",
+      "zh_joyoland": "初级竿",
       "zh_cle": null,
       "en": "Primary Rod",
       "ja": "プライマリロッド"
@@ -216,7 +217,7 @@
       "id_hex": "0x001E",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "珊瑚戒指+",
+      "zh_joyoland": "珊瑚戒指Plus",
       "zh_cle": null,
       "en": "Coral Ring+",
       "ja": "コーラルリング＋"
@@ -226,7 +227,7 @@
       "id_hex": "0x001F",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "英雄戒指+",
+      "zh_joyoland": "英雄戒指Plus",
       "zh_cle": null,
       "en": "Marble Ring+",
       "ja": "マーブルリング＋"
@@ -236,7 +237,7 @@
       "id_hex": "0x0020",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "夜光眼镜+",
+      "zh_joyoland": "夜光眼镜Plus",
       "zh_cle": null,
       "en": "Luminous Glasses+",
       "ja": "ルミナスグラス＋"
@@ -246,7 +247,7 @@
       "id_hex": "0x0021",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "凉爽项链+",
+      "zh_joyoland": "凉爽项链Plus",
       "zh_cle": null,
       "en": "Cool Necklace+",
       "ja": "クールネックレス＋"
@@ -256,7 +257,7 @@
       "id_hex": "0x0022",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "打火机+",
+      "zh_joyoland": "打火机Plus",
       "zh_cle": null,
       "en": "Lighter+",
       "ja": "フレイムジッポー＋"
@@ -266,7 +267,7 @@
       "id_hex": "0x0023",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "幻彩围巾+",
+      "zh_joyoland": "幻彩围巾Plus",
       "zh_cle": null,
       "en": "Mystic Stole+",
       "ja": "ミスティストール＋"
@@ -276,7 +277,7 @@
       "id_hex": "0x0024",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "叮当耳环+",
+      "zh_joyoland": "叮当耳环Plus",
       "zh_cle": null,
       "en": "Tinkle Earrings+",
       "ja": "ティンクルピアス＋"
@@ -286,7 +287,7 @@
       "id_hex": "0x0025",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "钢手镯+",
+      "zh_joyoland": "钢手镯Plus",
       "zh_cle": null,
       "en": "Steel Wrist+",
       "ja": "スティールリスト＋"
@@ -296,7 +297,7 @@
       "id_hex": "0x0026",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "花之瓶+",
+      "zh_joyoland": "花之瓶Plus",
       "zh_cle": null,
       "en": "Floral Bottle+",
       "ja": "フローラルボトル＋"
@@ -436,7 +437,7 @@
       "id_hex": "0x0034",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "超·必胜扎头巾",
+      "zh_joyoland": "超必胜扎头巾",
       "zh_cle": null,
       "en": "True Gladiator Headband",
       "ja": "超・必勝ハチマキ"
@@ -446,7 +447,7 @@
       "id_hex": "0x0035",
       "category": "equipment_jewelry",
       "category_zh": "装备-饰品",
-      "zh_joyoland": "超·斗魂腰带",
+      "zh_joyoland": "超斗魂腰带",
       "zh_cle": null,
       "en": "True Gladiator Belt",
       "ja": "超・闘魂ベルト"
@@ -876,7 +877,7 @@
       "id_hex": "0x0064",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "HP1",
+      "zh_joyoland": "ＨＰ１",
       "zh_cle": "HP1",
       "en": "HP 1",
       "ja": "ＨＰ１"
@@ -886,7 +887,7 @@
       "id_hex": "0x0065",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "HP2",
+      "zh_joyoland": "ＨＰ２",
       "zh_cle": "HP2",
       "en": "HP 2",
       "ja": "ＨＰ２"
@@ -896,7 +897,7 @@
       "id_hex": "0x0066",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "HP3",
+      "zh_joyoland": "ＨＰ３",
       "zh_cle": "HP3",
       "en": "HP 3",
       "ja": "ＨＰ３"
@@ -916,7 +917,7 @@
       "id_hex": "0x0068",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "EP1",
+      "zh_joyoland": "ＥＰ１",
       "zh_cle": "EP1",
       "en": "EP 1",
       "ja": "ＥＰ１"
@@ -926,7 +927,7 @@
       "id_hex": "0x0069",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "EP2",
+      "zh_joyoland": "ＥＰ２",
       "zh_cle": "EP2",
       "en": "EP 2",
       "ja": "ＥＰ２"
@@ -936,7 +937,7 @@
       "id_hex": "0x006A",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "EP3",
+      "zh_joyoland": "ＥＰ３",
       "zh_cle": "EP3",
       "en": "EP 3",
       "ja": "ＥＰ３"
@@ -956,7 +957,7 @@
       "id_hex": "0x006C",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "攻击1",
+      "zh_joyoland": "攻击１",
       "zh_cle": "攻击1",
       "en": "Attack 1",
       "ja": "攻撃１"
@@ -966,7 +967,7 @@
       "id_hex": "0x006D",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "攻击2",
+      "zh_joyoland": "攻击２",
       "zh_cle": "攻击2",
       "en": "Attack 2",
       "ja": "攻撃２"
@@ -976,7 +977,7 @@
       "id_hex": "0x006E",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "攻击3",
+      "zh_joyoland": "攻击３",
       "zh_cle": "攻击3",
       "en": "Attack 3",
       "ja": "攻撃３"
@@ -996,7 +997,7 @@
       "id_hex": "0x0070",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "防御1",
+      "zh_joyoland": "防御１",
       "zh_cle": "防御1",
       "en": "Defense 1",
       "ja": "防御１"
@@ -1006,7 +1007,7 @@
       "id_hex": "0x0071",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "防御2",
+      "zh_joyoland": "防御２",
       "zh_cle": "防御2",
       "en": "Defense 2",
       "ja": "防御２"
@@ -1016,7 +1017,7 @@
       "id_hex": "0x0072",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "防御3",
+      "zh_joyoland": "防御３",
       "zh_cle": "防御3",
       "en": "Defense 3",
       "ja": "防御３"
@@ -1036,7 +1037,7 @@
       "id_hex": "0x0074",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "精神1",
+      "zh_joyoland": "精神１",
       "zh_cle": "精神1",
       "en": "Mind 1",
       "ja": "精神１"
@@ -1046,7 +1047,7 @@
       "id_hex": "0x0075",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "精神2",
+      "zh_joyoland": "精神２",
       "zh_cle": "精神2",
       "en": "Mind 2",
       "ja": "精神２"
@@ -1056,7 +1057,7 @@
       "id_hex": "0x0076",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "精神3",
+      "zh_joyoland": "精神３",
       "zh_cle": "精神3",
       "en": "Mind 3",
       "ja": "精神３"
@@ -1076,7 +1077,7 @@
       "id_hex": "0x0078",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "魔防1",
+      "zh_joyoland": "魔防１",
       "zh_cle": "魔防1",
       "en": "Shield 1",
       "ja": "魔防１"
@@ -1086,7 +1087,7 @@
       "id_hex": "0x0079",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "魔防2",
+      "zh_joyoland": "魔防２",
       "zh_cle": "魔防2",
       "en": "Shield 2",
       "ja": "魔防２"
@@ -1096,7 +1097,7 @@
       "id_hex": "0x007A",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "魔防3",
+      "zh_joyoland": "魔防３",
       "zh_cle": "魔防3",
       "en": "Shield 3",
       "ja": "魔防３"
@@ -1116,7 +1117,7 @@
       "id_hex": "0x007C",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "命中1",
+      "zh_joyoland": "命中１",
       "zh_cle": "命中1",
       "en": "Hit 1",
       "ja": "命中１"
@@ -1126,7 +1127,7 @@
       "id_hex": "0x007D",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "命中2",
+      "zh_joyoland": "命中２",
       "zh_cle": "命中2",
       "en": "Hit 2",
       "ja": "命中２"
@@ -1136,7 +1137,7 @@
       "id_hex": "0x007E",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "命中3",
+      "zh_joyoland": "命中３",
       "zh_cle": "命中3",
       "en": "Hit 3",
       "ja": "命中３"
@@ -1156,7 +1157,7 @@
       "id_hex": "0x0080",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "回避1",
+      "zh_joyoland": "回避１",
       "zh_cle": "回避1",
       "en": "Evade 1",
       "ja": "回避１"
@@ -1166,7 +1167,7 @@
       "id_hex": "0x0081",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "回避2",
+      "zh_joyoland": "回避２",
       "zh_cle": "回避2",
       "en": "Evade 2",
       "ja": "回避２"
@@ -1176,7 +1177,7 @@
       "id_hex": "0x0082",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "回避3",
+      "zh_joyoland": "回避３",
       "zh_cle": "回避3",
       "en": "Evade 3",
       "ja": "回避３"
@@ -1196,7 +1197,7 @@
       "id_hex": "0x0084",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "移动1",
+      "zh_joyoland": "移动１",
       "zh_cle": "移动1",
       "en": "Move 1",
       "ja": "移動１"
@@ -1206,7 +1207,7 @@
       "id_hex": "0x0085",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "移动2",
+      "zh_joyoland": "移动２",
       "zh_cle": "移动2",
       "en": "Move 2",
       "ja": "移動２"
@@ -1236,7 +1237,7 @@
       "id_hex": "0x0088",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "行动力1",
+      "zh_joyoland": "行动力１",
       "zh_cle": "行动力1",
       "en": "Action 1",
       "ja": "行動力１"
@@ -1246,7 +1247,7 @@
       "id_hex": "0x0089",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "行动力2",
+      "zh_joyoland": "行动力２",
       "zh_cle": "行动力2",
       "en": "Action 2",
       "ja": "行動力２"
@@ -1256,7 +1257,7 @@
       "id_hex": "0x008A",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "行动力3",
+      "zh_joyoland": "行动力３",
       "zh_cle": "行动力3",
       "en": "Action 3",
       "ja": "行動力３"
@@ -1276,7 +1277,7 @@
       "id_hex": "0x008C",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "妨害1",
+      "zh_joyoland": "妨害１",
       "zh_cle": "妨碍1",
       "en": "Impede 1",
       "ja": "妨害１"
@@ -1286,7 +1287,7 @@
       "id_hex": "0x008D",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "妨害2",
+      "zh_joyoland": "妨害２",
       "zh_cle": "妨碍2",
       "en": "Impede 2",
       "ja": "妨害２"
@@ -1306,7 +1307,7 @@
       "id_hex": "0x008F",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "驱动1",
+      "zh_joyoland": "驱动１",
       "zh_cle": "驱动1",
       "en": "Cast 1",
       "ja": "駆動１"
@@ -1316,7 +1317,7 @@
       "id_hex": "0x0090",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "驱动2",
+      "zh_joyoland": "驱动２",
       "zh_cle": "驱动2",
       "en": "Cast 2",
       "ja": "駆動２"
@@ -1336,7 +1337,7 @@
       "id_hex": "0x0092",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "省EP1",
+      "zh_joyoland": "省ＥＰ１",
       "zh_cle": "省EP1",
       "en": "EP Cut 1",
       "ja": "省ＥＰ１"
@@ -1346,7 +1347,7 @@
       "id_hex": "0x0093",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "省EP2",
+      "zh_joyoland": "省ＥＰ２",
       "zh_cle": "省EP2",
       "en": "EP Cut 2",
       "ja": "省ＥＰ２"
@@ -1356,7 +1357,7 @@
       "id_hex": "0x0094",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "省EP3",
+      "zh_joyoland": "省ＥＰ３",
       "zh_cle": "省EP3",
       "en": "EP Cut 3",
       "ja": "省ＥＰ３"
@@ -1786,7 +1787,7 @@
       "id_hex": "0x00BF",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "石化之刃2",
+      "zh_joyoland": "石化之刃２",
       "zh_cle": "石化之刃2",
       "en": "Petrify 2",
       "ja": "石化の刃２"
@@ -1796,7 +1797,7 @@
       "id_hex": "0x00C0",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "封魔之刃2",
+      "zh_joyoland": "封魔之刃２",
       "zh_cle": "封魔之刃2",
       "en": "Mute 2",
       "ja": "封魔の刃２"
@@ -1806,7 +1807,7 @@
       "id_hex": "0x00C1",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "冻结之刃2",
+      "zh_joyoland": "冻结之刃２",
       "zh_cle": "冻结之刃2",
       "en": "Freeze 2",
       "ja": "凍結の刃２"
@@ -1816,7 +1817,7 @@
       "id_hex": "0x00C2",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "封技之刃2",
+      "zh_joyoland": "封技之刃２",
       "zh_cle": "封技之刃2",
       "en": "Seal 2",
       "ja": "封技の刃２"
@@ -1826,7 +1827,7 @@
       "id_hex": "0x00C3",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "炎伤之刃2",
+      "zh_joyoland": "炎伤之刃２",
       "zh_cle": "炎伤之刃2",
       "en": "Burn 2",
       "ja": "炎傷の刃２"
@@ -1836,7 +1837,7 @@
       "id_hex": "0x00C4",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "暗之刃2",
+      "zh_joyoland": "暗之刃２",
       "zh_cle": "黑暗之刃2",
       "en": "Blind 2",
       "ja": "暗闇の刃２"
@@ -1846,7 +1847,7 @@
       "id_hex": "0x00C5",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "睡眠之刃2",
+      "zh_joyoland": "睡眠之刃２",
       "zh_cle": "睡眠之刃2",
       "en": "Sleep 2",
       "ja": "睡眠の刃２"
@@ -1856,7 +1857,7 @@
       "id_hex": "0x00C6",
       "category": "circuit_normal",
       "category_zh": "回路-普通",
-      "zh_joyoland": "混乱之刃2",
+      "zh_joyoland": "混乱之刃２",
       "zh_cle": "混乱之刃2",
       "en": "Confuse 2",
       "ja": "混乱の刃２"
@@ -1906,7 +1907,7 @@
       "id_hex": "0x00CF",
       "category": "circuit_debug",
       "category_zh": "回路-Debug/未确认",
-      "zh_joyoland": "100%毒之刃",
+      "zh_joyoland": "Item_100毒之刃",
       "zh_cle": null,
       "en": "100％ Poison",
       "ja": "100毒の刃"
@@ -1916,7 +1917,7 @@
       "id_hex": "0x00D0",
       "category": "circuit_debug",
       "category_zh": "回路-Debug/未确认",
-      "zh_joyoland": "100%石化之刃",
+      "zh_joyoland": "Item_100石化之刃",
       "zh_cle": null,
       "en": "100％ Petrify",
       "ja": "100石化の刃"
@@ -1926,7 +1927,7 @@
       "id_hex": "0x00D1",
       "category": "circuit_debug",
       "category_zh": "回路-Debug/未确认",
-      "zh_joyoland": "100%封魔之刃",
+      "zh_joyoland": "Item_100封魔之刃",
       "zh_cle": null,
       "en": "100％ Mute",
       "ja": "100封魔の刃"
@@ -1936,7 +1937,7 @@
       "id_hex": "0x00D2",
       "category": "circuit_debug",
       "category_zh": "回路-Debug/未确认",
-      "zh_joyoland": "100%冻结之刃",
+      "zh_joyoland": "Item_100冻结之刃",
       "zh_cle": null,
       "en": "100％ Freeze",
       "ja": "100凍結の刃"
@@ -1946,7 +1947,7 @@
       "id_hex": "0x00D3",
       "category": "circuit_debug",
       "category_zh": "回路-Debug/未确认",
-      "zh_joyoland": "100%封技之刃",
+      "zh_joyoland": "Item_100封技之刃",
       "zh_cle": null,
       "en": "100％ Seal",
       "ja": "100封技の刃"
@@ -1956,7 +1957,7 @@
       "id_hex": "0x00D4",
       "category": "circuit_debug",
       "category_zh": "回路-Debug/未确认",
-      "zh_joyoland": "100%炎伤之刃",
+      "zh_joyoland": "Item_100炎伤之刃",
       "zh_cle": null,
       "en": "100％ Burn",
       "ja": "100炎傷の刃"
@@ -1966,7 +1967,7 @@
       "id_hex": "0x00D5",
       "category": "circuit_debug",
       "category_zh": "回路-Debug/未确认",
-      "zh_joyoland": "100%黑暗之刃",
+      "zh_joyoland": "Item_100黑暗之刃",
       "zh_cle": null,
       "en": "100％ Blind",
       "ja": "100暗闇の刃"
@@ -1976,7 +1977,7 @@
       "id_hex": "0x00D6",
       "category": "circuit_debug",
       "category_zh": "回路-Debug/未确认",
-      "zh_joyoland": "100%睡眠之刃",
+      "zh_joyoland": "Item_100睡眠之刃",
       "zh_cle": null,
       "en": "100％ Blind",
       "ja": "100睡眠の刃"
@@ -1986,7 +1987,7 @@
       "id_hex": "0x00D7",
       "category": "circuit_debug",
       "category_zh": "回路-Debug/未确认",
-      "zh_joyoland": "100%混乱之刃",
+      "zh_joyoland": "Item_100混乱之刃",
       "zh_cle": null,
       "en": "100％ Confuse",
       "ja": "100混乱の刃"
@@ -1996,7 +1997,7 @@
       "id_hex": "0x00D8",
       "category": "circuit_debug",
       "category_zh": "回路-Debug/未确认",
-      "zh_joyoland": "100%即死之刃",
+      "zh_joyoland": "Item_100即死之刃",
       "zh_cle": null,
       "en": "100％ Deathblow",
       "ja": "100即死の刃"
@@ -2166,7 +2167,7 @@
       "id_hex": "0x00EC",
       "category": "circuit_core",
       "category_zh": "回路-核心",
-      "zh_joyoland": "草薤",
+      "zh_joyoland": "草12_EC",
       "zh_cle": "草薙",
       "en": "Kusanagi",
       "ja": "クサナギ"
@@ -2216,7 +2217,7 @@
       "id_hex": "0x00F1",
       "category": "circuit_core",
       "category_zh": "回路-核心",
-      "zh_joyoland": "草薤",
+      "zh_joyoland": "草12_F1",
       "zh_cle": "草薙",
       "en": "Kusanagi",
       "ja": "クサナギ"
@@ -2306,7 +2307,7 @@
       "id_hex": "0x0135",
       "category": "food",
       "category_zh": "食材",
-      "zh_joyoland": "五谷味增",
+      "zh_joyoland": "五谷味噌",
       "zh_cle": null,
       "en": "Five-Colored Miso",
       "ja": "五穀味噌"
@@ -2516,7 +2517,7 @@
       "id_hex": "0x014A",
       "category": "food",
       "category_zh": "食材",
-      "zh_joyoland": "新鲜白鱼肉",
+      "zh_joyoland": "新鲜白肉鱼",
       "zh_cle": null,
       "en": "Tender Whitefish",
       "ja": "プリプリ白身"
@@ -2566,7 +2567,7 @@
       "id_hex": "0x0162",
       "category": "fishing_fish",
       "category_zh": "鱼类",
-      "zh_joyoland": "阿尔摩里卡鲫鱼",
+      "zh_joyoland": "阿尔摩利卡鲫鱼",
       "zh_cle": null,
       "en": "Armorican Carp",
       "ja": "アルモリカブナ"
@@ -2826,7 +2827,7 @@
       "id_hex": "0x017C",
       "category": "fishing_fish",
       "category_zh": "鱼类",
-      "zh_joyoland": "巨骨龙鱼皇",
+      "zh_joyoland": "巨骨龙皇鱼",
       "zh_cle": null,
       "en": "Elder King",
       "ja": "ギガルーク"
@@ -2876,7 +2877,7 @@
       "id_hex": "0x018A",
       "category": "fishing_bait",
       "category_zh": "钓具-鱼饵",
-      "zh_joyoland": "熬炼丸子DX",
+      "zh_joyoland": "熬炼丸子ＤＸ",
       "zh_cle": null,
       "en": "Deluxe Dumplings",
       "ja": "練り団子ＤＸ"
@@ -2886,7 +2887,7 @@
       "id_hex": "0x018B",
       "category": "fishing_bait",
       "category_zh": "钓具-鱼饵",
-      "zh_joyoland": "虹丸EX",
+      "zh_joyoland": "虹丸ＥＸ",
       "zh_cle": null,
       "en": "Rainbow Gem EX",
       "ja": "虹玉ＥＸ"
@@ -2906,7 +2907,7 @@
       "id_hex": "0x0190",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "天上面[日轮]",
+      "zh_joyoland": "天上面_日轮",
       "zh_cle": null,
       "en": "Heavenly Noodles",
       "ja": "天上麺≪日輪≫"
@@ -2926,7 +2927,7 @@
       "id_hex": "0x0192",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "极苦面[断头]",
+      "zh_joyoland": "极苦面_断头",
       "zh_cle": null,
       "en": "Headsman's Noodles",
       "ja": "極苦麺≪断頭≫"
@@ -2936,7 +2937,7 @@
       "id_hex": "0x0193",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "神仙麻婆[麒麟]",
+      "zh_joyoland": "神仙麻婆_麒麟",
       "zh_cle": null,
       "en": "Immortal Mapo Tofu",
       "ja": "神仙麻婆≪麒麟≫"
@@ -2956,7 +2957,7 @@
       "id_hex": "0x0195",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "炼狱麻婆[阎魔]",
+      "zh_joyoland": "炼狱麻婆_阎魔",
       "zh_cle": null,
       "en": "Yama's Purga-tofu",
       "ja": "煉獄麻婆≪閻魔≫"
@@ -2996,7 +2997,7 @@
       "id_hex": "0x0199",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "极品牛排[刚]",
+      "zh_joyoland": "极品牛排_刚",
       "zh_cle": null,
       "en": "Piquant Steak",
       "ja": "極上ステーキ≪剛≫"
@@ -3016,7 +3017,7 @@
       "id_hex": "0x019B",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "顽固肉排[岩]",
+      "zh_joyoland": "顽固肉排_岩",
       "zh_cle": null,
       "en": "Rock-Hard Jerky",
       "ja": "頑固肉≪巌≫"
@@ -3046,7 +3047,7 @@
       "id_hex": "0x019E",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "混沌久煮[浊]",
+      "zh_joyoland": "混沌久煮_浊",
       "zh_cle": null,
       "en": "Abominable Stew",
       "ja": "混沌煮込み≪濁≫"
@@ -3056,7 +3057,7 @@
       "id_hex": "0x019F",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "大地锅[烂漫]",
+      "zh_joyoland": "大地锅_烂漫",
       "zh_cle": null,
       "en": "Cornucopia Hotpot",
       "ja": "大地鍋≪爛漫≫"
@@ -3076,7 +3077,7 @@
       "id_hex": "0x01A1",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "男人料理[山]",
+      "zh_joyoland": "男人料理_山",
       "zh_cle": null,
       "en": "Mountaineer's Meal",
       "ja": "男料理≪山≫"
@@ -3086,7 +3087,7 @@
       "id_hex": "0x01A2",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "天河锅[瑞云]",
+      "zh_joyoland": "天河锅_瑞云",
       "zh_cle": null,
       "en": "'Cosmic Ocean' Hotpot",
       "ja": "天河鍋≪瑞雲≫"
@@ -3106,7 +3107,7 @@
       "id_hex": "0x01A4",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "男人料理[川]",
+      "zh_joyoland": "男人料理_川",
       "zh_cle": null,
       "en": "Riverman's Meal",
       "ja": "男料理≪川≫"
@@ -3116,7 +3117,7 @@
       "id_hex": "0x01A5",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "特快炸鱼[疾]",
+      "zh_joyoland": "特快炸鱼_疾",
       "zh_cle": null,
       "en": "Turbo Fry",
       "ja": "特急フライ≪疾≫"
@@ -3176,7 +3177,7 @@
       "id_hex": "0x01AB",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "翠玉面[治愈]",
+      "zh_joyoland": "翠玉面_治愈",
       "zh_cle": null,
       "en": "Soothing Jade Noodles",
       "ja": "翠玉麺≪癒し≫"
@@ -3296,7 +3297,7 @@
       "id_hex": "0x01B7",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "真心饭盒[诚]",
+      "zh_joyoland": "真心盒饭_诚",
       "zh_cle": null,
       "en": "Sincere Lunchbox",
       "ja": "真心弁当≪誠≫"
@@ -3306,8 +3307,8 @@
       "id_hex": "0x01B8",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "行乐午餐饭盒",
-      "zh_cle": null,
+      "zh_joyoland": "行乐午餐盒饭",
+      "zh_cle": "行乐午餐盒饭",
       "en": "Picnic Lunchbox",
       "ja": "行楽ランチボックス"
     },
@@ -3316,7 +3317,7 @@
       "id_hex": "0x01B9",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "不可思议盒饭[仰天]",
+      "zh_joyoland": "不可思议盒饭_仰天",
       "zh_cle": null,
       "en": "Surprise Lunchbox",
       "ja": "不思議弁当≪仰天≫"
@@ -3386,7 +3387,7 @@
       "id_hex": "0x01C0",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "天上甜点[夜月]",
+      "zh_joyoland": "天上甜点_夜月",
       "zh_cle": null,
       "en": "Midnight Delight",
       "ja": "天菓≪夜月≫"
@@ -3416,7 +3417,7 @@
       "id_hex": "0x01C3",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "宝物甜点[白雪]",
+      "zh_joyoland": "宝物甜点_白雪",
       "zh_cle": null,
       "en": "White Snow Pudding",
       "ja": "宝菓≪白雪≫"
@@ -3446,7 +3447,7 @@
       "id_hex": "0x01C6",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "冰凉甜点[七彩]",
+      "zh_joyoland": "冰凉甜点_七彩",
       "zh_cle": null,
       "en": "Septicolored Sherbet",
       "ja": "氷菓≪七彩≫"
@@ -3476,7 +3477,7 @@
       "id_hex": "0x01C9",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "绝品甜点[瞬动]",
+      "zh_joyoland": "绝品甜点_瞬动",
       "zh_cle": null,
       "en": "Impulse Popcorn",
       "ja": "絶菓≪瞬動≫"
@@ -3506,7 +3507,7 @@
       "id_hex": "0x01CC",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "玉露[绿风]",
+      "zh_joyoland": "玉露_绿风",
       "zh_cle": null,
       "en": "Summer Breeze Blend",
       "ja": "玉露≪緑風≫"
@@ -3526,7 +3527,7 @@
       "id_hex": "0x01CE",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "良药[熊竹]",
+      "zh_joyoland": "良药_熊竹",
       "zh_cle": null,
       "en": "Potent Bamboo Remedy",
       "ja": "良薬≪熊笹≫"
@@ -3536,7 +3537,7 @@
       "id_hex": "0x01CF",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "甘露[紫绀]",
+      "zh_joyoland": "甘露_紫绀",
       "zh_cle": null,
       "en": "Periwinkle Nectar",
       "ja": "甘露≪紫紺≫"
@@ -3566,7 +3567,7 @@
       "id_hex": "0x01D2",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "黑茶[梦魇杀手]",
+      "zh_joyoland": "黑茶_梦魇杀手",
       "zh_cle": null,
       "en": "Nightmare Slayer",
       "ja": "黒茶≪夢魔殺し≫"
@@ -3596,7 +3597,7 @@
       "id_hex": "0x01D5",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "秘水[桃源乡]",
+      "zh_joyoland": "秘水_桃源乡",
       "zh_cle": null,
       "en": "Arcadian Ambrosia",
       "ja": "秘水≪桃源郷≫"
@@ -3606,8 +3607,8 @@
       "id_hex": "0x01D6",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "桃色紫薇",
-      "zh_cle": null,
+      "zh_joyoland": "桃色蔷薇",
+      "zh_cle": "桃色蔷薇",
       "en": "Pinky Rose",
       "ja": "ピンキーローズ"
     },
@@ -3626,7 +3627,7 @@
       "id_hex": "0x01D8",
       "category": "props_cooking",
       "category_zh": "料理",
-      "zh_joyoland": "失败作[引以为戒]",
+      "zh_joyoland": "失败作_引以为戒",
       "zh_cle": null,
       "en": "A Cautionary Fail",
       "ja": "失敗作《戒め》"
@@ -3686,7 +3687,7 @@
       "id_hex": "0x01F8",
       "category": "props_normal",
       "category_zh": "道具-普通",
-      "zh_joyoland": "EP填充剂I",
+      "zh_joyoland": "ＥＰ填充剂Ⅰ",
       "zh_cle": "EP填充剂Ⅰ",
       "en": "EP Charge",
       "ja": "ＥＰチャージⅠ"
@@ -3696,7 +3697,7 @@
       "id_hex": "0x01F9",
       "category": "props_normal",
       "category_zh": "道具-普通",
-      "zh_joyoland": "EP填充剂II",
+      "zh_joyoland": "ＥＰ填充剂Ⅱ",
       "zh_cle": "EP填充剂Ⅱ",
       "en": "EP Charge II",
       "ja": "ＥＰチャージⅡ"
@@ -3706,7 +3707,7 @@
       "id_hex": "0x01FA",
       "category": "props_normal",
       "category_zh": "道具-普通",
-      "zh_joyoland": "EP填充剂III",
+      "zh_joyoland": "ＥＰ填充剂Ⅲ",
       "zh_cle": "EP填充剂Ⅲ",
       "en": "EP Charge III",
       "ja": "ＥＰチャージⅢ"
@@ -3736,7 +3737,7 @@
       "id_hex": "0x01FD",
       "category": "props_normal",
       "category_zh": "道具-普通",
-      "zh_joyoland": "圣灵药·改",
+      "zh_joyoland": "圣灵药改",
       "zh_cle": "圣灵药·改",
       "en": "Celestial Balm EX",
       "ja": "アセラスの薬・改"
@@ -3866,7 +3867,7 @@
       "id_hex": "0x020A",
       "category": "props_normal",
       "category_zh": "道具-普通",
-      "zh_joyoland": "S-药片",
+      "zh_joyoland": "Ｓ药片",
       "zh_cle": "S-药锭",
       "en": "S-Tablet",
       "ja": "Ｓ－タブレット"
@@ -4036,7 +4037,7 @@
       "id_hex": "0x021C",
       "category": "props_normal",
       "category_zh": "道具-普通",
-      "zh_joyoland": "运动汽水X",
+      "zh_joyoland": "运动汽水Ｘ",
       "zh_cle": "运动汽水X",
       "en": "Sporitan X",
       "ja": "スポリタンＸ"
@@ -4056,7 +4057,7 @@
       "id_hex": "0x02BC",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊①",
+      "zh_joyoland": "克洛斯贝尔时代周刊1_2BC",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 1",
       "ja": "クロスベルタイムズ①"
@@ -4066,7 +4067,7 @@
       "id_hex": "0x02BD",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊②",
+      "zh_joyoland": "克洛斯贝尔时代周刊2_2BD",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 2",
       "ja": "クロスベルタイムズ②"
@@ -4076,7 +4077,7 @@
       "id_hex": "0x02BE",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊③",
+      "zh_joyoland": "克洛斯贝尔时代周刊3_2BE",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 3",
       "ja": "クロスベルタイムズ③"
@@ -4086,7 +4087,7 @@
       "id_hex": "0x02BF",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊号外",
+      "zh_joyoland": "克洛斯贝尔时代周刊号外_2BF",
       "zh_cle": null,
       "en": "Crossbell Times - Special Edition",
       "ja": "クロスベルタイムズ号外"
@@ -4096,7 +4097,7 @@
       "id_hex": "0x02C0",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊④",
+      "zh_joyoland": "克洛斯贝尔时代周刊4_2C0",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 4",
       "ja": "クロスベルタイムズ④"
@@ -4106,7 +4107,7 @@
       "id_hex": "0x02C1",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑤",
+      "zh_joyoland": "克洛斯贝尔时代周刊5_2C1",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 5",
       "ja": "クロスベルタイムズ⑤"
@@ -4116,7 +4117,7 @@
       "id_hex": "0x02C2",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑥",
+      "zh_joyoland": "克洛斯贝尔时代周刊6_2C2",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 6",
       "ja": "クロスベルタイムズ⑥"
@@ -4126,7 +4127,7 @@
       "id_hex": "0x02C3",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑦",
+      "zh_joyoland": "克洛斯贝尔时代周刊7_2C3",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 7",
       "ja": "クロスベルタイムズ⑦"
@@ -4136,7 +4137,7 @@
       "id_hex": "0x02C4",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑧",
+      "zh_joyoland": "克洛斯贝尔时代周刊8_2C4",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 8",
       "ja": "クロスベルタイムズ⑧"
@@ -4146,7 +4147,7 @@
       "id_hex": "0x02C6",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 1卷",
+      "zh_joyoland": "黑市医生格伦１卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 1",
       "ja": "闇医者グレン　１巻"
@@ -4156,7 +4157,7 @@
       "id_hex": "0x02C7",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 2卷",
+      "zh_joyoland": "黑市医生格伦２卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 2",
       "ja": "闇医者グレン　２巻"
@@ -4166,7 +4167,7 @@
       "id_hex": "0x02C8",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 3卷",
+      "zh_joyoland": "黑市医生格伦３卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 3",
       "ja": "闇医者グレン　３巻"
@@ -4176,7 +4177,7 @@
       "id_hex": "0x02C9",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 4卷",
+      "zh_joyoland": "黑市医生格伦４卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 4",
       "ja": "闇医者グレン　４巻"
@@ -4186,7 +4187,7 @@
       "id_hex": "0x02CA",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 5卷",
+      "zh_joyoland": "黑市医生格伦５卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 5",
       "ja": "闇医者グレン　５巻"
@@ -4196,7 +4197,7 @@
       "id_hex": "0x02CB",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 6卷",
+      "zh_joyoland": "黑市医生格伦６卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 6",
       "ja": "闇医者グレン　６巻"
@@ -4206,7 +4207,7 @@
       "id_hex": "0x02CC",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 7卷",
+      "zh_joyoland": "黑市医生格伦７卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 7",
       "ja": "闇医者グレン　７巻"
@@ -4216,7 +4217,7 @@
       "id_hex": "0x02CD",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 8卷",
+      "zh_joyoland": "黑市医生格伦８卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 8",
       "ja": "闇医者グレン　８巻"
@@ -4226,7 +4227,7 @@
       "id_hex": "0x02CE",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 9卷",
+      "zh_joyoland": "黑市医生格伦９卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 9",
       "ja": "闇医者グレン　９巻"
@@ -4236,7 +4237,7 @@
       "id_hex": "0x02CF",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 10卷",
+      "zh_joyoland": "黑市医生格伦10卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 10",
       "ja": "闇医者グレン　10巻"
@@ -4246,7 +4247,7 @@
       "id_hex": "0x02D0",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 11卷",
+      "zh_joyoland": "黑市医生格伦11卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 11",
       "ja": "闇医者グレン　11巻"
@@ -4256,7 +4257,7 @@
       "id_hex": "0x02D1",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 12卷",
+      "zh_joyoland": "黑市医生格伦12卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 12",
       "ja": "闇医者グレン　12巻"
@@ -4266,7 +4267,7 @@
       "id_hex": "0x02D2",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 13卷",
+      "zh_joyoland": "黑市医生格伦13卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 13",
       "ja": "闇医者グレン　13巻"
@@ -4276,7 +4277,7 @@
       "id_hex": "0x02D3",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "黑市医生格伦 14卷",
+      "zh_joyoland": "黑市医生格伦14卷",
       "zh_cle": null,
       "en": "Back Alley Doctor Glenn - Ch. 14",
       "ja": "闇医者グレン　14巻"
@@ -4296,7 +4297,7 @@
       "id_hex": "0x02D6",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "玛尔克与森林深处的魔女们·上",
+      "zh_joyoland": "玛尔克与森林深处的魔女上",
       "zh_cle": null,
       "en": "Mark and the Witch - Part 1",
       "ja": "マルクと深き森の魔女・上"
@@ -4316,7 +4317,7 @@
       "id_hex": "0x02D8",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "有效利用五分钟零散时间",
+      "zh_joyoland": "有效利用五分钟的零散时间",
       "zh_cle": null,
       "en": "The Best Way to Use 5 Minutes",
       "ja": "余った５分の有効な使い方"
@@ -4336,7 +4337,7 @@
       "id_hex": "0x02DA",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "彩虹·Funbook",
+      "zh_joyoland": "彩虹FanBook",
       "zh_cle": null,
       "en": "Arc en Ciel Enthusiasts",
       "ja": "アルカンシェル・ＦＢ"
@@ -4346,7 +4347,7 @@
       "id_hex": "0x02DD",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "玛尔克与森林深处的魔女们·中",
+      "zh_joyoland": "玛尔克与森林深处的魔女中",
       "zh_cle": null,
       "en": "Mark and the Witch - 2",
       "ja": "マルクと深き森の魔女・中"
@@ -4356,7 +4357,7 @@
       "id_hex": "0x02DE",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "玛尔克与森林深处的魔女们·下",
+      "zh_joyoland": "玛尔克与森林深处的魔女下",
       "zh_cle": null,
       "en": "Mark and the Witch - 3",
       "ja": "マルクと深き森の魔女・下"
@@ -4366,7 +4367,7 @@
       "id_hex": "0x02DF",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "圣女与白狼·上",
+      "zh_joyoland": "圣女与白狼上",
       "zh_cle": null,
       "en": "Saint and White Wolf - 1",
       "ja": "聖女と白い狼・上"
@@ -4376,7 +4377,7 @@
       "id_hex": "0x02E0",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "圣女与白狼·下",
+      "zh_joyoland": "圣女与白狼下",
       "zh_cle": null,
       "en": "Saint and White Wolf - 2",
       "ja": "聖女と白い狼・下"
@@ -4386,7 +4387,7 @@
       "id_hex": "0x02E1",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑴",
+      "zh_joyoland": "克洛斯贝尔时代周刊1_2E1",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 1",
       "ja": "クロスベルタイムズ①"
@@ -4396,7 +4397,7 @@
       "id_hex": "0x02E2",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑵",
+      "zh_joyoland": "克洛斯贝尔时代周刊2_2E2",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 2",
       "ja": "クロスベルタイムズ②"
@@ -4406,7 +4407,7 @@
       "id_hex": "0x02E3",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑶",
+      "zh_joyoland": "克洛斯贝尔时代周刊3_2E3",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 3",
       "ja": "クロスベルタイムズ③"
@@ -4416,7 +4417,7 @@
       "id_hex": "0x02E4",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑷",
+      "zh_joyoland": "克洛斯贝尔时代周刊4_2E4",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 4",
       "ja": "クロスベルタイムズ④"
@@ -4426,7 +4427,7 @@
       "id_hex": "0x02E5",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑸",
+      "zh_joyoland": "克洛斯贝尔时代周刊5_2E5",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 5",
       "ja": "クロスベルタイムズ⑤"
@@ -4436,7 +4437,7 @@
       "id_hex": "0x02E6",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑹",
+      "zh_joyoland": "克洛斯贝尔时代周刊6_2E6",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 6",
       "ja": "クロスベルタイムズ⑥"
@@ -4446,7 +4447,7 @@
       "id_hex": "0x02E7",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑺",
+      "zh_joyoland": "克洛斯贝尔时代周刊7_2E7",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 7",
       "ja": "クロスベルタイムズ⑦"
@@ -4456,7 +4457,7 @@
       "id_hex": "0x02E8",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑻",
+      "zh_joyoland": "克洛斯贝尔时代周刊8_2E8",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 8",
       "ja": "クロスベルタイムズ⑧"
@@ -4466,7 +4467,7 @@
       "id_hex": "0x02E9",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑨",
+      "zh_joyoland": "克洛斯贝尔时代周刊9",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 9",
       "ja": "クロスベルタイムズ⑨"
@@ -4476,7 +4477,7 @@
       "id_hex": "0x02EA",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊号外",
+      "zh_joyoland": "克洛斯贝尔时代周刊号外_2EA",
       "zh_cle": null,
       "en": "Crossbell Times - Special Edition",
       "ja": "クロスベルタイムズ号外"
@@ -4486,7 +4487,7 @@
       "id_hex": "0x02EB",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑽",
+      "zh_joyoland": "克洛斯贝尔时代周刊10",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 10",
       "ja": "クロスベルタイムズ⑩"
@@ -4496,7 +4497,7 @@
       "id_hex": "0x02EC",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "克洛斯贝尔时代周刊⑾",
+      "zh_joyoland": "克洛斯贝尔时代周刊11",
       "zh_cle": null,
       "en": "Crossbell Times - Issue 11",
       "ja": "クロスベルタイムズ⑪"
@@ -4506,7 +4507,7 @@
       "id_hex": "0x02EE",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 1卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝１卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 1",
       "ja": "陽溜りのアニエス　１巻"
@@ -4516,7 +4517,7 @@
       "id_hex": "0x02EF",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 2卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝２卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 2",
       "ja": "陽溜りのアニエス　２巻"
@@ -4526,7 +4527,7 @@
       "id_hex": "0x02F0",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 3卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝３卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 3",
       "ja": "陽溜りのアニエス　３巻"
@@ -4536,7 +4537,7 @@
       "id_hex": "0x02F1",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 4卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝４卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 4",
       "ja": "陽溜りのアニエス　４巻"
@@ -4546,7 +4547,7 @@
       "id_hex": "0x02F2",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 5卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝５卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 5",
       "ja": "陽溜りのアニエス　５巻"
@@ -4556,7 +4557,7 @@
       "id_hex": "0x02F3",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 6卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝６卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 6",
       "ja": "陽溜りのアニエス　６巻"
@@ -4566,7 +4567,7 @@
       "id_hex": "0x02F4",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 7卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝７卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 7",
       "ja": "陽溜りのアニエス　７巻"
@@ -4576,7 +4577,7 @@
       "id_hex": "0x02F5",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 8卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝８卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 8",
       "ja": "陽溜りのアニエス　８巻"
@@ -4586,7 +4587,7 @@
       "id_hex": "0x02F6",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 9卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝９卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 9",
       "ja": "陽溜りのアニエス　９巻"
@@ -4596,7 +4597,7 @@
       "id_hex": "0x02F7",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 10卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝10卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 10",
       "ja": "陽溜りのアニエス　10巻"
@@ -4606,7 +4607,7 @@
       "id_hex": "0x02F8",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 11卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝11卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 11",
       "ja": "陽溜りのアニエス　11巻"
@@ -4616,7 +4617,7 @@
       "id_hex": "0x02F9",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 12卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝12卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 12",
       "ja": "陽溜りのアニエス　12巻"
@@ -4626,7 +4627,7 @@
       "id_hex": "0x02FA",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 13卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝13卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 13",
       "ja": "陽溜りのアニエス　13巻"
@@ -4636,7 +4637,7 @@
       "id_hex": "0x02FB",
       "category": "book",
       "category_zh": "书籍/手册",
-      "zh_joyoland": "沐浴阳光的阿尼艾斯 14卷",
+      "zh_joyoland": "沐浴阳光的阿尼艾丝14卷",
       "zh_cle": null,
       "en": "Sunshine Agnes - Ch. 14",
       "ja": "陽溜りのアニエス　14巻"
@@ -4676,7 +4677,7 @@
       "id_hex": "0x0322",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "地下空间B区域的钥匙",
+      "zh_joyoland": "地下空间Ｂ区域的钥匙",
       "zh_cle": null,
       "en": "Geofront B Key",
       "ja": "ジオフロントＢの鍵"
@@ -4696,7 +4697,7 @@
       "id_hex": "0x0324",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "lBC认证卡片",
+      "zh_joyoland": "ＩＢＣ认证卡片",
       "zh_cle": null,
       "en": "IBC ID Card",
       "ja": "ＩＢＣ認証カード"
@@ -4716,7 +4717,7 @@
       "id_hex": "0x0326",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "IBC贵宾卡片",
+      "zh_joyoland": "ＩＢＣ贵宾卡片",
       "zh_cle": null,
       "en": "IBC Primary Card",
       "ja": "ＩＢＣプライマリカード"
@@ -4736,7 +4737,7 @@
       "id_hex": "0x0329",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "纯白之石[中]",
+      "zh_joyoland": "纯白之石_329",
       "zh_cle": null,
       "en": "Whitestone",
       "ja": "ホワイトストーン"
@@ -4746,7 +4747,7 @@
       "id_hex": "0x032B",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "纯白之石[小]",
+      "zh_joyoland": "纯白之石_32B",
       "zh_cle": null,
       "en": "Whitestone",
       "ja": "ホワイトストーン"
@@ -4756,7 +4757,7 @@
       "id_hex": "0x032C",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "纯白之石[大]",
+      "zh_joyoland": "纯白之石_32C",
       "zh_cle": null,
       "en": "Whitestone",
       "ja": "ホワイトストーン"
@@ -4846,7 +4847,7 @@
       "id_hex": "0x0335",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "罗赞贝尔克人偶．C",
+      "zh_joyoland": "罗赞贝尔克人偶Ｃ",
       "zh_cle": null,
       "en": "Rosenberg Doll K",
       "ja": "ローゼンベルク人形・Ｃ"
@@ -4856,7 +4857,7 @@
       "id_hex": "0x0336",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "罗赞贝尔克人偶．R",
+      "zh_joyoland": "罗赞贝尔克人偶Ｒ",
       "zh_cle": null,
       "en": "Rosenberg Doll L",
       "ja": "ローゼンベルク人形・Ｒ"
@@ -4866,7 +4867,7 @@
       "id_hex": "0x0337",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "罗赞贝尔克人偶．M",
+      "zh_joyoland": "罗赞贝尔克人偶Ｍ",
       "zh_cle": null,
       "en": "Rosenberg Doll M",
       "ja": "ローゼンベルク人形・Ｍ"
@@ -4876,7 +4877,7 @@
       "id_hex": "0x0338",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "罗赞贝尔克人偶．S",
+      "zh_joyoland": "罗赞贝尔克人偶Ｓ",
       "zh_cle": null,
       "en": "Rosenberg Doll S",
       "ja": "ローゼンベルク人形・Ｓ"
@@ -4886,7 +4887,7 @@
       "id_hex": "0x0339",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "波波碰！β版",
+      "zh_joyoland": "波波碰β版",
       "zh_cle": null,
       "en": "Pom! Pom! Party! Beta",
       "ja": "ポムっと！β版"
@@ -4936,7 +4937,7 @@
       "id_hex": "0x0341",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "选秀活动特别奖纪念盾[艾莉]",
+      "zh_joyoland": "选秀活动特别奖纪念盾_341",
       "zh_cle": null,
       "en": "Pageant Keepsake Plaque",
       "ja": "ミスコン特別賞記念盾"
@@ -4946,7 +4947,7 @@
       "id_hex": "0x0342",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "选秀活动特别奖纪念盾[提欧]",
+      "zh_joyoland": "选秀活动特别奖纪念盾_342",
       "zh_cle": null,
       "en": "Pageant Keepsake Plaque",
       "ja": "ミスコン特別賞記念盾"
@@ -4956,7 +4957,7 @@
       "id_hex": "0x0343",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "选秀活动特别奖纪念盾[诺埃尔]",
+      "zh_joyoland": "选秀活动特别奖纪念盾_343",
       "zh_cle": null,
       "en": "Pageant Keepsake Plaque",
       "ja": "ミスコン特別賞記念盾"
@@ -5166,7 +5167,7 @@
       "id_hex": "0x0358",
       "category": "event_furnishing",
       "category_zh": "事件-家具",
-      "zh_joyoland": "ZWEI2企鹅",
+      "zh_joyoland": "ＺＷＥＩ２企鹅",
       "zh_cle": null,
       "en": "Zwei II Penguin",
       "ja": "ＺＷＥＩ２ペンギン"
@@ -5186,7 +5187,7 @@
       "id_hex": "0x035D",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "米修拉姆·奇幻乐园游乐券",
+      "zh_joyoland": "米修拉姆奇幻乐园游乐券",
       "zh_cle": null,
       "en": "MWL Ticket",
       "ja": "Ｍ・Ｗ・Ｌチケット"
@@ -5266,7 +5267,7 @@
       "id_hex": "0x0365",
       "category": "event_car",
       "category_zh": "事件-导力车",
-      "zh_joyoland": "HP回复装置",
+      "zh_joyoland": "ＨＰ回复装置",
       "zh_cle": null,
       "en": "HP Charger",
       "ja": "ＨＰチャージャー"
@@ -5276,7 +5277,7 @@
       "id_hex": "0x0366",
       "category": "event_car",
       "category_zh": "事件-导力车",
-      "zh_joyoland": "EP回复装置",
+      "zh_joyoland": "ＥＰ回复装置",
       "zh_cle": null,
       "en": "EP Charger",
       "ja": "ＥＰチャージャー"
@@ -5286,7 +5287,7 @@
       "id_hex": "0x0367",
       "category": "event_car",
       "category_zh": "事件-导力车",
-      "zh_joyoland": "CP回复装置",
+      "zh_joyoland": "ＣＰ回复装置",
       "zh_cle": null,
       "en": "CP Charger",
       "ja": "ＣＰチャージャー"
@@ -5296,7 +5297,7 @@
       "id_hex": "0x0368",
       "category": "event_car",
       "category_zh": "事件-导力车",
-      "zh_joyoland": "CPD主题",
+      "zh_joyoland": "ＣＰＤ主题",
       "zh_cle": null,
       "en": "CPD Paintwork",
       "ja": "ＣＰＤカラー"
@@ -5316,7 +5317,7 @@
       "id_hex": "0x036A",
       "category": "event_car",
       "category_zh": "事件-导力车",
-      "zh_joyoland": "人物主题E",
+      "zh_joyoland": "人物主题Ｅ",
       "zh_cle": null,
       "en": "Lil' E. Paintwork",
       "ja": "ペインカラーＥ"
@@ -5326,7 +5327,7 @@
       "id_hex": "0x036B",
       "category": "event_car",
       "category_zh": "事件-导力车",
-      "zh_joyoland": "人物主题T",
+      "zh_joyoland": "人物主题Ｔ",
       "zh_cle": null,
       "en": "Lil' T. Paintwork",
       "ja": "ペインカラーＴ"
@@ -5476,7 +5477,7 @@
       "id_hex": "0x038E",
       "category": "event_story",
       "category_zh": "事件-剧情",
-      "zh_joyoland": "U材料",
+      "zh_joyoland": "Ｕ材料",
       "zh_cle": null,
       "en": "U-Material",
       "ja": "Ｕマテリアル"
@@ -5616,7 +5617,7 @@
       "id_hex": "0x03E8",
       "category": "equipment_weapon_Lloyd",
       "category_zh": "装备-武器-罗伊德",
-      "zh_joyoland": "强力破坏者·改",
+      "zh_joyoland": "强力破坏者改",
       "zh_cle": "强力破坏者·改",
       "en": "Hard Breaker II",
       "ja": "ハードブレイカー改"
@@ -5716,7 +5717,7 @@
       "id_hex": "0x03F2",
       "category": "equipment_weapon_Lloyd",
       "category_zh": "装备-武器-罗伊德",
-      "zh_joyoland": "七星击",
+      "zh_joyoland": "零破坏者",
       "zh_cle": "神圣五芒星",
       "en": "Zero Breaker",
       "ja": "ゼロ・ブレイカー"
@@ -5726,7 +5727,7 @@
       "id_hex": "0x03F3",
       "category": "equipment_weapon_Lloyd",
       "category_zh": "装备-武器-罗伊德",
-      "zh_joyoland": "零·破坏者",
+      "zh_joyoland": "七星击",
       "zh_cle": "七星击",
       "en": "Seventh Nova",
       "ja": "七星撃"
@@ -5786,7 +5787,7 @@
       "id_hex": "0x03FF",
       "category": "equipment_weapon_Elie",
       "category_zh": "装备-武器-艾莉",
-      "zh_joyoland": "红色樱草II",
+      "zh_joyoland": "红色樱草Ⅱ",
       "zh_cle": "红色樱草Ⅱ",
       "en": "Primrose 2",
       "ja": "プリムローズⅡ"
@@ -5856,7 +5857,7 @@
       "id_hex": "0x0406",
       "category": "equipment_weapon_Elie",
       "category_zh": "装备-武器-艾莉",
-      "zh_joyoland": "千金·烙印",
+      "zh_joyoland": "千金烙印",
       "zh_cle": "千金·烙印",
       "en": "Lady Brand",
       "ja": "レディ・ブランド"
@@ -6076,7 +6077,7 @@
       "id_hex": "0x042D",
       "category": "equipment_weapon_Randy",
       "category_zh": "装备-武器-兰迪",
-      "zh_joyoland": "破坏神·改",
+      "zh_joyoland": "破坏神改",
       "zh_cle": "破坏神·改",
       "en": "Destroyer II",
       "ja": "デストロイヤー改"
@@ -6306,7 +6307,7 @@
       "id_hex": "0x0451",
       "category": "equipment_weapon_Noel",
       "category_zh": "装备-武器-诺艾尔",
-      "zh_joyoland": "M8公猫",
+      "zh_joyoland": "Ｍ８公猫",
       "zh_cle": "漆黑蛰刺",
       "en": "M8 Tomcat",
       "ja": "Ｍ８トムキャット"
@@ -6326,7 +6327,7 @@
       "id_hex": "0x0453",
       "category": "equipment_weapon_Noel",
       "category_zh": "装备-武器-诺艾尔",
-      "zh_joyoland": "三重风暴",
+      "zh_joyoland": "三重暴风",
       "zh_cle": "彗星拳套",
       "en": "Delta Storm",
       "ja": "デルタストーム"
@@ -6426,7 +6427,7 @@
       "id_hex": "0x0463",
       "category": "equipment_weapon_Rixia",
       "category_zh": "装备-武器-莉夏",
-      "zh_joyoland": "灵剑·奠邪",
+      "zh_joyoland": "灵剑莫邪",
       "zh_cle": "雷电魔枪",
       "en": "Bakuya",
       "ja": "霊剣・莫邪"
@@ -6496,7 +6497,7 @@
       "id_hex": "0x046A",
       "category": "equipment_weapon_Arios",
       "category_zh": "装备-武器-亚里欧斯",
-      "zh_joyoland": "利剑『隼风』",
+      "zh_joyoland": "利剑_隼风",
       "zh_cle": "利剑【隼风】",
       "en": "Hayakaze",
       "ja": "利剣「隼風」"

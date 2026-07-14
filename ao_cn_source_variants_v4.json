@@ -5981,7 +5981,7 @@
             "zh_joyoland": "回复药",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6001,7 +6001,7 @@
             "zh_joyoland": "中回复药",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6021,7 +6021,7 @@
             "zh_joyoland": "大回复药",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6041,7 +6041,7 @@
             "zh_joyoland": "全回复药",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6050,7 +6050,7 @@
           "row": 6,
           "source_name": "EP填充剂Ⅰ",
           "zh_cle": "EP填充剂Ⅰ",
-          "zh_joyoland": "EP填充剂I",
+          "zh_joyoland": "ＥＰ填充剂Ⅰ",
           "canonical_item": {
             "id_hex": "0x01F8",
             "id_dec": 504,
@@ -6058,10 +6058,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "EP填充剂I",
+            "zh_joyoland": "ＥＰ填充剂Ⅰ",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6070,7 +6070,7 @@
           "row": 7,
           "source_name": "EP填充剂Ⅱ",
           "zh_cle": "EP填充剂Ⅱ",
-          "zh_joyoland": "EP填充剂II",
+          "zh_joyoland": "ＥＰ填充剂Ⅱ",
           "canonical_item": {
             "id_hex": "0x01F9",
             "id_dec": 505,
@@ -6078,10 +6078,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "EP填充剂II",
+            "zh_joyoland": "ＥＰ填充剂Ⅱ",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6090,7 +6090,7 @@
           "row": 8,
           "source_name": "EP填充剂Ⅲ",
           "zh_cle": "EP填充剂Ⅲ",
-          "zh_joyoland": "EP填充剂III",
+          "zh_joyoland": "ＥＰ填充剂Ⅲ",
           "canonical_item": {
             "id_hex": "0x01FA",
             "id_dec": 506,
@@ -6098,10 +6098,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "EP填充剂III",
+            "zh_joyoland": "ＥＰ填充剂Ⅲ",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6121,7 +6121,7 @@
             "zh_joyoland": "复苏药",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6141,7 +6141,7 @@
             "zh_joyoland": "圣灵药",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6150,7 +6150,7 @@
           "row": 11,
           "source_name": "圣灵药·改",
           "zh_cle": "圣灵药·改",
-          "zh_joyoland": "圣灵药·改",
+          "zh_joyoland": "圣灵药改",
           "canonical_item": {
             "id_hex": "0x01FD",
             "id_dec": 509,
@@ -6158,13 +6158,13 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "圣灵药·改",
+            "zh_joyoland": "圣灵药改",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
-          "match_status": "exact_name",
-          "name_equals_canonical": true
+          "match_status": "row_order",
+          "name_equals_canonical": false
         },
         {
           "row": 12,
@@ -6181,7 +6181,7 @@
             "zh_joyoland": "还魂粉",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6201,7 +6201,7 @@
             "zh_joyoland": "还魂胶囊",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6221,7 +6221,7 @@
             "zh_joyoland": "解毒药",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6241,7 +6241,7 @@
             "zh_joyoland": "软化膏",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6261,7 +6261,7 @@
             "zh_joyoland": "绝缘胶带",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6281,7 +6281,7 @@
             "zh_joyoland": "解冻暖炉",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6301,7 +6301,7 @@
             "zh_joyoland": "舒缓凝胶",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6321,7 +6321,7 @@
             "zh_joyoland": "冷却喷雾",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6341,7 +6341,7 @@
             "zh_joyoland": "眼药",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6361,7 +6361,7 @@
             "zh_joyoland": "提神薄荷",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6381,7 +6381,7 @@
             "zh_joyoland": "苏醒药",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6401,7 +6401,7 @@
             "zh_joyoland": "镇静剂",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6410,7 +6410,7 @@
           "row": 24,
           "source_name": "S-药锭",
           "zh_cle": "S-药锭",
-          "zh_joyoland": "S-药片",
+          "zh_joyoland": "Ｓ药片",
           "canonical_item": {
             "id_hex": "0x020A",
             "id_dec": 522,
@@ -6418,10 +6418,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "S-药片",
+            "zh_joyoland": "Ｓ药片",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6441,7 +6441,7 @@
             "zh_joyoland": "痊愈之药",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6461,7 +6461,7 @@
             "zh_joyoland": "爆灵宝玉",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6481,7 +6481,7 @@
             "zh_joyoland": "烟雾弹",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6501,7 +6501,7 @@
             "zh_joyoland": "战斗探测器",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6521,7 +6521,7 @@
             "zh_joyoland": "枫糖蛋糕",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6541,7 +6541,7 @@
             "zh_joyoland": "赏月面包",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6561,7 +6561,7 @@
             "zh_joyoland": "奶油菠萝包",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6581,7 +6581,7 @@
             "zh_joyoland": "贝奈特绝品",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6601,7 +6601,7 @@
             "zh_joyoland": "极厚猪排三明治",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6621,7 +6621,7 @@
             "zh_joyoland": "最终旅途",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6641,7 +6641,7 @@
             "zh_joyoland": "咪西包子",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6661,7 +6661,7 @@
             "zh_joyoland": "咪雪丸子",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -6681,7 +6681,7 @@
             "zh_joyoland": "罐装果汁",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6701,7 +6701,7 @@
             "zh_joyoland": "罐装咖啡",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6721,7 +6721,7 @@
             "zh_joyoland": "强壮苦番茄猪骨汤",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6741,7 +6741,7 @@
             "zh_joyoland": "暖心猪骨汤",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "exact_name",
           "name_equals_canonical": true
@@ -6750,7 +6750,7 @@
           "row": 41,
           "source_name": "运动汽水X",
           "zh_cle": "运动汽水X",
-          "zh_joyoland": "运动汽水X",
+          "zh_joyoland": "运动汽水Ｘ",
           "canonical_item": {
             "id_hex": "0x021C",
             "id_dec": 540,
@@ -6758,13 +6758,13 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "运动汽水X",
+            "zh_joyoland": "运动汽水Ｘ",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
-          "match_status": "exact_name",
-          "name_equals_canonical": true
+          "match_status": "row_order",
+          "name_equals_canonical": false
         },
         {
           "row": 42,
@@ -6781,7 +6781,7 @@
             "zh_joyoland": "苦西红柿苏打",
             "category_zh": "道具-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7474,7 +7474,7 @@
             "zh_joyoland": "练习用武器",
             "category_zh": "装备-武器-通用",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7483,7 +7483,7 @@
           "row": 3,
           "source_name": "双钉棍",
           "zh_cle": "双钉棍",
-          "zh_joyoland": "珊瑚戒指+",
+          "zh_joyoland": "珊瑚戒指Plus",
           "canonical_item": {
             "id_hex": "0x001E",
             "id_dec": 30,
@@ -7491,10 +7491,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "珊瑚戒指+",
+            "zh_joyoland": "珊瑚戒指Plus",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7503,7 +7503,7 @@
           "row": 4,
           "source_name": "螺纹双棍",
           "zh_cle": "螺纹双棍",
-          "zh_joyoland": "英雄戒指+",
+          "zh_joyoland": "英雄戒指Plus",
           "canonical_item": {
             "id_hex": "0x001F",
             "id_dec": 31,
@@ -7511,10 +7511,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "英雄戒指+",
+            "zh_joyoland": "英雄戒指Plus",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7523,7 +7523,7 @@
           "row": 5,
           "source_name": "罪犯克星",
           "zh_cle": "罪犯克星",
-          "zh_joyoland": "夜光眼镜+",
+          "zh_joyoland": "夜光眼镜Plus",
           "canonical_item": {
             "id_hex": "0x0020",
             "id_dec": 32,
@@ -7531,10 +7531,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "夜光眼镜+",
+            "zh_joyoland": "夜光眼镜Plus",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7543,7 +7543,7 @@
           "row": 6,
           "source_name": "集团破坏者",
           "zh_cle": "集团破坏者",
-          "zh_joyoland": "凉爽项链+",
+          "zh_joyoland": "凉爽项链Plus",
           "canonical_item": {
             "id_hex": "0x0021",
             "id_dec": 33,
@@ -7551,10 +7551,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "凉爽项链+",
+            "zh_joyoland": "凉爽项链Plus",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7563,7 +7563,7 @@
           "row": 7,
           "source_name": "猛虎棍",
           "zh_cle": "猛虎棍",
-          "zh_joyoland": "打火机+",
+          "zh_joyoland": "打火机Plus",
           "canonical_item": {
             "id_hex": "0x0022",
             "id_dec": 34,
@@ -7571,10 +7571,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "打火机+",
+            "zh_joyoland": "打火机Plus",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7583,7 +7583,7 @@
           "row": 8,
           "source_name": "玄象棍",
           "zh_cle": "玄象棍",
-          "zh_joyoland": "幻彩围巾+",
+          "zh_joyoland": "幻彩围巾Plus",
           "canonical_item": {
             "id_hex": "0x0023",
             "id_dec": 35,
@@ -7591,10 +7591,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "幻彩围巾+",
+            "zh_joyoland": "幻彩围巾Plus",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7603,7 +7603,7 @@
           "row": 9,
           "source_name": "捕捉者",
           "zh_cle": "捕捉者",
-          "zh_joyoland": "叮当耳环+",
+          "zh_joyoland": "叮当耳环Plus",
           "canonical_item": {
             "id_hex": "0x0024",
             "id_dec": 36,
@@ -7611,10 +7611,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "叮当耳环+",
+            "zh_joyoland": "叮当耳环Plus",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7623,7 +7623,7 @@
           "row": 10,
           "source_name": "裂地棍",
           "zh_cle": "裂地棍",
-          "zh_joyoland": "钢手镯+",
+          "zh_joyoland": "钢手镯Plus",
           "canonical_item": {
             "id_hex": "0x0025",
             "id_dec": 37,
@@ -7631,10 +7631,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "钢手镯+",
+            "zh_joyoland": "钢手镯Plus",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7643,7 +7643,7 @@
           "row": 11,
           "source_name": "钢管旋棍",
           "zh_cle": "钢管旋棍",
-          "zh_joyoland": "花之瓶+",
+          "zh_joyoland": "花之瓶Plus",
           "canonical_item": {
             "id_hex": "0x0026",
             "id_dec": 38,
@@ -7651,10 +7651,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "花之瓶+",
+            "zh_joyoland": "花之瓶Plus",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7674,7 +7674,7 @@
             "zh_joyoland": "坚硬肉干",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7694,7 +7694,7 @@
             "zh_joyoland": "海刃奖牌",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7714,7 +7714,7 @@
             "zh_joyoland": "水狂奖牌",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7734,7 +7734,7 @@
             "zh_joyoland": "龙宫奖牌",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7754,7 +7754,7 @@
             "zh_joyoland": "银螭奖牌",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7774,7 +7774,7 @@
             "zh_joyoland": "钓皇奖牌",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7794,7 +7794,7 @@
             "zh_joyoland": "狙击枪管",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7814,7 +7814,7 @@
             "zh_joyoland": "影丸头巾",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7834,7 +7834,7 @@
             "zh_joyoland": "咪西尾巴",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7854,7 +7854,7 @@
             "zh_joyoland": "咪西帽子",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7874,7 +7874,7 @@
             "zh_joyoland": "咪雪爪子",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7894,7 +7894,7 @@
             "zh_joyoland": "咪雪缎带",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7914,7 +7914,7 @@
             "zh_joyoland": "进击刻印",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7923,7 +7923,7 @@
           "row": 25,
           "source_name": "暗灰小丑",
           "zh_cle": "暗灰小丑",
-          "zh_joyoland": "超·必胜扎头巾",
+          "zh_joyoland": "超必胜扎头巾",
           "canonical_item": {
             "id_hex": "0x0034",
             "id_dec": 52,
@@ -7931,10 +7931,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "超·必胜扎头巾",
+            "zh_joyoland": "超必胜扎头巾",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7943,7 +7943,7 @@
           "row": 26,
           "source_name": "千金·烙印",
           "zh_cle": "千金·烙印",
-          "zh_joyoland": "超·斗魂腰带",
+          "zh_joyoland": "超斗魂腰带",
           "canonical_item": {
             "id_hex": "0x0035",
             "id_dec": 53,
@@ -7951,10 +7951,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "超·斗魂腰带",
+            "zh_joyoland": "超斗魂腰带",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7974,7 +7974,7 @@
             "zh_joyoland": "正义徽章",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -7994,7 +7994,7 @@
             "zh_joyoland": "幸运刻印",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8014,7 +8014,7 @@
             "zh_joyoland": "光晓之冠",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8034,7 +8034,7 @@
             "zh_joyoland": "盘古之冠",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8054,7 +8054,7 @@
             "zh_joyoland": "馥郁香波",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8074,7 +8074,7 @@
             "zh_joyoland": "银胸针",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8094,7 +8094,7 @@
             "zh_joyoland": "珊瑚戒指",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8114,7 +8114,7 @@
             "zh_joyoland": "英雄戒指",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8134,7 +8134,7 @@
             "zh_joyoland": "夜光眼镜",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8154,7 +8154,7 @@
             "zh_joyoland": "凉爽项链",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8174,7 +8174,7 @@
             "zh_joyoland": "打火机",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8194,7 +8194,7 @@
             "zh_joyoland": "幻彩围巾",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8214,7 +8214,7 @@
             "zh_joyoland": "叮当耳环",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8234,7 +8234,7 @@
             "zh_joyoland": "钢手镯",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8254,7 +8254,7 @@
             "zh_joyoland": "花之瓶",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8274,7 +8274,7 @@
             "zh_joyoland": "神圣之链",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8294,7 +8294,7 @@
             "zh_joyoland": "云之使者",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8314,7 +8314,7 @@
             "zh_joyoland": "月亮灵摆",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8334,7 +8334,7 @@
             "zh_joyoland": "太阳灵摆",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8354,7 +8354,7 @@
             "zh_joyoland": "星辰灵摆",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8374,7 +8374,7 @@
             "zh_joyoland": "加长枪管",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8394,7 +8394,7 @@
             "zh_joyoland": "规律徽章",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8414,7 +8414,7 @@
             "zh_joyoland": "勇气徽章",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8434,7 +8434,7 @@
             "zh_joyoland": "闪光徽章",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8454,7 +8454,7 @@
             "zh_joyoland": "必胜扎头巾",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8474,7 +8474,7 @@
             "zh_joyoland": "斗魂腰带",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8494,7 +8494,7 @@
             "zh_joyoland": "星杯挂坠",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8514,7 +8514,7 @@
             "zh_joyoland": "银之链",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8534,7 +8534,7 @@
             "zh_joyoland": "月灵玉",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8554,7 +8554,7 @@
             "zh_joyoland": "咪雪挂饰",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8574,7 +8574,7 @@
             "zh_joyoland": "土人偶",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8594,7 +8594,7 @@
             "zh_joyoland": "寂静之蓝",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8614,7 +8614,7 @@
             "zh_joyoland": "激情之红",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8634,7 +8634,7 @@
             "zh_joyoland": "常青之绿",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8654,7 +8654,7 @@
             "zh_joyoland": "深邃之黄",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8674,7 +8674,7 @@
             "zh_joyoland": "草帽",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8694,7 +8694,7 @@
             "zh_joyoland": "安全头盔",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8714,7 +8714,7 @@
             "zh_joyoland": "医用手套",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8734,7 +8734,7 @@
             "zh_joyoland": "睡猫硬币",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8754,7 +8754,7 @@
             "zh_joyoland": "跳蛙硬币",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8774,7 +8774,7 @@
             "zh_joyoland": "神圣挂坠",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8794,7 +8794,7 @@
             "zh_joyoland": "五彩风车",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8814,7 +8814,7 @@
             "zh_joyoland": "翠耀石挂饰",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8834,7 +8834,7 @@
             "zh_joyoland": "苍耀石挂饰",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8854,7 +8854,7 @@
             "zh_joyoland": "红耀石挂饰",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8874,7 +8874,7 @@
             "zh_joyoland": "琥耀石挂饰",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8894,7 +8894,7 @@
             "zh_joyoland": "金耀石挂饰",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8914,7 +8914,7 @@
             "zh_joyoland": "修利的帽子",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8934,7 +8934,7 @@
             "zh_joyoland": "芙兰的护符",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8954,7 +8954,7 @@
             "zh_joyoland": "舞姬的发饰",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8974,7 +8974,7 @@
             "zh_joyoland": "勇士之心",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -8994,7 +8994,7 @@
             "zh_joyoland": "零之神珠",
             "category_zh": "装备-饰品",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9003,7 +9003,7 @@
           "row": 79,
           "source_name": "无畏之枪",
           "zh_cle": "无畏之枪",
-          "zh_joyoland": "强力破坏者·改",
+          "zh_joyoland": "强力破坏者改",
           "canonical_item": {
             "id_hex": "0x03E8",
             "id_dec": 1000,
@@ -9011,10 +9011,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "强力破坏者·改",
+            "zh_joyoland": "强力破坏者改",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9034,7 +9034,7 @@
             "zh_joyoland": "双钉棍",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9054,7 +9054,7 @@
             "zh_joyoland": "螺纹双棍",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9074,7 +9074,7 @@
             "zh_joyoland": "罪恶制裁者",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9094,7 +9094,7 @@
             "zh_joyoland": "集团破坏者",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9114,7 +9114,7 @@
             "zh_joyoland": "猛虎棍",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9134,7 +9134,7 @@
             "zh_joyoland": "玄象棍",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9154,7 +9154,7 @@
             "zh_joyoland": "捕捉者",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9174,7 +9174,7 @@
             "zh_joyoland": "裂地棍",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9194,7 +9194,7 @@
             "zh_joyoland": "神圣五芒星",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9203,7 +9203,7 @@
           "row": 89,
           "source_name": "制裁",
           "zh_cle": "制裁",
-          "zh_joyoland": "七星击",
+          "zh_joyoland": "零破坏者",
           "canonical_item": {
             "id_hex": "0x03F2",
             "id_dec": 1010,
@@ -9211,10 +9211,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "七星击",
+            "zh_joyoland": "零破坏者",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9223,7 +9223,7 @@
           "row": 90,
           "source_name": "利剑【隼风】",
           "zh_cle": "利剑【隼风】",
-          "zh_joyoland": "零·破坏者",
+          "zh_joyoland": "七星击",
           "canonical_item": {
             "id_hex": "0x03F3",
             "id_dec": 1011,
@@ -9231,10 +9231,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "零·破坏者",
+            "zh_joyoland": "七星击",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9254,7 +9254,7 @@
             "zh_joyoland": "雷神之佑",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9274,7 +9274,7 @@
             "zh_joyoland": "无限之光",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9294,7 +9294,7 @@
             "zh_joyoland": "钢管旋棍",
             "category_zh": "装备-武器-罗伊德",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9314,7 +9314,7 @@
             "zh_joyoland": "倾国",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9334,7 +9334,7 @@
             "zh_joyoland": "喜悦",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9343,7 +9343,7 @@
           "row": 96,
           "source_name": "荆棘夹克",
           "zh_cle": "荆棘夹克",
-          "zh_joyoland": "红色樱草II",
+          "zh_joyoland": "红色樱草Ⅱ",
           "canonical_item": {
             "id_hex": "0x03FF",
             "id_dec": 1023,
@@ -9351,10 +9351,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "红色樱草II",
+            "zh_joyoland": "红色樱草Ⅱ",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9374,7 +9374,7 @@
             "zh_joyoland": "丝绒之吻",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9394,7 +9394,7 @@
             "zh_joyoland": "纯真女皇",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9414,7 +9414,7 @@
             "zh_joyoland": "高洁圣女",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9434,7 +9434,7 @@
             "zh_joyoland": "银色密雨",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9454,7 +9454,7 @@
             "zh_joyoland": "神恩",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9474,7 +9474,7 @@
             "zh_joyoland": "暗灰小丑",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9483,7 +9483,7 @@
           "row": 103,
           "source_name": "丹宁护服",
           "zh_cle": "丹宁护服",
-          "zh_joyoland": "千金·烙印",
+          "zh_joyoland": "千金烙印",
           "canonical_item": {
             "id_hex": "0x0406",
             "id_dec": 1030,
@@ -9491,10 +9491,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "千金·烙印",
+            "zh_joyoland": "千金烙印",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9514,7 +9514,7 @@
             "zh_joyoland": "血色光辉",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9534,7 +9534,7 @@
             "zh_joyoland": "纯白圣枪",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9554,7 +9554,7 @@
             "zh_joyoland": "能天使威光",
             "category_zh": "装备-武器-艾莉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9574,7 +9574,7 @@
             "zh_joyoland": "探索者",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9594,7 +9594,7 @@
             "zh_joyoland": "聚魔杖",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9614,7 +9614,7 @@
             "zh_joyoland": "高纯能量",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9634,7 +9634,7 @@
             "zh_joyoland": "光辉之翼",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9654,7 +9654,7 @@
             "zh_joyoland": "精神同步",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9674,7 +9674,7 @@
             "zh_joyoland": "魔导加速器",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9694,7 +9694,7 @@
             "zh_joyoland": "先导者",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9714,7 +9714,7 @@
             "zh_joyoland": "黑暗搏动",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9734,7 +9734,7 @@
             "zh_joyoland": "星之脉冲",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9754,7 +9754,7 @@
             "zh_joyoland": "天启",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9774,7 +9774,7 @@
             "zh_joyoland": "宇宙崩坏",
             "category_zh": "装备-武器-缇欧",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9794,7 +9794,7 @@
             "zh_joyoland": "全力冲击",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9814,7 +9814,7 @@
             "zh_joyoland": "格斗战斧",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9834,7 +9834,7 @@
             "zh_joyoland": "巨象震慑者",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9854,7 +9854,7 @@
             "zh_joyoland": "终结粉碎者",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9874,7 +9874,7 @@
             "zh_joyoland": "高热蒸汽",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9894,7 +9894,7 @@
             "zh_joyoland": "白银冲击枪",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9914,7 +9914,7 @@
             "zh_joyoland": "黑暗制造者",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9923,7 +9923,7 @@
           "row": 125,
           "source_name": "强力服Z",
           "zh_cle": "强力服Z",
-          "zh_joyoland": "破坏神·改",
+          "zh_joyoland": "破坏神改",
           "canonical_item": {
             "id_hex": "0x042D",
             "id_dec": 1069,
@@ -9931,10 +9931,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "破坏神·改",
+            "zh_joyoland": "破坏神改",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9954,7 +9954,7 @@
             "zh_joyoland": "终极冲击",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9974,7 +9974,7 @@
             "zh_joyoland": "邪恶粉碎者",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -9994,7 +9994,7 @@
             "zh_joyoland": "天灾",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10014,7 +10014,7 @@
             "zh_joyoland": "屠龙深渊",
             "category_zh": "装备-武器-兰迪",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10034,7 +10034,7 @@
             "zh_joyoland": "皮拳套",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10054,7 +10054,7 @@
             "zh_joyoland": "罪恶拳套",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10074,7 +10074,7 @@
             "zh_joyoland": "合金拳套",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10094,7 +10094,7 @@
             "zh_joyoland": "音速狂潮",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10114,7 +10114,7 @@
             "zh_joyoland": "螺旋冲击",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10134,7 +10134,7 @@
             "zh_joyoland": "漆黑螫刺",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10154,7 +10154,7 @@
             "zh_joyoland": "王者拳套",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10174,7 +10174,7 @@
             "zh_joyoland": "彗星拳套",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10194,7 +10194,7 @@
             "zh_joyoland": "范式谜爪",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10214,7 +10214,7 @@
             "zh_joyoland": "戒律护手",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10234,7 +10234,7 @@
             "zh_joyoland": "灵光护手",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10254,7 +10254,7 @@
             "zh_joyoland": "乐园",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10274,7 +10274,7 @@
             "zh_joyoland": "七耀圣腕",
             "category_zh": "装备-武器-瓦吉",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10294,7 +10294,7 @@
             "zh_joyoland": "交叉火力",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10314,7 +10314,7 @@
             "zh_joyoland": "岩石尘碎",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10334,7 +10334,7 @@
             "zh_joyoland": "闪光甲虫",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10354,7 +10354,7 @@
             "zh_joyoland": "圣十字",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10374,7 +10374,7 @@
             "zh_joyoland": "野马",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10383,7 +10383,7 @@
           "row": 148,
           "source_name": "虚空护腿",
           "zh_cle": "虚空护腿",
-          "zh_joyoland": "M8公猫",
+          "zh_joyoland": "Ｍ８公猫",
           "canonical_item": {
             "id_hex": "0x0451",
             "id_dec": 1105,
@@ -10391,10 +10391,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "M8公猫",
+            "zh_joyoland": "Ｍ８公猫",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10414,7 +10414,7 @@
             "zh_joyoland": "杀戮黄蜂",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10423,7 +10423,7 @@
           "row": 150,
           "source_name": "神宠高跟鞋",
           "zh_cle": "神宠高跟鞋",
-          "zh_joyoland": "三重风暴",
+          "zh_joyoland": "三重暴风",
           "canonical_item": {
             "id_hex": "0x0453",
             "id_dec": 1107,
@@ -10431,10 +10431,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "三重风暴",
+            "zh_joyoland": "三重暴风",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10454,7 +10454,7 @@
             "zh_joyoland": "无畏之枪",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10474,7 +10474,7 @@
             "zh_joyoland": "白隼",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10494,7 +10494,7 @@
             "zh_joyoland": "第五爆裂枪",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10514,7 +10514,7 @@
             "zh_joyoland": "挚爱恋人",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10534,7 +10534,7 @@
             "zh_joyoland": "雷电魔枪",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10554,7 +10554,7 @@
             "zh_joyoland": "日耀弧光",
             "category_zh": "装备-武器-诺艾尔",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10574,7 +10574,7 @@
             "zh_joyoland": "八尺乌",
             "category_zh": "装备-武器-莉夏",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10594,7 +10594,7 @@
             "zh_joyoland": "黑鸫",
             "category_zh": "装备-武器-莉夏",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10614,7 +10614,7 @@
             "zh_joyoland": "降魔不知火",
             "category_zh": "装备-武器-莉夏",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10623,7 +10623,7 @@
           "row": 160,
           "source_name": "打火机",
           "zh_cle": "打火机",
-          "zh_joyoland": "灵剑·奠邪",
+          "zh_joyoland": "灵剑莫邪",
           "canonical_item": {
             "id_hex": "0x0463",
             "id_dec": 1123,
@@ -10631,10 +10631,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "灵剑·奠邪",
+            "zh_joyoland": "灵剑莫邪",
             "category_zh": "装备-武器-莉夏",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10654,7 +10654,7 @@
             "zh_joyoland": "曳影之剑",
             "category_zh": "装备-武器-莉夏",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10674,7 +10674,7 @@
             "zh_joyoland": "皇帝",
             "category_zh": "装备-武器-达德利",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10694,7 +10694,7 @@
             "zh_joyoland": "黑鹰",
             "category_zh": "装备-武器-达德利",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10714,7 +10714,7 @@
             "zh_joyoland": "龙神",
             "category_zh": "装备-武器-达德利",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10734,7 +10734,7 @@
             "zh_joyoland": "恶魔",
             "category_zh": "装备-武器-达德利",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10754,7 +10754,7 @@
             "zh_joyoland": "制裁",
             "category_zh": "装备-武器-达德利",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10763,7 +10763,7 @@
           "row": 167,
           "source_name": "珊瑚戒指+",
           "zh_cle": "珊瑚戒指+",
-          "zh_joyoland": "利剑『隼风』",
+          "zh_joyoland": "利剑_隼风",
           "canonical_item": {
             "id_hex": "0x046A",
             "id_dec": 1130,
@@ -10771,10 +10771,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "利剑『隼风』",
+            "zh_joyoland": "利剑_隼风",
             "category_zh": "装备-武器-亚里欧斯",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10794,7 +10794,7 @@
             "zh_joyoland": "亚麻拳套",
             "category_zh": "装备-武器-蔡特",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10814,7 +10814,7 @@
             "zh_joyoland": "尖钉项圈",
             "category_zh": "装备-武器-蔡特",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10834,7 +10834,7 @@
             "zh_joyoland": "皮革背带",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10854,7 +10854,7 @@
             "zh_joyoland": "护腿甲",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10874,7 +10874,7 @@
             "zh_joyoland": "纤维夹克",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10894,7 +10894,7 @@
             "zh_joyoland": "强化牛仔服",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10914,7 +10914,7 @@
             "zh_joyoland": "弹性大衣",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10934,7 +10934,7 @@
             "zh_joyoland": "荆棘夹克",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10954,7 +10954,7 @@
             "zh_joyoland": "水珠连衣裙",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10974,7 +10974,7 @@
             "zh_joyoland": "机动战斗服",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -10994,7 +10994,7 @@
             "zh_joyoland": "符文长袍",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11014,7 +11014,7 @@
             "zh_joyoland": "野战套装",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11034,7 +11034,7 @@
             "zh_joyoland": "向日葵斗篷",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11054,7 +11054,7 @@
             "zh_joyoland": "求生背心",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11074,7 +11074,7 @@
             "zh_joyoland": "牛仔皮衣",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11094,7 +11094,7 @@
             "zh_joyoland": "影丸外套",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11114,7 +11114,7 @@
             "zh_joyoland": "祭司法衣",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11134,7 +11134,7 @@
             "zh_joyoland": "军风大衣",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11154,7 +11154,7 @@
             "zh_joyoland": "龙华树之服",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11174,7 +11174,7 @@
             "zh_joyoland": "钛金铠甲",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11194,7 +11194,7 @@
             "zh_joyoland": "晚礼服",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11214,7 +11214,7 @@
             "zh_joyoland": "神圣法袍",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11234,7 +11234,7 @@
             "zh_joyoland": "邪恶胸甲",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11254,7 +11254,7 @@
             "zh_joyoland": "七龙装甲",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11274,7 +11274,7 @@
             "zh_joyoland": "星辰羽衣",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11294,7 +11294,7 @@
             "zh_joyoland": "暴风长袍",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11314,7 +11314,7 @@
             "zh_joyoland": "七耀神威圣铠",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11334,7 +11334,7 @@
             "zh_joyoland": "七耀极星圣衣",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11354,7 +11354,7 @@
             "zh_joyoland": "勇猛夹克",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11374,7 +11374,7 @@
             "zh_joyoland": "纯净礼裙",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11394,7 +11394,7 @@
             "zh_joyoland": "智慧斗篷",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11414,7 +11414,7 @@
             "zh_joyoland": "野性大衣",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11434,7 +11434,7 @@
             "zh_joyoland": "盟约法衣",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11454,7 +11454,7 @@
             "zh_joyoland": "增幅战斗装",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11474,7 +11474,7 @@
             "zh_joyoland": "规则西装",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11494,7 +11494,7 @@
             "zh_joyoland": "歼天幻舞装",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11514,7 +11514,7 @@
             "zh_joyoland": "动力服Z",
             "category_zh": "装备-服装",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11534,7 +11534,7 @@
             "zh_joyoland": "钉鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11554,7 +11554,7 @@
             "zh_joyoland": "远足鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11574,7 +11574,7 @@
             "zh_joyoland": "加速跑鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11594,7 +11594,7 @@
             "zh_joyoland": "田园鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11614,7 +11614,7 @@
             "zh_joyoland": "珐琅凉鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11634,7 +11634,7 @@
             "zh_joyoland": "军用靴",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11654,7 +11654,7 @@
             "zh_joyoland": "弹簧跑鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11674,7 +11674,7 @@
             "zh_joyoland": "影丸雪踏",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11694,7 +11694,7 @@
             "zh_joyoland": "白色帆布鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11714,7 +11714,7 @@
             "zh_joyoland": "斯托雷加越野鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11734,7 +11734,7 @@
             "zh_joyoland": "檀木树脂靴",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11754,7 +11754,7 @@
             "zh_joyoland": "黑靴",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11774,7 +11774,7 @@
             "zh_joyoland": "纤足高跟鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11794,7 +11794,7 @@
             "zh_joyoland": "军用作战靴",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11814,7 +11814,7 @@
             "zh_joyoland": "骑士护腿",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11834,7 +11834,7 @@
             "zh_joyoland": "都市皮鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11854,7 +11854,7 @@
             "zh_joyoland": "柔光凉鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11874,7 +11874,7 @@
             "zh_joyoland": "金属强化鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11894,7 +11894,7 @@
             "zh_joyoland": "超能跑鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11914,7 +11914,7 @@
             "zh_joyoland": "辉光护腿",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11934,7 +11934,7 @@
             "zh_joyoland": "缭乱七彩靴",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11954,7 +11954,7 @@
             "zh_joyoland": "虚空护腿",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11974,7 +11974,7 @@
             "zh_joyoland": "天神战斗靴",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -11994,7 +11994,7 @@
             "zh_joyoland": "神宠高跟鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -12014,7 +12014,7 @@
             "zh_joyoland": "金耀翔天鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -12034,7 +12034,7 @@
             "zh_joyoland": "银耀星影鞋",
             "category_zh": "装备-鞋子",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -12061,7 +12061,7 @@
               "zh_joyoland": "盾牌",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -12168,7 +12168,7 @@
               "zh_joyoland": "神佑",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -12275,7 +12275,7 @@
               "zh_joyoland": "小丑",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -12382,7 +12382,7 @@
               "zh_joyoland": "法则",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -12489,7 +12489,7 @@
               "zh_joyoland": "王权",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -12596,7 +12596,7 @@
               "zh_joyoland": "贤者",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -12703,7 +12703,7 @@
               "zh_joyoland": "力量",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -12810,7 +12810,7 @@
               "zh_joyoland": "战斧",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -12917,7 +12917,7 @@
               "zh_joyoland": "骑士",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -13024,7 +13024,7 @@
               "zh_joyoland": "妖精",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -13131,7 +13131,7 @@
               "zh_joyoland": "羽翼",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -13227,33 +13227,8 @@
           "source_name": "草薙",
           "zh_cle": "草薙",
           "zh_joyoland": "草薤",
-          "canonical_candidates": [
-            {
-              "id_hex": "0x00EC",
-              "id_dec": 236,
-              "key": null,
-              "reference_no": null,
-              "owner_key": null,
-              "owner_zh": null,
-              "zh_joyoland": "草薤",
-              "category_zh": "回路-核心",
-              "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
-            },
-            {
-              "id_hex": "0x00F1",
-              "id_dec": 241,
-              "key": null,
-              "reference_no": null,
-              "owner_key": null,
-              "owner_zh": null,
-              "zh_joyoland": "草薤",
-              "category_zh": "回路-核心",
-              "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
-            }
-          ],
-          "match_status": "manual_alias_ambiguous",
+          "canonical_candidates": [],
+          "match_status": "unmatched",
           "rows": [
             {
               "row": 57,
@@ -13357,7 +13332,7 @@
               "zh_joyoland": "利爪",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -13464,7 +13439,7 @@
               "zh_joyoland": "守护",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -13571,7 +13546,7 @@
               "zh_joyoland": "罪恶",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -13678,7 +13653,7 @@
               "zh_joyoland": "白金",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -13785,7 +13760,7 @@
               "zh_joyoland": "无限",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -13892,7 +13867,7 @@
               "zh_joyoland": "纹章",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -13999,7 +13974,7 @@
               "zh_joyoland": "幻象",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -14106,7 +14081,7 @@
               "zh_joyoland": "魅影",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -14213,7 +14188,7 @@
               "zh_joyoland": "灵猫",
               "category_zh": "回路-核心",
               "skill_kind": null,
-              "source": "ao_items_db.py / BZH item definitions + items.json"
+              "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
             }
           ],
           "match_status": "manual_alias",
@@ -14316,7 +14291,7 @@
           "row": 2,
           "source_name": "防御1",
           "zh_cle": "防御1",
-          "zh_joyoland": "HP1",
+          "zh_joyoland": "ＨＰ１",
           "canonical_item": {
             "id_hex": "0x0064",
             "id_dec": 100,
@@ -14324,10 +14299,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "HP1",
+            "zh_joyoland": "ＨＰ１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14336,7 +14311,7 @@
           "row": 3,
           "source_name": "防御2",
           "zh_cle": "防御2",
-          "zh_joyoland": "HP2",
+          "zh_joyoland": "ＨＰ２",
           "canonical_item": {
             "id_hex": "0x0065",
             "id_dec": 101,
@@ -14344,10 +14319,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "HP2",
+            "zh_joyoland": "ＨＰ２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14356,7 +14331,7 @@
           "row": 4,
           "source_name": "防御3",
           "zh_cle": "防御3",
-          "zh_joyoland": "HP3",
+          "zh_joyoland": "ＨＰ３",
           "canonical_item": {
             "id_hex": "0x0066",
             "id_dec": 102,
@@ -14364,10 +14339,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "HP3",
+            "zh_joyoland": "ＨＰ３",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14387,7 +14362,7 @@
             "zh_joyoland": "水耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14396,7 +14371,7 @@
           "row": 6,
           "source_name": "毒之刃",
           "zh_cle": "毒之刃",
-          "zh_joyoland": "EP1",
+          "zh_joyoland": "ＥＰ１",
           "canonical_item": {
             "id_hex": "0x0068",
             "id_dec": 104,
@@ -14404,10 +14379,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "EP1",
+            "zh_joyoland": "ＥＰ１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14416,7 +14391,7 @@
           "row": 7,
           "source_name": "毒之刃2",
           "zh_cle": "毒之刃2",
-          "zh_joyoland": "EP2",
+          "zh_joyoland": "ＥＰ２",
           "canonical_item": {
             "id_hex": "0x0069",
             "id_dec": 105,
@@ -14424,10 +14399,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "EP2",
+            "zh_joyoland": "ＥＰ２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14436,7 +14411,7 @@
           "row": 8,
           "source_name": "石化之刃",
           "zh_cle": "石化之刃",
-          "zh_joyoland": "EP3",
+          "zh_joyoland": "ＥＰ３",
           "canonical_item": {
             "id_hex": "0x006A",
             "id_dec": 106,
@@ -14444,10 +14419,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "EP3",
+            "zh_joyoland": "ＥＰ３",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14467,7 +14442,7 @@
             "zh_joyoland": "银耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14476,7 +14451,7 @@
           "row": 10,
           "source_name": "破盾之牙",
           "zh_cle": "破盾之牙",
-          "zh_joyoland": "攻击1",
+          "zh_joyoland": "攻击１",
           "canonical_item": {
             "id_hex": "0x006C",
             "id_dec": 108,
@@ -14484,10 +14459,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "攻击1",
+            "zh_joyoland": "攻击１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14496,7 +14471,7 @@
           "row": 11,
           "source_name": "耀脈",
           "zh_cle": "耀脈",
-          "zh_joyoland": "攻击2",
+          "zh_joyoland": "攻击２",
           "canonical_item": {
             "id_hex": "0x006D",
             "id_dec": 109,
@@ -14504,10 +14479,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "攻击2",
+            "zh_joyoland": "攻击２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14516,7 +14491,7 @@
           "row": 12,
           "source_name": "机功",
           "zh_cle": "机功",
-          "zh_joyoland": "攻击3",
+          "zh_joyoland": "攻击３",
           "canonical_item": {
             "id_hex": "0x006E",
             "id_dec": 110,
@@ -14524,10 +14499,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "攻击3",
+            "zh_joyoland": "攻击３",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14547,7 +14522,7 @@
             "zh_joyoland": "红耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14556,7 +14531,7 @@
           "row": 14,
           "source_name": "镇星铃",
           "zh_cle": "镇星铃",
-          "zh_joyoland": "防御1",
+          "zh_joyoland": "防御１",
           "canonical_item": {
             "id_hex": "0x0070",
             "id_dec": 112,
@@ -14564,10 +14539,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "防御1",
+            "zh_joyoland": "防御１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14576,7 +14551,7 @@
           "row": 15,
           "source_name": "HP1",
           "zh_cle": "HP1",
-          "zh_joyoland": "防御2",
+          "zh_joyoland": "防御２",
           "canonical_item": {
             "id_hex": "0x0071",
             "id_dec": 113,
@@ -14584,10 +14559,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "防御2",
+            "zh_joyoland": "防御２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14596,7 +14571,7 @@
           "row": 16,
           "source_name": "HP2",
           "zh_cle": "HP2",
-          "zh_joyoland": "防御3",
+          "zh_joyoland": "防御３",
           "canonical_item": {
             "id_hex": "0x0072",
             "id_dec": 114,
@@ -14604,10 +14579,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "防御3",
+            "zh_joyoland": "防御３",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14627,7 +14602,7 @@
             "zh_joyoland": "琥耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14636,7 +14611,7 @@
           "row": 18,
           "source_name": "水耀珠",
           "zh_cle": "水耀珠",
-          "zh_joyoland": "精神1",
+          "zh_joyoland": "精神１",
           "canonical_item": {
             "id_hex": "0x0074",
             "id_dec": 116,
@@ -14644,10 +14619,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "精神1",
+            "zh_joyoland": "精神１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14656,7 +14631,7 @@
           "row": 19,
           "source_name": "魔防1",
           "zh_cle": "魔防1",
-          "zh_joyoland": "精神2",
+          "zh_joyoland": "精神２",
           "canonical_item": {
             "id_hex": "0x0075",
             "id_dec": 117,
@@ -14664,10 +14639,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "精神2",
+            "zh_joyoland": "精神２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14676,7 +14651,7 @@
           "row": 20,
           "source_name": "魔防2",
           "zh_cle": "魔防2",
-          "zh_joyoland": "精神3",
+          "zh_joyoland": "精神３",
           "canonical_item": {
             "id_hex": "0x0076",
             "id_dec": 118,
@@ -14684,10 +14659,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "精神3",
+            "zh_joyoland": "精神３",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14707,7 +14682,7 @@
             "zh_joyoland": "白耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14716,7 +14691,7 @@
           "row": 22,
           "source_name": "苍耀珠",
           "zh_cle": "苍耀珠",
-          "zh_joyoland": "魔防1",
+          "zh_joyoland": "魔防１",
           "canonical_item": {
             "id_hex": "0x0078",
             "id_dec": 120,
@@ -14724,10 +14699,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "魔防1",
+            "zh_joyoland": "魔防１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14736,7 +14711,7 @@
           "row": 23,
           "source_name": "封魔之刃",
           "zh_cle": "封魔之刃",
-          "zh_joyoland": "魔防2",
+          "zh_joyoland": "魔防２",
           "canonical_item": {
             "id_hex": "0x0079",
             "id_dec": 121,
@@ -14744,10 +14719,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "魔防2",
+            "zh_joyoland": "魔防２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14756,7 +14731,7 @@
           "row": 24,
           "source_name": "封魔之刃2",
           "zh_cle": "封魔之刃2",
-          "zh_joyoland": "魔防3",
+          "zh_joyoland": "魔防３",
           "canonical_item": {
             "id_hex": "0x007A",
             "id_dec": 122,
@@ -14764,10 +14739,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "魔防3",
+            "zh_joyoland": "魔防３",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14787,7 +14762,7 @@
             "zh_joyoland": "苍耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14796,7 +14771,7 @@
           "row": 26,
           "source_name": "冻结之刃2",
           "zh_cle": "冻结之刃2",
-          "zh_joyoland": "命中1",
+          "zh_joyoland": "命中１",
           "canonical_item": {
             "id_hex": "0x007C",
             "id_dec": 124,
@@ -14804,10 +14779,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "命中1",
+            "zh_joyoland": "命中１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14816,7 +14791,7 @@
           "row": 27,
           "source_name": "破灵之牙",
           "zh_cle": "破灵之牙",
-          "zh_joyoland": "命中2",
+          "zh_joyoland": "命中２",
           "canonical_item": {
             "id_hex": "0x007D",
             "id_dec": 125,
@@ -14824,10 +14799,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "命中2",
+            "zh_joyoland": "命中２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14836,7 +14811,7 @@
           "row": 28,
           "source_name": "真心",
           "zh_cle": "真心",
-          "zh_joyoland": "命中3",
+          "zh_joyoland": "命中３",
           "canonical_item": {
             "id_hex": "0x007E",
             "id_dec": 126,
@@ -14844,10 +14819,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "命中3",
+            "zh_joyoland": "命中３",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14867,7 +14842,7 @@
             "zh_joyoland": "光耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14876,7 +14851,7 @@
           "row": 30,
           "source_name": "辰星铃",
           "zh_cle": "辰星铃",
-          "zh_joyoland": "回避1",
+          "zh_joyoland": "回避１",
           "canonical_item": {
             "id_hex": "0x0080",
             "id_dec": 128,
@@ -14884,10 +14859,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "回避1",
+            "zh_joyoland": "回避１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14896,7 +14871,7 @@
           "row": 31,
           "source_name": "攻击1",
           "zh_cle": "攻击1",
-          "zh_joyoland": "回避2",
+          "zh_joyoland": "回避２",
           "canonical_item": {
             "id_hex": "0x0081",
             "id_dec": 129,
@@ -14904,10 +14879,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "回避2",
+            "zh_joyoland": "回避２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14916,7 +14891,7 @@
           "row": 32,
           "source_name": "攻击2",
           "zh_cle": "攻击2",
-          "zh_joyoland": "回避3",
+          "zh_joyoland": "回避３",
           "canonical_item": {
             "id_hex": "0x0082",
             "id_dec": 130,
@@ -14924,10 +14899,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "回避3",
+            "zh_joyoland": "回避３",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14947,7 +14922,7 @@
             "zh_joyoland": "翠耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14956,7 +14931,7 @@
           "row": 34,
           "source_name": "红耀珠",
           "zh_cle": "红耀珠",
-          "zh_joyoland": "移动1",
+          "zh_joyoland": "移动１",
           "canonical_item": {
             "id_hex": "0x0084",
             "id_dec": 132,
@@ -14964,10 +14939,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "移动1",
+            "zh_joyoland": "移动１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -14976,7 +14951,7 @@
           "row": 35,
           "source_name": "封技之刃",
           "zh_cle": "封技之刃",
-          "zh_joyoland": "移动2",
+          "zh_joyoland": "移动２",
           "canonical_item": {
             "id_hex": "0x0085",
             "id_dec": 133,
@@ -14984,10 +14959,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "移动2",
+            "zh_joyoland": "移动２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15007,7 +14982,7 @@
             "zh_joyoland": "风耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15016,7 +14991,7 @@
           "row": 37,
           "source_name": "炎伤之刃",
           "zh_cle": "炎伤之刃",
-          "zh_joyoland": "行动力1",
+          "zh_joyoland": "行动力１",
           "canonical_item": {
             "id_hex": "0x0088",
             "id_dec": 136,
@@ -15024,10 +14999,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "行动力1",
+            "zh_joyoland": "行动力１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15036,7 +15011,7 @@
           "row": 38,
           "source_name": "炎伤之刃2",
           "zh_cle": "炎伤之刃2",
-          "zh_joyoland": "行动力2",
+          "zh_joyoland": "行动力２",
           "canonical_item": {
             "id_hex": "0x0089",
             "id_dec": 137,
@@ -15044,10 +15019,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "行动力2",
+            "zh_joyoland": "行动力２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15056,7 +15031,7 @@
           "row": 39,
           "source_name": "破剑之牙",
           "zh_cle": "破剑之牙",
-          "zh_joyoland": "行动力3",
+          "zh_joyoland": "行动力３",
           "canonical_item": {
             "id_hex": "0x008A",
             "id_dec": 138,
@@ -15064,10 +15039,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "行动力3",
+            "zh_joyoland": "行动力３",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15087,7 +15062,7 @@
             "zh_joyoland": "黑耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15096,7 +15071,7 @@
           "row": 41,
           "source_name": "练气",
           "zh_cle": "练气",
-          "zh_joyoland": "妨害1",
+          "zh_joyoland": "妨害１",
           "canonical_item": {
             "id_hex": "0x008C",
             "id_dec": 140,
@@ -15104,10 +15079,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "妨害1",
+            "zh_joyoland": "妨害１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15116,7 +15091,7 @@
           "row": 42,
           "source_name": "龙眼",
           "zh_cle": "龙眼",
-          "zh_joyoland": "妨害2",
+          "zh_joyoland": "妨害２",
           "canonical_item": {
             "id_hex": "0x008D",
             "id_dec": 141,
@@ -15124,10 +15099,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "妨害2",
+            "zh_joyoland": "妨害２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15147,7 +15122,7 @@
             "zh_joyoland": "绝耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15156,7 +15131,7 @@
           "row": 44,
           "source_name": "回避1",
           "zh_cle": "回避1",
-          "zh_joyoland": "驱动1",
+          "zh_joyoland": "驱动１",
           "canonical_item": {
             "id_hex": "0x008F",
             "id_dec": 143,
@@ -15164,10 +15139,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "驱动1",
+            "zh_joyoland": "驱动１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15176,7 +15151,7 @@
           "row": 45,
           "source_name": "回避2",
           "zh_cle": "回避2",
-          "zh_joyoland": "驱动2",
+          "zh_joyoland": "驱动２",
           "canonical_item": {
             "id_hex": "0x0090",
             "id_dec": 144,
@@ -15184,10 +15159,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "驱动2",
+            "zh_joyoland": "驱动２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15207,7 +15182,7 @@
             "zh_joyoland": "刻耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15216,7 +15191,7 @@
           "row": 47,
           "source_name": "翠耀珠",
           "zh_cle": "翠耀珠",
-          "zh_joyoland": "省EP1",
+          "zh_joyoland": "省ＥＰ１",
           "canonical_item": {
             "id_hex": "0x0092",
             "id_dec": 146,
@@ -15224,10 +15199,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "省EP1",
+            "zh_joyoland": "省ＥＰ１",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15236,7 +15211,7 @@
           "row": 48,
           "source_name": "移动1",
           "zh_cle": "移动1",
-          "zh_joyoland": "省EP2",
+          "zh_joyoland": "省ＥＰ２",
           "canonical_item": {
             "id_hex": "0x0093",
             "id_dec": 147,
@@ -15244,10 +15219,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "省EP2",
+            "zh_joyoland": "省ＥＰ２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15256,7 +15231,7 @@
           "row": 49,
           "source_name": "移动2",
           "zh_cle": "移动2",
-          "zh_joyoland": "省EP3",
+          "zh_joyoland": "省ＥＰ３",
           "canonical_item": {
             "id_hex": "0x0094",
             "id_dec": 148,
@@ -15264,10 +15239,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "省EP3",
+            "zh_joyoland": "省ＥＰ３",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15287,7 +15262,7 @@
             "zh_joyoland": "金耀珠",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15307,7 +15282,7 @@
             "zh_joyoland": "毒之刃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15327,7 +15302,7 @@
             "zh_joyoland": "石化之刃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15347,7 +15322,7 @@
             "zh_joyoland": "封魔之刃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15367,7 +15342,7 @@
             "zh_joyoland": "冻结之刃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15387,7 +15362,7 @@
             "zh_joyoland": "封技之刃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15407,7 +15382,7 @@
             "zh_joyoland": "炎伤之刃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15427,7 +15402,7 @@
             "zh_joyoland": "暗之刃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15447,7 +15422,7 @@
             "zh_joyoland": "睡眠之刃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15467,7 +15442,7 @@
             "zh_joyoland": "混乱之刃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15487,7 +15462,7 @@
             "zh_joyoland": "破剑之牙",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15507,7 +15482,7 @@
             "zh_joyoland": "破盾之牙",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15527,7 +15502,7 @@
             "zh_joyoland": "破言之牙",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15547,7 +15522,7 @@
             "zh_joyoland": "破灵之牙",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15567,7 +15542,7 @@
             "zh_joyoland": "破迅之牙",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15587,7 +15562,7 @@
             "zh_joyoland": "破脚之牙",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15607,7 +15582,7 @@
             "zh_joyoland": "镇星铃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15627,7 +15602,7 @@
             "zh_joyoland": "辰星铃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15647,7 +15622,7 @@
             "zh_joyoland": "焰星铃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15667,7 +15642,7 @@
             "zh_joyoland": "岁星铃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15687,7 +15662,7 @@
             "zh_joyoland": "冥王铃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15707,7 +15682,7 @@
             "zh_joyoland": "天王铃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15727,7 +15702,7 @@
             "zh_joyoland": "明王铃",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15747,7 +15722,7 @@
             "zh_joyoland": "耀脉",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15767,7 +15742,7 @@
             "zh_joyoland": "机功",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15787,7 +15762,7 @@
             "zh_joyoland": "治愈",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15807,7 +15782,7 @@
             "zh_joyoland": "丹精",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15827,7 +15802,7 @@
             "zh_joyoland": "炼气",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15847,7 +15822,7 @@
             "zh_joyoland": "龙眼",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15867,7 +15842,7 @@
             "zh_joyoland": "恶戏",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15887,7 +15862,7 @@
             "zh_joyoland": "脱兔",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15907,7 +15882,7 @@
             "zh_joyoland": "虎威",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15927,7 +15902,7 @@
             "zh_joyoland": "美臭",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15947,7 +15922,7 @@
             "zh_joyoland": "幸运",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15967,7 +15942,7 @@
             "zh_joyoland": "鹰目",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -15987,7 +15962,7 @@
             "zh_joyoland": "天眼",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16007,7 +15982,7 @@
             "zh_joyoland": "范围",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16027,7 +16002,7 @@
             "zh_joyoland": "情报",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16047,7 +16022,7 @@
             "zh_joyoland": "探知",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16067,7 +16042,7 @@
             "zh_joyoland": "缚魔",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16087,7 +16062,7 @@
             "zh_joyoland": "幻胧",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16107,7 +16082,7 @@
             "zh_joyoland": "毒之刃2",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16116,7 +16091,7 @@
           "row": 92,
           "source_name": "EP3",
           "zh_cle": "EP3",
-          "zh_joyoland": "石化之刃2",
+          "zh_joyoland": "石化之刃２",
           "canonical_item": {
             "id_hex": "0x00BF",
             "id_dec": 191,
@@ -16124,10 +16099,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "石化之刃2",
+            "zh_joyoland": "石化之刃２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16136,7 +16111,7 @@
           "row": 93,
           "source_name": "银耀珠",
           "zh_cle": "银耀珠",
-          "zh_joyoland": "封魔之刃2",
+          "zh_joyoland": "封魔之刃２",
           "canonical_item": {
             "id_hex": "0x00C0",
             "id_dec": 192,
@@ -16144,10 +16119,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "封魔之刃2",
+            "zh_joyoland": "封魔之刃２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16156,7 +16131,7 @@
           "row": 94,
           "source_name": "混乱之刃",
           "zh_cle": "混乱之刃",
-          "zh_joyoland": "冻结之刃2",
+          "zh_joyoland": "冻结之刃２",
           "canonical_item": {
             "id_hex": "0x00C1",
             "id_dec": 193,
@@ -16164,10 +16139,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "冻结之刃2",
+            "zh_joyoland": "冻结之刃２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16176,7 +16151,7 @@
           "row": 95,
           "source_name": "混乱之刃2",
           "zh_cle": "混乱之刃2",
-          "zh_joyoland": "封技之刃2",
+          "zh_joyoland": "封技之刃２",
           "canonical_item": {
             "id_hex": "0x00C2",
             "id_dec": 194,
@@ -16184,10 +16159,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "封技之刃2",
+            "zh_joyoland": "封技之刃２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16196,7 +16171,7 @@
           "row": 96,
           "source_name": "情报",
           "zh_cle": "情报",
-          "zh_joyoland": "炎伤之刃2",
+          "zh_joyoland": "炎伤之刃２",
           "canonical_item": {
             "id_hex": "0x00C3",
             "id_dec": 195,
@@ -16204,10 +16179,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "炎伤之刃2",
+            "zh_joyoland": "炎伤之刃２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16216,7 +16191,7 @@
           "row": 97,
           "source_name": "探知",
           "zh_cle": "探知",
-          "zh_joyoland": "暗之刃2",
+          "zh_joyoland": "暗之刃２",
           "canonical_item": {
             "id_hex": "0x00C4",
             "id_dec": 196,
@@ -16224,10 +16199,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "暗之刃2",
+            "zh_joyoland": "暗之刃２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16236,7 +16211,7 @@
           "row": 98,
           "source_name": "幻胧",
           "zh_cle": "幻胧",
-          "zh_joyoland": "睡眠之刃2",
+          "zh_joyoland": "睡眠之刃２",
           "canonical_item": {
             "id_hex": "0x00C5",
             "id_dec": 197,
@@ -16244,10 +16219,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "睡眠之刃2",
+            "zh_joyoland": "睡眠之刃２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false
@@ -16256,7 +16231,7 @@
           "row": 99,
           "source_name": "明王铃",
           "zh_cle": "明王铃",
-          "zh_joyoland": "混乱之刃2",
+          "zh_joyoland": "混乱之刃２",
           "canonical_item": {
             "id_hex": "0x00C6",
             "id_dec": 198,
@@ -16264,10 +16239,10 @@
             "reference_no": null,
             "owner_key": null,
             "owner_zh": null,
-            "zh_joyoland": "混乱之刃2",
+            "zh_joyoland": "混乱之刃２",
             "category_zh": "回路-普通",
             "skill_kind": null,
-            "source": "ao_items_db.py / BZH item definitions + items.json"
+            "source": "Ouroboros/Falcom ItemNameMap.py via ao_item_index.json + supplied item JSON"
           },
           "match_status": "row_order",
           "name_equals_canonical": false

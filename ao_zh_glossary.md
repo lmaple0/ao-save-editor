@@ -87,73 +87,73 @@
 | 0x0004 | 战斗手册 | Combat Notebook | 戦闘手帳 | book |
 | 0x0005 | 自治州地图 | State Map | 自治州の地図 | book |
 | 0x0006 | 克洛斯贝尔市的地图 | Crossbell City Map | クロスベル市の地図 | book |
-| 0x000A | 战术书·击 | Craft Book - Strike | 戦術書・撃 | book |
-| 0x000B | 战术书·十 | Craft Book - Cross | 戦術書・十 | book |
-| 0x000C | 战术书·苍 | Craft Book - Blue | 戦術書・蒼 | book |
-| 0x000D | 战术书·袭 | Craft Book - Raid | 戦術書・襲 | book |
-| 0x000E | 战术书·虚 | Craft Book - Akasha | 戦術書・虚 | book |
-| 0x000F | 战术书·爆 | Craft Book - Blast | 戦術書・爆 | book |
-| 0x0010 | 战术书·里 | Craft Book - Rebel | 戦術書・裏 | book |
-| 0x0011 | 战术书·升 | Craft Book - Ascend | 戦術書・昇 | book |
-| 0x02BC | 克洛斯贝尔时代周刊① | Crossbell Times - Issue 1 | クロスベルタイムズ① | book |
-| 0x02BD | 克洛斯贝尔时代周刊② | Crossbell Times - Issue 2 | クロスベルタイムズ② | book |
-| 0x02BE | 克洛斯贝尔时代周刊③ | Crossbell Times - Issue 3 | クロスベルタイムズ③ | book |
-| 0x02BF | 克洛斯贝尔时代周刊号外 | Crossbell Times - Special Edition | クロスベルタイムズ号外 | book |
-| 0x02C0 | 克洛斯贝尔时代周刊④ | Crossbell Times - Issue 4 | クロスベルタイムズ④ | book |
-| 0x02C1 | 克洛斯贝尔时代周刊⑤ | Crossbell Times - Issue 5 | クロスベルタイムズ⑤ | book |
-| 0x02C2 | 克洛斯贝尔时代周刊⑥ | Crossbell Times - Issue 6 | クロスベルタイムズ⑥ | book |
-| 0x02C3 | 克洛斯贝尔时代周刊⑦ | Crossbell Times - Issue 7 | クロスベルタイムズ⑦ | book |
-| 0x02C4 | 克洛斯贝尔时代周刊⑧ | Crossbell Times - Issue 8 | クロスベルタイムズ⑧ | book |
-| 0x02C6 | 黑市医生格伦 1卷 | Back Alley Doctor Glenn - Ch. 1 | 闇医者グレン　１巻 | book |
-| 0x02C7 | 黑市医生格伦 2卷 | Back Alley Doctor Glenn - Ch. 2 | 闇医者グレン　２巻 | book |
-| 0x02C8 | 黑市医生格伦 3卷 | Back Alley Doctor Glenn - Ch. 3 | 闇医者グレン　３巻 | book |
-| 0x02C9 | 黑市医生格伦 4卷 | Back Alley Doctor Glenn - Ch. 4 | 闇医者グレン　４巻 | book |
-| 0x02CA | 黑市医生格伦 5卷 | Back Alley Doctor Glenn - Ch. 5 | 闇医者グレン　５巻 | book |
-| 0x02CB | 黑市医生格伦 6卷 | Back Alley Doctor Glenn - Ch. 6 | 闇医者グレン　６巻 | book |
-| 0x02CC | 黑市医生格伦 7卷 | Back Alley Doctor Glenn - Ch. 7 | 闇医者グレン　７巻 | book |
-| 0x02CD | 黑市医生格伦 8卷 | Back Alley Doctor Glenn - Ch. 8 | 闇医者グレン　８巻 | book |
-| 0x02CE | 黑市医生格伦 9卷 | Back Alley Doctor Glenn - Ch. 9 | 闇医者グレン　９巻 | book |
-| 0x02CF | 黑市医生格伦 10卷 | Back Alley Doctor Glenn - Ch. 10 | 闇医者グレン　10巻 | book |
-| 0x02D0 | 黑市医生格伦 11卷 | Back Alley Doctor Glenn - Ch. 11 | 闇医者グレン　11巻 | book |
-| 0x02D1 | 黑市医生格伦 12卷 | Back Alley Doctor Glenn - Ch. 12 | 闇医者グレン　12巻 | book |
-| 0x02D2 | 黑市医生格伦 13卷 | Back Alley Doctor Glenn - Ch. 13 | 闇医者グレン　13巻 | book |
-| 0x02D3 | 黑市医生格伦 14卷 | Back Alley Doctor Glenn - Ch. 14 | 闇医者グレン　14巻 | book |
+| 0x000A | 战术书击 | Craft Book - Strike | 戦術書・撃 | book |
+| 0x000B | 战术书十 | Craft Book - Cross | 戦術書・十 | book |
+| 0x000C | 战术书苍 | Craft Book - Blue | 戦術書・蒼 | book |
+| 0x000D | 战术书袭 | Craft Book - Raid | 戦術書・襲 | book |
+| 0x000E | 战术书虚 | Craft Book - Akasha | 戦術書・虚 | book |
+| 0x000F | 战术书爆 | Craft Book - Blast | 戦術書・爆 | book |
+| 0x0010 | 战术书里 | Craft Book - Rebel | 戦術書・裏 | book |
+| 0x0011 | 战术书升 | Craft Book - Ascend | 戦術書・昇 | book |
+| 0x02BC | 克洛斯贝尔时代周刊1_2BC | Crossbell Times - Issue 1 | クロスベルタイムズ① | book |
+| 0x02BD | 克洛斯贝尔时代周刊2_2BD | Crossbell Times - Issue 2 | クロスベルタイムズ② | book |
+| 0x02BE | 克洛斯贝尔时代周刊3_2BE | Crossbell Times - Issue 3 | クロスベルタイムズ③ | book |
+| 0x02BF | 克洛斯贝尔时代周刊号外_2BF | Crossbell Times - Special Edition | クロスベルタイムズ号外 | book |
+| 0x02C0 | 克洛斯贝尔时代周刊4_2C0 | Crossbell Times - Issue 4 | クロスベルタイムズ④ | book |
+| 0x02C1 | 克洛斯贝尔时代周刊5_2C1 | Crossbell Times - Issue 5 | クロスベルタイムズ⑤ | book |
+| 0x02C2 | 克洛斯贝尔时代周刊6_2C2 | Crossbell Times - Issue 6 | クロスベルタイムズ⑥ | book |
+| 0x02C3 | 克洛斯贝尔时代周刊7_2C3 | Crossbell Times - Issue 7 | クロスベルタイムズ⑦ | book |
+| 0x02C4 | 克洛斯贝尔时代周刊8_2C4 | Crossbell Times - Issue 8 | クロスベルタイムズ⑧ | book |
+| 0x02C6 | 黑市医生格伦１卷 | Back Alley Doctor Glenn - Ch. 1 | 闇医者グレン　１巻 | book |
+| 0x02C7 | 黑市医生格伦２卷 | Back Alley Doctor Glenn - Ch. 2 | 闇医者グレン　２巻 | book |
+| 0x02C8 | 黑市医生格伦３卷 | Back Alley Doctor Glenn - Ch. 3 | 闇医者グレン　３巻 | book |
+| 0x02C9 | 黑市医生格伦４卷 | Back Alley Doctor Glenn - Ch. 4 | 闇医者グレン　４巻 | book |
+| 0x02CA | 黑市医生格伦５卷 | Back Alley Doctor Glenn - Ch. 5 | 闇医者グレン　５巻 | book |
+| 0x02CB | 黑市医生格伦６卷 | Back Alley Doctor Glenn - Ch. 6 | 闇医者グレン　６巻 | book |
+| 0x02CC | 黑市医生格伦７卷 | Back Alley Doctor Glenn - Ch. 7 | 闇医者グレン　７巻 | book |
+| 0x02CD | 黑市医生格伦８卷 | Back Alley Doctor Glenn - Ch. 8 | 闇医者グレン　８巻 | book |
+| 0x02CE | 黑市医生格伦９卷 | Back Alley Doctor Glenn - Ch. 9 | 闇医者グレン　９巻 | book |
+| 0x02CF | 黑市医生格伦10卷 | Back Alley Doctor Glenn - Ch. 10 | 闇医者グレン　10巻 | book |
+| 0x02D0 | 黑市医生格伦11卷 | Back Alley Doctor Glenn - Ch. 11 | 闇医者グレン　11巻 | book |
+| 0x02D1 | 黑市医生格伦12卷 | Back Alley Doctor Glenn - Ch. 12 | 闇医者グレン　12巻 | book |
+| 0x02D2 | 黑市医生格伦13卷 | Back Alley Doctor Glenn - Ch. 13 | 闇医者グレン　13巻 | book |
+| 0x02D3 | 黑市医生格伦14卷 | Back Alley Doctor Glenn - Ch. 14 | 闇医者グレン　14巻 | book |
 | 0x02D5 | 铁道爱好者的推荐 | Train Fanatic Recs | 鉄道マニアのススメ | book |
-| 0x02D6 | 玛尔克与森林深处的魔女们·上 | Mark and the Witch - Part 1 | マルクと深き森の魔女・上 | book |
+| 0x02D6 | 玛尔克与森林深处的魔女上 | Mark and the Witch - Part 1 | マルクと深き森の魔女・上 | book |
 | 0x02D7 | 改变大陆的美人们 | Women Who Changed the World | 大陸を動かした美人たち | book |
-| 0x02D8 | 有效利用五分钟零散时间 | The Best Way to Use 5 Minutes | 余った５分の有効な使い方 | book |
+| 0x02D8 | 有效利用五分钟的零散时间 | The Best Way to Use 5 Minutes | 余った５分の有効な使い方 | book |
 | 0x02D9 | 克洛斯贝尔怪谈全集 | Paranormal Crossbell Collection | クロスベル怪奇全集 | book |
-| 0x02DA | 彩虹·Funbook | Arc en Ciel Enthusiasts | アルカンシェル・ＦＢ | book |
-| 0x02DD | 玛尔克与森林深处的魔女们·中 | Mark and the Witch - 2 | マルクと深き森の魔女・中 | book |
-| 0x02DE | 玛尔克与森林深处的魔女们·下 | Mark and the Witch - 3 | マルクと深き森の魔女・下 | book |
-| 0x02DF | 圣女与白狼·上 | Saint and White Wolf - 1 | 聖女と白い狼・上 | book |
-| 0x02E0 | 圣女与白狼·下 | Saint and White Wolf - 2 | 聖女と白い狼・下 | book |
-| 0x02E1 | 克洛斯贝尔时代周刊⑴ | Crossbell Times - Issue 1 | クロスベルタイムズ① | book |
-| 0x02E2 | 克洛斯贝尔时代周刊⑵ | Crossbell Times - Issue 2 | クロスベルタイムズ② | book |
-| 0x02E3 | 克洛斯贝尔时代周刊⑶ | Crossbell Times - Issue 3 | クロスベルタイムズ③ | book |
-| 0x02E4 | 克洛斯贝尔时代周刊⑷ | Crossbell Times - Issue 4 | クロスベルタイムズ④ | book |
-| 0x02E5 | 克洛斯贝尔时代周刊⑸ | Crossbell Times - Issue 5 | クロスベルタイムズ⑤ | book |
-| 0x02E6 | 克洛斯贝尔时代周刊⑹ | Crossbell Times - Issue 6 | クロスベルタイムズ⑥ | book |
-| 0x02E7 | 克洛斯贝尔时代周刊⑺ | Crossbell Times - Issue 7 | クロスベルタイムズ⑦ | book |
-| 0x02E8 | 克洛斯贝尔时代周刊⑻ | Crossbell Times - Issue 8 | クロスベルタイムズ⑧ | book |
-| 0x02E9 | 克洛斯贝尔时代周刊⑨ | Crossbell Times - Issue 9 | クロスベルタイムズ⑨ | book |
-| 0x02EA | 克洛斯贝尔时代周刊号外 | Crossbell Times - Special Edition | クロスベルタイムズ号外 | book |
-| 0x02EB | 克洛斯贝尔时代周刊⑽ | Crossbell Times - Issue 10 | クロスベルタイムズ⑩ | book |
-| 0x02EC | 克洛斯贝尔时代周刊⑾ | Crossbell Times - Issue 11 | クロスベルタイムズ⑪ | book |
-| 0x02EE | 沐浴阳光的阿尼艾斯 1卷 | Sunshine Agnes - Ch. 1 | 陽溜りのアニエス　１巻 | book |
-| 0x02EF | 沐浴阳光的阿尼艾斯 2卷 | Sunshine Agnes - Ch. 2 | 陽溜りのアニエス　２巻 | book |
-| 0x02F0 | 沐浴阳光的阿尼艾斯 3卷 | Sunshine Agnes - Ch. 3 | 陽溜りのアニエス　３巻 | book |
-| 0x02F1 | 沐浴阳光的阿尼艾斯 4卷 | Sunshine Agnes - Ch. 4 | 陽溜りのアニエス　４巻 | book |
-| 0x02F2 | 沐浴阳光的阿尼艾斯 5卷 | Sunshine Agnes - Ch. 5 | 陽溜りのアニエス　５巻 | book |
-| 0x02F3 | 沐浴阳光的阿尼艾斯 6卷 | Sunshine Agnes - Ch. 6 | 陽溜りのアニエス　６巻 | book |
-| 0x02F4 | 沐浴阳光的阿尼艾斯 7卷 | Sunshine Agnes - Ch. 7 | 陽溜りのアニエス　７巻 | book |
-| 0x02F5 | 沐浴阳光的阿尼艾斯 8卷 | Sunshine Agnes - Ch. 8 | 陽溜りのアニエス　８巻 | book |
-| 0x02F6 | 沐浴阳光的阿尼艾斯 9卷 | Sunshine Agnes - Ch. 9 | 陽溜りのアニエス　９巻 | book |
-| 0x02F7 | 沐浴阳光的阿尼艾斯 10卷 | Sunshine Agnes - Ch. 10 | 陽溜りのアニエス　10巻 | book |
-| 0x02F8 | 沐浴阳光的阿尼艾斯 11卷 | Sunshine Agnes - Ch. 11 | 陽溜りのアニエス　11巻 | book |
-| 0x02F9 | 沐浴阳光的阿尼艾斯 12卷 | Sunshine Agnes - Ch. 12 | 陽溜りのアニエス　12巻 | book |
-| 0x02FA | 沐浴阳光的阿尼艾斯 13卷 | Sunshine Agnes - Ch. 13 | 陽溜りのアニエス　13巻 | book |
-| 0x02FB | 沐浴阳光的阿尼艾斯 14卷 | Sunshine Agnes - Ch. 14 | 陽溜りのアニエス　14巻 | book |
+| 0x02DA | 彩虹FanBook | Arc en Ciel Enthusiasts | アルカンシェル・ＦＢ | book |
+| 0x02DD | 玛尔克与森林深处的魔女中 | Mark and the Witch - 2 | マルクと深き森の魔女・中 | book |
+| 0x02DE | 玛尔克与森林深处的魔女下 | Mark and the Witch - 3 | マルクと深き森の魔女・下 | book |
+| 0x02DF | 圣女与白狼上 | Saint and White Wolf - 1 | 聖女と白い狼・上 | book |
+| 0x02E0 | 圣女与白狼下 | Saint and White Wolf - 2 | 聖女と白い狼・下 | book |
+| 0x02E1 | 克洛斯贝尔时代周刊1_2E1 | Crossbell Times - Issue 1 | クロスベルタイムズ① | book |
+| 0x02E2 | 克洛斯贝尔时代周刊2_2E2 | Crossbell Times - Issue 2 | クロスベルタイムズ② | book |
+| 0x02E3 | 克洛斯贝尔时代周刊3_2E3 | Crossbell Times - Issue 3 | クロスベルタイムズ③ | book |
+| 0x02E4 | 克洛斯贝尔时代周刊4_2E4 | Crossbell Times - Issue 4 | クロスベルタイムズ④ | book |
+| 0x02E5 | 克洛斯贝尔时代周刊5_2E5 | Crossbell Times - Issue 5 | クロスベルタイムズ⑤ | book |
+| 0x02E6 | 克洛斯贝尔时代周刊6_2E6 | Crossbell Times - Issue 6 | クロスベルタイムズ⑥ | book |
+| 0x02E7 | 克洛斯贝尔时代周刊7_2E7 | Crossbell Times - Issue 7 | クロスベルタイムズ⑦ | book |
+| 0x02E8 | 克洛斯贝尔时代周刊8_2E8 | Crossbell Times - Issue 8 | クロスベルタイムズ⑧ | book |
+| 0x02E9 | 克洛斯贝尔时代周刊9 | Crossbell Times - Issue 9 | クロスベルタイムズ⑨ | book |
+| 0x02EA | 克洛斯贝尔时代周刊号外_2EA | Crossbell Times - Special Edition | クロスベルタイムズ号外 | book |
+| 0x02EB | 克洛斯贝尔时代周刊10 | Crossbell Times - Issue 10 | クロスベルタイムズ⑩ | book |
+| 0x02EC | 克洛斯贝尔时代周刊11 | Crossbell Times - Issue 11 | クロスベルタイムズ⑪ | book |
+| 0x02EE | 沐浴阳光的阿尼艾丝１卷 | Sunshine Agnes - Ch. 1 | 陽溜りのアニエス　１巻 | book |
+| 0x02EF | 沐浴阳光的阿尼艾丝２卷 | Sunshine Agnes - Ch. 2 | 陽溜りのアニエス　２巻 | book |
+| 0x02F0 | 沐浴阳光的阿尼艾丝３卷 | Sunshine Agnes - Ch. 3 | 陽溜りのアニエス　３巻 | book |
+| 0x02F1 | 沐浴阳光的阿尼艾丝４卷 | Sunshine Agnes - Ch. 4 | 陽溜りのアニエス　４巻 | book |
+| 0x02F2 | 沐浴阳光的阿尼艾丝５卷 | Sunshine Agnes - Ch. 5 | 陽溜りのアニエス　５巻 | book |
+| 0x02F3 | 沐浴阳光的阿尼艾丝６卷 | Sunshine Agnes - Ch. 6 | 陽溜りのアニエス　６巻 | book |
+| 0x02F4 | 沐浴阳光的阿尼艾丝７卷 | Sunshine Agnes - Ch. 7 | 陽溜りのアニエス　７巻 | book |
+| 0x02F5 | 沐浴阳光的阿尼艾丝８卷 | Sunshine Agnes - Ch. 8 | 陽溜りのアニエス　８巻 | book |
+| 0x02F6 | 沐浴阳光的阿尼艾丝９卷 | Sunshine Agnes - Ch. 9 | 陽溜りのアニエス　９巻 | book |
+| 0x02F7 | 沐浴阳光的阿尼艾丝10卷 | Sunshine Agnes - Ch. 10 | 陽溜りのアニエス　10巻 | book |
+| 0x02F8 | 沐浴阳光的阿尼艾丝11卷 | Sunshine Agnes - Ch. 11 | 陽溜りのアニエス　11巻 | book |
+| 0x02F9 | 沐浴阳光的阿尼艾丝12卷 | Sunshine Agnes - Ch. 12 | 陽溜りのアニエス　12巻 | book |
+| 0x02FA | 沐浴阳光的阿尼艾丝13卷 | Sunshine Agnes - Ch. 13 | 陽溜りのアニエス　13巻 | book |
+| 0x02FB | 沐浴阳光的阿尼艾丝14卷 | Sunshine Agnes - Ch. 14 | 陽溜りのアニエス　14巻 | book |
 | 0x02FC | 幻兽调查报告书 | Cryptid Investigation Report | 幻獣調査報告書 | book |
 
 ### 事件-剧情 (47)
@@ -162,15 +162,15 @@
 |---|---|---|---|---|
 | 0x0320 | 受损的警察徽章 | Damaged Officer Badge | 傷付いた警察徽章 | event_story |
 | 0x0321 | 伊梅尔达馆的钥匙 | Maison Imelda Key | メゾン・イメルダの鍵 | event_story |
-| 0x0322 | 地下空间B区域的钥匙 | Geofront B Key | ジオフロントＢの鍵 | event_story |
+| 0x0322 | 地下空间Ｂ区域的钥匙 | Geofront B Key | ジオフロントＢの鍵 | event_story |
 | 0x0323 | 旧矿山的钥匙 | Old Mine Key | 旧鉱山の鍵 | event_story |
-| 0x0324 | lBC认证卡片 | IBC ID Card | ＩＢＣ認証カード | event_story |
+| 0x0324 | ＩＢＣ认证卡片 | IBC ID Card | ＩＢＣ認証カード | event_story |
 | 0x0325 | 梅琳的伞 | Meiling's Umbrella | メイリンの傘 | event_story |
-| 0x0326 | IBC贵宾卡片 | IBC Primary Card | ＩＢＣプライマリカード | event_story |
+| 0x0326 | ＩＢＣ贵宾卡片 | IBC Primary Card | ＩＢＣプライマリカード | event_story |
 | 0x0328 | 废弃材料 | Scrap Metal | 廃材 | event_story |
-| 0x0329 | 纯白之石[中] | Whitestone | ホワイトストーン | event_story |
-| 0x032B | 纯白之石[小] | Whitestone | ホワイトストーン | event_story |
-| 0x032C | 纯白之石[大] | Whitestone | ホワイトストーン | event_story |
+| 0x0329 | 纯白之石_329 | Whitestone | ホワイトストーン | event_story |
+| 0x032B | 纯白之石_32B | Whitestone | ホワイトストーン | event_story |
+| 0x032C | 纯白之石_32C | Whitestone | ホワイトストーン | event_story |
 | 0x032D | 尼克鲁的问诊表 | Nikolai's Health Survey | ニコルの問診表 | event_story |
 | 0x032E | 迪诺的问诊表 | Dino's Health Survey | ディーノの問診表 | event_story |
 | 0x032F | 库雷斯队员的问诊表 | Cless' Health Survey | クレス隊員の問診表 | event_story |
@@ -179,31 +179,31 @@
 | 0x0332 | 发往住宅街的送货单 | Shipping Label | 住宅街の届け先の伝票 | event_story |
 | 0x0333 | 蓝花 | Blue Flora | 蒼い花 | event_story |
 | 0x0334 | 结晶碎片 | Quartz Fragment | フラグメント | event_story |
-| 0x0335 | 罗赞贝尔克人偶．C | Rosenberg Doll K | ローゼンベルク人形・Ｃ | event_story |
-| 0x0336 | 罗赞贝尔克人偶．R | Rosenberg Doll L | ローゼンベルク人形・Ｒ | event_story |
-| 0x0337 | 罗赞贝尔克人偶．M | Rosenberg Doll M | ローゼンベルク人形・Ｍ | event_story |
-| 0x0338 | 罗赞贝尔克人偶．S | Rosenberg Doll S | ローゼンベルク人形・Ｓ | event_story |
-| 0x0339 | 波波碰！β版 | Pom! Pom! Party! Beta | ポムっと！β版 | event_story |
+| 0x0335 | 罗赞贝尔克人偶Ｃ | Rosenberg Doll K | ローゼンベルク人形・Ｃ | event_story |
+| 0x0336 | 罗赞贝尔克人偶Ｒ | Rosenberg Doll L | ローゼンベルク人形・Ｒ | event_story |
+| 0x0337 | 罗赞贝尔克人偶Ｍ | Rosenberg Doll M | ローゼンベルク人形・Ｍ | event_story |
+| 0x0338 | 罗赞贝尔克人偶Ｓ | Rosenberg Doll S | ローゼンベルク人形・Ｓ | event_story |
+| 0x0339 | 波波碰β版 | Pom! Pom! Party! Beta | ポムっと！β版 | event_story |
 | 0x033A | 小箱子 | Small Trunk | 小さなトランク | event_story |
 | 0x033E | 月之宝珠 | Moon Orb | 月の宝珠 | event_story |
 | 0x033F | 星之光玉 | Starlight Orb | 星の光玉 | event_story |
 | 0x0340 | 苦西红柿酱 | Acerbic Tomato Paste | にがトマトペースト | event_story |
-| 0x0341 | 选秀活动特别奖纪念盾[艾莉] | Pageant Keepsake Plaque | ミスコン特別賞記念盾 | event_story |
-| 0x0342 | 选秀活动特别奖纪念盾[提欧] | Pageant Keepsake Plaque | ミスコン特別賞記念盾 | event_story |
-| 0x0343 | 选秀活动特别奖纪念盾[诺埃尔] | Pageant Keepsake Plaque | ミスコン特別賞記念盾 | event_story |
+| 0x0341 | 选秀活动特别奖纪念盾_341 | Pageant Keepsake Plaque | ミスコン特別賞記念盾 | event_story |
+| 0x0342 | 选秀活动特别奖纪念盾_342 | Pageant Keepsake Plaque | ミスコン特別賞記念盾 | event_story |
+| 0x0343 | 选秀活动特别奖纪念盾_343 | Pageant Keepsake Plaque | ミスコン特別賞記念盾 | event_story |
 | 0x0344 | 绀碧竿 | Lapis Rod | 紺碧のロッド | event_story |
 | 0x0345 | 琥珀轴 | Amber Reel | 琥珀のリール | event_story |
 | 0x0346 | 翡翠线 | Jade Line | 翡翠のライン | event_story |
 | 0x0347 | 红莲钩 | Crimson Hook | 紅蓮のフック | event_story |
 | 0x035C | 支援科车辆钥匙 | SSS Car Key | 支援課車両のキー | event_story |
-| 0x035D | 米修拉姆·奇幻乐园游乐券 | MWL Ticket | Ｍ・Ｗ・Ｌチケット | event_story |
+| 0x035D | 米修拉姆奇幻乐园游乐券 | MWL Ticket | Ｍ・Ｗ・Ｌチケット | event_story |
 | 0x035E | 临时认证卡片 | Temporary Access Card | 一時認証カード | event_story |
 | 0x0375 | 金属探测器 | Metal Detector | 金属探知機 | event_story |
 | 0x0376 | 银耀石钥匙 | Argem Key | 銀耀石の鍵 | event_story |
 | 0x0377 | 金耀石钥匙 | Goldia Key | 金耀石の鍵 | event_story |
 | 0x0378 | 黑耀石钥匙 | Nohval Key | 黒耀石の鍵 | event_story |
 | 0x0379 | 红色卡片钥匙 | Red Keycard | 赤いカードキー | event_story |
-| 0x038E | U材料 | U-Material | Ｕマテリアル | event_story |
+| 0x038E | Ｕ材料 | U-Material | Ｕマテリアル | event_story |
 | 0x0394 | 塞姆里亚石碎片 | Zemurian Ore Shard | ゼムリアストーンの欠片 | event_story |
 | 0x0395 | 神圣布料 | Divine Cloth | デヴァインクロス | event_story |
 | 0x0396 | 塞姆里亚石 | Zemurian Ore | ゼムリアストーン | event_story |
@@ -228,7 +228,7 @@
 | 0x0355 | 波波靠垫 | Shining Pom Cushion | ポムクッション | event_furnishing |
 | 0x0356 | 黑泰迪熊 | Black Teddy Bear | 黒テディベア | event_furnishing |
 | 0x0357 | 苦番茄人玩偶 | Acerbic Tomartian | にがとまとにあん | event_furnishing |
-| 0x0358 | ZWEI2企鹅 | Zwei II Penguin | ＺＷＥＩ２ペンギン | event_furnishing |
+| 0x0358 | ＺＷＥＩ２企鹅 | Zwei II Penguin | ＺＷＥＩ２ペンギン | event_furnishing |
 
 ### 事件-导力车 (22)
 
@@ -240,13 +240,13 @@
 | 0x0362 | 前保险杠 | Front Bumper | フロントバンパー | event_car |
 | 0x0363 | 警灯 | Beacon Light | パトランプ | event_car |
 | 0x0364 | 强化轮圈 | Improved Wheels | 強化ホイール | event_car |
-| 0x0365 | HP回复装置 | HP Charger | ＨＰチャージャー | event_car |
-| 0x0366 | EP回复装置 | EP Charger | ＥＰチャージャー | event_car |
-| 0x0367 | CP回复装置 | CP Charger | ＣＰチャージャー | event_car |
-| 0x0368 | CPD主题 | CPD Paintwork | ＣＰＤカラー | event_car |
+| 0x0365 | ＨＰ回复装置 | HP Charger | ＨＰチャージャー | event_car |
+| 0x0366 | ＥＰ回复装置 | EP Charger | ＥＰチャージャー | event_car |
+| 0x0367 | ＣＰ回复装置 | CP Charger | ＣＰチャージャー | event_car |
+| 0x0368 | ＣＰＤ主题 | CPD Paintwork | ＣＰＤカラー | event_car |
 | 0x0369 | 咪西主题 | Mishy Paintwork | みっしぃカラー | event_car |
-| 0x036A | 人物主题E | Lil' E. Paintwork | ペインカラーＥ | event_car |
-| 0x036B | 人物主题T | Lil' T. Paintwork | ペインカラーＴ | event_car |
+| 0x036A | 人物主题Ｅ | Lil' E. Paintwork | ペインカラーＥ | event_car |
+| 0x036B | 人物主题Ｔ | Lil' T. Paintwork | ペインカラーＴ | event_car |
 | 0x036C | 天空色彩 | Sky Paintwork | スカイカラー | event_car |
 | 0x036D | 高贵色彩 | Noble Paintwork | ノーブルカラー | event_car |
 | 0x036E | 魅力色彩 | Charming Paintwork | チャームカラー | event_car |
@@ -266,69 +266,69 @@
 | 0x00CC | 魔法吸收 |  |  | circuit_debug |
 | 0x00CD | 物理反射 |  |  | circuit_debug |
 | 0x00CE | 魔法反射 |  |  | circuit_debug |
-| 0x00CF | 100%毒之刃 | 100％ Poison | 100毒の刃 | circuit_debug |
-| 0x00D0 | 100%石化之刃 | 100％ Petrify | 100石化の刃 | circuit_debug |
-| 0x00D1 | 100%封魔之刃 | 100％ Mute | 100封魔の刃 | circuit_debug |
-| 0x00D2 | 100%冻结之刃 | 100％ Freeze | 100凍結の刃 | circuit_debug |
-| 0x00D3 | 100%封技之刃 | 100％ Seal | 100封技の刃 | circuit_debug |
-| 0x00D4 | 100%炎伤之刃 | 100％ Burn | 100炎傷の刃 | circuit_debug |
-| 0x00D5 | 100%黑暗之刃 | 100％ Blind | 100暗闇の刃 | circuit_debug |
-| 0x00D6 | 100%睡眠之刃 | 100％ Blind | 100睡眠の刃 | circuit_debug |
-| 0x00D7 | 100%混乱之刃 | 100％ Confuse | 100混乱の刃 | circuit_debug |
-| 0x00D8 | 100%即死之刃 | 100％ Deathblow | 100即死の刃 | circuit_debug |
+| 0x00CF | Item_100毒之刃 | 100％ Poison | 100毒の刃 | circuit_debug |
+| 0x00D0 | Item_100石化之刃 | 100％ Petrify | 100石化の刃 | circuit_debug |
+| 0x00D1 | Item_100封魔之刃 | 100％ Mute | 100封魔の刃 | circuit_debug |
+| 0x00D2 | Item_100冻结之刃 | 100％ Freeze | 100凍結の刃 | circuit_debug |
+| 0x00D3 | Item_100封技之刃 | 100％ Seal | 100封技の刃 | circuit_debug |
+| 0x00D4 | Item_100炎伤之刃 | 100％ Burn | 100炎傷の刃 | circuit_debug |
+| 0x00D5 | Item_100黑暗之刃 | 100％ Blind | 100暗闇の刃 | circuit_debug |
+| 0x00D6 | Item_100睡眠之刃 | 100％ Blind | 100睡眠の刃 | circuit_debug |
+| 0x00D7 | Item_100混乱之刃 | 100％ Confuse | 100混乱の刃 | circuit_debug |
+| 0x00D8 | Item_100即死之刃 | 100％ Deathblow | 100即死の刃 | circuit_debug |
 
 ### 回路-普通 (98)
 
 | ID | 中文名 | 英文名 | 日文名 | 原类别 |
 |---|---|---|---|---|
-| 0x0064 | HP1 | HP 1 | ＨＰ１ | circuit_normal |
-| 0x0065 | HP2 | HP 2 | ＨＰ２ | circuit_normal |
-| 0x0066 | HP3 | HP 3 | ＨＰ３ | circuit_normal |
+| 0x0064 | ＨＰ１ | HP 1 | ＨＰ１ | circuit_normal |
+| 0x0065 | ＨＰ２ | HP 2 | ＨＰ２ | circuit_normal |
+| 0x0066 | ＨＰ３ | HP 3 | ＨＰ３ | circuit_normal |
 | 0x0067 | 水耀珠 | Water Gem | 水耀珠 | circuit_normal |
-| 0x0068 | EP1 | EP 1 | ＥＰ１ | circuit_normal |
-| 0x0069 | EP2 | EP 2 | ＥＰ２ | circuit_normal |
-| 0x006A | EP3 | EP 3 | ＥＰ３ | circuit_normal |
+| 0x0068 | ＥＰ１ | EP 1 | ＥＰ１ | circuit_normal |
+| 0x0069 | ＥＰ２ | EP 2 | ＥＰ２ | circuit_normal |
+| 0x006A | ＥＰ３ | EP 3 | ＥＰ３ | circuit_normal |
 | 0x006B | 银耀珠 | Silver Gem | 銀耀珠 | circuit_normal |
-| 0x006C | 攻击1 | Attack 1 | 攻撃１ | circuit_normal |
-| 0x006D | 攻击2 | Attack 2 | 攻撃２ | circuit_normal |
-| 0x006E | 攻击3 | Attack 3 | 攻撃３ | circuit_normal |
+| 0x006C | 攻击１ | Attack 1 | 攻撃１ | circuit_normal |
+| 0x006D | 攻击２ | Attack 2 | 攻撃２ | circuit_normal |
+| 0x006E | 攻击３ | Attack 3 | 攻撃３ | circuit_normal |
 | 0x006F | 红耀珠 | Ruby Gem | 紅耀珠 | circuit_normal |
-| 0x0070 | 防御1 | Defense 1 | 防御１ | circuit_normal |
-| 0x0071 | 防御2 | Defense 2 | 防御２ | circuit_normal |
-| 0x0072 | 防御3 | Defense 3 | 防御３ | circuit_normal |
+| 0x0070 | 防御１ | Defense 1 | 防御１ | circuit_normal |
+| 0x0071 | 防御２ | Defense 2 | 防御２ | circuit_normal |
+| 0x0072 | 防御３ | Defense 3 | 防御３ | circuit_normal |
 | 0x0073 | 琥耀珠 | Topaz Gem | 琥耀珠 | circuit_normal |
-| 0x0074 | 精神1 | Mind 1 | 精神１ | circuit_normal |
-| 0x0075 | 精神2 | Mind 2 | 精神２ | circuit_normal |
-| 0x0076 | 精神3 | Mind 3 | 精神３ | circuit_normal |
+| 0x0074 | 精神１ | Mind 1 | 精神１ | circuit_normal |
+| 0x0075 | 精神２ | Mind 2 | 精神２ | circuit_normal |
+| 0x0076 | 精神３ | Mind 3 | 精神３ | circuit_normal |
 | 0x0077 | 白耀珠 | Pearl Gem | 白耀珠 | circuit_normal |
-| 0x0078 | 魔防1 | Shield 1 | 魔防１ | circuit_normal |
-| 0x0079 | 魔防2 | Shield 2 | 魔防２ | circuit_normal |
-| 0x007A | 魔防3 | Shield 3 | 魔防３ | circuit_normal |
+| 0x0078 | 魔防１ | Shield 1 | 魔防１ | circuit_normal |
+| 0x0079 | 魔防２ | Shield 2 | 魔防２ | circuit_normal |
+| 0x007A | 魔防３ | Shield 3 | 魔防３ | circuit_normal |
 | 0x007B | 苍耀珠 | Sapphire Gem | 蒼耀珠 | circuit_normal |
-| 0x007C | 命中1 | Hit 1 | 命中１ | circuit_normal |
-| 0x007D | 命中2 | Hit 2 | 命中２ | circuit_normal |
-| 0x007E | 命中3 | Hit 3 | 命中３ | circuit_normal |
+| 0x007C | 命中１ | Hit 1 | 命中１ | circuit_normal |
+| 0x007D | 命中２ | Hit 2 | 命中２ | circuit_normal |
+| 0x007E | 命中３ | Hit 3 | 命中３ | circuit_normal |
 | 0x007F | 光耀珠 | Light Gem | 光耀珠 | circuit_normal |
-| 0x0080 | 回避1 | Evade 1 | 回避１ | circuit_normal |
-| 0x0081 | 回避2 | Evade 2 | 回避２ | circuit_normal |
-| 0x0082 | 回避3 | Evade 3 | 回避３ | circuit_normal |
+| 0x0080 | 回避１ | Evade 1 | 回避１ | circuit_normal |
+| 0x0081 | 回避２ | Evade 2 | 回避２ | circuit_normal |
+| 0x0082 | 回避３ | Evade 3 | 回避３ | circuit_normal |
 | 0x0083 | 翠耀珠 | Emerald Gem | 翠耀珠 | circuit_normal |
-| 0x0084 | 移动1 | Move 1 | 移動１ | circuit_normal |
-| 0x0085 | 移动2 | Move 2 | 移動２ | circuit_normal |
+| 0x0084 | 移动１ | Move 1 | 移動１ | circuit_normal |
+| 0x0085 | 移动２ | Move 2 | 移動２ | circuit_normal |
 | 0x0086 | 风耀珠 | Wind Gem | 風耀珠 | circuit_normal |
-| 0x0088 | 行动力1 | Action 1 | 行動力１ | circuit_normal |
-| 0x0089 | 行动力2 | Action 2 | 行動力２ | circuit_normal |
-| 0x008A | 行动力3 | Action 3 | 行動力３ | circuit_normal |
+| 0x0088 | 行动力１ | Action 1 | 行動力１ | circuit_normal |
+| 0x0089 | 行动力２ | Action 2 | 行動力２ | circuit_normal |
+| 0x008A | 行动力３ | Action 3 | 行動力３ | circuit_normal |
 | 0x008B | 黑耀珠 | Onyx Gem | 黒耀珠 | circuit_normal |
-| 0x008C | 妨害1 | Impede 1 | 妨害１ | circuit_normal |
-| 0x008D | 妨害2 | Impede 2 | 妨害２ | circuit_normal |
+| 0x008C | 妨害１ | Impede 1 | 妨害１ | circuit_normal |
+| 0x008D | 妨害２ | Impede 2 | 妨害２ | circuit_normal |
 | 0x008E | 绝耀珠 | Rift Gem | 絶耀珠 | circuit_normal |
-| 0x008F | 驱动1 | Cast 1 | 駆動１ | circuit_normal |
-| 0x0090 | 驱动2 | Cast 2 | 駆動２ | circuit_normal |
+| 0x008F | 驱动１ | Cast 1 | 駆動１ | circuit_normal |
+| 0x0090 | 驱动２ | Cast 2 | 駆動２ | circuit_normal |
 | 0x0091 | 刻耀珠 | Time Gem | 刻耀珠 | circuit_normal |
-| 0x0092 | 省EP1 | EP Cut 1 | 省ＥＰ１ | circuit_normal |
-| 0x0093 | 省EP2 | EP Cut 2 | 省ＥＰ２ | circuit_normal |
-| 0x0094 | 省EP3 | EP Cut 3 | 省ＥＰ３ | circuit_normal |
+| 0x0092 | 省ＥＰ１ | EP Cut 1 | 省ＥＰ１ | circuit_normal |
+| 0x0093 | 省ＥＰ２ | EP Cut 2 | 省ＥＰ２ | circuit_normal |
+| 0x0094 | 省ＥＰ３ | EP Cut 3 | 省ＥＰ３ | circuit_normal |
 | 0x0095 | 金耀珠 | Gold Gem | 金耀珠 | circuit_normal |
 | 0x0096 | 毒之刃 | Poison | 毒の刃 | circuit_normal |
 | 0x0097 | 石化之刃 | Petrify | 石化の刃 | circuit_normal |
@@ -371,14 +371,14 @@
 | 0x00BC | 缚魔 | Shackle | 縛魔 | circuit_normal |
 | 0x00BD | 幻胧 | Shroud | 幻朧 | circuit_normal |
 | 0x00BE | 毒之刃2 | Poison 2 | 毒の刃２ | circuit_normal |
-| 0x00BF | 石化之刃2 | Petrify 2 | 石化の刃２ | circuit_normal |
-| 0x00C0 | 封魔之刃2 | Mute 2 | 封魔の刃２ | circuit_normal |
-| 0x00C1 | 冻结之刃2 | Freeze 2 | 凍結の刃２ | circuit_normal |
-| 0x00C2 | 封技之刃2 | Seal 2 | 封技の刃２ | circuit_normal |
-| 0x00C3 | 炎伤之刃2 | Burn 2 | 炎傷の刃２ | circuit_normal |
-| 0x00C4 | 暗之刃2 | Blind 2 | 暗闇の刃２ | circuit_normal |
-| 0x00C5 | 睡眠之刃2 | Sleep 2 | 睡眠の刃２ | circuit_normal |
-| 0x00C6 | 混乱之刃2 | Confuse 2 | 混乱の刃２ | circuit_normal |
+| 0x00BF | 石化之刃２ | Petrify 2 | 石化の刃２ | circuit_normal |
+| 0x00C0 | 封魔之刃２ | Mute 2 | 封魔の刃２ | circuit_normal |
+| 0x00C1 | 冻结之刃２ | Freeze 2 | 凍結の刃２ | circuit_normal |
+| 0x00C2 | 封技之刃２ | Seal 2 | 封技の刃２ | circuit_normal |
+| 0x00C3 | 炎伤之刃２ | Burn 2 | 炎傷の刃２ | circuit_normal |
+| 0x00C4 | 暗之刃２ | Blind 2 | 暗闇の刃２ | circuit_normal |
+| 0x00C5 | 睡眠之刃２ | Sleep 2 | 睡眠の刃２ | circuit_normal |
+| 0x00C6 | 混乱之刃２ | Confuse 2 | 混乱の刃２ | circuit_normal |
 
 ### 回路-核心 (22)
 
@@ -400,45 +400,45 @@
 | 0x00E9 | 无限 | Moebius | メビウス | circuit_core |
 | 0x00EA | 小丑 | Juggler | ジャグラー | circuit_core |
 | 0x00EB | 罪恶 | Criminal | クリミナル | circuit_core |
-| 0x00EC | 草薤 | Kusanagi | クサナギ | circuit_core |
+| 0x00EC | 草12_EC | Kusanagi | クサナギ | circuit_core |
 | 0x00ED | 纹章 | Emblem | エンブレム | circuit_core |
 | 0x00EE | 灵猫 | Katze | カッツェ | circuit_core |
 | 0x00EF | 骑士 | Chevalier | シュバリエ | circuit_core |
 | 0x00F0 | 贤者 | Magius | マギウス | circuit_core |
-| 0x00F1 | 草薤 | Kusanagi | クサナギ | circuit_core |
+| 0x00F1 | 草12_F1 | Kusanagi | クサナギ | circuit_core |
 
 ### 料理 (74)
 
 | ID | 中文名 | 英文名 | 日文名 | 原类别 |
 |---|---|---|---|---|
-| 0x0190 | 天上面[日轮] | Heavenly Noodles | 天上麺≪日輪≫ | props_cooking |
+| 0x0190 | 天上面_日轮 | Heavenly Noodles | 天上麺≪日輪≫ | props_cooking |
 | 0x0191 | 微苦担担面 | Peddler's Noodles | ピリ苦坦々麺 | props_cooking |
-| 0x0192 | 极苦面[断头] | Headsman's Noodles | 極苦麺≪断頭≫ | props_cooking |
-| 0x0193 | 神仙麻婆[麒麟] | Immortal Mapo Tofu | 神仙麻婆≪麒麟≫ | props_cooking |
+| 0x0192 | 极苦面_断头 | Headsman's Noodles | 極苦麺≪断頭≫ | props_cooking |
+| 0x0193 | 神仙麻婆_麒麟 | Immortal Mapo Tofu | 神仙麻婆≪麒麟≫ | props_cooking |
 | 0x0194 | 药膳麻婆豆腐 | Medicinal Mapo Tofu | 薬膳麻婆豆腐 | props_cooking |
-| 0x0195 | 炼狱麻婆[阎魔] | Yama's Purga-tofu | 煉獄麻婆≪閻魔≫ | props_cooking |
+| 0x0195 | 炼狱麻婆_阎魔 | Yama's Purga-tofu | 煉獄麻婆≪閻魔≫ | props_cooking |
 | 0x0196 | 天下一品炒饭 | Peerless Fried Rice | 天下一炒飯 | props_cooking |
 | 0x0197 | 龙老炒饭 | Dragon Fried Rice | 龍老炒飯 | props_cooking |
 | 0x0198 | 杂色锅巴饭 | Scorched Fried Rice | まだら焦げ飯 | props_cooking |
-| 0x0199 | 极品牛排[刚] | Piquant Steak | 極上ステーキ≪剛≫ | props_cooking |
+| 0x0199 | 极品牛排_刚 | Piquant Steak | 極上ステーキ≪剛≫ | props_cooking |
 | 0x019A | 精力牛排 | Stamina Steak | スタミナステーキ | props_cooking |
-| 0x019B | 顽固肉排[岩] | Rock-Hard Jerky | 頑固肉≪巌≫ | props_cooking |
+| 0x019B | 顽固肉排_岩 | Rock-Hard Jerky | 頑固肉≪巌≫ | props_cooking |
 | 0x019C | 三日久煮炖菜 | Three-Day Stew | 三日煮込みシチュー | props_cooking |
 | 0x019D | 久煮炖菜 | Braised Stew | 煮込みシチュー | props_cooking |
-| 0x019E | 混沌久煮[浊] | Abominable Stew | 混沌煮込み≪濁≫ | props_cooking |
-| 0x019F | 大地锅[烂漫] | Cornucopia Hotpot | 大地鍋≪爛漫≫ | props_cooking |
+| 0x019E | 混沌久煮_浊 | Abominable Stew | 混沌煮込み≪濁≫ | props_cooking |
+| 0x019F | 大地锅_烂漫 | Cornucopia Hotpot | 大地鍋≪爛漫≫ | props_cooking |
 | 0x01A0 | 大饱口福锅 | Bellyful Hotpot | 満腹寄せ鍋 | props_cooking |
-| 0x01A1 | 男人料理[山] | Mountaineer's Meal | 男料理≪山≫ | props_cooking |
-| 0x01A2 | 天河锅[瑞云] | 'Cosmic Ocean' Hotpot | 天河鍋≪瑞雲≫ | props_cooking |
+| 0x01A1 | 男人料理_山 | Mountaineer's Meal | 男料理≪山≫ | props_cooking |
+| 0x01A2 | 天河锅_瑞云 | 'Cosmic Ocean' Hotpot | 天河鍋≪瑞雲≫ | props_cooking |
 | 0x01A3 | 芳醇潮锅 | 'Tide of Plenty' Hotpot | 芳醇潮鍋 | props_cooking |
-| 0x01A4 | 男人料理[川] | Riverman's Meal | 男料理≪川≫ | props_cooking |
-| 0x01A5 | 特快炸鱼[疾] | Turbo Fry | 特急フライ≪疾≫ | props_cooking |
+| 0x01A4 | 男人料理_川 | Riverman's Meal | 男料理≪川≫ | props_cooking |
+| 0x01A5 | 特快炸鱼_疾 | Turbo Fry | 特急フライ≪疾≫ | props_cooking |
 | 0x01A6 | 炸鱼排 | Fried Fish | フライドフィッシュ | props_cooking |
 | 0x01A7 | 箭之鱼 | Sardineedles | フィッシュアロー | props_cooking |
 | 0x01A8 | 丰盛蛋包饭 | Heaping Omelet Rice | メガ盛オムライス | props_cooking |
 | 0x01A9 | 大师蛋包饭 | Chef's Special Omelet Rice | 匠風オムライス | props_cooking |
 | 0x01AA | 激辣炸弹蛋包饭 | Spicy Bombelet Rice | 激辛ボムライス | props_cooking |
-| 0x01AB | 翠玉面[治愈] | Soothing Jade Noodles | 翠玉麺≪癒し≫ | props_cooking |
+| 0x01AB | 翠玉面_治愈 | Soothing Jade Noodles | 翠玉麺≪癒し≫ | props_cooking |
 | 0x01AC | 香草面 | Herb Pasta | ハーブパスタ | props_cooking |
 | 0x01AD | 细针面 | Pasta Needles | ニードルパスタ | props_cooking |
 | 0x01AE | 双层汉堡 | Double Burger | ダブルバーガー | props_cooking |
@@ -450,40 +450,40 @@
 | 0x01B4 | 强效三明治 | Powerful Sandwich | パワフルサンド | props_cooking |
 | 0x01B5 | 鲜美三明治 | Fresh Sandwich | フレッシュサンド | props_cooking |
 | 0x01B6 | 守护三明治 | Warding Sandwich | プロテクサンド | props_cooking |
-| 0x01B7 | 真心饭盒[诚] | Sincere Lunchbox | 真心弁当≪誠≫ | props_cooking |
-| 0x01B8 | 行乐午餐饭盒 | Picnic Lunchbox | 行楽ランチボックス | props_cooking |
-| 0x01B9 | 不可思议盒饭[仰天] | Surprise Lunchbox | 不思議弁当≪仰天≫ | props_cooking |
+| 0x01B7 | 真心盒饭_诚 | Sincere Lunchbox | 真心弁当≪誠≫ | props_cooking |
+| 0x01B8 | 行乐午餐盒饭 | Picnic Lunchbox | 行楽ランチボックス | props_cooking |
+| 0x01B9 | 不可思议盒饭_仰天 | Surprise Lunchbox | 不思議弁当≪仰天≫ | props_cooking |
 | 0x01BA | 辉煌汤 | Brilliant Soup | ブリリアントスープ | props_cooking |
 | 0x01BB | 奶油浓汤 | Milk Potage | ミルクポタージュ | props_cooking |
 | 0x01BC | 奇妙汤 | Magica Soup | マジカスープ | props_cooking |
 | 0x01BD | 奇幻糖果 | Wonder Candy | ワンダーキャンディ | props_cooking |
 | 0x01BE | 七色棉花糖 | Rainbow Cotton Candy | 七色わたあめ | props_cooking |
 | 0x01BF | 秘密棉花糖 | Enigma Candy | エニグマキャンディ | props_cooking |
-| 0x01C0 | 天上甜点[夜月] | Midnight Delight | 天菓≪夜月≫ | props_cooking |
+| 0x01C0 | 天上甜点_夜月 | Midnight Delight | 天菓≪夜月≫ | props_cooking |
 | 0x01C1 | 香甜巧克力蛋糕 | Sweet Chocolate | スイートショコラ | props_cooking |
 | 0x01C2 | 反射巧克力蛋糕 | Reflective Chocolate | リフレクショコラ | props_cooking |
-| 0x01C3 | 宝物甜点[白雪] | White Snow Pudding | 宝菓≪白雪≫ | props_cooking |
+| 0x01C3 | 宝物甜点_白雪 | White Snow Pudding | 宝菓≪白雪≫ | props_cooking |
 | 0x01C4 | 溜滑杏仁豆腐 | Smooth Almond Jelly | つるつる杏仁豆腐 | props_cooking |
 | 0x01C5 | 爽弹布丁 | Jiggly Pudding | プルプルプリン | props_cooking |
-| 0x01C6 | 冰凉甜点[七彩] | Septicolored Sherbet | 氷菓≪七彩≫ | props_cooking |
+| 0x01C6 | 冰凉甜点_七彩 | Septicolored Sherbet | 氷菓≪七彩≫ | props_cooking |
 | 0x01C7 | 混合冰激凌 | Mixed Gelato | ミックスジェラート | props_cooking |
 | 0x01C8 | 痊愈冰激凌 | Bracing Ice Cream | リカバリアイス | props_cooking |
-| 0x01C9 | 绝品甜点[瞬动] | Impulse Popcorn | 絶菓≪瞬動≫ | props_cooking |
+| 0x01C9 | 绝品甜点_瞬动 | Impulse Popcorn | 絶菓≪瞬動≫ | props_cooking |
 | 0x01CA | 轻快爆米花 | Light Popcorn | 軽快ポップコーン | props_cooking |
 | 0x01CB | 隐秘爆米花 | Secrecy Popcorn | 隠密ポップコーン | props_cooking |
-| 0x01CC | 玉露[绿风] | Summer Breeze Blend | 玉露≪緑風≫ | props_cooking |
+| 0x01CC | 玉露_绿风 | Summer Breeze Blend | 玉露≪緑風≫ | props_cooking |
 | 0x01CD | 考究抹茶拿铁 | Select Matcha Latte | こだわり抹茶ラテ | props_cooking |
-| 0x01CE | 良药[熊竹] | Potent Bamboo Remedy | 良薬≪熊笹≫ | props_cooking |
-| 0x01CF | 甘露[紫绀] | Periwinkle Nectar | 甘露≪紫紺≫ | props_cooking |
+| 0x01CE | 良药_熊竹 | Potent Bamboo Remedy | 良薬≪熊笹≫ | props_cooking |
+| 0x01CF | 甘露_紫绀 | Periwinkle Nectar | 甘露≪紫紺≫ | props_cooking |
 | 0x01D0 | 铃铛草莓果汁 | Bellberry Juice | ベルベリージュース | props_cooking |
 | 0x01D1 | 紫色液体 | Purple Liquid | パープルリキッド | props_cooking |
-| 0x01D2 | 黑茶[梦魇杀手] | Nightmare Slayer | 黒茶≪夢魔殺し≫ | props_cooking |
+| 0x01D2 | 黑茶_梦魇杀手 | Nightmare Slayer | 黒茶≪夢魔殺し≫ | props_cooking |
 | 0x01D3 | 浓厚卡布奇诺 | Rich Cappuccino | 濃厚カプチーノ | props_cooking |
 | 0x01D4 | 褐色液体 | Brown Liquid | ブラウンリキッド | props_cooking |
-| 0x01D5 | 秘水[桃源乡] | Arcadian Ambrosia | 秘水≪桃源郷≫ | props_cooking |
-| 0x01D6 | 桃色紫薇 | Pinky Rose | ピンキーローズ | props_cooking |
+| 0x01D5 | 秘水_桃源乡 | Arcadian Ambrosia | 秘水≪桃源郷≫ | props_cooking |
+| 0x01D6 | 桃色蔷薇 | Pinky Rose | ピンキーローズ | props_cooking |
 | 0x01D7 | 粉红液体 | Pink Liquid | ももいろリキッド | props_cooking |
-| 0x01D8 | 失败作[引以为戒] | A Cautionary Fail | 失敗作《戒め》 | props_cooking |
+| 0x01D8 | 失败作_引以为戒 | A Cautionary Fail | 失敗作《戒め》 | props_cooking |
 | 0x01D9 | 猫食 | Cat Food | ねこまんま | props_cooking |
 
 ### 装备-服装 (34)
@@ -529,7 +529,7 @@
 
 | ID | 中文名 | 英文名 | 日文名 | 原类别 |
 |---|---|---|---|---|
-| 0x046A | 利剑『隼风』 | Hayakaze | 利剣「隼風」 | equipment_weapon_Arios |
+| 0x046A | 利剑_隼风 | Hayakaze | 利剣「隼風」 | equipment_weapon_Arios |
 
 ### 装备-武器-兰迪 (12)
 
@@ -542,7 +542,7 @@
 | 0x042A | 高热蒸汽 | Hyper Stream | ハイパースチーム | equipment_weapon_Randy |
 | 0x042B | 白银冲击枪 | Vice Shocker | ヴァイスショッカー | equipment_weapon_Randy |
 | 0x042C | 黑暗制造者 | Darkbringer | ダークブリンガー | equipment_weapon_Randy |
-| 0x042D | 破坏神·改 | Destroyer II | デストロイヤー改 | equipment_weapon_Randy |
+| 0x042D | 破坏神改 | Destroyer II | デストロイヤー改 | equipment_weapon_Randy |
 | 0x042E | 终极冲击 | Omega Drive | オメガドライヴ | equipment_weapon_Randy |
 | 0x042F | 邪恶粉碎者 | Devil Smasher | デビルスマッシャー | equipment_weapon_Randy |
 | 0x0430 | 天灾 | Catastrophe | カタストロフィ | equipment_weapon_Randy |
@@ -586,7 +586,7 @@
 
 | ID | 中文名 | 英文名 | 日文名 | 原类别 |
 |---|---|---|---|---|
-| 0x03E8 | 强力破坏者·改 | Hard Breaker II | ハードブレイカー改 | equipment_weapon_Lloyd |
+| 0x03E8 | 强力破坏者改 | Hard Breaker II | ハードブレイカー改 | equipment_weapon_Lloyd |
 | 0x03E9 | 双钉棍 | Twin Hammer | ツインハンマー | equipment_weapon_Lloyd |
 | 0x03EA | 螺纹双棍 | Double Twister | ダブルツイスター | equipment_weapon_Lloyd |
 | 0x03EB | 罪恶制裁者 | Crime Buster | クライムバスター | equipment_weapon_Lloyd |
@@ -596,8 +596,8 @@
 | 0x03EF | 捕捉者 | Clutch Hammer | クラッチハンマー | equipment_weapon_Lloyd |
 | 0x03F0 | 裂地棍 | Piledriver | パイルドライバー | equipment_weapon_Lloyd |
 | 0x03F1 | 神圣五芒星 | Pentagon | ペンタゴン | equipment_weapon_Lloyd |
-| 0x03F2 | 七星击 | Zero Breaker | ゼロ・ブレイカー | equipment_weapon_Lloyd |
-| 0x03F3 | 零·破坏者 | Seventh Nova | 七星撃 | equipment_weapon_Lloyd |
+| 0x03F2 | 零破坏者 | Zero Breaker | ゼロ・ブレイカー | equipment_weapon_Lloyd |
+| 0x03F3 | 七星击 | Seventh Nova | 七星撃 | equipment_weapon_Lloyd |
 | 0x03F4 | 雷神之佑 | Mjolnir | ミョルニール | equipment_weapon_Lloyd |
 | 0x03F5 | 无限之光 | Infinity | インフィニティ | equipment_weapon_Lloyd |
 | 0x03F6 | 钢管旋棍 | Pipe Tonfa | パイプトンファー | equipment_weapon_Lloyd |
@@ -608,14 +608,14 @@
 |---|---|---|---|---|
 | 0x03FD | 倾国 | Charlotte | シャルロッテ | equipment_weapon_Elie |
 | 0x03FE | 喜悦 | Moliere | モリエール | equipment_weapon_Elie |
-| 0x03FF | 红色樱草II | Primrose 2 | プリムローズⅡ | equipment_weapon_Elie |
+| 0x03FF | 红色樱草Ⅱ | Primrose 2 | プリムローズⅡ | equipment_weapon_Elie |
 | 0x0400 | 丝绒之吻 | Velvet Kiss | ベルベットキス | equipment_weapon_Elie |
 | 0x0401 | 纯真女皇 | Ekaterina | エカテリーナ | equipment_weapon_Elie |
 | 0x0402 | 高洁圣女 | Adelheid | アーデルハイト | equipment_weapon_Elie |
 | 0x0403 | 银色密雨 | Silver Rain | シルバーレイン | equipment_weapon_Elie |
 | 0x0404 | 神恩 | Sacrament | サクラメント | equipment_weapon_Elie |
 | 0x0405 | 暗灰小丑 | Gray Joker | グレイジョーカー | equipment_weapon_Elie |
-| 0x0406 | 千金·烙印 | Lady Brand | レディ・ブランド | equipment_weapon_Elie |
+| 0x0406 | 千金烙印 | Lady Brand | レディ・ブランド | equipment_weapon_Elie |
 | 0x0407 | 血色光辉 | Bloody Lucien | ブラッディルシアン | equipment_weapon_Elie |
 | 0x0408 | 纯白圣枪 | Akkelte | アークケルテ | equipment_weapon_Elie |
 | 0x0409 | 能天使威光 | Exis Ray | エクスシアレイ | equipment_weapon_Elie |
@@ -627,7 +627,7 @@
 | 0x0460 | 八尺乌 | Yatagarasu | 八咫烏 | equipment_weapon_Rixia |
 | 0x0461 | 黑鸫 | Kuro Tsugumi | 黒鶫 | equipment_weapon_Rixia |
 | 0x0462 | 降魔不知火 | Gouma Shiranui | 降魔不知火 | equipment_weapon_Rixia |
-| 0x0463 | 灵剑·奠邪 | Bakuya | 霊剣・莫邪 | equipment_weapon_Rixia |
+| 0x0463 | 灵剑莫邪 | Bakuya | 霊剣・莫邪 | equipment_weapon_Rixia |
 | 0x0464 | 曳影之剑 | Eieinoken | 曳影之剣 | equipment_weapon_Rixia |
 
 ### 装备-武器-蔡特 (2)
@@ -646,9 +646,9 @@
 | 0x044E | 闪光甲虫 | Flare Beetle | フレアビートル | equipment_weapon_Noel |
 | 0x044F | 圣十字 | Crusader | クルセイダー | equipment_weapon_Noel |
 | 0x0450 | 野马 | Mustang | ムスタング | equipment_weapon_Noel |
-| 0x0451 | M8公猫 | M8 Tomcat | Ｍ８トムキャット | equipment_weapon_Noel |
+| 0x0451 | Ｍ８公猫 | M8 Tomcat | Ｍ８トムキャット | equipment_weapon_Noel |
 | 0x0452 | 杀戮黄蜂 | Killer Hornet | キラーホーネット | equipment_weapon_Noel |
-| 0x0453 | 三重风暴 | Delta Storm | デルタストーム | equipment_weapon_Noel |
+| 0x0453 | 三重暴风 | Delta Storm | デルタストーム | equipment_weapon_Noel |
 | 0x0454 | 无畏之枪 | Dread Note | ドレッドノート | equipment_weapon_Noel |
 | 0x0455 | 白隼 | White Falcon | ホワイトファルコン | equipment_weapon_Noel |
 | 0x0456 | 第五爆裂枪 | Fifth Blaster | フィフスブラスター | equipment_weapon_Noel |
@@ -709,15 +709,15 @@
 
 | ID | 中文名 | 英文名 | 日文名 | 原类别 |
 |---|---|---|---|---|
-| 0x001E | 珊瑚戒指+ | Coral Ring+ | コーラルリング＋ | equipment_jewelry |
-| 0x001F | 英雄戒指+ | Marble Ring+ | マーブルリング＋ | equipment_jewelry |
-| 0x0020 | 夜光眼镜+ | Luminous Glasses+ | ルミナスグラス＋ | equipment_jewelry |
-| 0x0021 | 凉爽项链+ | Cool Necklace+ | クールネックレス＋ | equipment_jewelry |
-| 0x0022 | 打火机+ | Lighter+ | フレイムジッポー＋ | equipment_jewelry |
-| 0x0023 | 幻彩围巾+ | Mystic Stole+ | ミスティストール＋ | equipment_jewelry |
-| 0x0024 | 叮当耳环+ | Tinkle Earrings+ | ティンクルピアス＋ | equipment_jewelry |
-| 0x0025 | 钢手镯+ | Steel Wrist+ | スティールリスト＋ | equipment_jewelry |
-| 0x0026 | 花之瓶+ | Floral Bottle+ | フローラルボトル＋ | equipment_jewelry |
+| 0x001E | 珊瑚戒指Plus | Coral Ring+ | コーラルリング＋ | equipment_jewelry |
+| 0x001F | 英雄戒指Plus | Marble Ring+ | マーブルリング＋ | equipment_jewelry |
+| 0x0020 | 夜光眼镜Plus | Luminous Glasses+ | ルミナスグラス＋ | equipment_jewelry |
+| 0x0021 | 凉爽项链Plus | Cool Necklace+ | クールネックレス＋ | equipment_jewelry |
+| 0x0022 | 打火机Plus | Lighter+ | フレイムジッポー＋ | equipment_jewelry |
+| 0x0023 | 幻彩围巾Plus | Mystic Stole+ | ミスティストール＋ | equipment_jewelry |
+| 0x0024 | 叮当耳环Plus | Tinkle Earrings+ | ティンクルピアス＋ | equipment_jewelry |
+| 0x0025 | 钢手镯Plus | Steel Wrist+ | スティールリスト＋ | equipment_jewelry |
+| 0x0026 | 花之瓶Plus | Floral Bottle+ | フローラルボトル＋ | equipment_jewelry |
 | 0x0027 | 坚硬肉干 | Hard Jerky | ハードジャーキー | equipment_jewelry |
 | 0x0028 | 海刃奖牌 | Ocean Edge's Medal | 海刃のメダル | equipment_jewelry |
 | 0x0029 | 水狂奖牌 | Crazy Wave's Medal | 水狂のメダル | equipment_jewelry |
@@ -731,8 +731,8 @@
 | 0x0031 | 咪雪爪子 | Mishette Paws | みーしぇハンド | equipment_jewelry |
 | 0x0032 | 咪雪缎带 | Mishette Ribbon | みーしぇリボン | equipment_jewelry |
 | 0x0033 | 进击刻印 | Rush Emblem | 進撃の刻印 | equipment_jewelry |
-| 0x0034 | 超·必胜扎头巾 | True Gladiator Headband | 超・必勝ハチマキ | equipment_jewelry |
-| 0x0035 | 超·斗魂腰带 | True Gladiator Belt | 超・闘魂ベルト | equipment_jewelry |
+| 0x0034 | 超必胜扎头巾 | True Gladiator Headband | 超・必勝ハチマキ | equipment_jewelry |
+| 0x0035 | 超斗魂腰带 | True Gladiator Belt | 超・闘魂ベルト | equipment_jewelry |
 | 0x0036 | 正义徽章 | Medal of Justice | 正義の徽章 | equipment_jewelry |
 | 0x0037 | 幸运刻印 | Luck Emblem | 幸運の刻印 | equipment_jewelry |
 | 0x0038 | 光晓之冠 | Dawn Crown | 光暁の冠 | equipment_jewelry |
@@ -794,12 +794,12 @@
 | 0x01F5 | 中回复药 | Teara Balm | ティアラの薬 | props_normal |
 | 0x01F6 | 大回复药 | Tearal Balm | ティアラルの薬 | props_normal |
 | 0x01F7 | 全回复药 | Tear-All Balm | ティア・オルの薬 | props_normal |
-| 0x01F8 | EP填充剂I | EP Charge | ＥＰチャージⅠ | props_normal |
-| 0x01F9 | EP填充剂II | EP Charge II | ＥＰチャージⅡ | props_normal |
-| 0x01FA | EP填充剂III | EP Charge III | ＥＰチャージⅢ | props_normal |
+| 0x01F8 | ＥＰ填充剂Ⅰ | EP Charge | ＥＰチャージⅠ | props_normal |
+| 0x01F9 | ＥＰ填充剂Ⅱ | EP Charge II | ＥＰチャージⅡ | props_normal |
+| 0x01FA | ＥＰ填充剂Ⅲ | EP Charge III | ＥＰチャージⅢ | props_normal |
 | 0x01FB | 复苏药 | Reviving Balm | セラスの薬 | props_normal |
 | 0x01FC | 圣灵药 | Celestial Balm | アセラスの薬 | props_normal |
-| 0x01FD | 圣灵药·改 | Celestial Balm EX | アセラスの薬・改 | props_normal |
+| 0x01FD | 圣灵药改 | Celestial Balm EX | アセラスの薬・改 | props_normal |
 | 0x01FE | 还魂粉 | Zeram Powder | ゼラムパウダー | props_normal |
 | 0x01FF | 还魂胶囊 | Zeram Capsule | ゼラムカプセル | props_normal |
 | 0x0200 | 解毒药 | Antidote | 解毒薬 | props_normal |
@@ -812,7 +812,7 @@
 | 0x0207 | 提神薄荷 | Mint Drop | ミントドロップ | props_normal |
 | 0x0208 | 苏醒药 | Stimulant | 気付け薬 | props_normal |
 | 0x0209 | 镇静剂 | Sedative | 鎮静薬 | props_normal |
-| 0x020A | S-药片 | S-Tablet | Ｓ－タブレット | props_normal |
+| 0x020A | Ｓ药片 | S-Tablet | Ｓ－タブレット | props_normal |
 | 0x020B | 痊愈之药 | Curia Balm | キュリアの薬 | props_normal |
 | 0x020C | 爆灵宝玉 | Burst Orb | バーストオーブ | props_normal |
 | 0x020D | 烟雾弹 | Smoke Grenade | 煙り玉 | props_normal |
@@ -829,14 +829,14 @@
 | 0x0219 | 罐装咖啡 | Canned Coffee | 缶コーヒー | props_normal |
 | 0x021A | 强壮苦番茄猪骨汤 | Hearty Acerbic Pork Soup | 強壮にがトマ豚汁 | props_normal |
 | 0x021B | 暖心猪骨汤 | Warm Miso Soup | あったか豚汁 | props_normal |
-| 0x021C | 运动汽水X | Sporitan X | スポリタンＸ | props_normal |
+| 0x021C | 运动汽水Ｘ | Sporitan X | スポリタンＸ | props_normal |
 | 0x021D | 苦西红柿苏打 | Acerbic Tomato Soda | にがトマトソーダ | props_normal |
 
 ### 钓具-钓竿 (5)
 
 | ID | 中文名 | 英文名 | 日文名 | 原类别 |
 |---|---|---|---|---|
-| 0x0014 | 初级杆 | Primary Rod | プライマリロッド | fishing_rod |
+| 0x0014 | 初级竿 | Primary Rod | プライマリロッド | fishing_rod |
 | 0x0015 | 小巧射手 | Little Shooter | リトルシューター | fishing_rod |
 | 0x0016 | 竹竿 | Bamboo Rod | 竹竿 | fishing_rod |
 | 0x0017 | 钢竿侵略者 | Viking Rod | 剛竿バイキング | fishing_rod |
@@ -850,8 +850,8 @@
 | 0x0187 | 熬炼丸子 | Dumplings | 練り団子 | fishing_bait |
 | 0x0188 | 红虫 | Red Flies | アカムシ | fishing_bait |
 | 0x0189 | 蚯蚓 | Earthworm | ミミズ | fishing_bait |
-| 0x018A | 熬炼丸子DX | Deluxe Dumplings | 練り団子ＤＸ | fishing_bait |
-| 0x018B | 虹丸EX | Rainbow Gem EX | 虹玉ＥＸ | fishing_bait |
+| 0x018A | 熬炼丸子ＤＸ | Deluxe Dumplings | 練り団子ＤＸ | fishing_bait |
+| 0x018B | 虹丸ＥＸ | Rainbow Gem EX | 虹玉ＥＸ | fishing_bait |
 | 0x018C | 垂钓大礼包 | Fishing Bait Set | 釣りエサセット | fishing_bait |
 
 ### 食材 (30)
@@ -866,7 +866,7 @@
 | 0x0131 | 魔兽之种 | Prickly Seed | 魔獣の種 | food |
 | 0x0132 | 魔兽明胶 | Clear Gelatin | 魔獣のゼラチン | food |
 | 0x0134 | 发芽糙米 | Sprouted Brown Rice | 発芽玄米 | food |
-| 0x0135 | 五谷味增 | Five-Colored Miso | 五穀味噌 | food |
+| 0x0135 | 五谷味噌 | Five-Colored Miso | 五穀味噌 | food |
 | 0x0136 | 百药精酒 | Healthy Liquor | 百薬精酒 | food |
 | 0x0137 | 朝摘香叶 | Fresh-Picked Leaf | 朝摘みリーフ | food |
 | 0x0138 | 清绿香草 | Green Herb | グリーンハーブ | food |
@@ -887,7 +887,7 @@
 | 0x0147 | 迷你胡萝卜 | Petite Carrot | プチキャロット | food |
 | 0x0148 | 苦西红柿 | Acerbic Tomato | にがトマト | food |
 | 0x0149 | 雪花里脊肉 | Marbled Steak | 霜降りヒレ肉 | food |
-| 0x014A | 新鲜白鱼肉 | Tender Whitefish | プリプリ白身 | food |
+| 0x014A | 新鲜白肉鱼 | Tender Whitefish | プリプリ白身 | food |
 
 ### 鱼类 (31)
 
@@ -897,7 +897,7 @@
 | 0x015F | 雪花蟹 | Snow Crab | スノーシュラブ | fishing_fish |
 | 0x0160 | 蓝带神仙鱼 | Azelfish | エーゼル | fishing_fish |
 | 0x0161 | 银伞鱼 | Kasagin | カサギン | fishing_fish |
-| 0x0162 | 阿尔摩里卡鲫鱼 | Armorican Carp | アルモリカブナ | fishing_fish |
+| 0x0162 | 阿尔摩利卡鲫鱼 | Armorican Carp | アルモリカブナ | fishing_fish |
 | 0x0163 | 乌龟 | Turtle | トタス | fishing_fish |
 | 0x0164 | 橙河鱼 | Tiger Rockfish | オロショ | fishing_fish |
 | 0x0165 | 岩穴鱼 | Rockeater | ロック | fishing_fish |
@@ -923,7 +923,7 @@
 | 0x0179 | 琥耀岩穴鱼 | Tiger Rockeater | ティガロック | fishing_fish |
 | 0x017A | 红耀食人鱼 | Crimson Eater | クリムゾンイータ | fishing_fish |
 | 0x017B | 苍耀巨龙鱼 | Bull Dragon | ブルドラゴン | fishing_fish |
-| 0x017C | 巨骨龙鱼皇 | Elder King | ギガルーク | fishing_fish |
+| 0x017C | 巨骨龙皇鱼 | Elder King | ギガルーク | fishing_fish |
 
 ## 参考技能/魔法术语
 

@@ -176,11 +176,11 @@ UI_TRANSLATIONS = {
         "选中 → 0": "选中 → 0",
         "编辑选中物品": "编辑选中物品",
         "物品 ID / 名称:": "物品 ID / 名称:",
-        "数量 (0-65535):": "数量 (0-65535):",
+        "数量 (0-99):": "数量 (0-99):",
         "应用修改": "应用修改",
         "请先选择一个物品": "请先选择一个物品",
         "物品 ID/名称无效或名称不唯一，请输入 1 到 65535 的 ID 或选择下拉项": "物品 ID/名称无效或名称不唯一，请输入 1 到 65535 的 ID 或选择下拉项",
-        "数量必须是 0 到 65535 之间的整数": "数量必须是 0 到 65535 之间的整数",
+        "数量必须是 0 到 99 之间的整数": "数量必须是 0 到 99 之间的整数",
         "目标物品已存在": "目标物品已存在",
         "目标 ID {code} 已存在。是否覆盖其数量并删除原物品？": "目标 ID {code} 已存在。是否覆盖其数量并删除原物品？",
         "物品 {old} 已替换为 {new}，数量 {qty}": "物品 {old} 已替换为 {new}，数量 {qty}",
@@ -297,11 +297,11 @@ UI_TRANSLATIONS = {
         "选中 → 0": "Selected → 0",
         "编辑选中物品": "Edit Selected Item",
         "物品 ID / 名称:": "Item ID / Name:",
-        "数量 (0-65535):": "Quantity (0-65535):",
+        "数量 (0-99):": "Quantity (0-99):",
         "应用修改": "Apply",
         "请先选择一个物品": "Select an item first",
         "物品 ID/名称无效或名称不唯一，请输入 1 到 65535 的 ID 或选择下拉项": "Invalid or ambiguous item ID/name. Enter an ID from 1 to 65535 or select a list item.",
-        "数量必须是 0 到 65535 之间的整数": "Quantity must be an integer from 0 to 65535.",
+        "数量必须是 0 到 99 之间的整数": "Quantity must be an integer from 0 to 99.",
         "目标物品已存在": "Target Item Exists",
         "目标 ID {code} 已存在。是否覆盖其数量并删除原物品？": "Target ID {code} already exists. Overwrite its quantity and remove the original item?",
         "物品 {old} 已替换为 {new}，数量 {qty}": "Replaced item {old} with {new}, quantity {qty}",
@@ -418,11 +418,11 @@ UI_TRANSLATIONS = {
         "选中 → 0": "選択 → 0",
         "编辑选中物品": "選択アイテムを編集",
         "物品 ID / 名称:": "アイテムID / 名前:",
-        "数量 (0-65535):": "数量 (0-65535):",
+        "数量 (0-99):": "数量 (0-99):",
         "应用修改": "適用",
         "请先选择一个物品": "先にアイテムを選択してください",
         "物品 ID/名称无效或名称不唯一，请输入 1 到 65535 的 ID 或选择下拉项": "アイテムID/名前が無効または一意ではありません。1～65535のIDを入力するか一覧から選択してください。",
-        "数量必须是 0 到 65535 之间的整数": "数量は0～65535の整数で入力してください。",
+        "数量必须是 0 到 99 之间的整数": "数量は0～99の整数で入力してください。",
         "目标物品已存在": "対象アイテムは既に存在します",
         "目标 ID {code} 已存在。是否覆盖其数量并删除原物品？": "対象ID {code} は既に存在します。数量を上書きして元のアイテムを削除しますか？",
         "物品 {old} 已替换为 {new}，数量 {qty}": "アイテム {old} を {new} に置換しました。数量 {qty}",
@@ -682,6 +682,7 @@ def ui_text(text, lang="zh_cn"):
 
 ITEM_ORDERED_CODES = tuple(code for cat_codes in ITEM_WRITE_ORDER for code in cat_codes)
 ITEM_ORDERED_SET = set(ITEM_ORDERED_CODES)
+ITEM_QUANTITY_MAX = 99
 
 def item_codes_for_categories(*categories):
     """按 BZH 写入顺序返回指定类别的物品代码。"""
@@ -1395,9 +1396,9 @@ class SaveEditor(tk.Tk):
         self._item_id_combo = ttk.Combobox(edit, textvariable=self._item_edit_id_var, width=42, state="normal")
         self._item_id_combo.grid(row=0, column=1, padx=2, pady=5, sticky="ew")
         self._item_id_combo.bind("<Return>", lambda _event: self._items_apply_edit())
-        ttk.Label(edit, text=self._t("数量 (0-65535):")).grid(row=0, column=2, padx=(10, 2), pady=5, sticky="e")
+        ttk.Label(edit, text=self._t("数量 (0-99):")).grid(row=0, column=2, padx=(10, 2), pady=5, sticky="e")
         self._item_edit_qty_var = tk.StringVar()
-        self._item_qty_spin = ttk.Spinbox(edit, from_=0, to=65535, textvariable=self._item_edit_qty_var, width=8)
+        self._item_qty_spin = ttk.Spinbox(edit, from_=0, to=ITEM_QUANTITY_MAX, textvariable=self._item_edit_qty_var, width=8)
         self._item_qty_spin.grid(row=0, column=3, padx=2, pady=5)
         self._item_qty_spin.bind("<Return>", lambda _event: self._items_apply_edit())
         ttk.Button(edit, text=self._t("应用修改"), command=self._items_apply_edit).grid(row=0, column=4, padx=5, pady=5)
@@ -1499,10 +1500,10 @@ class SaveEditor(tk.Tk):
         try:
             qty = int(self._item_edit_qty_var.get().strip())
         except ValueError:
-            messagebox.showerror(self._t("错误"), self._t("数量必须是 0 到 65535 之间的整数"))
+            messagebox.showerror(self._t("错误"), self._t("数量必须是 0 到 99 之间的整数"))
             return
-        if not 0 <= qty <= 0xFFFF:
-            messagebox.showerror(self._t("错误"), self._t("数量必须是 0 到 65535 之间的整数"))
+        if not 0 <= qty <= ITEM_QUANTITY_MAX:
+            messagebox.showerror(self._t("错误"), self._t("数量必须是 0 到 99 之间的整数"))
             return
 
         if new_code != old_code and qty > 0 and new_code in self._items_data:
