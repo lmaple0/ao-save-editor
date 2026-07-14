@@ -174,6 +174,17 @@ UI_TRANSLATIONS = {
         "名称语言:": "名称语言:",
         "选中 → 99": "选中 → 99",
         "选中 → 0": "选中 → 0",
+        "编辑选中物品": "编辑选中物品",
+        "物品 ID / 名称:": "物品 ID / 名称:",
+        "数量 (0-65535):": "数量 (0-65535):",
+        "应用修改": "应用修改",
+        "请先选择一个物品": "请先选择一个物品",
+        "物品 ID/名称无效或名称不唯一，请输入 1 到 65535 的 ID 或选择下拉项": "物品 ID/名称无效或名称不唯一，请输入 1 到 65535 的 ID 或选择下拉项",
+        "数量必须是 0 到 65535 之间的整数": "数量必须是 0 到 65535 之间的整数",
+        "目标物品已存在": "目标物品已存在",
+        "目标 ID {code} 已存在。是否覆盖其数量并删除原物品？": "目标 ID {code} 已存在。是否覆盖其数量并删除原物品？",
+        "物品 {old} 已替换为 {new}，数量 {qty}": "物品 {old} 已替换为 {new}，数量 {qty}",
+        "物品 {code} 数量已设为 {qty}": "物品 {code} 数量已设为 {qty}",
         "代码": "代码",
         "名称": "名称",
         "数量": "数量",
@@ -284,6 +295,17 @@ UI_TRANSLATIONS = {
         "名称语言:": "Name Language:",
         "选中 → 99": "Selected → 99",
         "选中 → 0": "Selected → 0",
+        "编辑选中物品": "Edit Selected Item",
+        "物品 ID / 名称:": "Item ID / Name:",
+        "数量 (0-65535):": "Quantity (0-65535):",
+        "应用修改": "Apply",
+        "请先选择一个物品": "Select an item first",
+        "物品 ID/名称无效或名称不唯一，请输入 1 到 65535 的 ID 或选择下拉项": "Invalid or ambiguous item ID/name. Enter an ID from 1 to 65535 or select a list item.",
+        "数量必须是 0 到 65535 之间的整数": "Quantity must be an integer from 0 to 65535.",
+        "目标物品已存在": "Target Item Exists",
+        "目标 ID {code} 已存在。是否覆盖其数量并删除原物品？": "Target ID {code} already exists. Overwrite its quantity and remove the original item?",
+        "物品 {old} 已替换为 {new}，数量 {qty}": "Replaced item {old} with {new}, quantity {qty}",
+        "物品 {code} 数量已设为 {qty}": "Set item {code} quantity to {qty}",
         "代码": "Code",
         "名称": "Name",
         "数量": "Qty",
@@ -394,6 +416,17 @@ UI_TRANSLATIONS = {
         "名称语言:": "名称言語:",
         "选中 → 99": "選択 → 99",
         "选中 → 0": "選択 → 0",
+        "编辑选中物品": "選択アイテムを編集",
+        "物品 ID / 名称:": "アイテムID / 名前:",
+        "数量 (0-65535):": "数量 (0-65535):",
+        "应用修改": "適用",
+        "请先选择一个物品": "先にアイテムを選択してください",
+        "物品 ID/名称无效或名称不唯一，请输入 1 到 65535 的 ID 或选择下拉项": "アイテムID/名前が無効または一意ではありません。1～65535のIDを入力するか一覧から選択してください。",
+        "数量必须是 0 到 65535 之间的整数": "数量は0～65535の整数で入力してください。",
+        "目标物品已存在": "対象アイテムは既に存在します",
+        "目标 ID {code} 已存在。是否覆盖其数量并删除原物品？": "対象ID {code} は既に存在します。数量を上書きして元のアイテムを削除しますか？",
+        "物品 {old} 已替换为 {new}，数量 {qty}": "アイテム {old} を {new} に置換しました。数量 {qty}",
+        "物品 {code} 数量已设为 {qty}": "アイテム {code} の数量を {qty} に設定しました",
         "代码": "コード",
         "名称": "名称",
         "数量": "数量",
@@ -1212,6 +1245,7 @@ class SaveEditor(tk.Tk):
             self._tree.heading("code", text=self._t("代码"))
             self._tree.heading("name", text=self._t("名称"))
             self._tree.heading("qty", text=self._t("数量"))
+            self._refresh_item_id_choices()
             if self._is_active_tab("物品"):
                 self._refresh_items_ui()
             else:
@@ -1352,9 +1386,26 @@ class SaveEditor(tk.Tk):
         scrollbar = ttk.Scrollbar(frm, orient="vertical", command=self._tree.yview)
         scrollbar.grid(row=1, column=1, sticky="ns")
         self._tree.configure(yscrollcommand=scrollbar.set)
+        self._tree.bind("<<TreeviewSelect>>", self._on_item_selected)
+
+        edit = ttk.LabelFrame(frm, text=self._t("编辑选中物品"))
+        edit.grid(row=2, column=0, columnspan=2, sticky="ew", padx=5, pady=(2, 5))
+        ttk.Label(edit, text=self._t("物品 ID / 名称:")).grid(row=0, column=0, padx=(5, 2), pady=5, sticky="e")
+        self._item_edit_id_var = tk.StringVar()
+        self._item_id_combo = ttk.Combobox(edit, textvariable=self._item_edit_id_var, width=42, state="normal")
+        self._item_id_combo.grid(row=0, column=1, padx=2, pady=5, sticky="ew")
+        self._item_id_combo.bind("<Return>", lambda _event: self._items_apply_edit())
+        ttk.Label(edit, text=self._t("数量 (0-65535):")).grid(row=0, column=2, padx=(10, 2), pady=5, sticky="e")
+        self._item_edit_qty_var = tk.StringVar()
+        self._item_qty_spin = ttk.Spinbox(edit, from_=0, to=65535, textvariable=self._item_edit_qty_var, width=8)
+        self._item_qty_spin.grid(row=0, column=3, padx=2, pady=5)
+        self._item_qty_spin.bind("<Return>", lambda _event: self._items_apply_edit())
+        ttk.Button(edit, text=self._t("应用修改"), command=self._items_apply_edit).grid(row=0, column=4, padx=5, pady=5)
+        edit.grid_columnconfigure(1, weight=1)
 
         self._items_data = {}  # code -> qty
         self._items_ui_dirty = True
+        self._refresh_item_id_choices()
 
     def _current_item_language(self):
         return self._current_ui_language()
@@ -1365,7 +1416,129 @@ class SaveEditor(tk.Tk):
 
     def _on_item_language_changed(self, _event=None):
         self._update_item_name_heading()
+        self._refresh_item_id_choices()
         self._refresh_items_ui()
+
+    def _format_item_choice(self, code):
+        return f"0x{code:04x} | {item_name(code, self._current_item_language())}"
+
+    def _refresh_item_id_choices(self):
+        if not hasattr(self, "_item_id_combo"):
+            return
+        codes = sorted(set(ITEM_DB) | ITEM_ORDERED_SET)
+        self._item_id_combo.configure(values=[self._format_item_choice(code) for code in codes])
+        selected = self._tree.selection() if hasattr(self, "_tree") else ()
+        if selected:
+            values = self._tree.item(selected[0], "values")
+            if values:
+                self._item_edit_id_var.set(self._format_item_choice(int(values[0], 16)))
+
+    def _on_item_selected(self, _event=None):
+        selected = self._tree.selection()
+        if not selected:
+            return
+        values = self._tree.item(selected[0], "values")
+        if not values:
+            return
+        code = int(values[0], 16)
+        self._item_edit_id_var.set(self._format_item_choice(code))
+        self._item_edit_qty_var.set(str(values[2]))
+
+    @staticmethod
+    def _parse_item_code(value):
+        raw = value.strip()
+        token = raw.split("|", 1)[0].strip()
+        try:
+            if token.lower().startswith("0x"):
+                return int(token, 16)
+            return int(token, 10)
+        except ValueError:
+            pass
+
+        needle = raw.casefold()
+        matches = []
+        for code in sorted(set(ITEM_DB) | ITEM_ORDERED_SET):
+            names = [item_name(code, "zh_cn")]
+            localized = get_item_i18n().get(code, {})
+            names.extend((localized.get("en", ""), localized.get("ja", "")))
+            if any(name and name.casefold() == needle for name in names):
+                matches.append(code)
+        if len(matches) == 1:
+            return matches[0]
+        raise ValueError("unknown or ambiguous item name")
+
+    def _select_item_code(self, code):
+        target = f"0x{code:04x}"
+        for iid in self._tree.get_children():
+            values = self._tree.item(iid, "values")
+            if values and str(values[0]).lower() == target:
+                self._tree.selection_set(iid)
+                self._tree.focus(iid)
+                self._tree.see(iid)
+                return
+
+    def _items_apply_edit(self):
+        if self.save.data is None:
+            self._set_status("请先打开存档文件")
+            return
+        selected = self._tree.selection()
+        if not selected:
+            messagebox.showwarning(self._t("提示"), self._t("请先选择一个物品"))
+            return
+
+        values = self._tree.item(selected[0], "values")
+        old_code = int(values[0], 16)
+        try:
+            new_code = self._parse_item_code(self._item_edit_id_var.get())
+        except (TypeError, ValueError):
+            messagebox.showerror(self._t("错误"), self._t("物品 ID/名称无效或名称不唯一，请输入 1 到 65535 的 ID 或选择下拉项"))
+            return
+        if not 1 <= new_code <= 0xFFFF:
+            messagebox.showerror(self._t("错误"), self._t("物品 ID/名称无效或名称不唯一，请输入 1 到 65535 的 ID 或选择下拉项"))
+            return
+        try:
+            qty = int(self._item_edit_qty_var.get().strip())
+        except ValueError:
+            messagebox.showerror(self._t("错误"), self._t("数量必须是 0 到 65535 之间的整数"))
+            return
+        if not 0 <= qty <= 0xFFFF:
+            messagebox.showerror(self._t("错误"), self._t("数量必须是 0 到 65535 之间的整数"))
+            return
+
+        if new_code != old_code and qty > 0 and new_code in self._items_data:
+            confirmed = messagebox.askyesno(
+                self._t("目标物品已存在"),
+                self._t("目标 ID {code} 已存在。是否覆盖其数量并删除原物品？", code=f"0x{new_code:04x}"),
+            )
+            if not confirmed:
+                return
+
+        previous = dict(self._items_data)
+        self._items_data.pop(old_code, None)
+        if qty > 0:
+            self._items_data[new_code] = qty
+        try:
+            self.save.write_items(self._items_data)
+        except ValueError as exc:
+            self._items_data = previous
+            messagebox.showerror(self._t("错误"), str(exc))
+            return
+
+        self._search_var.set("")
+        self._refresh_items_ui()
+        if qty > 0:
+            self._select_item_code(new_code)
+        else:
+            self._item_edit_id_var.set("")
+            self._item_edit_qty_var.set("")
+
+        if new_code != old_code and qty > 0:
+            self._set_status(
+                "物品 {old} 已替换为 {new}，数量 {qty}",
+                old=f"0x{old_code:04x}", new=f"0x{new_code:04x}", qty=qty,
+            )
+        else:
+            self._set_status("物品 {code} 数量已设为 {qty}", code=f"0x{old_code:04x}", qty=qty)
 
     def _refresh_items(self):
         self._search_var.set("")

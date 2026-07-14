@@ -19,7 +19,7 @@ The in-editor Chinese item names and labels use the Joyoland/欢乐百世 Simpli
 - Edit character stat snapshots for 11 characters.
 - Edit party slots and 12 bonding values.
 - Switch the GUI globally between Chinese, English, and Japanese for implemented labels and data names.
-- Browse, search, and rewrite the full 713-item inventory table, with Chinese/English/Japanese item-name display where available.
+- Browse and search the full 713-item inventory table, replace an item by ID/name, and set any quantity from 0 to 65,535, with Chinese/English/Japanese item-name display where available.
 - Toggle the 7-byte achievement bitmap, with all-unlock/all-lock buttons and Chinese/English/Japanese achievement-name display.
 - Batch-fill consumables, ingredients, books, fish, quartz, and equipment.
 - Edit battle manual counters.
