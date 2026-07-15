@@ -12,6 +12,21 @@ CHECKSUM_USER = 0x00026434
 ITEMS_START = 0x00000E2C
 ITEMS_END = 0x0000194C
 
+# Equipment is five contiguous u16 item IDs. Orbments are seven pairs of
+# (u16 item ID, u16 slot-enhancement level).
+LOADOUT_CHARACTERS = (
+    "Lloyd", "Elie", "Tio", "Randy", "Wazy", "Rixia",
+    "Garcia", "Arios", "Noel", "Dudley", "Zeit",
+)
+EQUIPMENT_START = 0x00000304
+EQUIPMENT_RECORD_SIZE = 0x0A
+EQUIPMENT_SLOT_NAMES = ("weapon", "clothes", "shoes", "accessory_1", "accessory_2")
+ORBMENT_START = 0x00000CDC
+ORBMENT_RECORD_SIZE = 0x1C
+ORBMENT_SLOT_COUNT = 7
+ORBMENT_SLOT_RECORD_SIZE = 4
+ORBMENT_ENHANCEMENT_LEVELS = frozenset((0, 1, 2))
+
 TEAM_SLOTS = tuple(0x0001AFE0 + index * 2 for index in range(8))
 KNOWN_TEAM_IDS = frozenset((
     *range(11), 15, 61, 82, 140, 160, 161, 0x00FF,

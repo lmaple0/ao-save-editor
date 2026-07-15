@@ -34,6 +34,7 @@ from ao_save_layout import (
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
+from ao_loadout_ui import LoadoutUiMixin
 from ao_reference_index_ui import ReferenceIndexUiMixin
 
 APP_DIR = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
@@ -1542,7 +1543,7 @@ class SaveData:
 # GUI
 # ============================================================
 
-class SaveEditor(ReferenceIndexUiMixin, tk.Tk):
+class SaveEditor(LoadoutUiMixin, ReferenceIndexUiMixin, tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("碧之轨迹 NISA版 存档修改器")
@@ -1594,6 +1595,12 @@ class SaveEditor(ReferenceIndexUiMixin, tk.Tk):
         self._nb.add(frm_char, text="角色属性")
         self._tab_defs.append((frm_char, "角色属性"))
         self._build_char_tab(frm_char)
+
+        # 人物装备 / 回路（可写，事务同步背包）
+        frm_loadout = ttk.Frame(self._nb)
+        self._nb.add(frm_loadout, text="人物装备 / 回路")
+        self._tab_defs.append((frm_loadout, "人物装备 / 回路"))
+        self._build_loadout_tab(frm_loadout, item_name, character_name)
 
         # 标签3: 队伍 & 好感
         frm_team = ttk.Frame(self._nb)
@@ -1681,6 +1688,8 @@ class SaveEditor(ReferenceIndexUiMixin, tk.Tk):
         key = self._active_tab_key()
         if key == "物品" and getattr(self, "_items_ui_dirty", True):
             self._refresh_items_ui()
+        elif key == "人物装备 / 回路" and getattr(self, "_loadout_ui_dirty", True):
+            self._refresh_loadout_ui()
         elif key == "怪物图鉴" and getattr(self, "_monster_ui_dirty", True):
             self._refresh_monster_ui()
         elif key == "资源索引" and getattr(self, "_reference_ui_dirty", True):
@@ -1776,6 +1785,8 @@ class SaveEditor(ReferenceIndexUiMixin, tk.Tk):
                 lbl.config(text=self._t(f"队员 {i+1}"))
         if hasattr(self, "_team_combos"):
             self._refresh_team_choices()
+        if hasattr(self, "_loadout_tab_frame"):
+            self._refresh_loadout_language()
         if hasattr(self, "_quick_party_buttons"):
             for btn, name in self._quick_party_buttons:
                 btn.config(text=self._t("{name} LV99 满HP/EP/CP", name=character_name(name, lang)))
@@ -2257,6 +2268,10 @@ class SaveEditor(ReferenceIndexUiMixin, tk.Tk):
         # 物品
         self._items_data = s.read_items()
         self._items_ui_dirty = True
+
+        self._loadout_ui_dirty = True
+        if self._is_active_tab("人物装备 / 回路"):
+            self._refresh_loadout_ui()
 
         # P0: 手册、成就 + 战斗
         self._refresh_recipes_ui()
