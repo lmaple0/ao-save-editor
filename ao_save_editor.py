@@ -29,6 +29,7 @@ from ao_save_layout import (
     RECIPE_BOOK_OFFSETS,
     ROLE_DISPLAY_OFFSETS,
     TEAM_SLOTS,
+    monster_record_is_complete,
 )
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
@@ -1212,10 +1213,7 @@ class MonsterRecord:
         # consistently exposes all seven information bits and both item fields;
         # bit 7 of stats varies by monster. Keep accepting the old payload so
         # imported/previously edited saves remain compatible.
-        return (
-            self.payload == MONSTER_COMPLETE_PAYLOAD
-            or (self.stats & 0x7F) == 0x7F and self.get_item == 0xFF
-        )
+        return monster_record_is_complete(self.payload)
 
     def binary(self):
         return struct.pack("<I4B", self.code, self.flag, self.resistance, self.stats, self.get_item)

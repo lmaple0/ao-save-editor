@@ -51,6 +51,15 @@ class SaveAuditTests(unittest.TestCase):
         self.assertEqual(report.metrics["monsters"]["complete"], 1)
         self.assertEqual(report.metrics["monsters"]["missing"], 0)
 
+    def test_nisa_complete_variant_matches_editor_semantics(self):
+        data = clean_save()
+        struct.pack_into("<I4B", data, MONSTER_START, KNOWN_MONSTER, 0x2A, 0x0F, 0x7F, 0xFF)
+
+        report = self.auditor.audit(data, checksum_valid=True)
+
+        self.assertEqual(report.metrics["monsters"]["complete"], 1)
+        self.assertEqual(report.metrics["monsters"]["partial"], 0)
+
     def test_structural_anomalies_are_reported_without_guessing_repairs(self):
         data = clean_save()
         data[DIFFICULTY_OFFSET] = 9

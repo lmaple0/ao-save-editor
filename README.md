@@ -55,7 +55,7 @@ Validation performed on the publish package:
 - The monster-detail generator parses and numerically compares 333/333 files in all three locales, links 305/305 save monsters, and resolves action-script sources for 333/333 entries. Unexplained extensions in `ms60000/ms60001` are recorded only by size and hash. The 2.3 MB detail JSON is now loaded on first use.
 - The reference-index generator independently and bounds-safely parses the three `t_name._dt` tables and effective `as*.dat` headers/action tables without disassembling or executing action instructions. It emits 6,173 nodes, 6,835 relations, and seven same-name candidate-variant groups. The 5.4 MB graph is lazy-loaded and an empty GUI search is capped at 500 rows.
 - The chest generator verifies all 280 flags, 44 localized maps, and 93 NISA scenario files. Two local NISA sample saves both report 117/280 obtained chests, and the feature never writes save flags.
-- All 74 unit tests pass. Eight user-identified party samples match their raw slot order; 122 valid local saves have no unknown party/appearance IDs, and validation leaves their hashes unchanged. A hidden Windows Python 3.13 Tk smoke test verified 13 tabs, fixed appearance labels, and all three UI languages.
+- All 75 unit tests pass. Eight user-identified party samples match their raw slot order; 122 valid local saves have no unknown party/appearance IDs, and validation leaves their hashes unchanged. A hidden Windows Python 3.13 Tk smoke test verified 13 tabs, fixed appearance labels, and all three UI languages.
 
 The Codex bundled Python runtime lacks Tcl/Tk; GUI construction and language switching were instead smoke-tested with Windows Python 3.13.
 
