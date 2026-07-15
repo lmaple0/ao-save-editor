@@ -11,6 +11,8 @@ from ao_save_layout import (
     EXPECTED_SIZE,
     ITEMS_END,
     ITEMS_START,
+    KNOWN_ROLE_DISPLAY_IDS,
+    KNOWN_TEAM_IDS,
     MONSTER_COMPLETE_PAYLOAD,
     MONSTER_END,
     MONSTER_RECORD_SIZE,
@@ -19,9 +21,8 @@ from ao_save_layout import (
     RECIPE_BOOK_OFFSETS,
     ROLE_DISPLAY_OFFSETS,
     TEAM_SLOTS,
+    monster_record_is_complete,
 )
-KNOWN_TEAM_IDS = frozenset((*range(11), 0x00FF))
-KNOWN_ROLE_DISPLAY_IDS = frozenset(range(21))
 
 
 TEXT = {
@@ -301,7 +302,7 @@ class SaveAuditor:
         present_known = self.known_monster_set & set(monster_counts)
         complete = {
             code for _slot, code, payload in monster_rows
-            if code in self.known_monster_set and payload == MONSTER_COMPLETE_PAYLOAD
+            if code in self.known_monster_set and monster_record_is_complete(payload)
         }
         partial = present_known - complete
         missing = self.known_monster_set - present_known

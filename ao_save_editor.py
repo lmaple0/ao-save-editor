@@ -29,9 +29,12 @@ from ao_save_layout import (
     RECIPE_BOOK_OFFSETS,
     ROLE_DISPLAY_OFFSETS,
     TEAM_SLOTS,
+    monster_record_is_complete,
 )
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
+
+from ao_reference_index_ui import ReferenceIndexUiMixin
 
 APP_DIR = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
 if APP_DIR not in sys.path:
@@ -70,6 +73,11 @@ try:
     from ao_save_audit import load_default_save_auditor
 except ImportError:
     load_default_save_auditor = None
+
+try:
+    from ao_reference_graph_db import load_default_reference_graph
+except ImportError:
+    load_default_reference_graph = None
 
 ITEM_LANGUAGE_LABELS = {
     "zh_cn": "中文",
@@ -179,6 +187,9 @@ CHARACTER_NAME_I18N = {
     "银": {"zh_cn": "银", "en": "Silver", "ja": "銀"},
     "秦": {"zh_cn": "秦", "en": "Xin", "ja": "シン"},
     "雷蒙德": {"zh_cn": "雷蒙德", "en": "Raymond", "ja": "レイモンド"},
+    "约纳": {"zh_cn": "约纳", "en": "Jona", "ja": "ヨナ"},
+    "莉丝修女": {"zh_cn": "莉丝修女", "en": "Sister Ries", "ja": "シスター・リース"},
+    "魔兽": {"zh_cn": "魔兽", "en": "Monster", "ja": "モンスター"},
 }
 
 
@@ -255,6 +266,28 @@ UI_TRANSLATIONS = {
         "存档诊断": "存档诊断",
         "刷新诊断": "刷新诊断",
         "诊断数据不可用": "诊断数据不可用",
+        "资源索引": "资源索引",
+        "搜索资源:": "搜索资源:",
+        "全部类型": "全部类型",
+        "只看异常": "只看异常",
+        "类型": "类型",
+        "标识": "标识",
+        "可信度": "可信度",
+        "关系详情": "关系详情",
+        "资源索引数据不可用": "资源索引数据不可用",
+        "资源索引: 共 {total} 项，当前显示 {shown} 项": "资源索引: 共 {total} 项，当前显示 {shown} 项",
+        "角色": "角色",
+        "怪物": "怪物",
+        "状态文件": "状态文件",
+        "动作脚本": "动作脚本",
+        "动作入口": "动作入口",
+        "已验证": "已验证",
+        "推导": "推导",
+        "候选": "候选",
+        "异常": "异常",
+        "关系": "关系",
+        "出站": "出站",
+        "入站": "入站",
         "宝箱进度": "宝箱进度",
         "搜索宝箱:": "搜索宝箱:",
         "地图:": "地图:",
@@ -431,6 +464,28 @@ UI_TRANSLATIONS = {
         "存档诊断": "Save Diagnostics",
         "刷新诊断": "Refresh Diagnostics",
         "诊断数据不可用": "Diagnostic data is unavailable",
+        "资源索引": "Resource Index",
+        "搜索资源:": "Search resources:",
+        "全部类型": "All types",
+        "只看异常": "Issues only",
+        "类型": "Type",
+        "标识": "Identifier",
+        "可信度": "Confidence",
+        "关系详情": "Relationship Details",
+        "资源索引数据不可用": "Resource index data is unavailable",
+        "资源索引: 共 {total} 项，当前显示 {shown} 项": "Resource index: {total} items, {shown} shown",
+        "角色": "Character",
+        "怪物": "Monster",
+        "状态文件": "Status File",
+        "动作脚本": "Action Script",
+        "动作入口": "Action Entry",
+        "已验证": "Verified",
+        "推导": "Derived",
+        "候选": "Candidate",
+        "异常": "Issue",
+        "关系": "Relationships",
+        "出站": "Outbound",
+        "入站": "Inbound",
         "宝箱进度": "Chest Progress",
         "搜索宝箱:": "Search chests:",
         "地图:": "Map:",
@@ -607,6 +662,28 @@ UI_TRANSLATIONS = {
         "存档诊断": "セーブ診断",
         "刷新诊断": "診断を更新",
         "诊断数据不可用": "診断データを利用できません",
+        "资源索引": "リソース索引",
+        "搜索资源:": "リソース検索:",
+        "全部类型": "すべての種類",
+        "只看异常": "問題のみ",
+        "类型": "種類",
+        "标识": "識別子",
+        "可信度": "信頼度",
+        "关系详情": "関連詳細",
+        "资源索引数据不可用": "リソース索引データを利用できません",
+        "资源索引: 共 {total} 项，当前显示 {shown} 项": "リソース索引: 全{total}件、{shown}件表示",
+        "角色": "キャラクター",
+        "怪物": "魔獣",
+        "状态文件": "ステータスファイル",
+        "动作脚本": "アクションスクリプト",
+        "动作入口": "アクションエントリ",
+        "已验证": "検証済み",
+        "推导": "推定",
+        "候选": "候補",
+        "异常": "問題",
+        "关系": "関連",
+        "出站": "出力",
+        "入站": "入力",
         "宝箱进度": "宝箱進捗",
         "搜索宝箱:": "宝箱検索:",
         "地图:": "マップ:",
@@ -948,14 +1025,15 @@ BATTLE_STATS = {
 # ============================================================
 # P1: 角色显示外观 (12 slots, u16)
 # ============================================================
-ROLE_DISPLAY_NAMES = {  # ID -> 名称
+ROLE_DISPLAY_NAMES = {  # raw save ID -> 名称
     0: "罗伊德", 1: "艾莉", 2: "缇欧", 3: "兰迪",
-    4: "瓦吉(初期)", 5: "瓦吉(后期)", 6: "银", 7: "莉夏",
-    8: "蔡特", 9: "亚里欧斯", 10: "诺艾尔", 11: "达德利",
-    12: "加尔西亚", 13: "魔兽(跳跳猫)",
-    14: "亚里欧斯(NPC)", 15: "罗伊德(NPC1)",
-    16: "罗伊德(NPC2)", 17: "雷蒙德", 18: "秦",
-    19: "谢莉", 20: "琪雅",
+    4: "瓦吉(初期)", 0x1F: "瓦吉(后期)",
+    5: "银", 0x20: "莉夏", 6: "蔡特", 7: "亚里欧斯",
+    8: "诺艾尔", 9: "达德利", 10: "加尔西亚",
+    15: "魔兽(跳跳猫)", 11: "亚里欧斯(NPC)",
+    12: "罗伊德(NPC1)", 14: "罗伊德(NPC2)",
+    0x60: "罗伊德(泳装)", 0x61: "兰迪(泳装)", 0x62: "瓦吉(泳装)",
+    0xA0: "雷蒙德", 0xA1: "秦", 0xA2: "谢莉", 0xA4: "琪雅",
 }
 
 ROLE_DISPLAY_I18N = {
@@ -964,29 +1042,45 @@ ROLE_DISPLAY_I18N = {
     2: {"en": "Tio", "ja": "ティオ"},
     3: {"en": "Randy", "ja": "ランディ"},
     4: {"en": "Wazy (Early)", "ja": "ワジ(初期)"},
-    5: {"en": "Wazy (Late)", "ja": "ワジ(後期)"},
-    6: {"en": "Silver", "ja": "銀"},
-    7: {"en": "Rixia", "ja": "リーシャ"},
-    8: {"en": "Zeit", "ja": "ツァイト"},
-    9: {"en": "Arios", "ja": "アリオス"},
-    10: {"en": "Noel", "ja": "ノエル"},
-    11: {"en": "Dudley", "ja": "ダドリー"},
-    12: {"en": "Garcia", "ja": "ガルシア"},
-    13: {"en": "Flying Feline", "ja": "魔獣(跳ね猫)"},
-    14: {"en": "Arios (NPC)", "ja": "アリオス(NPC)"},
-    15: {"en": "Lloyd (NPC1)", "ja": "ロイド(NPC1)"},
-    16: {"en": "Lloyd (NPC2)", "ja": "ロイド(NPC2)"},
-    17: {"en": "Raymond", "ja": "レイモンド"},
-    18: {"en": "Xin", "ja": "シン"},
-    19: {"en": "Shirley", "ja": "シズク"},
-    20: {"en": "KeA", "ja": "キーア"},
+    0x1F: {"en": "Wazy (Late)", "ja": "ワジ(後期)"},
+    5: {"en": "Yin", "ja": "銀"},
+    0x20: {"en": "Rixia", "ja": "リーシャ"},
+    6: {"en": "Zeit", "ja": "ツァイト"},
+    7: {"en": "Arios", "ja": "アリオス"},
+    8: {"en": "Noel", "ja": "ノエル"},
+    9: {"en": "Dudley", "ja": "ダドリー"},
+    10: {"en": "Garcia", "ja": "ガルシア"},
+    15: {"en": "Flying Feline", "ja": "魔獣(跳ね猫)"},
+    11: {"en": "Arios (NPC)", "ja": "アリオス(NPC)"},
+    12: {"en": "Lloyd (NPC1)", "ja": "ロイド(NPC1)"},
+    14: {"en": "Lloyd (NPC2)", "ja": "ロイド(NPC2)"},
+    0x60: {"en": "Lloyd (Swimsuit)", "ja": "ロイド(水着)"},
+    0x61: {"en": "Randy (Swimsuit)", "ja": "ランディ(水着)"},
+    0x62: {"en": "Wazy (Swimsuit)", "ja": "ワジ(水着)"},
+    0xA0: {"en": "Raymond", "ja": "レイモンド"},
+    0xA1: {"en": "Xin", "ja": "シン"},
+    0xA2: {"en": "Shirley", "ja": "シャーリィ"},
+    0xA4: {"en": "KeA", "ja": "キーア"},
 }
-
 
 def role_display_name(role_id, lang="zh_cn"):
     if lang == "zh_cn":
         return ROLE_DISPLAY_NAMES.get(role_id, f"未知({role_id})")
     return ROLE_DISPLAY_I18N.get(role_id, {}).get(lang) or ROLE_DISPLAY_NAMES.get(role_id, f"未知({role_id})")
+
+ROLE_DISPLAY_SLOT_CHARACTERS = (
+    "Lloyd", "Elie", "Tio", "Randy", "Wazy", "Rixia",
+    "Zeit", "Arios", "Noel", "Dudley", "Garcia", None,
+)
+
+
+def role_display_slot_name(index, lang="zh_cn"):
+    """Name the fixed character slot, not the resource selected for that slot."""
+    character = ROLE_DISPLAY_SLOT_CHARACTERS[index]
+    if character is not None:
+        return character_name(character, lang)
+    return {"zh_cn": "其他", "en": "Other", "ja": "その他"}.get(lang, "Other")
+
 
 # ============================================================
 # P1: 怪物图鉴 (variable-length records)
@@ -1075,6 +1169,23 @@ def get_save_auditor():
     return SAVE_AUDITOR
 
 
+REFERENCE_GRAPH = None
+_REFERENCE_GRAPH_LOADED = False
+
+
+def get_reference_graph():
+    """Load the research graph only when its read-only tab is first opened."""
+    global REFERENCE_GRAPH, _REFERENCE_GRAPH_LOADED
+    if not _REFERENCE_GRAPH_LOADED:
+        REFERENCE_GRAPH = (
+            load_default_reference_graph(app_dir())
+            if load_default_reference_graph is not None
+            else None
+        )
+        _REFERENCE_GRAPH_LOADED = True
+    return REFERENCE_GRAPH
+
+
 CHEST_CATALOG = (
     load_default_chest_catalog(app_dir())
     if load_default_chest_catalog is not None
@@ -1096,18 +1207,57 @@ class MonsterRecord:
 
     @property
     def is_complete(self):
-        return self.payload == MONSTER_COMPLETE_PAYLOAD
+        # NISA PC does not use the old Joyoland 08 FE FF FF payload as a
+        # canonical value. Its first byte is the defeat counter and the second
+        # byte also changes during normal play. A fully investigated entry
+        # consistently exposes all seven information bits and both item fields;
+        # bit 7 of stats varies by monster. Keep accepting the old payload so
+        # imported/previously edited saves remain compatible.
+        return monster_record_is_complete(self.payload)
 
     def binary(self):
         return struct.pack("<I4B", self.code, self.flag, self.resistance, self.stats, self.get_item)
 
 
 TEAM_NAMES = {
+    # These are logical party-slot IDs, not presentation/model IDs from
+    # t_name._dt. In particular, party ID 5 remains Rixia after her reveal,
+    # while t_name uses 0x0005 for Yin and 0x0020 for Rixia's later resources.
     0: "罗伊德", 1: "艾莉", 2: "缇欧", 3: "兰迪",
     4: "瓦吉", 5: "莉夏", 6: "蔡特", 7: "亚里欧斯",
     8: "诺艾尔", 9: "达德利", 10: "加尔西亚",
-    255: "(空)"
+    # NISA t_name plus naturally occurring local save values.
+    15: "魔兽", 61: "约纳", 82: "琪雅", 140: "莉丝修女",
+    160: "雷蒙德", 161: "秦", 255: "(空)"
 }
+
+
+def format_team_member(value, lang="zh_cn"):
+    """Format a raw party member ID without losing unsupported values."""
+    value = int(value)
+    if value == 255:
+        name = {"zh_cn": "空位", "en": "Empty", "ja": "空き"}.get(lang, "Empty")
+    elif value in TEAM_NAMES:
+        name = character_name(TEAM_NAMES[value], lang)
+    else:
+        name = {"zh_cn": "未知", "en": "Unknown", "ja": "不明"}.get(lang, "Unknown")
+    return f"{value} · {name}"
+
+
+def parse_team_member(value):
+    """Parse a combo-box label while retaining compatibility with raw numbers."""
+    text = str(value).strip()
+    if not text:
+        raise ValueError("队员不能为空")
+    token = text.split("·", 1)[0].strip()
+    result = int(token, 0)
+    if not 0 <= result <= 0xFFFF:
+        raise ValueError("队员 ID 必须在 0 到 65535 之间")
+    return result
+
+
+def team_member_choices(lang="zh_cn"):
+    return tuple(format_team_member(value, lang) for value in TEAM_NAMES)
 
 DIFFICULTY_NAMES = {0: "Normal", 1: "Hard", 2: "Nightmare", 3: "Easy"}
 
@@ -1392,7 +1542,7 @@ class SaveData:
 # GUI
 # ============================================================
 
-class SaveEditor(tk.Tk):
+class SaveEditor(ReferenceIndexUiMixin, tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("碧之轨迹 NISA版 存档修改器")
@@ -1469,7 +1619,13 @@ class SaveEditor(tk.Tk):
         self._tab_defs.append((frm_monsters, "怪物图鉴"))
         self._build_monster_tab(frm_monsters)
 
-        # 标签7: 宝箱进度（只读）
+        # 标签7: 资源索引（只读，独立于存档）
+        frm_reference = ttk.Frame(self._nb)
+        self._nb.add(frm_reference, text="资源索引")
+        self._tab_defs.append((frm_reference, "资源索引"))
+        self._build_reference_tab(frm_reference)
+
+        # 标签8: 宝箱进度（只读）
         frm_chests = ttk.Frame(self._nb)
         self._nb.add(frm_chests, text="宝箱进度")
         self._tab_defs.append((frm_chests, "宝箱进度"))
@@ -1527,6 +1683,8 @@ class SaveEditor(tk.Tk):
             self._refresh_items_ui()
         elif key == "怪物图鉴" and getattr(self, "_monster_ui_dirty", True):
             self._refresh_monster_ui()
+        elif key == "资源索引" and getattr(self, "_reference_ui_dirty", True):
+            self._refresh_reference_ui()
         elif key == "宝箱进度" and getattr(self, "_chest_ui_dirty", True):
             self._refresh_chest_ui()
         elif key == "存档诊断" and getattr(self, "_save_audit_dirty", True):
@@ -1616,9 +1774,14 @@ class SaveEditor(tk.Tk):
         if hasattr(self, "_team_labels"):
             for i, lbl in enumerate(self._team_labels):
                 lbl.config(text=self._t(f"队员 {i+1}"))
+        if hasattr(self, "_team_combos"):
+            self._refresh_team_choices()
         if hasattr(self, "_quick_party_buttons"):
             for btn, name in self._quick_party_buttons:
                 btn.config(text=self._t("{name} LV99 满HP/EP/CP", name=character_name(name, lang)))
+        if hasattr(self, "_appearance_labels"):
+            for i, label in enumerate(self._appearance_labels):
+                label.config(text=role_display_slot_name(i, lang))
         if hasattr(self, "_appearance_vars"):
             self._refresh_appearance_ui()
         if hasattr(self, "_battle_vars"):
@@ -1639,6 +1802,16 @@ class SaveEditor(tk.Tk):
             self._monster_ui_dirty = True
             if self._is_active_tab("怪物图鉴"):
                 self._refresh_monster_ui()
+        if hasattr(self, "_reference_tree"):
+            for column, key in {
+                "kind": "类型", "name": "名称", "identifier": "标识",
+                "ms": "状态文件", "as": "动作脚本", "confidence": "可信度",
+            }.items():
+                self._reference_tree.heading(column, text=self._t(key))
+            self._refresh_reference_kind_choices()
+            self._reference_ui_dirty = True
+            if self._is_active_tab("资源索引"):
+                self._refresh_reference_ui()
         if hasattr(self, "_chest_tree"):
             for column, key in {
                 "status": "状态", "map": "地图", "item": "物品",
@@ -1736,16 +1909,37 @@ class SaveEditor(tk.Tk):
         f1 = ttk.LabelFrame(frm, text=self._t("队伍编成 (0=罗伊德, 1=艾莉, ..., 255=空)"))
         f1.grid(row=0, column=0, sticky="nw", padx=5, pady=5)
         self._team_labels = []
+        self._team_combos = []
         for i in range(8):
             lbl = ttk.Label(f1, text=self._t(f"队员 {i+1}"))
             lbl.grid(row=i, column=0, sticky="e", padx=2, pady=1)
-            ttk.Entry(f1, textvariable=self._var(f"team_{i}"), width=5).grid(row=i, column=1, sticky="w", padx=2, pady=1)
+            combo = ttk.Combobox(
+                f1,
+                textvariable=self._var(f"team_{i}"),
+                values=team_member_choices(self._current_ui_language()),
+                width=18,
+                state="readonly",
+            )
+            combo.grid(row=i, column=1, sticky="w", padx=2, pady=1)
+            self._team_combos.append(combo)
             self._team_labels.append(lbl)
 
         f2 = ttk.LabelFrame(frm, text=self._t("好感度 (0-? )"))
         f2.grid(row=0, column=1, sticky="nw", padx=5, pady=5)
         for i, (name, off) in enumerate(LIKEABILITY.items()):
             self._lb_entry(f2, character_name(name, self._current_ui_language()), f"like_{name}", i, 0, width=5)
+
+    def _refresh_team_choices(self):
+        """Relocalize party choices while preserving every raw member ID."""
+        lang = self._current_ui_language()
+        values = team_member_choices(lang)
+        for i, combo in enumerate(self._team_combos):
+            try:
+                member_id = parse_team_member(self._var(f"team_{i}").get())
+            except ValueError:
+                member_id = 255
+            combo.configure(values=values)
+            self._var(f"team_{i}").set(format_team_member(member_id, lang))
 
     def _build_items_tab(self, frm):
         frm.grid_columnconfigure(0, weight=1)
@@ -2052,7 +2246,9 @@ class SaveEditor(tk.Tk):
 
         # 队伍
         for i, off in enumerate(TEAM_SLOTS):
-            self._var(f"team_{i}").set(str(s.read_u16(off)))
+            self._var(f"team_{i}").set(format_team_member(
+                s.read_u16(off), self._current_ui_language()
+            ))
 
         # 好感度
         for name, off in LIKEABILITY.items():
@@ -2128,7 +2324,7 @@ class SaveEditor(tk.Tk):
 
         for i, off in enumerate(TEAM_SLOTS):
             try:
-                s.write_u16(off, int(self._var(f"team_{i}").get()))
+                s.write_u16(off, parse_team_member(self._var(f"team_{i}").get()))
             except ValueError:
                 pass
 
@@ -2777,14 +2973,17 @@ class SaveEditor(tk.Tk):
         frm.grid_columnconfigure(0, weight=1)
         ttk.Label(frm, text=self._t("角色显示外观 (修改对应槽位的模型)"), font=("", 11, "bold")).grid(row=0, column=0, columnspan=2, pady=10)
 
-        SLOT_LABELS = ["显示1","显示2","显示3","显示4","显示5","显示6",
-                       "显示7","显示8","显示9","显示10","显示11","显示12"]
+        self._appearance_labels = []
         self._appearance_vars = []
         self._appearance_combos = []
         opts = [f"{k}:{role_display_name(k, self._current_ui_language())}" for k in sorted(ROLE_DISPLAY_NAMES)]
 
         for i in range(12):
-            ttk.Label(frm, text=self._t(SLOT_LABELS[i])).grid(row=i+1, column=0, sticky="e", padx=5, pady=2)
+            label = ttk.Label(
+                frm, text=role_display_slot_name(i, self._current_ui_language())
+            )
+            label.grid(row=i+1, column=0, sticky="e", padx=5, pady=2)
+            self._appearance_labels.append(label)
             var = tk.StringVar(value=f"0:{role_display_name(0, self._current_ui_language())}")
             cb = ttk.Combobox(frm, textvariable=var, values=opts, width=20, state="readonly")
             cb.grid(row=i+1, column=1, sticky="w", padx=5)
