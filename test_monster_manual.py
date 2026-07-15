@@ -82,6 +82,26 @@ class MonsterRecordTests(unittest.TestCase):
         self.assertEqual(diag["duplicate_codes"], (code,))
         self.assertEqual(diag["partial"], 1)
 
+    def test_nisa_complete_records_ignore_counter_and_variant_bits(self):
+        code_a, code_b = MONSTER_CODES[:2]
+        self._write_record(0, code_a, (0x2A, 0x0F, 0x7F, 0xFF))
+        self._write_record(1, code_b, (0x80, 0x7F, 0xFF, 0xFF))
+
+        diag = self.save.monster_diagnostics()
+
+        self.assertEqual(diag["complete"], 2)
+        self.assertEqual(diag["partial"], 0)
+
+    def test_nisa_record_missing_information_or_items_is_partial(self):
+        code_a, code_b = MONSTER_CODES[:2]
+        self._write_record(0, code_a, (1, 0x0F, 0x3F, 0xFF))
+        self._write_record(1, code_b, (1, 0x0F, 0x7F, 0x00))
+
+        diag = self.save.monster_diagnostics()
+
+        self.assertEqual(diag["complete"], 0)
+        self.assertEqual(diag["partial"], 2)
+
     def test_unlock_all_fills_every_known_slot(self):
         self.save.unlock_all_monsters()
 
