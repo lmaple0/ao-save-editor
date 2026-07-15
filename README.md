@@ -26,7 +26,8 @@ The in-editor Chinese item names and labels use the Joyoland/欢乐百世 Simpli
 - Edit battle manual counters.
 - Change 12 character display model slots.
 - Browse and edit a 305-entry localized monster catalog with 75 location filters and diagnostics. A new read-only detail panel shows HP/EP/CP, full battle stats, elemental efficacy, status resistance, sepith and item drops, localized craft names/descriptions, and `ms/as` provenance. Details are generated from all 333 installed NISA `ms*.dat` files in each language, with identical numeric structures verified across locales.
-- View read-only progress for 280 treasure chests across 44 maps; search localized map/item names, filter by map or missing status, and inspect chest coordinates, trigger coordinates, and trigger range. Localized locations are generated from installed NISA scenario `MapIndex` values and the three local `t_town._dt` tables.
+- View read-only progress for 280 treasure chests across 44 maps; search localized map/item names, filter by map or missing status, and inspect chest coordinates, trigger coordinates, and trigger range. Localized locations are generated from installed NISA scenario MapIndex values and the three local 	_town._dt tables.
+- Run a Chinese/English/Japanese read-only save audit covering size, checksum, difficulty, items, party IDs, appearance IDs, recipe mirrors, monster records, and reference-edition compatibility. It reports anomalies without repairing or writing them.
 - Recalculate the BZH 32-bit additive save checksum before writing.
 - Create a `.bak` backup when saving over an existing file.
 
@@ -50,10 +51,11 @@ Validation performed on the publish package:
 - Recipe-book reads were verified against nine real progression saves with 0/1/6/8/12/13/15/18/18 recipes; a temporary copy also passed a 24-recipe write, checksum, zstd save, and reload roundtrip.
 - A Windows Python 3.13 GUI smoke test verified all 24 checkboxes plus Chinese/English/Japanese tab and recipe-name switching.
 - The monster catalog generator verifies 305/305 save codes, localized `ms*.dat` names, and localized locations (283 active and 22 commented upstream mappings; 302 scenario-derived and 3 local-town-name supplements); 23 unit tests cover localization, name/location search, location provenance, partial/duplicate/unknown diagnostics, selected writes, full-capacity protection, and the final record boundary.
-- The monster-detail generator parses and numerically compares 333/333 files in all three locales, links 305/305 save monsters, and resolves action-script sources for 333/333 entries. Unexplained extensions in `ms60000/ms60001` are recorded only by size and hash. All 37 unit tests pass.
+- The monster-detail generator parses and numerically compares 333/333 files in all three locales, links 305/305 save monsters, and resolves action-script sources for 333/333 entries. Unexplained extensions in `ms60000/ms60001` are recorded only by size and hash. The 2.3 MB detail JSON is now loaded on first use.
 - The chest generator verifies all 280 flags, 44 localized maps, and 93 NISA scenario files. Two local NISA sample saves both report 117/280 obtained chests, and the feature never writes save flags.
+- All 47 unit tests pass. Two compressed samples load in about 6 ms and audit in 5–6 ms with zero errors/warnings and unchanged hashes. A hidden Windows Python 3.13 Tk smoke test verified 12 tabs, the read-only audit widget, and all three UI languages.
 
-GUI launch was not verified inside the Codex bundled Python runtime because that runtime lacks Tcl/Tk. Use a normal Windows Python installation with Tkinter for GUI use.
+The Codex bundled Python runtime lacks Tcl/Tk; GUI construction and language switching were instead smoke-tested with Windows Python 3.13.
 
 ## Localization Data
 

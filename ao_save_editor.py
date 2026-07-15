@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 碧之轨迹 NISA版 存档修改器 (基于 BZH_AO_NO_KISEKI_Savedata_Editor 偏移表)
 直接支持 zstd 压缩的 savedata.dat 文件。
@@ -13,6 +13,23 @@ import shutil
 import tempfile
 from collections import Counter
 from dataclasses import dataclass
+
+from ao_save_layout import (
+    CHECKSUM_USER,
+    CHECKSUM_USER_SIZE,
+    DIFFICULTY_OFFSET,
+    EXPECTED_SIZE,
+    ITEMS_END,
+    ITEMS_START,
+    MONSTER_COMPLETE_PAYLOAD,
+    MONSTER_END,
+    MONSTER_RECORD_SIZE,
+    MONSTER_START,
+    RECIPE_BOOK_MASK,
+    RECIPE_BOOK_OFFSETS,
+    ROLE_DISPLAY_OFFSETS,
+    TEAM_SLOTS,
+)
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
@@ -48,6 +65,11 @@ try:
     from ao_chests_db import load_default_chest_catalog
 except ImportError:
     load_default_chest_catalog = None
+
+try:
+    from ao_save_audit import load_default_save_auditor
+except ImportError:
+    load_default_save_auditor = None
 
 ITEM_LANGUAGE_LABELS = {
     "zh_cn": "中文",
@@ -182,7 +204,7 @@ UI_TRANSLATIONS = {
         "资源": "资源",
         "耀晶片": "耀晶片",
         "游戏时间": "游戏时间",
-        "难度 (0=Easy 1=Normal 2=Hard 3=Nightmare)": "难度 (0=Easy 1=Normal 2=Hard 3=Nightmare)",
+        "难度 (0=Normal 1=Hard 2=Nightmare 3=Easy)": "难度 (0=Normal 1=Hard 2=Nightmare 3=Easy)",
         "角色": "角色",
         "队伍编成 (0=罗伊德, 1=艾莉, ..., 255=空)": "队伍编成 (0=罗伊德, 1=艾莉, ..., 255=空)",
         "好感度 (0-? )": "好感度 (0-? )",
@@ -230,6 +252,9 @@ UI_TRANSLATIONS = {
         "可用": "可用",
         "缺失": "缺失",
         "说明": "说明",
+        "存档诊断": "存档诊断",
+        "刷新诊断": "刷新诊断",
+        "诊断数据不可用": "诊断数据不可用",
         "宝箱进度": "宝箱进度",
         "搜索宝箱:": "搜索宝箱:",
         "地图:": "地图:",
@@ -309,7 +334,6 @@ UI_TRANSLATIONS = {
         "幻": "幻",
         "最大HP": "最大HP",
         "当前HP": "当前HP",
-        "等级": "等级",
         "最大EP": "最大EP",
         "当前EP": "当前EP",
         "CP": "CP",
@@ -356,7 +380,7 @@ UI_TRANSLATIONS = {
         "资源": "Resources",
         "耀晶片": "Sepith",
         "游戏时间": "Play Time",
-        "难度 (0=Easy 1=Normal 2=Hard 3=Nightmare)": "Difficulty (0=Easy 1=Normal 2=Hard 3=Nightmare)",
+        "难度 (0=Normal 1=Hard 2=Nightmare 3=Easy)": "Difficulty (0=Normal 1=Hard 2=Nightmare 3=Easy)",
         "角色": "Character",
         "队伍编成 (0=罗伊德, 1=艾莉, ..., 255=空)": "Party formation (0=Lloyd, 1=Elie, ..., 255=empty)",
         "好感度 (0-? )": "Bond values (0-? )",
@@ -404,6 +428,9 @@ UI_TRANSLATIONS = {
         "可用": "available",
         "缺失": "missing",
         "说明": "Description",
+        "存档诊断": "Save Diagnostics",
+        "刷新诊断": "Refresh Diagnostics",
+        "诊断数据不可用": "Diagnostic data is unavailable",
         "宝箱进度": "Chest Progress",
         "搜索宝箱:": "Search chests:",
         "地图:": "Map:",
@@ -483,7 +510,6 @@ UI_TRANSLATIONS = {
         "幻": "Mirage",
         "最大HP": "MAX HP",
         "当前HP": "Current HP",
-        "等级": "Level",
         "最大EP": "MAX EP",
         "当前EP": "Current EP",
         "CP": "CP",
@@ -530,7 +556,7 @@ UI_TRANSLATIONS = {
         "资源": "資源",
         "耀晶片": "セピス",
         "游戏时间": "プレイ時間",
-        "难度 (0=Easy 1=Normal 2=Hard 3=Nightmare)": "難易度 (0=Easy 1=Normal 2=Hard 3=Nightmare)",
+        "难度 (0=Normal 1=Hard 2=Nightmare 3=Easy)": "難易度 (0=Normal 1=Hard 2=Nightmare 3=Easy)",
         "角色": "キャラ",
         "队伍编成 (0=罗伊德, 1=艾莉, ..., 255=空)": "編成 (0=ロイド, 1=エリィ, ..., 255=空)",
         "好感度 (0-? )": "絆値 (0-? )",
@@ -578,6 +604,9 @@ UI_TRANSLATIONS = {
         "可用": "あり",
         "缺失": "なし",
         "说明": "説明",
+        "存档诊断": "セーブ診断",
+        "刷新诊断": "診断を更新",
+        "诊断数据不可用": "診断データを利用できません",
         "宝箱进度": "宝箱進捗",
         "搜索宝箱:": "宝箱検索:",
         "地图:": "マップ:",
@@ -657,7 +686,6 @@ UI_TRANSLATIONS = {
         "幻": "幻",
         "最大HP": "最大HP",
         "当前HP": "現在HP",
-        "等级": "レベル",
         "最大EP": "MAX EP",
         "当前EP": "現在EP",
         "CP": "CP",
@@ -729,7 +757,7 @@ OFFSETS = {
     "medal":     0x00019C34,
     "dp":        0x00019C1C,
     "time_s":    0x00019C84,
-    "difficulty":0x0001F36D,
+    "difficulty":DIFFICULTY_OFFSET,
 }
 
 # 七属性耀晶片
@@ -751,20 +779,7 @@ LIKEABILITY = {
     "塞西尔": 0x0001B33D, "芙兰": 0x0001B33E, "苏莉": 0x0001B33F,
 }
 
-# 队伍槽位 (8个, 每个2字节)
-TEAM_SLOTS = [0x0001AFE0 + i * 2 for i in range(8)]
-
-# 校验和
-CHECKSUM_USER_SIZE = 0x00026438
-CHECKSUM_USER = 0x00026434
-
-# 期望的存档体积
-EXPECTED_SIZE = 0x2643C  # 156732 bytes
-
-# 团队队员ID映射
-# 物品列表偏移 (BZH: 0xE2C ~ 0x194C, 每项 4 字节: u16 code + u16 qty)
-ITEMS_START = 0x00000E2C
-ITEMS_END   = 0x0000194C
+# 队伍槽位、校验和、存档大小和物品区偏移统一定义在 ao_save_layout.py。
 
 # BZH 写入顺序 — 按此顺序序列化物品 (数量为0则跳过)
 ITEM_WRITE_ORDER = [
@@ -862,8 +877,6 @@ ITEM_QUANTITY_MAX = 99
 
 # NISA Ao stores the 24 learned recipes as three mirrored u32 bitmaps.
 # t_cook._dt indexes recipes from 1 to 24; bit 0 is reserved.
-RECIPE_BOOK_OFFSETS = (0x00019C98, 0x00019C9C, 0x00019CA0)
-RECIPE_BOOK_MASK = 0x01FFFFFE
 RECIPE_BOOK_ITEMS = tuple(0x0191 + index * 3 for index in range(24))
 
 def item_codes_for_categories(*categories):
@@ -935,8 +948,6 @@ BATTLE_STATS = {
 # ============================================================
 # P1: 角色显示外观 (12 slots, u16)
 # ============================================================
-ROLE_DISPLAY_OFFSETS = [0x0001B358 + i * 2 for i in range(12)]
-
 ROLE_DISPLAY_NAMES = {  # ID -> 名称
     0: "罗伊德", 1: "艾莉", 2: "缇欧", 3: "兰迪",
     4: "瓦吉(初期)", 5: "瓦吉(后期)", 6: "银", 7: "莉夏",
@@ -980,11 +991,6 @@ def role_display_name(role_id, lang="zh_cn"):
 # ============================================================
 # P1: 怪物图鉴 (variable-length records)
 # ============================================================
-MONSTER_START = 0x0001B370
-MONSTER_END   = 0x0001BCF0
-MONSTER_RECORD_SIZE = 8
-MONSTER_COMPLETE_PAYLOAD = bytes((0x08, 0xFE, 0xFF, 0xFF))
-
 # 来自 bzh_ank_se_code_define_manual.h 的真实怪物代码列表。存档记录必须写这些
 # u32 code；写顺序号会让游戏/原工具无法识别已解锁怪物。
 MONSTER_CODES = (
@@ -1036,11 +1042,38 @@ MONSTER_CATALOG = (
     else None
 )
 
-MONSTER_DETAIL_CATALOG = (
-    load_default_monster_detail_catalog(app_dir())
-    if load_default_monster_detail_catalog is not None
-    else None
-)
+MONSTER_DETAIL_CATALOG = None
+_MONSTER_DETAIL_CATALOG_LOADED = False
+
+
+def get_monster_detail_catalog():
+    """Load the large detail catalog only when the detail panel is first used."""
+    global MONSTER_DETAIL_CATALOG, _MONSTER_DETAIL_CATALOG_LOADED
+    if not _MONSTER_DETAIL_CATALOG_LOADED:
+        MONSTER_DETAIL_CATALOG = (
+            load_default_monster_detail_catalog(app_dir())
+            if load_default_monster_detail_catalog is not None
+            else None
+        )
+        _MONSTER_DETAIL_CATALOG_LOADED = True
+    return MONSTER_DETAIL_CATALOG
+
+
+SAVE_AUDITOR = None
+_SAVE_AUDITOR_LOADED = False
+
+
+def get_save_auditor():
+    global SAVE_AUDITOR, _SAVE_AUDITOR_LOADED
+    if not _SAVE_AUDITOR_LOADED:
+        SAVE_AUDITOR = (
+            load_default_save_auditor(app_dir())
+            if load_default_save_auditor is not None
+            else None
+        )
+        _SAVE_AUDITOR_LOADED = True
+    return SAVE_AUDITOR
+
 
 CHEST_CATALOG = (
     load_default_chest_catalog(app_dir())
@@ -1076,7 +1109,7 @@ TEAM_NAMES = {
     255: "(空)"
 }
 
-DIFFICULTY_NAMES = {0: "Easy", 1: "Normal", 2: "Hard", 3: "Nightmare"}
+DIFFICULTY_NAMES = {0: "Normal", 1: "Hard", 2: "Nightmare", 3: "Easy"}
 
 # ============================================================
 # 存档读写核心
@@ -1442,7 +1475,13 @@ class SaveEditor(tk.Tk):
         self._tab_defs.append((frm_chests, "宝箱进度"))
         self._build_chest_tab(frm_chests)
 
-        # 标签7: 成就
+        # 标签8: 存档诊断（只读）
+        frm_audit = ttk.Frame(self._nb)
+        self._nb.add(frm_audit, text="存档诊断")
+        self._tab_defs.append((frm_audit, "存档诊断"))
+        self._build_save_audit_tab(frm_audit)
+
+        # 标签9: 成就
         frm_ach = ttk.Frame(self._nb)
         self._nb.add(frm_ach, text="成就")
         self._tab_defs.append((frm_ach, "成就"))
@@ -1490,6 +1529,8 @@ class SaveEditor(tk.Tk):
             self._refresh_monster_ui()
         elif key == "宝箱进度" and getattr(self, "_chest_ui_dirty", True):
             self._refresh_chest_ui()
+        elif key == "存档诊断" and getattr(self, "_save_audit_dirty", True):
+            self._refresh_save_audit()
         elif key == "成就":
             self._refresh_achievements_ui()
         elif key == "战斗手册":
@@ -1608,6 +1649,10 @@ class SaveEditor(tk.Tk):
             self._chest_ui_dirty = True
             if self._is_active_tab("宝箱进度"):
                 self._refresh_chest_ui()
+        if hasattr(self, "_save_audit_text"):
+            self._save_audit_dirty = True
+            if self._is_active_tab("存档诊断"):
+                self._refresh_save_audit()
         self.update_idletasks()
 
     def _translate_widget_tree(self, widget, lang):
@@ -1646,7 +1691,7 @@ class SaveEditor(tk.Tk):
         self._lb_entry(f3, "分", "time_m", 2, 0)
         self._lb_entry(f3, "秒", "time_sec", 3, 0)
 
-        f4 = ttk.LabelFrame(frm, text=self._t("难度 (0=Easy 1=Normal 2=Hard 3=Nightmare)"))
+        f4 = ttk.LabelFrame(frm, text=self._t("难度 (0=Normal 1=Hard 2=Nightmare 3=Easy)"))
         f4.grid(row=1, column=1, sticky="nw", padx=5, pady=5)
         self._lb_entry(f4, "难度", "difficulty", 0, 0, width=4)
 
@@ -2025,6 +2070,9 @@ class SaveEditor(tk.Tk):
         self._chest_ui_dirty = True
         if self._is_active_tab("宝箱进度"):
             self._refresh_chest_ui()
+        self._save_audit_dirty = True
+        if self._is_active_tab("存档诊断"):
+            self._refresh_save_audit()
         self._refresh_achievements_ui()
         self._refresh_battle_ui()
         # P1: 外观
@@ -2099,6 +2147,7 @@ class SaveEditor(tk.Tk):
         self._write_battle_from_gui()
         # P1: 外观
         self._write_appearance_from_gui()
+        self._save_audit_dirty = True
 
     def _quick_set(self, varname, val):
         if self.save.data is None:
@@ -2384,7 +2433,8 @@ class SaveEditor(tk.Tk):
             return
         code = int(selection[0], 16)
         reference = MONSTER_CATALOG.get(code)
-        detail = MONSTER_DETAIL_CATALOG.get(reference.ms_file) if reference and MONSTER_DETAIL_CATALOG else None
+        detail_catalog = get_monster_detail_catalog()
+        detail = detail_catalog.get(reference.ms_file) if reference and detail_catalog else None
         if detail is None:
             self._set_monster_detail_text(self._t("怪物详情数据不可用"))
             return
@@ -2446,6 +2496,7 @@ class SaveEditor(tk.Tk):
             messagebox.showerror(self._t("错误"), str(exc))
             return
         self._refresh_monster_ui()
+        self._save_audit_dirty = True
         self._set_status(
             "已将 {count} 个怪物设为全资料 · 请保存存档" if unlocked else "已将 {count} 个怪物设为未登记 · 请保存存档",
             count=len(codes),
@@ -2593,6 +2644,45 @@ class SaveEditor(tk.Tk):
             tz=trigger["z"] / 1000.0, range=trigger["range"] / 1000.0,
         ))
 
+    # ---- P0: 存档结构诊断（只读） ----
+    def _build_save_audit_tab(self, frm):
+        toolbar = ttk.Frame(frm)
+        toolbar.pack(fill="x", padx=8, pady=(8, 4))
+        ttk.Button(toolbar, text=self._t("刷新诊断"), command=self._refresh_save_audit).pack(side="left")
+        body = ttk.Frame(frm)
+        body.pack(fill="both", expand=True, padx=8, pady=(0, 8))
+        self._save_audit_text = tk.Text(body, wrap="word", relief="flat")
+        scroll = ttk.Scrollbar(body, orient="vertical", command=self._save_audit_text.yview)
+        self._save_audit_text.configure(yscrollcommand=scroll.set, state="disabled")
+        self._save_audit_text.pack(side="left", fill="both", expand=True)
+        scroll.pack(side="right", fill="y")
+        self._save_audit_report = None
+        self._save_audit_dirty = True
+
+    def _set_save_audit_text(self, value):
+        self._save_audit_text.configure(state="normal")
+        self._save_audit_text.delete("1.0", "end")
+        self._save_audit_text.insert("1.0", value)
+        self._save_audit_text.configure(state="disabled")
+
+    def _refresh_save_audit(self):
+        if self.save.data is None:
+            self._save_audit_report = None
+            self._set_save_audit_text(self._t("未加载存档"))
+            self._save_audit_dirty = False
+            return
+        auditor = get_save_auditor()
+        if auditor is None:
+            self._set_save_audit_text(self._t("诊断数据不可用"))
+            self._save_audit_dirty = False
+            return
+        self._save_audit_report = auditor.audit(
+            self.save.data,
+            checksum_valid=SaveData._checksum_valid(self.save.data),
+        )
+        self._set_save_audit_text(self._save_audit_report.render(self._current_ui_language()))
+        self._save_audit_dirty = False
+
     # ---- P0: 成就标签页 ----
     def _build_achievement_tab(self, frm):
         self._ach_vars = []  # list of (part, bit, BooleanVar, checkbox)
@@ -2737,6 +2827,7 @@ class SaveEditor(tk.Tk):
         self._monster_ui_dirty = True
         if self._is_active_tab("怪物图鉴"):
             self._refresh_monster_ui()
+        self._save_audit_dirty = True
         self._set_status("怪物图鉴已全开 · 请保存存档")
 
     # ---- 快捷操作 ----
@@ -2779,6 +2870,9 @@ class SaveEditor(tk.Tk):
         except (RuntimeError, ValueError, OSError) as exc:
             messagebox.showerror(self._t("错误"), str(exc))
             return
+        self._save_audit_dirty = True
+        if self._is_active_tab("存档诊断"):
+            self._refresh_save_audit()
         self._set_status("已保存到: {fp}", fp=fp)
         messagebox.showinfo(self._t("完成"), self._t("存档已保存到:\n{fp}\n\n备份已自动创建为 .bak\n请将文件放回游戏存档目录替换原文件。", fp=fp))
 

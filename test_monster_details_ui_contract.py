@@ -1,11 +1,11 @@
 import unittest
 
-from ao_save_editor import MONSTER_DETAIL_CATALOG, SaveEditor, UI_TRANSLATIONS
+from ao_save_editor import SaveEditor, UI_TRANSLATIONS, get_monster_detail_catalog
 
 
 class MonsterDetailUiContractTests(unittest.TestCase):
     def test_detail_catalog_and_read_only_ui_methods_are_available(self):
-        self.assertEqual(len(MONSTER_DETAIL_CATALOG), 333)
+        self.assertEqual(len(get_monster_detail_catalog()), 333)
         for method in (
             "_refresh_monster_detail",
             "_set_monster_detail_text",
