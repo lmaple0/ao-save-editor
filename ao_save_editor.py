@@ -40,6 +40,11 @@ except ImportError:
     load_default_monster_catalog = None
 
 try:
+    from ao_monster_details_db import load_default_monster_detail_catalog
+except ImportError:
+    load_default_monster_detail_catalog = None
+
+try:
     from ao_chests_db import load_default_chest_catalog
 except ImportError:
     load_default_chest_catalog = None
@@ -214,6 +219,17 @@ UI_TRANSLATIONS = {
         "全回路 → 99 (含核心回路)": "全回路 → 99 (含核心回路)",
         "全装备 → 1": "全装备 → 1",
         "怪物图鉴": "怪物图鉴",
+        "怪物详情": "怪物详情",
+        "请选择一个怪物查看详情": "请选择一个怪物查看详情",
+        "怪物详情数据不可用": "怪物详情数据不可用",
+        "属性有效率": "属性有效率",
+        "异常抗性": "异常抗性",
+        "掉落耀晶片": "掉落耀晶片",
+        "掉落物": "掉落物",
+        "战技": "战技",
+        "可用": "可用",
+        "缺失": "缺失",
+        "说明": "说明",
         "宝箱进度": "宝箱进度",
         "搜索宝箱:": "搜索宝箱:",
         "地图:": "地图:",
@@ -377,6 +393,17 @@ UI_TRANSLATIONS = {
         "全回路 → 99 (含核心回路)": "All quartz → 99 (core quartz included)",
         "全装备 → 1": "All equipment → 1",
         "怪物图鉴": "Monster Manual",
+        "怪物详情": "Monster Details",
+        "请选择一个怪物查看详情": "Select a monster to view details",
+        "怪物详情数据不可用": "Monster detail data is unavailable",
+        "属性有效率": "Elemental efficacy",
+        "异常抗性": "Status resistance",
+        "掉落耀晶片": "Sepith drops",
+        "掉落物": "Item drops",
+        "战技": "Crafts",
+        "可用": "available",
+        "缺失": "missing",
+        "说明": "Description",
         "宝箱进度": "Chest Progress",
         "搜索宝箱:": "Search chests:",
         "地图:": "Map:",
@@ -540,6 +567,17 @@ UI_TRANSLATIONS = {
         "全回路 → 99 (含核心回路)": "全クオーツ → 99 (コアクオーツ含む)",
         "全装备 → 1": "装備 → 1",
         "怪物图鉴": "魔兽图鉴",
+        "怪物详情": "魔獣詳細",
+        "请选择一个怪物查看详情": "詳細を表示する魔獣を選択してください",
+        "怪物详情数据不可用": "魔獣詳細データを利用できません",
+        "属性有效率": "属性有効率",
+        "异常抗性": "状態異常耐性",
+        "掉落耀晶片": "セピスドロップ",
+        "掉落物": "ドロップアイテム",
+        "战技": "クラフト",
+        "可用": "あり",
+        "缺失": "なし",
+        "说明": "説明",
         "宝箱进度": "宝箱進捗",
         "搜索宝箱:": "宝箱検索:",
         "地图:": "マップ:",
@@ -995,6 +1033,12 @@ MONSTER_CODE_SET = frozenset(MONSTER_CODES)
 MONSTER_CATALOG = (
     load_default_monster_catalog(app_dir())
     if load_default_monster_catalog is not None
+    else None
+)
+
+MONSTER_DETAIL_CATALOG = (
+    load_default_monster_detail_catalog(app_dir())
+    if load_default_monster_detail_catalog is not None
     else None
 )
 
@@ -2239,10 +2283,16 @@ class SaveEditor(tk.Tk):
             self._monster_tree.column(column, width=widths[column], anchor="center" if column in {"code", "level", "status"} else "w")
         scroll = ttk.Scrollbar(table, orient="vertical", command=self._monster_tree.yview)
         self._monster_tree.configure(yscrollcommand=scroll.set)
+        self._monster_tree.bind("<<TreeviewSelect>>", self._refresh_monster_detail)
         self._monster_tree.pack(side="left", fill="both", expand=True)
         scroll.pack(side="right", fill="y")
         self._monster_summary_lbl = ttk.Label(frm, text="")
         self._monster_summary_lbl.pack(fill="x", padx=10, pady=(2, 8))
+        detail = ttk.LabelFrame(frm, text=self._t("怪物详情"))
+        detail.pack(fill="x", padx=8, pady=(0, 8))
+        self._monster_detail_text = tk.Text(detail, height=10, wrap="word", relief="flat")
+        self._monster_detail_text.pack(fill="x", padx=6, pady=5)
+        self._monster_detail_text.configure(state="disabled")
         self._monster_ui_dirty = True
 
     def _refresh_monster_location_choices(self):
@@ -2273,6 +2323,7 @@ class SaveEditor(tk.Tk):
         self._monster_tree.delete(*self._monster_tree.get_children())
         if self.save.data is None:
             self._monster_summary_lbl.config(text=self._t("未加载存档"))
+            self._set_monster_detail_text(self._t("请选择一个怪物查看详情"))
             self._monster_ui_dirty = False
             return
 
@@ -2309,7 +2360,72 @@ class SaveEditor(tk.Tk):
             known=diag["known"], total=len(MONSTER_CODES), complete=diag["complete"],
             partial=diag["partial"], unknown=len(diag["unknown_codes"]), duplicates=len(diag["duplicate_codes"]),
         ))
+        self._refresh_monster_detail()
         self._monster_ui_dirty = False
+
+    def _set_monster_detail_text(self, value):
+        if not hasattr(self, "_monster_detail_text"):
+            return
+        self._monster_detail_text.configure(state="normal")
+        self._monster_detail_text.delete("1.0", "end")
+        self._monster_detail_text.insert("1.0", value)
+        self._monster_detail_text.configure(state="disabled")
+
+    @staticmethod
+    def _clean_monster_detail_text(value):
+        return " ".join(str(value or "").replace("\\n", " ").replace("\r", " ").split())
+
+    def _refresh_monster_detail(self, _event=None):
+        if not hasattr(self, "_monster_tree"):
+            return
+        selection = self._monster_tree.selection()
+        if not selection:
+            self._set_monster_detail_text(self._t("请选择一个怪物查看详情"))
+            return
+        code = int(selection[0], 16)
+        reference = MONSTER_CATALOG.get(code)
+        detail = MONSTER_DETAIL_CATALOG.get(reference.ms_file) if reference and MONSTER_DETAIL_CATALOG else None
+        if detail is None:
+            self._set_monster_detail_text(self._t("怪物详情数据不可用"))
+            return
+        lang = self._current_ui_language()
+        data = detail.data
+        stats = data["stats"]
+        element_keys = ("earth", "water", "fire", "wind", "time", "space", "mirage")
+        element_labels = ("地", "水", "火", "风", "时", "空", "幻")
+        rates = "  ".join(
+            f"{self._t(label)} {data['attribute_rates'][key]}%"
+            for key, label in zip(element_keys, element_labels)
+        )
+        sepith = "  ".join(
+            f"{self._t(label)} {data['sepith'][key]}"
+            for key, label in zip(element_keys, element_labels)
+        )
+        drops = []
+        for drop in data["drops"]:
+            code = int(drop["item_code"])
+            if code in {0, 0xFFFF}:
+                continue
+            drops.append(f"{item_name(code, lang)} ({drop['rate']}%)")
+        crafts = [
+            self._clean_monster_detail_text(craft["name"])
+            for craft in detail.crafts(lang)
+            if self._clean_monster_detail_text(craft["name"])
+        ]
+        description = self._clean_monster_detail_text(detail.description(lang)) or self._t("无")
+        action_status = self._t("可用") if detail.action_script_available(lang) else self._t("缺失")
+        lines = (
+            f"{detail.name(lang)} · LV {data['level']} · HP {data['maximum_hp']} · EP {data['maximum_ep']} · CP {data['maximum_cp']} · EXP {data['exp_reward']}",
+            f"STR {stats['str']}  DEF {stats['def']}  ATS {stats['ats']}  ADF {stats['adf']}  SPD {stats['spd']}  DEX {stats['dex']}  AGL {stats['agl']}  MOV {stats['mov']}",
+            f"{self._t('属性有效率')}: {rates}",
+            f"{self._t('异常抗性')}: 0x{data['resistance']:08X}",
+            f"{self._t('掉落耀晶片')}: {sepith}",
+            f"{self._t('掉落物')}: {'、'.join(drops) if drops else self._t('无')}",
+            f"{self._t('战技')}: {'、'.join(crafts) if crafts else self._t('无')}",
+            f"{self._t('文件')}: {detail.ms_file} / {data['as_file']} ({action_status})",
+            f"{self._t('说明')}: {description}",
+        )
+        self._set_monster_detail_text("\n".join(lines))
 
     def _selected_monster_codes(self):
         if not hasattr(self, "_monster_tree"):
