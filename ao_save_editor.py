@@ -35,6 +35,8 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
 from ao_loadout_ui import LoadoutUiMixin
+from ao_fishing_ui import FishingUiMixin
+from ao_fishing import FISHING_UI_TRANSLATIONS
 from ao_reference_index_ui import ReferenceIndexUiMixin
 
 APP_DIR = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
@@ -945,6 +947,10 @@ def achievement_name(part, bit, zh_name, lang="zh_cn"):
     return localized or zh_name
 
 
+for _language, _translations in FISHING_UI_TRANSLATIONS.items():
+    UI_TRANSLATIONS.setdefault(_language, {}).update(_translations)
+
+
 def ui_text(text, lang="zh_cn"):
     translated = UI_TRANSLATIONS.get(lang, {}).get(text)
     if translated is not None:
@@ -1615,7 +1621,7 @@ class SaveData:
 # GUI
 # ============================================================
 
-class SaveEditor(LoadoutUiMixin, ReferenceIndexUiMixin, tk.Tk):
+class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("碧之轨迹 NISA版 存档修改器")
@@ -1692,6 +1698,12 @@ class SaveEditor(LoadoutUiMixin, ReferenceIndexUiMixin, tk.Tk):
         self._tab_defs.append((frm_recipes, "料理手册"))
         self._build_recipe_tab(frm_recipes)
 
+        # 钓鱼手册（最大尺寸可写；次数、奖励和鱼饵资料只读）
+        frm_fishing = ttk.Frame(self._nb)
+        self._nb.add(frm_fishing, text="钓鱼手册")
+        self._tab_defs.append((frm_fishing, "钓鱼手册"))
+        self._build_fishing_tab(frm_fishing, item_name)
+
         # 标签6: 怪物图鉴
         frm_monsters = ttk.Frame(self._nb)
         self._nb.add(frm_monsters, text="怪物图鉴")
@@ -1762,6 +1774,8 @@ class SaveEditor(LoadoutUiMixin, ReferenceIndexUiMixin, tk.Tk):
             self._refresh_items_ui()
         elif key == "人物装备 / 回路" and getattr(self, "_loadout_ui_dirty", True):
             self._refresh_loadout_ui()
+        elif key == "钓鱼手册" and getattr(self, "_fishing_ui_dirty", True):
+            self._refresh_fishing_ui()
         elif key == "怪物图鉴" and getattr(self, "_monster_ui_dirty", True):
             self._refresh_monster_ui()
         elif key == "资源索引" and getattr(self, "_reference_ui_dirty", True):
@@ -1873,6 +1887,8 @@ class SaveEditor(LoadoutUiMixin, ReferenceIndexUiMixin, tk.Tk):
             self._refresh_achievements_ui()
         if hasattr(self, "_recipe_vars"):
             self._refresh_recipe_names()
+        if hasattr(self, "_fishing_tree"):
+            self._refresh_fishing_language()
         if hasattr(self, "_monster_tree"):
             self._monster_tree.heading("code", text=self._t("代码"))
             self._monster_tree.heading("name", text=self._t("名称"))
@@ -2347,6 +2363,9 @@ class SaveEditor(LoadoutUiMixin, ReferenceIndexUiMixin, tk.Tk):
 
         # P0: 手册、成就 + 战斗
         self._refresh_recipes_ui()
+        self._fishing_ui_dirty = True
+        if self._is_active_tab("钓鱼手册"):
+            self._refresh_fishing_ui()
         self._monster_ui_dirty = True
         if self._is_active_tab("怪物图鉴"):
             self._refresh_monster_ui()

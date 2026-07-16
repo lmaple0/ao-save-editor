@@ -29,7 +29,8 @@ class LoadoutUiContractTests(unittest.TestCase):
 
     def test_save_editor_registers_loadout_tab_and_refresh_lifecycle(self):
         source = (ROOT / "ao_save_editor.py").read_text(encoding="utf-8")
-        self.assertIn("class SaveEditor(LoadoutUiMixin, ReferenceIndexUiMixin, tk.Tk)", source)
+        self.assertIn("class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk)", source)
+        self.assertIn("from ao_fishing_ui import FishingUiMixin", source)
         self.assertIn("self._build_loadout_tab(frm_loadout, item_name, character_name)", source)
         self.assertIn('self._is_active_tab("人物装备 / 回路")', source)
 
