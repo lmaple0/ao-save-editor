@@ -134,12 +134,12 @@ def load_achievement_i18n():
     result = {}
     for row in rows:
         try:
-            key = int(row.get("game_achievement_id"))
+            achievement_id = int(row.get("game_achievement_id"))
         except (TypeError, ValueError):
             continue
-        if not 0 <= key < 56:
+        if not 0 <= achievement_id < 56:
             continue
-        result[key] = row
+        result[achievement_id] = row
     return result
 
 
@@ -936,9 +936,11 @@ def item_search_text(code):
     return " ".join(name for name in names if name).lower()
 
 
-def achievement_name(achievement_id, zh_name, lang="zh_cn"):
+def achievement_name(part, bit, zh_name, lang="zh_cn"):
     if lang == "zh_cn":
         return zh_name
+    save_bit = part * 8 + bit
+    achievement_id = NISA_ACHIEVEMENT_GAME_IDS[save_bit]
     localized = get_achievement_i18n().get(achievement_id, {}).get(lang)
     return localized or zh_name
 
@@ -1002,15 +1004,15 @@ LEGACY_ACHIEVEMENT_NAMES = [
     (5, 3, "刚之追及者"), (5, 4, "红之讨伐者"),
     (5, 5, "与兰迪的羁绊"), (5, 6, "与缇欧的羁绊"),
     (5, 7, "与艾莉的羁绊"),
-    (6, 0, "七耀之贤士"), (6, 1, "鬼屋射击大师"),
+    (6, 0, "七曜之贤士"), (6, 1, "鬼屋射击大师"),
     (6, 2, "波波碰大师"), (6, 3, "传至的思念～不断的羁绊"),
     (6, 4, "解明真相者"), (6, 5, "爆裂果敢"),
     (6, 6, "赶尽杀绝"), (6, 7, "八头击灭"),
 ]
 
-# NISA stores bits directly by game_achievement_id. Keep the legacy list above
-# only as provenance for the former Joyoland bitmap order.
-LEGACY_ACHIEVEMENT_IDS = (
+# Original Joyoland system-save coordinates, retained to recover Chinese names
+# when the localization JSON is unavailable. They are not NISA per-slot bits.
+LEGACY_ACHIEVEMENT_GAME_IDS = (
     10, 8, 4, 3, 5, 9, 1, 2,
     19, 18, 17, 16, 12, 32, 36, 11,
     7, 6, 31, 28, 33, 15, 21, 20,
@@ -1020,18 +1022,56 @@ LEGACY_ACHIEVEMENT_IDS = (
     30, 13, 14, 55, 37, 27, 26, 25,
 )
 
+# ao.exe contains a 57-pointer platform table. Entry 0 is the aggregate
+# ALL_ACHIEVEMENTS trophy; NISA save bits 0..55 map to entries 1..56.
+NISA_ACHIEVEMENT_PLATFORM_KEYS = (
+    "AR_ALL_BATTLENOTE", "AR_ALL_CLEAR_QUEST", "AR_ALL_RECIPE", "AR_ALL_QUARZ",
+    "AR_ALL_BOOK", "AR_ALL_TREASUREBOX", "AR_ALL_FISHING", "AR_ALL_COOKING2",
+    "AR_ALL_COOKING3", "AR_ALL_FLAGMENT", "AR_ALL_COMBICRAFT", "AR_MANYGOLD",
+    "AR_BATTLE100", "AR_BATTLE200", "AR_BATTLE300", "AR_DESTROY_ENEMYS1000",
+    "AR_PARTYADVANTAGE100", "AR_SBREAK100", "AR_PLAYTIME", "AR_CLASS_1ST",
+    "AR_STRONGEST_WEAPON", "AR_LEVEL120", "AR_INTERIOR", "AR_CARMANIA",
+    "AR_MASTERQUARTZ", "AR_ENIGMA2", "AR_GAME_CLEAR_HARD",
+    "AR_GAME_CLEAR_NIGHTMARE", "AR_PROROGUE_CLEAR", "AR_1ST_CLEAR",
+    "AR_2ND_CLEAR", "AR_INT_CLEAR", "AR_3RD_CLEAR", "AR_4TH_CLEAR",
+    "AR_5TH_CLEAR", "AR_LAST_CLEAR", "AR_COMBI_UP_DUDLEY", "AR_COMBI_UP_NOEL",
+    "AR_COMBI_UP_WAZY", "AR_COMBI_UP_RIXIA", "AR_COMBI_UP_ELIE",
+    "AR_COMBI_UP_TIO", "AR_COMBI_UP_RANDY", "AR_KILL_WANTED",
+    "AR_KILL_ARIANLOAD", "AR_CANCEL_ARTS_100", "AR_BTBONUS_100",
+    "AR_3CHAINED_BATTLE", "AR_KILL10ENEMY", "AR_KILL16ENEMY", "AR_BURST",
+    "AR_KUROMAKU", "AR_KIZUNA_ETC", "AR_POMTTO", "AR_HORROR", "AR_ARTSMASTER",
+)
+
+# game_achievement_id for each NISA per-slot bit, derived from the platform key
+# table above and the localized achievement descriptions.
+NISA_ACHIEVEMENT_GAME_IDS = (
+    1, 2, 9, 5, 3, 4, 8, 11,
+    10, 36, 32, 12, 16, 17, 18, 19,
+    20, 21, 15, 33, 28, 31, 6, 7,
+    29, 0, 34, 35, 40, 41, 42, 43,
+    44, 45, 46, 47, 54, 51, 52, 53,
+    48, 49, 50, 38, 39, 22, 23, 24,
+    25, 26, 27, 37, 55, 14, 13, 30,
+)
+
 
 def build_achievement_names(localized_rows):
-    """Build the NISA ID-ordered catalog, retaining a Chinese fallback."""
-    fallback = {
+    """Build the NISA save-bit catalog, retaining a Chinese fallback by ID."""
+    fallback_by_id = {
         achievement_id: zh_name
         for achievement_id, (_part, _bit, zh_name) in zip(
-            LEGACY_ACHIEVEMENT_IDS, LEGACY_ACHIEVEMENT_NAMES
+            LEGACY_ACHIEVEMENT_GAME_IDS, LEGACY_ACHIEVEMENT_NAMES
         )
     }
     return [
-        (achievement_id, localized_rows.get(achievement_id, {}).get("zh_cn", fallback[achievement_id]))
-        for achievement_id in range(56)
+        (
+            save_bit // 8,
+            save_bit % 8,
+            localized_rows.get(achievement_id, {}).get(
+                "zh_cn", fallback_by_id[achievement_id]
+            ),
+        )
+        for save_bit, achievement_id in enumerate(NISA_ACHIEVEMENT_GAME_IDS)
     ]
 
 
@@ -2928,7 +2968,7 @@ class SaveEditor(LoadoutUiMixin, ReferenceIndexUiMixin, tk.Tk):
 
     # ---- P0: 成就标签页 ----
     def _build_achievement_tab(self, frm):
-        self._ach_vars = []  # list of (achievement_id, BooleanVar, checkbox)
+        self._ach_vars = []  # list of (bitmap_part, bit, BooleanVar, checkbox)
         canvas = tk.Canvas(frm)
         scrollbar = ttk.Scrollbar(frm, orient="vertical", command=canvas.yview)
         scrollable = ttk.Frame(canvas)
@@ -2944,35 +2984,39 @@ class SaveEditor(LoadoutUiMixin, ReferenceIndexUiMixin, tk.Tk):
         ttk.Button(bar, text="全锁定", command=self._ach_lock_all).pack(side="left", padx=3)
         self._ach_count_label = ttk.Label(bar, text="0 / 56")
         self._ach_count_label.pack(side="right", padx=8)
-        for achievement_id, name in ACHIEVEMENT_NAMES:
+        for part, bit, name in ACHIEVEMENT_NAMES:
             var = tk.BooleanVar()
-            cb = ttk.Checkbutton(scrollable, text=achievement_name(achievement_id, name, self._current_ui_language()), variable=var)
+            cb = ttk.Checkbutton(
+                scrollable,
+                text=achievement_name(part, bit, name, self._current_ui_language()),
+                variable=var,
+            )
             cb.pack(anchor="w", padx=15, pady=1)
-            self._ach_vars.append((achievement_id, var, cb))
+            self._ach_vars.append((part, bit, var, cb))
 
     def _on_achievement_language_changed(self, _event=None):
         lang = self._current_ui_language()
-        name_by_id = dict(ACHIEVEMENT_NAMES)
-        for achievement_id, _var, checkbox in self._ach_vars:
-            zh_name = name_by_id.get(achievement_id, "")
-            checkbox.configure(text=achievement_name(achievement_id, zh_name, lang))
+        name_by_position = {
+            (part, bit): name for part, bit, name in ACHIEVEMENT_NAMES
+        }
+        for part, bit, _var, checkbox in self._ach_vars:
+            zh_name = name_by_position.get((part, bit), "")
+            checkbox.configure(text=achievement_name(part, bit, zh_name, lang))
 
     def _refresh_achievements_ui(self):
         if self.save.data is None:
             return
         bits = self.save.read_achievements()
-        for achievement_id, var, checkbox in self._ach_vars:
-            part, bit = divmod(achievement_id, 8)
+        for part, bit, var, checkbox in self._ach_vars:
             var.set(bool(bits.get(part, [0]*8)[bit]))
         self._ach_count_label.configure(
-            text=f"{sum(var.get() for _, var, _ in self._ach_vars)} / 56"
+            text=f"{sum(var.get() for _, _, var, _ in self._ach_vars)} / 56"
         )
         self._on_achievement_language_changed()
 
     def _write_achievements_from_gui(self):
         bits = {i: [0]*8 for i in range(7)}
-        for achievement_id, var, _checkbox in self._ach_vars:
-            part, bit = divmod(achievement_id, 8)
+        for part, bit, var, _checkbox in self._ach_vars:
             if var.get():
                 bits[part][bit] = 1
         self.save.write_achievements(bits)

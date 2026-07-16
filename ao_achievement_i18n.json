@@ -4,7 +4,8 @@
     "missing": [],
     "notes": [
       "NISA PC stores the 56 achievement bits at 0x1F454-0x1F45A.",
-      "game_achievement_id is the direct zero-based NISA bitmap bit index; legacy bitmap_part/bit fields describe the old Joyoland UI order only.",
+      "bitmap_part/bit retain the Joyoland system-save coordinates; they are not the NISA per-slot bit order.",
+      "NISA per-slot bits 0-55 map to ao.exe platform-table entries 1-56; entry 0 is ALL_ACHIEVEMENTS. Runtime joins that order to game_achievement_id.",
       "zh_cn names were reconciled by acquisition condition against the user-supplied Joyoland achievement-table screenshots on 2026-07-16."
     ]
   },
@@ -540,7 +541,7 @@
     {
       "bitmap_part": 6,
       "bit": 0,
-      "zh_cn": "七耀之贤士",
+      "zh_cn": "七曜之贤士",
       "ja": "七耀の賢士",
       "ja_desc": "七属性全ての最強攻撃アーツを使える状態にした。",
       "en": "The Last Orbender",
