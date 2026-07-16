@@ -32,7 +32,7 @@
 - 浏览、搜索并重写完整 713 项物品表；可按 ID/名称将一个物品替换成另一个物品，并将数量设为 0–99 的任意整数；物品名支持中文/英文/日文显示切换。
 - 修改 24 道基础菜谱的料理手册解锁状态，支持逐项勾选、全选/全不选，并随全局语言切换显示欢乐百世中文、NISA 英文和 Falcom 日文名称。
 - 一键补齐并设置消耗品、食材、书籍、鱼、回路和装备数量。
-- 修改 7 字节成就位图，支持全解锁/全锁定，成就名支持中文/英文/日文显示切换。
+- 修改 NISA 单存档 `0x1F454~0x1F45A` 的 56 位成就位图，显示已解锁数量，支持全解锁/全锁定及中文/英文/日文名称切换。
 - 修改战斗手册统计计数。
 - 修改 12 个固定角色的外观资源槽，使用已校正的 NISA 原始 ID，覆盖瓦吉前/后期、银/莉夏及间章泳装变体。
 - 怪物图鉴支持 305 项目录浏览、名称/代码/文件/地点搜索、75 个细分地点筛选、状态诊断、逐项编辑和一键全开；新增只读详情面板，显示 HP/EP/CP、完整战斗属性、七属性有效率、异常抗性、掉落耀晶片、掉落物、战技名称、说明及 `ms/as` 来源。详情由本机 NISA 三语 333 个 `ms*.dat` 生成，数值结构跨语言一致。
@@ -65,7 +65,7 @@
 - 怪物详情生成器完成三语 333/333 文件解析和全数值结构对比，305/305 存档图鉴怪物可关联详情，333/333 有有效动作脚本来源；`ms60000/ms60001` 的未解释尾部扩展只记录大小与哈希。详情 JSON 改为首次查看时懒加载。
 - 资源索引生成器独立、带边界检查地解析三语 `t_name._dt` 和有效 `as*.dat` 头/动作表，不反汇编或执行动作指令；生成 6173 个节点、6835 条关系及 7 组同名候选变体。5.4 MB 索引按首次打开页面懒加载，空搜索最多向 Treeview 填充 500 项。
 - 宝箱目录生成器完成 280/280 旗标、44/44 三语地图和 93/93 NISA 场景文件覆盖；两个本机 NISA 样例存档均解析为 117/280 已取得。宝箱功能只读取旗标，不写入存档。
-- 当前 96 项单元测试全部通过。用户标注的 8 个队伍样本与原始槽位顺序逐项一致；122 个有效本机存档均无未知队伍/外观 ID，且只读验证前后哈希不变；128 个有效本机存档的元素限定检查为零冲突，Windows Python 3.13 隐藏窗口测试确认限定槽只显示兼容回路。
+- 当前 105 项单元测试全部通过，新增 4 项 `tools/`、`docs/` 目录契约检查；其中成就回归测试覆盖 47/56 实际位图、ID 完整性、本地化匹配及仅修改 7 字节的写入边界。用户标注的 8 个队伍样本与原始槽位顺序逐项一致；122 个有效本机存档均无未知队伍/外观 ID，且只读验证前后哈希不变；128 个有效本机存档的元素限定检查为零冲突，Windows Python 3.13 隐藏窗口测试确认限定槽只显示兼容回路。
 
 Codex bundled Python 缺少 Tcl/Tk；GUI 已改用本机 Windows Python 3.13 完成隐藏窗口构建与三语切换冒烟测试。
 
@@ -73,12 +73,12 @@ Codex bundled Python 缺少 Tcl/Tk；GUI 已改用本机 Windows Python 3.13 完
 
 - `ao_item_i18n.json`：按存档物品 ID 匹配的物品名称/描述。
 - `ao_item_index.json`：结构化物品元数据；`zh_joyoland` 是运行时中文默认值，`zh_cle` 是保守保留的对照层。
-- `ao_achievement_i18n.json`：按存档成就位图位置匹配的成就名称/描述，并保留用户提供 JSON 中的游戏成就 ID。
+- `ao_achievement_i18n.json`：按 NISA `game_achievement_id` 直接对应成就位图 bit；欢乐百世中文名依据用户提供的成就表截图和获得条件逐项复核。
 - `ao_magic_i18n.json`：来自用户提供 magic CSV 的战技/导力魔法英文行数据。这里的 CSV 行号只是参考行，不声明为已确认的存档战技槽位 ID；日文 CSV 文本已保留，但存在需要后续复核的编码问题。
-- `ao_monster_reference.json`：由 `build_monster_reference.py` 将存档代码表、Ouroboros/Falcom 身份层、本机 NISA 三语 `ms*.dat` 名称和场景地点合并生成；不执行上游 Python 文件。`build_monster_locations.py` 负责场景代码扫描和三语 MapIndex 地点解析。
-- `ao_monster_details.json`：由 `build_monster_details.py` 使用独立、带边界检查的只读解析器从本机三语 333 个 `ms*.dat` 生成；保留每个来源文件的 SHA-256，不执行或分发上游生成脚本及原始游戏文件。
-- `ao_reference_graph.json`：由 `build_reference_graph.py` 连接怪物目录、三语 `t_name._dt`、333 个 `ms` 与三语有效 `as` 动作表；保留相对来源路径和 SHA-256。动作入口按索引关联，不能证明属于本地脚本的战技引用只列为未解析研究项。
-- `ao_chest_reference.json`：由 `build_chest_reference.py` 将 Ouroboros/Falcom RecordViewer 的宝箱旗标与坐标、本机 NISA 场景 `MapIndex`、三语 `t_town._dt` 和物品 ID 索引合并生成；保留旧 Joyoland 地图/物品名与源码行号作为来源证据。
+- `ao_monster_reference.json`：由 `tools/build_monster_reference.py` 将存档代码表、Ouroboros/Falcom 身份层、本机 NISA 三语 `ms*.dat` 名称和场景地点合并生成；不执行上游 Python 文件。`tools/build_monster_locations.py` 负责场景代码扫描和三语 MapIndex 地点解析。
+- `ao_monster_details.json`：由 `tools/build_monster_details.py` 使用独立、带边界检查的只读解析器从本机三语 333 个 `ms*.dat` 生成；保留每个来源文件的 SHA-256，不执行或分发上游生成脚本及原始游戏文件。
+- `ao_reference_graph.json`：由 `tools/build_reference_graph.py` 连接怪物目录、三语 `t_name._dt`、333 个 `ms` 与三语有效 `as` 动作表；保留相对来源路径和 SHA-256。动作入口按索引关联，不能证明属于本地脚本的战技引用只列为未解析研究项。
+- `ao_chest_reference.json`：由 `tools/build_chest_reference.py` 将 Ouroboros/Falcom RecordViewer 的宝箱旗标与坐标、本机 NISA 场景 `MapIndex`、三语 `t_town._dt` 和物品 ID 索引合并生成；保留旧 Joyoland 地图/物品名与源码行号作为来源证据。
 
 ## 存档格式说明
 
@@ -131,4 +131,4 @@ python ao_save_editor.py savedata.dat --mira 9999999 --sepith max --dp 400 --max
 
 修改存档前请手动备份。真实存档文件 `*.dat` 默认已加入 `.gitignore`，不建议提交到仓库。
 
-更多开发排期和实现记录见 `ao_save_editor_roadmap.md`。
+更多开发排期和实现记录见 `docs/ao_save_editor_roadmap.md`。

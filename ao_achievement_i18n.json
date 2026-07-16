@@ -3,8 +3,9 @@
     "source": "User supplied achievements_ja.json and achievements_us.json",
     "missing": [],
     "notes": [
-      "bitmap_part/bit are save-editor achievement bitmap locations.",
-      "game_achievement_id is the ID from the supplied achievement JSON and is not the bitmap order."
+      "NISA PC stores the 56 achievement bits at 0x1F454-0x1F45A.",
+      "game_achievement_id is the direct zero-based NISA bitmap bit index; legacy bitmap_part/bit fields describe the old Joyoland UI order only.",
+      "zh_cn names were reconciled by acquisition condition against the user-supplied Joyoland achievement-table screenshots on 2026-07-16."
     ]
   },
   "achievements": [
@@ -99,7 +100,7 @@
     {
       "bitmap_part": 1,
       "bit": 0,
-      "zh_cn": "千战之志士",
+      "zh_cn": "千战的武者",
       "ja": "千討の志士",
       "ja_desc": "敵を２０００体以上倒した。",
       "en": "Writ of Habeas Corpses",
@@ -110,7 +111,7 @@
     {
       "bitmap_part": 1,
       "bit": 1,
-      "zh_cn": "历战之胜者",
+      "zh_cn": "历战的胜者",
       "ja": "歴戦の勝者",
       "ja_desc": "戦闘勝利回数１０００回達成。",
       "en": "Voluntary Monslaughter",
@@ -121,7 +122,7 @@
     {
       "bitmap_part": 1,
       "bit": 2,
-      "zh_cn": "奋战之猛士",
+      "zh_cn": "奋战的猛士",
       "ja": "奮戦の猛者",
       "ja_desc": "戦闘勝利回数５００回達成。",
       "en": "Right to Remain Violent",
@@ -132,7 +133,7 @@
     {
       "bitmap_part": 1,
       "bit": 3,
-      "zh_cn": "力战之勇士",
+      "zh_cn": "力战的勇士",
       "ja": "力戦の勇士",
       "ja_desc": "戦闘勝利回数１００回達成。",
       "en": "Petty Monst-emeanor",
@@ -165,7 +166,7 @@
     {
       "bitmap_part": 1,
       "bit": 6,
-      "zh_cn": "D之追及者",
+      "zh_cn": "D之追究者",
       "ja": "Ｄの追及者",
       "ja_desc": "Ｄ∴Ｇ教団の端末を全て解析した。",
       "en": "Terminal Diagnosis",
@@ -209,7 +210,7 @@
     {
       "bitmap_part": 2,
       "bit": 2,
-      "zh_cn": "无双之猎士",
+      "zh_cn": "无双之烈士",
       "ja": "無双の烈士",
       "ja_desc": "ロイド、エリィ、ティオ、ランディのレベルを１２０まで上げた。",
       "en": "Peerless Heroes",
@@ -242,13 +243,13 @@
     {
       "bitmap_part": 2,
       "bit": 5,
-      "zh_cn": "持续的压迫",
+      "zh_cn": "持续的雅士",
       "ja": "継続の粋人",
       "ja_desc": "プレイ時間が１００時間を越えた。",
-      "en": "The Phantom Menace",
-      "en_desc": "Scored at least 4,000 points on the Horror Coaster.",
-      "game_achievement_id": 13,
-      "match_source": "zh_cn_to_ja_name_to_json_id"
+      "en": "Search and Leisure",
+      "en_desc": "Played for over 100 hours.",
+      "game_achievement_id": 15,
+      "match_source": "verified_ja_and_steam_mapping"
     },
     {
       "bitmap_part": 2,
@@ -297,7 +298,7 @@
     {
       "bitmap_part": 3,
       "bit": 2,
-      "zh_cn": "预兆~新的生活",
+      "zh_cn": "预兆～新的生活",
       "ja": "予兆～新たなる日々",
       "ja_desc": "第１章『予兆～新たなる日々』をクリアした。",
       "en": "Out of Sight, Out of Mine",
@@ -407,7 +408,7 @@
     {
       "bitmap_part": 4,
       "bit": 4,
-      "zh_cn": "即便如此我们也…",
+      "zh_cn": "即使如此，我们也……",
       "ja": "それでも僕らは。",
       "ja_desc": "終章『それでも僕らは。』をクリアした。",
       "en": "From Zero to Azure",
@@ -418,7 +419,7 @@
     {
       "bitmap_part": 4,
       "bit": 5,
-      "zh_cn": "跨越虚幻的乐园",
+      "zh_cn": "跨越虚幻的乐土",
       "ja": "偽りの楽土を越えて",
       "ja_desc": "断章『偽りの楽土を越えて』をクリアした。",
       "en": "Prison of Hard Knox",
@@ -462,7 +463,7 @@
     {
       "bitmap_part": 5,
       "bit": 1,
-      "zh_cn": "绚烂攻击",
+      "zh_cn": "绚烂攻守",
       "ja": "絢爛攻守",
       "ja_desc": "タクティカルボーナス値×４．００以上達成。",
       "en": "4.0 Average",
@@ -484,7 +485,7 @@
     {
       "bitmap_part": 5,
       "bit": 3,
-      "zh_cn": "刚之追随者",
+      "zh_cn": "刚之追及者",
       "ja": "鋼に届きし者",
       "ja_desc": "《鋼の聖女》アリアンロードの膝を付かせた。",
       "en": "Forged in Battle",
@@ -539,7 +540,7 @@
     {
       "bitmap_part": 6,
       "bit": 0,
-      "zh_cn": "绮耀之贤士",
+      "zh_cn": "七耀之贤士",
       "ja": "七耀の賢士",
       "ja_desc": "七属性全ての最強攻撃アーツを使える状態にした。",
       "en": "The Last Orbender",
@@ -550,7 +551,7 @@
     {
       "bitmap_part": 6,
       "bit": 1,
-      "zh_cn": "怪物射击大师",
+      "zh_cn": "鬼屋射击大师",
       "ja": "ホラーバスター",
       "ja_desc": "ホラーコースターで４０００ポイントを獲得した。",
       "en": "The Phantom Menace",
@@ -572,7 +573,7 @@
     {
       "bitmap_part": 6,
       "bit": 3,
-      "zh_cn": "传承的思念～不断的羁绊",
+      "zh_cn": "传至的思念～不断的羁绊",
       "ja": "届いた想い、繋がる絆",
       "ja_desc": "キーア、フラン、セシル、イリア、シュリとの絆を深めた。",
       "en": "The Girls Are Alright",
@@ -605,7 +606,7 @@
     {
       "bitmap_part": 6,
       "bit": 6,
-      "zh_cn": "赶紧杀绝",
+      "zh_cn": "赶尽杀绝",
       "ja": "滅絶淘汰",
       "ja_desc": "一度の戦闘で１６体の敵を倒した。",
       "en": "Sixteen Going on Severing",
@@ -616,7 +617,7 @@
     {
       "bitmap_part": 6,
       "bit": 7,
-      "zh_cn": "霸头歼灭",
+      "zh_cn": "八头击灭",
       "ja": "八頭撃滅",
       "ja_desc": "敵８体を同時に倒した。",
       "en": "Octa-GONE",

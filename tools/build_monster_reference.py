@@ -6,7 +6,7 @@ import ast
 import json
 import re
 
-from build_monster_locations import attach_monster_locations
+from .build_monster_locations import attach_monster_locations
 
 
 ENTRY_RE = re.compile(
@@ -135,7 +135,7 @@ def build_reference(editor_path, dbmon_path, game_root):
         "schema_version": 3,
         "game": "ao_no_kiseki",
         "target_save_edition": "nisa_pc",
-        "generated_by": "build_monster_reference.py",
+        "generated_by": "tools/build_monster_reference.py",
         "source": {
             "identity": {
                 "repository": "https://github.com/Ouroboros/Falcom",

@@ -11,6 +11,9 @@ from pathlib import Path
 import struct
 
 
+WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
+
+
 T_NAME_SOURCES = {
     "zh_cle": ("data_cn/text/t_name._dt", "gbk"),
     "ja": ("data/text/t_name._dt", "cp932"),
@@ -556,15 +559,15 @@ def main():
     parser.add_argument("game_root", type=Path)
     parser.add_argument(
         "--monster-reference", type=Path,
-        default=Path(__file__).with_name("ao_monster_reference.json"),
+        default=WORKSPACE_ROOT / "ao_monster_reference.json",
     )
     parser.add_argument(
         "--monster-details", type=Path,
-        default=Path(__file__).with_name("ao_monster_details.json"),
+        default=WORKSPACE_ROOT / "ao_monster_details.json",
     )
     parser.add_argument(
         "--output", type=Path,
-        default=Path(__file__).with_name("ao_reference_graph.json"),
+        default=WORKSPACE_ROOT / "ao_reference_graph.json",
     )
     args = parser.parse_args()
     graph = build_graph(args.game_root, args.monster_reference, args.monster_details)

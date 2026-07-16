@@ -4,7 +4,7 @@ from pathlib import Path
 import ao_loadout_ui
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 
 
 class LoadoutUiContractTests(unittest.TestCase):

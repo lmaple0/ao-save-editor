@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from build_reference_graph import ParseError, parse_action_script, parse_t_name
+from tools.build_reference_graph import ParseError, parse_action_script, parse_t_name
 
 
 class ReferenceGraphBuilderTests(unittest.TestCase):

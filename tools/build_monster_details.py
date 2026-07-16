@@ -10,6 +10,9 @@ from pathlib import Path
 import struct
 
 
+WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
+
+
 LOCALE_SOURCES = {
     "zh_cle": ("data_cn/battle/dat", "gbk"),
     "ja": ("data/battle/dat", "cp932"),
@@ -296,7 +299,7 @@ def build_catalog(game_root):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("game_root", type=Path)
-    parser.add_argument("--output", type=Path, default=Path(__file__).with_name("ao_monster_details.json"))
+    parser.add_argument("--output", type=Path, default=WORKSPACE_ROOT / "ao_monster_details.json")
     args = parser.parse_args()
     catalog = build_catalog(args.game_root)
     args.output.write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -9,6 +9,9 @@ from pathlib import Path
 import struct
 
 
+WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
+
+
 TOWN_LOCALES = {
     "zh_cle": ("data_cn/text/t_town._dt", "gbk"),
     "ja": ("data/text/t_town._dt", "cp932"),
@@ -181,8 +184,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("recordviewer_json", type=Path)
     parser.add_argument("game_root", type=Path)
-    parser.add_argument("--item-index", type=Path, default=Path(__file__).with_name("ao_item_index.json"))
-    parser.add_argument("--output", type=Path, default=Path(__file__).with_name("ao_chest_reference.json"))
+    parser.add_argument("--item-index", type=Path, default=WORKSPACE_ROOT / "ao_item_index.json")
+    parser.add_argument("--output", type=Path, default=WORKSPACE_ROOT / "ao_chest_reference.json")
     args = parser.parse_args()
     data = build_reference(args.recordviewer_json, args.game_root, args.item_index)
     args.output.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
