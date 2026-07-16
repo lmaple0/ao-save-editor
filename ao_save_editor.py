@@ -38,6 +38,7 @@ from ao_loadout_ui import LoadoutUiMixin
 from ao_fishing_ui import FishingUiMixin
 from ao_fishing import FISHING_UI_TRANSLATIONS
 from ao_reference_index_ui import ReferenceIndexUiMixin
+from ao_save_browser import SAVE_BROWSER_TRANSLATIONS, default_ao_save_root, discover_save_slots
 
 APP_DIR = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
 if APP_DIR not in sys.path:
@@ -160,6 +161,36 @@ APP_TITLES = {
     "en": "Trails to Azure NISA Save Editor",
     "ja": "碧の軌跡 NISA版 セーブエディタ",
 }
+
+# Compact labels are specific to the Notebook tab strip. Full translations remain
+# available inside each page and in other controls.
+TAB_TITLE_I18N = {
+    "zh_cn": {
+        "基本 / Mira": "基本", "角色属性": "角色", "人物装备 / 回路": "装备/回路",
+        "队伍 / 好感度": "队伍/好感", "物品": "物品", "料理手册": "料理",
+        "钓鱼手册": "钓鱼", "怪物图鉴": "怪物", "资源索引": "资源索引",
+        "宝箱进度": "宝箱", "存档诊断": "诊断", "成就": "成就",
+        "战斗手册": "战斗", "角色外观": "外观", "快捷操作": "快捷",
+    },
+    "en": {
+        "基本 / Mira": "Basics", "角色属性": "Stats", "人物装备 / 回路": "Loadout",
+        "队伍 / 好感度": "Party", "物品": "Items", "料理手册": "Recipes",
+        "钓鱼手册": "Fishing", "怪物图鉴": "Monsters", "资源索引": "Reference",
+        "宝箱进度": "Chests", "存档诊断": "Diagnostics", "成就": "Achievements",
+        "战斗手册": "Battle", "角色外观": "Appearance", "快捷操作": "Quick Edit",
+    },
+    "ja": {
+        "基本 / Mira": "基本", "角色属性": "能力", "人物装备 / 回路": "装備/クオーツ",
+        "队伍 / 好感度": "編成/絆", "物品": "アイテム", "料理手册": "料理",
+        "钓鱼手册": "釣り", "怪物图鉴": "魔獣", "资源索引": "索引",
+        "宝箱进度": "宝箱", "存档诊断": "診断", "成就": "実績",
+        "战斗手册": "戦闘", "角色外观": "外見", "快捷操作": "クイック",
+    },
+}
+
+
+def tab_title(key, lang="zh_cn"):
+    return TAB_TITLE_I18N.get(lang, TAB_TITLE_I18N["zh_cn"]).get(key, key)
 
 CHARACTER_NAME_I18N = {
     "Lloyd": {"zh_cn": "罗伊德", "en": "Lloyd", "ja": "ロイド"},
@@ -949,6 +980,8 @@ def achievement_name(part, bit, zh_name, lang="zh_cn"):
 
 for _language, _translations in FISHING_UI_TRANSLATIONS.items():
     UI_TRANSLATIONS.setdefault(_language, {}).update(_translations)
+for _language, _translations in SAVE_BROWSER_TRANSLATIONS.items():
+    UI_TRANSLATIONS.setdefault(_language, {}).update(_translations)
 
 
 def ui_text(text, lang="zh_cn"):
@@ -1625,11 +1658,14 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("碧之轨迹 NISA版 存档修改器")
-        self.geometry("1120x700")
+        self.geometry("1320x700")
         self.resizable(True, True)
         self.save = SaveData()
+        self._save_browser_root = default_ao_save_root()
+        self._save_slot_entries = {}
         self._vars = {}  # StringVar 缓存
         self._build_ui()
+        self.after_idle(self._refresh_save_browser)
 
     def _build_ui(self):
         # 工具栏
@@ -1640,6 +1676,8 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         self._toolbar_open_btn.pack(side="left", padx=3)
         self._toolbar_save_btn = ttk.Button(toolbar, text="保存存档", command=self._save_file)
         self._toolbar_save_btn.pack(side="left", padx=3)
+        self._save_browser_toggle_btn = ttk.Button(toolbar, command=self._toggle_save_browser)
+        self._save_browser_toggle_btn.pack(side="left", padx=3)
         self._ui_lang_label = ttk.Label(toolbar, text="语言")
         self._ui_lang_label.pack(side="left", padx=(16, 2))
         self._ui_lang_var = tk.StringVar(value="zh_cn:中文")
@@ -1657,9 +1695,16 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         self._status_key = "未加载存档"
         self._status_kwargs = {}
 
-        # Notebook 标签页
-        self._nb = ttk.Notebook(self)
-        self._nb.pack(fill="both", expand=True, padx=5, pady=5)
+        # 左侧存档列表 + Notebook 主编辑区
+        self._content_pane = ttk.Panedwindow(self, orient="horizontal")
+        self._content_pane.pack(fill="both", expand=True, padx=5, pady=5)
+        self._save_browser_frame = ttk.Frame(self._content_pane, width=300)
+        self._build_save_browser(self._save_browser_frame)
+        self._content_pane.add(self._save_browser_frame, weight=0)
+        self._save_browser_visible = True
+
+        self._nb = ttk.Notebook(self._content_pane)
+        self._content_pane.add(self._nb, weight=1)
         self._tab_defs = []
 
         # 标签1: 基本
@@ -1755,6 +1800,82 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         self._register_localizable_widgets(self)
         self._nb.bind("<<NotebookTabChanged>>", self._on_tab_changed)
         self._apply_ui_language(initial=True)
+    def _build_save_browser(self, parent):
+        parent.grid_rowconfigure(3, weight=1)
+        parent.grid_columnconfigure(0, weight=1)
+
+        self._save_browser_title = ttk.Label(
+            parent, text=self._t("存档列表"), font=("", 10, "bold")
+        )
+        self._save_browser_title.grid(row=0, column=0, sticky="w", padx=4, pady=(2, 4))
+
+        self._save_browser_path_lbl = ttk.Label(
+            parent, text=str(self._save_browser_root), wraplength=285, justify="left"
+        )
+        self._save_browser_path_lbl.grid(row=1, column=0, sticky="ew", padx=4, pady=(0, 4))
+
+        actions = ttk.Frame(parent)
+        actions.grid(row=2, column=0, sticky="ew", padx=2, pady=(0, 4))
+        self._save_browser_choose_btn = ttk.Button(
+            actions, text=self._t("选择目录"), command=self._choose_save_browser_root
+        )
+        self._save_browser_choose_btn.pack(side="left", padx=2)
+        self._save_browser_refresh_btn = ttk.Button(
+            actions, text=self._t("刷新列表"), command=self._refresh_save_browser
+        )
+        self._save_browser_refresh_btn.pack(side="left", padx=2)
+
+        tree_frame = ttk.Frame(parent)
+        tree_frame.grid(row=3, column=0, sticky="nsew", padx=2)
+        tree_frame.grid_rowconfigure(0, weight=1)
+        tree_frame.grid_columnconfigure(0, weight=1)
+        self._save_browser_tree = ttk.Treeview(
+            tree_frame,
+            columns=("slot", "status", "modified", "size"),
+            show="headings",
+            selectmode="browse",
+            height=20,
+        )
+        for column, width, anchor in (
+            ("slot", 72, "center"),
+            ("status", 50, "center"),
+            ("modified", 120, "center"),
+            ("size", 62, "e"),
+        ):
+            self._save_browser_tree.column(column, width=width, minwidth=40, anchor=anchor)
+        scrollbar = ttk.Scrollbar(
+            tree_frame, orient="vertical", command=self._save_browser_tree.yview
+        )
+        self._save_browser_tree.configure(yscrollcommand=scrollbar.set)
+        self._save_browser_tree.grid(row=0, column=0, sticky="nsew")
+        scrollbar.grid(row=0, column=1, sticky="ns")
+        self._save_browser_tree.bind("<Double-1>", self._load_selected_save)
+        self._save_browser_tree.bind("<Return>", self._load_selected_save)
+
+        self._save_browser_summary_lbl = ttk.Label(parent, text="")
+        self._save_browser_summary_lbl.grid(row=4, column=0, sticky="w", padx=4, pady=(4, 2))
+        self._save_browser_load_btn = ttk.Button(
+            parent, text=self._t("加载选中"), command=self._load_selected_save
+        )
+        self._save_browser_load_btn.grid(row=5, column=0, sticky="ew", padx=4, pady=(2, 4))
+
+    def _toggle_save_browser(self):
+        if self._save_browser_visible:
+            self._content_pane.forget(self._save_browser_frame)
+            self._save_browser_visible = False
+        else:
+            self._content_pane.insert(0, self._save_browser_frame, weight=0)
+            self._save_browser_visible = True
+        self._refresh_save_browser_toggle_text()
+
+    def _refresh_save_browser_toggle_text(self):
+        key = "隐藏存档列表" if self._save_browser_visible else "显示存档列表"
+        self._save_browser_toggle_btn.config(text=self._t(key))
+
+    def _apply_compact_tab_titles(self):
+        lang = self._current_ui_language()
+        for frame, key in self._tab_defs:
+            self._nb.tab(frame, text=tab_title(key, lang))
 
     def _active_tab_key(self):
         if not hasattr(self, "_nb") or not hasattr(self, "_tab_defs"):
@@ -1850,6 +1971,10 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
             self._toolbar_open_btn.config(text=self._t("打开存档 (savedata.dat)"))
         if hasattr(self, "_toolbar_save_btn"):
             self._toolbar_save_btn.config(text=self._t("保存存档"))
+        if hasattr(self, "_save_browser_toggle_btn"):
+            self._refresh_save_browser_toggle_text()
+        if hasattr(self, "_save_browser_tree"):
+            self._refresh_save_browser_language()
         if hasattr(self, "status_lbl") and not initial:
             self._render_status()
         if hasattr(self, "_tab_defs"):
@@ -1925,6 +2050,8 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
             self._save_audit_dirty = True
             if self._is_active_tab("存档诊断"):
                 self._refresh_save_audit()
+        if hasattr(self, "_tab_defs"):
+            self._apply_compact_tab_titles()
         self.update_idletasks()
 
     def _translate_widget_tree(self, widget, lang):
@@ -3148,6 +3275,139 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
 
     # ---- 快捷操作 ----
 
+    def _validate_save_slot(self, path):
+        try:
+            return SaveData().load(str(path))
+        except (OSError, RuntimeError, ValueError):
+            return False
+
+    def _save_slot_status_text(self, status):
+        return self._t({
+            "valid": "有效",
+            "invalid": "无效",
+            "unchecked": "未校验",
+        }.get(status, "未校验"))
+
+    def _render_save_browser_entries(self):
+        tree = self._save_browser_tree
+        selected_path = self.save.filepath if self.save.data is not None else None
+        tree.delete(*tree.get_children())
+        for iid, entry in self._save_slot_entries.items():
+            tree.insert(
+                "",
+                "end",
+                iid=iid,
+                values=(
+                    entry.slot_name,
+                    self._save_slot_status_text(entry.status),
+                    entry.modified_text,
+                    entry.size_text,
+                ),
+            )
+            if selected_path and self._same_save_path(entry.path, selected_path):
+                tree.selection_set(iid)
+                tree.focus(iid)
+                tree.see(iid)
+
+        count = len(self._save_slot_entries)
+        key = "已识别 {count} 个存档" if count else "未找到存档"
+        self._save_browser_summary_key = key
+        self._save_browser_summary_lbl.config(
+            text=self._t(key, count=count) if count else self._t(key)
+        )
+
+    def _refresh_save_browser_language(self):
+        self._save_browser_title.config(text=self._t("存档列表"))
+        self._save_browser_choose_btn.config(text=self._t("选择目录"))
+        self._save_browser_refresh_btn.config(text=self._t("刷新列表"))
+        self._save_browser_load_btn.config(text=self._t("加载选中"))
+        for column, key in {
+            "slot": "槽位",
+            "status": "状态",
+            "modified": "修改时间",
+            "size": "大小",
+        }.items():
+            self._save_browser_tree.heading(column, text=self._t(key))
+        self._render_save_browser_entries()
+
+    def _refresh_save_browser(self):
+        entries = discover_save_slots(
+            self._save_browser_root, validator=self._validate_save_slot
+        )
+        self._save_slot_entries = {entry.slot_name: entry for entry in entries}
+        self._save_browser_path_lbl.config(text=str(self._save_browser_root))
+        self._render_save_browser_entries()
+
+    def _choose_save_browser_root(self):
+        initial = str(self._save_browser_root)
+        if not os.path.isdir(initial):
+            initial = os.path.dirname(initial)
+        selected = filedialog.askdirectory(
+            title=self._t("选择 Ao 存档目录"),
+            initialdir=initial,
+            mustexist=True,
+        )
+        if selected:
+            self._save_browser_root = selected
+            self._refresh_save_browser()
+
+    @staticmethod
+    def _same_save_path(left, right):
+        return os.path.normcase(os.path.abspath(str(left))) == os.path.normcase(
+            os.path.abspath(str(right))
+        )
+
+    def _load_selected_save(self, _event=None):
+        selection = self._save_browser_tree.selection()
+        if not selection:
+            messagebox.showwarning(self._t("提示"), self._t("请先选择一个存档"))
+            return
+        entry = self._save_slot_entries.get(selection[0])
+        if entry is not None:
+            return self._load_save_path(str(entry.path))
+        return False
+
+    def _load_save_path(self, fp):
+        if (
+            self.save.data is not None
+            and self.save.filepath
+            and not self._same_save_path(self.save.filepath, fp)
+            and not messagebox.askyesno(
+                self._t("切换存档"),
+                self._t("切换存档会放弃当前尚未保存的界面修改。是否继续？"),
+            )
+        ):
+            return False
+
+        candidate = SaveData()
+        try:
+            loaded = candidate.load(fp)
+        except (OSError, RuntimeError, ValueError) as exc:
+            messagebox.showerror(self._t("错误"), str(exc))
+            return False
+        if not loaded:
+            messagebox.showerror(
+                self._t("错误"),
+                self._t(
+                    "无法解析存档:\n{fp}\n\n文件可能是加密的或格式不正确。",
+                    fp=fp,
+                ),
+            )
+            return False
+
+        self.save = candidate
+        self._refresh_all()
+        fname = os.path.basename(fp)
+        fdir = os.path.basename(os.path.dirname(fp))
+        self._set_status(
+            "已加载: ...{fdir}/{fname}  ({size} bytes)",
+            fdir=fdir,
+            fname=fname,
+            size=len(self.save.data),
+        )
+        self._render_save_browser_entries()
+        return True
+
     def _open_file(self):
         fp = filedialog.askopenfilename(
             title=self._t("选择 savedata.dat"),
@@ -3155,18 +3415,7 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         )
         if not fp:
             return
-        try:
-            loaded = self.save.load(fp)
-        except RuntimeError as exc:
-            messagebox.showerror(self._t("错误"), str(exc))
-            return
-        if loaded:
-            self._refresh_all()
-            fname = os.path.basename(fp)
-            fdir = os.path.basename(os.path.dirname(fp))
-            self._set_status("已加载: ...{fdir}/{fname}  ({size} bytes)", fdir=fdir, fname=fname, size=len(self.save.data))
-        else:
-            messagebox.showerror(self._t("错误"), self._t("无法解析存档:\n{fp}\n\n文件可能是加密的或格式不正确。", fp=fp))
+        self._load_save_path(fp)
 
     def _save_file(self):
         if self.save.data is None:

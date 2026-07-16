@@ -15,6 +15,7 @@ The in-editor Chinese item names and labels use the Joyoland/欢乐百世 Simpli
 ## Features
 
 - Directly open and save zstd-compressed NISA `savedata.dat` files.
+- Automatically locate FALCOM/Ao through the Windows Saved Games known folder and list dataNNNN/savedata.dat slots with checksum status, modification time, size, folder switching, and safe single-save loading. The sidebar can be collapsed, and compact locale-specific tab titles avoid high-DPI truncation.
 - Edit Mira, DP, medals, sepith, play time, and difficulty.
 - Edit character stat snapshots for 11 characters.
 - Edit character equipment and seven orbment slots with inventory-synchronized transactional writes. Dropdowns enforce weapon/slot categories, core uniqueness, duplicate-normal-quartz rules, and the NISA `t_orb` element locks derived from `t_quartz` primary elements.
@@ -57,7 +58,7 @@ Validation performed on the publish package:
 - The monster-detail generator parses and numerically compares 333/333 files in all three locales, links 305/305 save monsters, and resolves action-script sources for 333/333 entries. Unexplained extensions in `ms60000/ms60001` are recorded only by size and hash. The 2.3 MB detail JSON is now loaded on first use.
 - The reference-index generator independently and bounds-safely parses the three `t_name._dt` tables and effective `as*.dat` headers/action tables without disassembling or executing action instructions. It emits 6,173 nodes, 6,835 relations, and seven same-name candidate-variant groups. The 5.4 MB graph is lazy-loaded and an empty GUI search is capped at 500 rows.
 - The chest generator verifies all 280 flags, 44 localized maps, and 93 NISA scenario files. Two local NISA sample saves both report 117/280 obtained chests, and the feature never writes save flags.
-- All 118 unit tests pass, including four layout-contract checks for the `tools/` and `docs/` structure. Achievement regressions cover the known 47/56 bitmap, complete/unique IDs, localized-name matching, and the exact seven-byte write boundary. Eight user-identified party samples match their raw slot order; 122 valid local saves have no unknown party/appearance IDs, and validation leaves their hashes unchanged. Element-lock validation found zero conflicts across 128 valid local saves, and a hidden Windows Python 3.13 Tk smoke test confirmed that the GUI filters a locked slot to compatible quartz.
+- All 125 unit tests pass, including four layout-contract checks for the `tools/` and `docs/` structure. Achievement regressions cover the known 47/56 bitmap, complete/unique IDs, localized-name matching, and the exact seven-byte write boundary. Eight user-identified party samples match their raw slot order; 122 valid local saves have no unknown party/appearance IDs, and validation leaves their hashes unchanged. Element-lock validation found zero conflicts across 128 valid local saves, and a hidden Windows Python 3.13 Tk smoke test confirmed that the GUI filters a locked slot to compatible quartz. The local save browser found 134 slots: 133 passed full decompression/checksum validation and the 80-byte data0255 entry was correctly marked invalid; scanning took about 530 ms.
 
 The Codex bundled Python runtime lacks Tcl/Tk; GUI construction and language switching were instead smoke-tested with Windows Python 3.13.
 
