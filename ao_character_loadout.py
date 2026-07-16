@@ -1,8 +1,4 @@
-"""Read-only parsing and validation for verified Ao NISA character loadouts.
-
-Writing remains deliberately outside this module until inventory transfer and
-core-quartz ownership semantics are backed by controlled before/after evidence.
-"""
+"""Parsing, validation, and transactional writes for Ao NISA loadouts."""
 
 from __future__ import annotations
 
@@ -22,6 +18,7 @@ from ao_save_layout import (
     ORBMENT_SLOT_RECORD_SIZE,
     ORBMENT_START,
 )
+from ao_orbment_rules import orbment_code_is_allowed, required_slot_element
 
 
 @dataclass(frozen=True)
@@ -120,6 +117,14 @@ def validate_character_loadouts(data, item_categories):
                 issues.append(
                     LoadoutIssue("orbment_category", loadout.character, f"orbment_{index}", orbment_slot.item_code)
                 )
+            if orbment_slot.item_code and not orbment_code_is_allowed(
+                loadout.character, index, orbment_slot.item_code
+            ):
+                issues.append(
+                    LoadoutIssue(
+                        "orbment_element", loadout.character, f"orbment_{index}", orbment_slot.item_code
+                    )
+                )
             if orbment_slot.enhancement_level not in ORBMENT_ENHANCEMENT_LEVELS:
                 issues.append(
                     LoadoutIssue(
@@ -183,9 +188,17 @@ def apply_character_loadout_changes(
     for index, (old_slot, new_code, level) in enumerate(
         zip(current.orbment, orbment_codes, enhancement_levels)
     ):
+        # Preserve untouched unknown/legacy IDs during enhancement-only edits;
+        # every newly selected ID must pass both category and element checks.
         expected = "circuit_core" if index == 0 else "circuit_normal"
         if new_code != old_slot.item_code and new_code and item_categories.get(new_code) != expected:
             raise ValueError(f"item 0x{new_code:04X} is not valid for orbment slot {index}")
+        if new_code != old_slot.item_code and not orbment_code_is_allowed(character, index, new_code):
+            required = required_slot_element(character, index)
+            raise ValueError(
+                f"quartz 0x{new_code:04X} does not match element {required} "
+                f"required by {character} orbment slot {index}"
+            )
         if level not in ORBMENT_ENHANCEMENT_LEVELS:
             raise ValueError(f"invalid orbment enhancement level: {level}")
 

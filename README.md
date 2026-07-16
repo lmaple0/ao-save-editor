@@ -17,6 +17,7 @@ The in-editor Chinese item names and labels use the Joyoland/欢乐百世 Simpli
 - Directly open and save zstd-compressed NISA `savedata.dat` files.
 - Edit Mira, DP, medals, sepith, play time, and difficulty.
 - Edit character stat snapshots for 11 characters.
+- Edit character equipment and seven orbment slots with inventory-synchronized transactional writes. Dropdowns enforce weapon/slot categories, core uniqueness, duplicate-normal-quartz rules, and the NISA `t_orb` element locks derived from `t_quartz` primary elements.
 - Edit party slots and 12 bonding values.
 - Switch the GUI globally between Chinese, English, and Japanese for implemented labels and data names.
 - Browse and search the full 713-item inventory table, replace an item by ID/name, and set any quantity from 0 to 99, with Chinese/English/Japanese item-name display where available.
@@ -55,7 +56,7 @@ Validation performed on the publish package:
 - The monster-detail generator parses and numerically compares 333/333 files in all three locales, links 305/305 save monsters, and resolves action-script sources for 333/333 entries. Unexplained extensions in `ms60000/ms60001` are recorded only by size and hash. The 2.3 MB detail JSON is now loaded on first use.
 - The reference-index generator independently and bounds-safely parses the three `t_name._dt` tables and effective `as*.dat` headers/action tables without disassembling or executing action instructions. It emits 6,173 nodes, 6,835 relations, and seven same-name candidate-variant groups. The 5.4 MB graph is lazy-loaded and an empty GUI search is capped at 500 rows.
 - The chest generator verifies all 280 flags, 44 localized maps, and 93 NISA scenario files. Two local NISA sample saves both report 117/280 obtained chests, and the feature never writes save flags.
-- All 75 unit tests pass. Eight user-identified party samples match their raw slot order; 122 valid local saves have no unknown party/appearance IDs, and validation leaves their hashes unchanged. A hidden Windows Python 3.13 Tk smoke test verified 13 tabs, fixed appearance labels, and all three UI languages.
+- All 96 unit tests pass. Eight user-identified party samples match their raw slot order; 122 valid local saves have no unknown party/appearance IDs, and validation leaves their hashes unchanged. Element-lock validation found zero conflicts across 128 valid local saves, and a hidden Windows Python 3.13 Tk smoke test confirmed that the GUI filters a locked slot to compatible quartz.
 
 The Codex bundled Python runtime lacks Tcl/Tk; GUI construction and language switching were instead smoke-tested with Windows Python 3.13.
 

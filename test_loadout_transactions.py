@@ -25,6 +25,7 @@ class LoadoutTransactionTests(unittest.TestCase):
             0x00DE: "circuit_core",
             0x00DF: "circuit_core",
             0x008B: "circuit_normal",
+            0x0083: "circuit_normal",
         }
 
     def apply(self, character, equipment, orbment, levels, items=None):
@@ -99,6 +100,36 @@ class LoadoutTransactionTests(unittest.TestCase):
                 (0, 0, 0, 0, 0, 0, 0), {0x03F2: 1},
             )
 
+    def test_accepts_matching_element_in_locked_slot(self):
+        new_data, _new_items = self.apply(
+            "Elie", (0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0x0083, 0),
+            (0, 0, 0, 0, 0, 2, 0), {0x0083: 1},
+        )
+        elie = LOADOUT_CHARACTERS.index("Elie")
+        self.assertEqual(read_character_loadouts(new_data)[elie].orbment[5].item_code, 0x0083)
+
+    def test_rejects_wrong_element_in_locked_slot_atomically(self):
+        before = bytes(self.data)
+        items = {0x008B: 1}
+        with self.assertRaisesRegex(ValueError, "does not match element 4"):
+            self.apply(
+                "Elie", (0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0x008B, 0),
+                (0, 0, 0, 0, 0, 2, 0), items,
+            )
+        self.assertEqual(bytes(self.data), before)
+        self.assertEqual(items, {0x008B: 1})
+
+    def test_enhancement_only_change_preserves_existing_element_mismatch(self):
+        elie = LOADOUT_CHARACTERS.index("Elie")
+        offset = ORBMENT_START + elie * ORBMENT_RECORD_SIZE + 5 * 4
+        struct.pack_into("<HH", self.data, offset, 0x008B, 1)
+        new_data, _new_items = self.apply(
+            "Elie", (0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0x008B, 0),
+            (0, 0, 0, 0, 0, 2, 0), {},
+        )
+        slot = read_character_loadouts(new_data)[elie].orbment[5]
+        self.assertEqual((slot.item_code, slot.enhancement_level), (0x008B, 2))
 
 if __name__ == "__main__":
+
     unittest.main()

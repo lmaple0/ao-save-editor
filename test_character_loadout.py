@@ -27,6 +27,7 @@ class CharacterLoadoutTests(unittest.TestCase):
             0x0056: "equipment_jewelry",
             0x00DE: "circuit_core",
             0x008B: "circuit_normal",
+            0x0083: "circuit_normal",
         }
 
     def test_parses_verified_equipment_and_orbment_offsets(self):
@@ -64,6 +65,16 @@ class CharacterLoadoutTests(unittest.TestCase):
     def test_unknown_values_are_preserved_by_parser(self):
         struct.pack_into("<H", self.data, EQUIPMENT_START, 0xBEEF)
         self.assertEqual(read_character_loadouts(self.data)[0].equipment.weapon, 0xBEEF)
+
+    def test_validation_reports_element_mismatch(self):
+        elie = LOADOUT_CHARACTERS.index("Elie")
+        offset = ORBMENT_START + elie * ORBMENT_RECORD_SIZE + 5 * 4
+        struct.pack_into("<HH", self.data, offset, 0x008B, 2)
+        issues = validate_character_loadouts(self.data, self.categories)
+        self.assertIn(
+            ("orbment_element", "Elie", "orbment_5", 0x008B),
+            [(issue.code, issue.character, issue.slot, issue.value) for issue in issues],
+        )
 
     def test_rejects_wrong_save_size(self):
         with self.assertRaises(ValueError):

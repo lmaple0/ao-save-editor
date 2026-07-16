@@ -14,6 +14,7 @@ from ao_character_loadout import (
     read_character_loadouts,
 )
 from ao_items_db import ITEM_DB
+from ao_orbment_rules import orbment_code_is_allowed
 
 
 LOADOUT_TEXT = {
@@ -35,7 +36,7 @@ LOADOUT_TEXT = {
         "equipped": "已装备",
         "apply": "应用当前人物",
         "refresh": "重新读取",
-        "warning": "修改会同步装备槽与背包数量。已校验武器类别、槽位类型、同人物重复普通回路及核心回路唯一性；属性限定槽仍待 t_orb 完整建模，请先在存档副本测试。",
+        "warning": "修改会同步装备槽与背包数量，并校验武器类别、槽位类型、元素限定槽、同人物重复普通回路及核心回路唯一性。建议先备份存档。",
         "applied": "{character} 的装备/回路已写入内存 · 请保存存档",
         "load_first": "请先打开存档文件",
         "error": "装备/回路修改失败：\n{error}",
@@ -58,7 +59,7 @@ LOADOUT_TEXT = {
         "equipped": "Equipped",
         "apply": "Apply character",
         "refresh": "Reload",
-        "warning": "Changes update both loadout slots and inventory quantities. Weapon categories, slot types, duplicate normal quartz, and core uniqueness are checked. Element-locked slots still await complete t_orb modeling; test on a save copy first.",
+        "warning": "Changes update both loadout slots and inventory quantities. Weapon categories, slot types, element locks, duplicate normal quartz, and core uniqueness are checked. Back up the save first.",
         "applied": "Updated {character} equipment/orbment in memory · save the file to persist",
         "load_first": "Open a save file first",
         "error": "Equipment/orbment update failed:\n{error}",
@@ -81,7 +82,7 @@ LOADOUT_TEXT = {
         "equipped": "装備中",
         "apply": "このキャラに適用",
         "refresh": "再読み込み",
-        "warning": "装備スロットと所持数を同時に更新します。武器種、スロット種別、同一通常クオーツの重複、マスタークオーツの一意性を検査します。属性限定スロットは t_orb の完全解析待ちのため、まずセーブのコピーで確認してください。",
+        "warning": "装備スロットと所持数を同時に更新し、武器種、スロット種別、属性限定、同一通常クオーツの重複、マスタークオーツの一意性を検査します。先にバックアップしてください。",
         "applied": "{character} の装備/クオーツをメモリに反映しました · セーブしてください",
         "load_first": "先にセーブデータを開いてください",
         "error": "装備/クオーツの変更に失敗しました：\n{error}",
@@ -281,7 +282,11 @@ class LoadoutUiMixin:
                 category = "circuit_core" if slot_index == 0 else "circuit_normal"
                 current_codes = current_core if slot_index == 0 else current_normal
                 candidates = {0, slot.item_code}
-                candidates.update(code for code in inventory_codes if categories.get(code) == category)
+                candidates.update(
+                    code for code in inventory_codes
+                    if categories.get(code) == category
+                    and orbment_code_is_allowed(loadout.character, slot_index, code)
+                )
                 values = [
                     self._loadout_format_choice(code, current_codes)
                     for code in sorted(candidates)
