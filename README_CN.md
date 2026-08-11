@@ -67,7 +67,8 @@
 - 怪物详情生成器完成三语 333/333 文件解析和全数值结构对比，305/305 存档图鉴怪物可关联详情，333/333 有有效动作脚本来源；`ms60000/ms60001` 的未解释尾部扩展只记录大小与哈希。详情 JSON 改为首次查看时懒加载。
 - 资源索引生成器独立、带边界检查地解析三语 `t_name._dt` 和有效 `as*.dat` 头/动作表，不反汇编或执行动作指令；生成 6173 个节点、6835 条关系及 7 组同名候选变体。5.4 MB 索引按首次打开页面懒加载，空搜索最多向 Treeview 填充 500 项。
 - 宝箱目录生成器完成 280/280 旗标、44/44 三语地图和 93/93 NISA 场景文件覆盖；两个本机 NISA 样例存档均解析为 117/280 已取得。宝箱功能只读取旗标，不写入存档。
-- 当前 125 项单元测试全部通过，新增 4 项 `tools/`、`docs/` 目录契约检查；其中成就回归测试覆盖 47/56 实际位图、ID 完整性、本地化匹配及仅修改 7 字节的写入边界。用户标注的 8 个队伍样本与原始槽位顺序逐项一致；122 个有效本机存档均无未知队伍/外观 ID，且只读验证前后哈希不变；128 个有效本机存档的元素限定检查为零冲突，Windows Python 3.13 隐藏窗口测试确认限定槽只显示兼容回路。批量存档列表在本机目录识别 134 个槽位，其中 133 个通过完整存档校验，80 字节的 `data0255` 被正确标记为无效；扫描耗时约 530 ms。
+- 当前 130 项单元测试全部通过，包括 5 项 Windows 打包契约检查和 4 项 `tools/`、`docs/` 目录契约检查；其中成就回归测试覆盖 47/56 实际位图、ID 完整性、本地化匹配及仅修改 7 字节的写入边界。用户标注的 8 个队伍样本与原始槽位顺序逐项一致；122 个有效本机存档均无未知队伍/外观 ID，且只读验证前后哈希不变；128 个有效本机存档的元素限定检查为零冲突，Windows Python 3.13 隐藏窗口测试确认限定槽只显示兼容回路。批量存档列表在本机目录识别 134 个槽位，其中 133 个通过完整存档校验，80 字节的 `data0255` 被正确标记为无效；扫描耗时约 530 ms。
+- PyInstaller 6.21.0 / Python 3.13 x64 的 onedir 与 onefile 构建均已验证。带自定义 `kea.ico` 的 onefile 约 12.36 MiB；冻结版在临时存档副本上完成修改、`.bak` 创建、重新解析和 GUI 隐藏启动测试，不接触原始存档。
 
 Codex bundled Python 缺少 Tcl/Tk；GUI 已改用本机 Windows Python 3.13 完成隐藏窗口构建与三语切换冒烟测试。
 
@@ -122,6 +123,23 @@ python ao_save_editor.py
 ```bash
 python ao_save_editor.py savedata.dat --mira 9999999 --sepith max --dp 400 --max-chars all --max-like
 ```
+
+## 构建 Windows EXE
+
+推荐使用 Python 3.13 x64 和项目固定的 PyInstaller 版本。在项目目录执行：
+
+```powershell
+py -3.13 -m pip install -r packaging/requirements-build.txt
+powershell -ExecutionPolicy Bypass -File packaging/build_windows.ps1 -Mode OneFile
+```
+
+单文件成品位于 `dist/windows/AoSaveEditor.exe`。如需更快启动、便于排查杀毒软件误报的目录版，可改用：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File packaging/build_windows.ps1 -Mode OneDir
+```
+
+目录版入口位于 `dist/windows/AoSaveEditor/AoSaveEditor.exe`。打包只包含运行所需的 7 个 JSON 数据文件，不包含测试、研究文档或数据生成工具；默认关闭 UPX。onefile 首次启动需要将内置资源解压到系统临时目录，属于 PyInstaller 的正常行为。
 
 ## 致谢
 

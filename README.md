@@ -58,7 +58,8 @@ Validation performed on the publish package:
 - The monster-detail generator parses and numerically compares 333/333 files in all three locales, links 305/305 save monsters, and resolves action-script sources for 333/333 entries. Unexplained extensions in `ms60000/ms60001` are recorded only by size and hash. The 2.3 MB detail JSON is now loaded on first use.
 - The reference-index generator independently and bounds-safely parses the three `t_name._dt` tables and effective `as*.dat` headers/action tables without disassembling or executing action instructions. It emits 6,173 nodes, 6,835 relations, and seven same-name candidate-variant groups. The 5.4 MB graph is lazy-loaded and an empty GUI search is capped at 500 rows.
 - The chest generator verifies all 280 flags, 44 localized maps, and 93 NISA scenario files. Two local NISA sample saves both report 117/280 obtained chests, and the feature never writes save flags.
-- All 125 unit tests pass, including four layout-contract checks for the `tools/` and `docs/` structure. Achievement regressions cover the known 47/56 bitmap, complete/unique IDs, localized-name matching, and the exact seven-byte write boundary. Eight user-identified party samples match their raw slot order; 122 valid local saves have no unknown party/appearance IDs, and validation leaves their hashes unchanged. Element-lock validation found zero conflicts across 128 valid local saves, and a hidden Windows Python 3.13 Tk smoke test confirmed that the GUI filters a locked slot to compatible quartz. The local save browser found 134 slots: 133 passed full decompression/checksum validation and the 80-byte data0255 entry was correctly marked invalid; scanning took about 530 ms.
+- All 130 unit tests pass, including five Windows-packaging contract checks and four layout-contract checks for the `tools/` and `docs/` structure. Achievement regressions cover the known 47/56 bitmap, complete/unique IDs, localized-name matching, and the exact seven-byte write boundary. Eight user-identified party samples match their raw slot order; 122 valid local saves have no unknown party/appearance IDs, and validation leaves their hashes unchanged. Element-lock validation found zero conflicts across 128 valid local saves, and a hidden Windows Python 3.13 Tk smoke test confirmed that the GUI filters a locked slot to compatible quartz. The local save browser found 134 slots: 133 passed full decompression/checksum validation and the 80-byte data0255 entry was correctly marked invalid; scanning took about 530 ms.
+- PyInstaller 6.21.0 builds were verified with Python 3.13 x64 in both onedir and onefile modes. The onefile artifact with the custom `kea.ico` is about 12.36 MiB; a frozen build successfully edited and reloaded a temporary save copy, created its `.bak`, and passed a hidden GUI-startup smoke test without touching the original save.
 
 The Codex bundled Python runtime lacks Tcl/Tk; GUI construction and language switching were instead smoke-tested with Windows Python 3.13.
 
@@ -113,6 +114,23 @@ CLI quick edits:
 ```bash
 python ao_save_editor.py savedata.dat --mira 9999999 --sepith max --dp 400 --max-chars all --max-like
 ```
+
+## Building A Windows EXE
+
+Use Python 3.13 x64 and the pinned PyInstaller version from the project root:
+
+```powershell
+py -3.13 -m pip install -r packaging/requirements-build.txt
+powershell -ExecutionPolicy Bypass -File packaging/build_windows.ps1 -Mode OneFile
+```
+
+The single-file artifact is written to `dist/windows/AoSaveEditor.exe`. For faster startup and easier antivirus troubleshooting, build the directory form instead:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File packaging/build_windows.ps1 -Mode OneDir
+```
+
+Its entry point is `dist/windows/AoSaveEditor/AoSaveEditor.exe`. The package contains only the seven runtime JSON files, not tests, research documents, or data-generation tools, and UPX is disabled. PyInstaller onefile mode extracts its bundled resources to a system temporary directory at startup by design.
 
 ## Credits
 

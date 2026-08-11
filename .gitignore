@@ -6,3 +6,5 @@ __pycache__/
 *.p3a
 *.exe
 .env
+build/
+dist/
