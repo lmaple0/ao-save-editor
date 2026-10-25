@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-碧之轨迹 NISA版 存档修改器 (基于 BZH_AO_NO_KISEKI_Savedata_Editor 偏移表)
-直接支持 zstd 压缩的 savedata.dat 文件。
+碧之轨迹 NISA / CLE Kai 存档修改器
+(基于 BZH_AO_NO_KISEKI_Savedata_Editor 偏移表)
 """
 
 import struct
@@ -11,6 +11,7 @@ import io
 import json
 import shutil
 import tempfile
+from pathlib import Path
 from collections import Counter
 from dataclasses import dataclass
 
@@ -35,10 +36,26 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
 from ao_loadout_ui import LoadoutUiMixin
+from ao_save_formats import checksums, cle_to_nisa, nisa_to_cle
+from ao_save_metadata import source_metadata, cle_info, nisa_info
 from ao_fishing_ui import FishingUiMixin
 from ao_fishing import FISHING_UI_TRANSLATIONS
 from ao_reference_index_ui import ReferenceIndexUiMixin
-from ao_save_browser import SAVE_BROWSER_TRANSLATIONS, default_ao_save_root, discover_save_slots
+from ao_save_browser import (
+    EDITION_CLE_KAI,
+    EDITION_NISA,
+    SAVE_BROWSER_TRANSLATIONS,
+    default_ao_save_root,
+    default_cle_kai_save_root,
+    discover_save_slots,
+)
+from ao_save_container import (
+    FORMAT_CLE_KAI,
+    FORMAT_NISA_ZSTD,
+    decode_cle_kai,
+    encode_cle_kai,
+    looks_like_cle_kai,
+)
 
 APP_DIR = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
 if APP_DIR not in sys.path:
@@ -157,9 +174,9 @@ def get_achievement_i18n():
 
 
 APP_TITLES = {
-    "zh_cn": "碧之轨迹 NISA版 存档修改器",
-    "en": "Trails to Azure NISA Save Editor",
-    "ja": "碧の軌跡 NISA版 セーブエディタ",
+    "zh_cn": "碧之轨迹 NISA / CLE Kai 存档修改器",
+    "en": "Trails to Azure NISA / CLE Kai Save Editor",
+    "ja": "碧の軌跡 NISA / CLE Kai セーブエディタ",
 }
 
 # Compact labels are specific to the Notebook tab strip. Full translations remain
@@ -235,8 +252,10 @@ def character_name(name, lang="zh_cn"):
 
 UI_TRANSLATIONS = {
     "zh_cn": {
-        "打开存档 (savedata.dat)": "打开存档 (savedata.dat)",
+        "打开存档 (savedata.dat)": "打开存档 (.dat / .bin)",
         "保存存档": "保存存档",
+        "转为 NISA": "转为 NISA",
+        "转为 CLE Kai": "转为 CLE Kai",
         "未加载存档": "未加载存档",
         "语言": "语言",
         "基本 / Mira": "基本 / Mira",
@@ -379,7 +398,10 @@ UI_TRANSLATIONS = {
         "全成就已解锁": "全成就已解锁",
         "全成就已锁定": "全成就已锁定",
         "怪物图鉴已全开 · 请保存存档": "怪物图鉴已全开 · 请保存存档",
-        "选择 savedata.dat": "选择 savedata.dat",
+        "选择 savedata.dat": "选择 NISA / CLE Kai 存档",
+        "转换为 NISA 存档": "转换为 NISA 存档",
+        "转换为 CLE Kai 存档": "转换为 CLE Kai 存档",
+        "已转换到: {fp}": "已转换到: {fp}",
         "错误": "错误",
         "提示": "提示",
         "保存为": "保存为",
@@ -433,8 +455,10 @@ UI_TRANSLATIONS = {
         "{name} LV99 满HP/EP/CP": "{name} LV99 满HP/EP/CP",
     },
     "en": {
-        "打开存档 (savedata.dat)": "Open savedata.dat",
+        "打开存档 (savedata.dat)": "Open save (.dat / .bin)",
         "保存存档": "Save",
+        "转为 NISA": "Convert to NISA",
+        "转为 CLE Kai": "Convert to CLE Kai",
         "未加载存档": "No save loaded",
         "语言": "Language",
         "基本 / Mira": "Basics / Mira",
@@ -577,7 +601,10 @@ UI_TRANSLATIONS = {
         "全成就已解锁": "All achievements unlocked",
         "全成就已锁定": "All achievements locked",
         "怪物图鉴已全开 · 请保存存档": "Monster manual unlocked · save the file",
-        "选择 savedata.dat": "Choose savedata.dat",
+        "选择 savedata.dat": "Choose a NISA / CLE Kai save",
+        "转换为 NISA 存档": "Convert to a NISA save",
+        "转换为 CLE Kai 存档": "Convert to a CLE Kai save",
+        "已转换到: {fp}": "Converted to: {fp}",
         "错误": "Error",
         "提示": "Notice",
         "保存为": "Save As",
@@ -631,8 +658,10 @@ UI_TRANSLATIONS = {
         "{name} LV99 满HP/EP/CP": "{name} Lv99 Max HP/EP/CP",
     },
     "ja": {
-        "打开存档 (savedata.dat)": "セーブデータを開く (savedata.dat)",
+        "打开存档 (savedata.dat)": "セーブを開く (.dat / .bin)",
         "保存存档": "保存",
+        "转为 NISA": "NISA 形式へ変換",
+        "转为 CLE Kai": "CLE Kai 形式へ変換",
         "未加载存档": "未読込",
         "语言": "言語",
         "基本 / Mira": "基本 / ミラ",
@@ -775,7 +804,10 @@ UI_TRANSLATIONS = {
         "全成就已解锁": "実績を全解除",
         "全成就已锁定": "実績を全固定",
         "怪物图鉴已全开 · 请保存存档": "魔兽图鉴を全開放しました · セーブしてください",
-        "选择 savedata.dat": "savedata.dat を選択",
+        "选择 savedata.dat": "NISA / CLE Kai セーブを選択",
+        "转换为 NISA 存档": "NISA セーブへ変換",
+        "转换为 CLE Kai 存档": "CLE Kai セーブへ変換",
+        "已转换到: {fp}": "変換先: {fp}",
         "错误": "エラー",
         "提示": "通知",
         "保存为": "名前を付けて保存",
@@ -1373,6 +1405,12 @@ def team_member_choices(lang="zh_cn"):
 
 DIFFICULTY_NAMES = {0: "Normal", 1: "Hard", 2: "Nightmare", 3: "Easy"}
 
+# CLE keeps the later notebook/progress regions at their existing offsets, but
+# its leading character/loadout structures differ from NISA.  Inventory has a
+# verified CLE-specific mapping and is therefore enabled below.
+CLE_DISABLED_TABS = frozenset()
+
+
 # ============================================================
 # 存档读写核心
 # ============================================================
@@ -1382,9 +1420,11 @@ class SaveData:
         self.data = None
         self.filepath = None
         self.tempfile = None
+        self.container_format = None
+        self.cle_payload = None
 
     def load(self, filepath):
-        """加载 zstd 压缩或已解压的 savedata.dat。"""
+        """加载 NISA zstd/raw 或 CLE Kai 加密存档。"""
         self.filepath = filepath
         with open(filepath, "rb") as f:
             raw = f.read()
@@ -1397,8 +1437,19 @@ class SaveData:
                 data = dctx.decompress(raw, max_output_size=EXPECTED_SIZE + 0x1000)
             except zstd.ZstdError:
                 return False
+            container_format = FORMAT_NISA_ZSTD
+        elif looks_like_cle_kai(raw):
+            try:
+                container = decode_cle_kai(raw)
+            except ValueError:
+                return False
+            self.data = cle_to_nisa(container.payload)
+            self.container_format = FORMAT_CLE_KAI
+            self.cle_payload = container.payload
+            return True
         else:
             data = raw
+            container_format = FORMAT_NISA_ZSTD
 
         if len(data) < EXPECTED_SIZE:
             return False
@@ -1406,22 +1457,13 @@ class SaveData:
         if not self._checksum_valid(candidate):
             return False
         self.data = candidate
+        self.container_format = container_format
+        self.cle_payload = None
         return True
 
     @staticmethod
     def _calculate_checksums(data):
-        file_size_max_pos = len(data) - 1
-        savedata_sum = 0
-        pos = 0
-        while pos <= (file_size_max_pos - 0x08):
-            cache = struct.unpack_from("<I", data, pos)[0]
-            savedata_sum = (savedata_sum + cache) & 0xFFFFFFFF
-            pos += 0x04
-
-        num_chunks = ((file_size_max_pos - 0x08) // 0x04) + 0x01
-        size_checksum = (-1 * num_chunks) & 0xFFFFFFFF
-        size_checksum = (size_checksum - savedata_sum) & 0xFFFFFFFF
-        return savedata_sum, size_checksum
+        return checksums(data)
 
     @staticmethod
     def _checksum_valid(data):
@@ -1434,27 +1476,76 @@ class SaveData:
         )
         return actual == expected
 
-    def save(self, filepath=None):
-        """保存为 zstd 压缩格式。"""
+    def save(self, filepath=None, target_format=None):
+        """Atomically save in the source format or an explicit target format."""
         if filepath is None:
             filepath = self.filepath
         if not filepath:
             raise ValueError("未指定保存路径")
         if self.data is None:
             raise ValueError("未加载存档")
-        if zstd is None:
-            raise RuntimeError("缺少 zstandard 依赖，无法保存压缩存档。请先安装: pip install zstandard") from ZSTD_IMPORT_ERROR
         if len(self.data) != EXPECTED_SIZE:
             raise ValueError(f"存档大小异常: {len(self.data)} bytes，期望 {EXPECTED_SIZE} bytes")
 
-        self._recalc_checksum()
-        cctx = zstd.ZstdCompressor(level=3)
-        compressed = cctx.compress(bytes(self.data))
+        output_format = target_format or self.container_format or FORMAT_NISA_ZSTD
+        if output_format == FORMAT_CLE_KAI:
+            original = self.cle_payload if self.container_format == FORMAT_CLE_KAI else None
+            output = encode_cle_kai(nisa_to_cle(self.data, original=original))
+        elif output_format == FORMAT_NISA_ZSTD:
+            if zstd is None:
+                raise RuntimeError("缺少 zstandard 依赖，无法保存压缩存档。请先安装: pip install zstandard") from ZSTD_IMPORT_ERROR
+            self._recalc_checksum()
+            output = zstd.ZstdCompressor(level=3).compress(bytes(self.data))
+        else:
+            raise ValueError(f"不支持的目标存档格式: {output_format}")
+
+        self._atomic_replace(filepath, output)
+        return True
+
+    def export(self, filepath, target_format):
+        """Export an Ao slot with source-derived list metadata and thumbnail."""
+        destination = Path(filepath)
+        meta = source_metadata(self.filepath, self.data, self.container_format)
+        sidecars = {}
+        if target_format == FORMAT_CLE_KAI:
+            import re
+            match = re.fullmatch(r"(\d{3})_save\.bin", destination.name, re.IGNORECASE)
+            if match is None:
+                raise ValueError("CLE 存档请命名为 001_save.bin 至 100_save.bin")
+            index = destination.parent / "info.bin"
+            sidecars[index] = cle_info(index.read_bytes() if index.is_file() else None,
+                                      int(match[1]), self.data, meta)
+            icon = destination.with_suffix(".ico")
+        elif target_format == FORMAT_NISA_ZSTD:
+            import re
+            match = re.fullmatch(r"data(\d{4})", destination.parent.name, re.IGNORECASE)
+            if match:
+                clear_slot = 201 <= int(match[1]) <= 210
+                if clear_slot != meta.clear:
+                    raise ValueError("NISA 普通存档使用 data0001..data0200；通关资料使用 data0201..data0210")
+            sidecars[destination.parent / "info.txt"] = nisa_info(self.data, meta)
+            log = destination.parent / "messagelog.dat"
+            source_log = Path(self.filepath).parent / "messagelog.dat"
+            if not log.is_file():
+                sidecars[log] = source_log.read_bytes() if source_log.is_file() else struct.pack("<III", 2, 1, 0)
+            icon = destination.parent / "icon0.png"
+        else:
+            raise ValueError(f"不支持的目标存档格式: {target_format}")
+        if meta.icon is not None:
+            sidecars[icon] = meta.icon
+        self.save(destination, target_format=target_format)
+        for path, content in sidecars.items():
+            self._atomic_replace(path, content)
+        return True
+
+    @staticmethod
+    def _atomic_replace(filepath, output):
+        filepath = os.fspath(filepath)
         directory = os.path.dirname(os.path.abspath(filepath))
         fd, temp_path = tempfile.mkstemp(prefix=".ao_save_editor_", suffix=".tmp", dir=directory)
         try:
             with os.fdopen(fd, "wb") as f:
-                f.write(compressed)
+                f.write(output)
                 f.flush()
                 os.fsync(f.fileno())
 
@@ -1466,7 +1557,13 @@ class SaveData:
         finally:
             if temp_path and os.path.exists(temp_path):
                 os.unlink(temp_path)
-        return True
+
+    def format_integrity_valid(self):
+        if self.data is None or len(self.data) != EXPECTED_SIZE:
+            return False
+        if self.container_format == FORMAT_CLE_KAI:
+            return self.cle_payload is not None
+        return self._checksum_valid(self.data)
 
     def _recalc_checksum(self):
         """重新计算存档校验和 (BZH 算法：32位累加和)
@@ -1502,8 +1599,9 @@ class SaveData:
     def read_items(self):
         """读取物品列表 → {code: qty}"""
         items = {}
-        pos = ITEMS_START
-        while pos <= ITEMS_END:
+        start, end = ITEMS_START, ITEMS_END
+        pos = start
+        while pos <= end:
             code = self.read_u16(pos)
             qty = self.read_u16(pos + 2)
             if code != 0:
@@ -1512,29 +1610,38 @@ class SaveData:
         return items
 
     def write_items(self, items):
-        """按 BZH 顺序写入物品列表，保留未知代码并检查容量。"""
+        """按游戏表顺序写入当前版本的紧凑物品列表。"""
         entries = []
-        for code in ITEM_ORDERED_CODES:
-            qty = int(items.get(code, 0) or 0)
-            if qty > 0:
-                entries.append((code, qty))
+        if self.container_format == FORMAT_CLE_KAI:
+            # ``read_items`` preserves the natural CLE list order in its dict.
+            # Keeping it avoids imposing the older BZH menu ordering on Kai.
+            for code, raw_qty in items.items():
+                qty = int(raw_qty or 0)
+                if code and qty > 0:
+                    entries.append((int(code), qty))
+        else:
+            for code in ITEM_ORDERED_CODES:
+                qty = int(items.get(code, 0) or 0)
+                if qty > 0:
+                    entries.append((code, qty))
 
-        for code in sorted(set(items) - ITEM_ORDERED_SET):
-            qty = int(items.get(code, 0) or 0)
-            if code and qty > 0:
-                entries.append((code, qty))
+            for code in sorted(set(items) - ITEM_ORDERED_SET):
+                qty = int(items.get(code, 0) or 0)
+                if code and qty > 0:
+                    entries.append((code, qty))
 
-        capacity = ((ITEMS_END - ITEMS_START) // 4) + 1
+        start, end = ITEMS_START, ITEMS_END
+        capacity = ((end - start) // 4) + 1
         if len(entries) > capacity:
             raise ValueError(f"物品数量超出存档容量: {len(entries)} > {capacity}")
 
-        pos = ITEMS_START
+        pos = start
         for code, qty in entries:
             self.write_u16(pos, code)
             self.write_u16(pos + 2, qty)
             pos += 4
 
-        while pos <= ITEMS_END:
+        while pos <= end:
             self.write_u16(pos, 0)
             self.write_u16(pos + 2, 0)
             pos += 4
@@ -1657,11 +1764,19 @@ class SaveData:
 class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("碧之轨迹 NISA版 存档修改器")
+        self.title(APP_TITLES["zh_cn"])
         self.geometry("1320x700")
         self.resizable(True, True)
         self.save = SaveData()
-        self._save_browser_root = default_ao_save_root()
+        self._save_browser_roots = {
+            EDITION_NISA: default_ao_save_root(),
+            EDITION_CLE_KAI: default_cle_kai_save_root(),
+        }
+        self._save_browser_edition_var = tk.StringVar(value=EDITION_NISA)
+        self._save_browser_entries_by_edition = {
+            EDITION_NISA: {},
+            EDITION_CLE_KAI: {},
+        }
         self._save_slot_entries = {}
         self._vars = {}  # StringVar 缓存
         self._build_ui()
@@ -1676,6 +1791,14 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         self._toolbar_open_btn.pack(side="left", padx=3)
         self._toolbar_save_btn = ttk.Button(toolbar, text="保存存档", command=self._save_file)
         self._toolbar_save_btn.pack(side="left", padx=3)
+        self._toolbar_convert_nisa_btn = ttk.Button(
+            toolbar, text="转为 NISA", command=lambda: self._convert_save(FORMAT_NISA_ZSTD)
+        )
+        self._toolbar_convert_nisa_btn.pack(side="left", padx=3)
+        self._toolbar_convert_cle_btn = ttk.Button(
+            toolbar, text="转为 CLE Kai", command=lambda: self._convert_save(FORMAT_CLE_KAI)
+        )
+        self._toolbar_convert_cle_btn.pack(side="left", padx=3)
         self._save_browser_toggle_btn = ttk.Button(toolbar, command=self._toggle_save_browser)
         self._save_browser_toggle_btn.pack(side="left", padx=3)
         self._ui_lang_label = ttk.Label(toolbar, text="语言")
@@ -1801,7 +1924,7 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         self._nb.bind("<<NotebookTabChanged>>", self._on_tab_changed)
         self._apply_ui_language(initial=True)
     def _build_save_browser(self, parent):
-        parent.grid_rowconfigure(3, weight=1)
+        parent.grid_rowconfigure(4, weight=1)
         parent.grid_columnconfigure(0, weight=1)
 
         self._save_browser_title = ttk.Label(
@@ -1809,13 +1932,32 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         )
         self._save_browser_title.grid(row=0, column=0, sticky="w", padx=4, pady=(2, 4))
 
-        self._save_browser_path_lbl = ttk.Label(
-            parent, text=str(self._save_browser_root), wraplength=285, justify="left"
+        source_frame = ttk.Frame(parent)
+        source_frame.grid(row=1, column=0, sticky="ew", padx=2, pady=(0, 4))
+        self._save_browser_nisa_radio = ttk.Radiobutton(
+            source_frame,
+            text="NISA",
+            value=EDITION_NISA,
+            variable=self._save_browser_edition_var,
+            command=self._on_save_browser_edition_changed,
         )
-        self._save_browser_path_lbl.grid(row=1, column=0, sticky="ew", padx=4, pady=(0, 4))
+        self._save_browser_nisa_radio.pack(side="left", padx=2)
+        self._save_browser_cle_radio = ttk.Radiobutton(
+            source_frame,
+            text="CLE Kai",
+            value=EDITION_CLE_KAI,
+            variable=self._save_browser_edition_var,
+            command=self._on_save_browser_edition_changed,
+        )
+        self._save_browser_cle_radio.pack(side="left", padx=2)
+
+        self._save_browser_path_lbl = ttk.Label(
+            parent, text=str(self._active_save_browser_root()), wraplength=285, justify="left"
+        )
+        self._save_browser_path_lbl.grid(row=2, column=0, sticky="ew", padx=4, pady=(0, 4))
 
         actions = ttk.Frame(parent)
-        actions.grid(row=2, column=0, sticky="ew", padx=2, pady=(0, 4))
+        actions.grid(row=3, column=0, sticky="ew", padx=2, pady=(0, 4))
         self._save_browser_choose_btn = ttk.Button(
             actions, text=self._t("选择目录"), command=self._choose_save_browser_root
         )
@@ -1826,7 +1968,7 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         self._save_browser_refresh_btn.pack(side="left", padx=2)
 
         tree_frame = ttk.Frame(parent)
-        tree_frame.grid(row=3, column=0, sticky="nsew", padx=2)
+        tree_frame.grid(row=4, column=0, sticky="nsew", padx=2)
         tree_frame.grid_rowconfigure(0, weight=1)
         tree_frame.grid_columnconfigure(0, weight=1)
         self._save_browser_tree = ttk.Treeview(
@@ -1853,11 +1995,11 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         self._save_browser_tree.bind("<Return>", self._load_selected_save)
 
         self._save_browser_summary_lbl = ttk.Label(parent, text="")
-        self._save_browser_summary_lbl.grid(row=4, column=0, sticky="w", padx=4, pady=(4, 2))
+        self._save_browser_summary_lbl.grid(row=5, column=0, sticky="w", padx=4, pady=(4, 2))
         self._save_browser_load_btn = ttk.Button(
             parent, text=self._t("加载选中"), command=self._load_selected_save
         )
-        self._save_browser_load_btn.grid(row=5, column=0, sticky="ew", padx=4, pady=(2, 4))
+        self._save_browser_load_btn.grid(row=6, column=0, sticky="ew", padx=4, pady=(2, 4))
 
     def _toggle_save_browser(self):
         if self._save_browser_visible:
@@ -1888,6 +2030,17 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
 
     def _is_active_tab(self, key):
         return self._active_tab_key() == key
+
+    def _apply_format_capabilities(self):
+        """Apply edition-specific tab and conversion availability."""
+        is_cle = self.save.container_format == FORMAT_CLE_KAI
+        for frame, key in self._tab_defs:
+            state = "disabled" if is_cle and key in CLE_DISABLED_TABS else "normal"
+            self._nb.tab(frame, state=state)
+        if is_cle and self._active_tab_key() in CLE_DISABLED_TABS:
+            self._nb.select(self._tab_defs[0][0])
+        self._toolbar_convert_nisa_btn.configure(state="normal" if is_cle else "disabled")
+        self._toolbar_convert_cle_btn.configure(state="disabled" if is_cle else "normal")
 
     def _on_tab_changed(self, _event=None):
         key = self._active_tab_key()
@@ -1971,6 +2124,10 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
             self._toolbar_open_btn.config(text=self._t("打开存档 (savedata.dat)"))
         if hasattr(self, "_toolbar_save_btn"):
             self._toolbar_save_btn.config(text=self._t("保存存档"))
+        if hasattr(self, "_toolbar_convert_nisa_btn"):
+            self._toolbar_convert_nisa_btn.config(text=self._t("转为 NISA"))
+        if hasattr(self, "_toolbar_convert_cle_btn"):
+            self._toolbar_convert_cle_btn.config(text=self._t("转为 CLE Kai"))
         if hasattr(self, "_save_browser_toggle_btn"):
             self._refresh_save_browser_toggle_text()
         if hasattr(self, "_save_browser_tree"):
@@ -3107,7 +3264,7 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
             return
         self._save_audit_report = auditor.audit(
             self.save.data,
-            checksum_valid=SaveData._checksum_valid(self.save.data),
+            checksum_valid=self.save.format_integrity_valid(),
         )
         self._set_save_audit_text(self._save_audit_report.render(self._current_ui_language()))
         self._save_audit_dirty = False
@@ -3328,18 +3485,48 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
             "size": "大小",
         }.items():
             self._save_browser_tree.heading(column, text=self._t(key))
+        self._refresh_save_browser_source_labels()
         self._render_save_browser_entries()
 
     def _refresh_save_browser(self):
-        entries = discover_save_slots(
-            self._save_browser_root, validator=self._validate_save_slot
+        for edition, root in self._save_browser_roots.items():
+            entries = discover_save_slots(
+                root, validator=self._validate_save_slot, edition=edition
+            )
+            self._save_browser_entries_by_edition[edition] = {
+                entry.slot_name: entry for entry in entries
+            }
+        self._select_active_save_browser_entries()
+        self._refresh_save_browser_source_labels()
+        self._save_browser_path_lbl.config(text=str(self._active_save_browser_root()))
+        self._render_save_browser_entries()
+
+    def _active_save_browser_edition(self):
+        return self._save_browser_edition_var.get()
+
+    def _active_save_browser_root(self):
+        return self._save_browser_roots[self._active_save_browser_edition()]
+
+    def _select_active_save_browser_entries(self):
+        self._save_slot_entries = self._save_browser_entries_by_edition.get(
+            self._active_save_browser_edition(), {}
         )
-        self._save_slot_entries = {entry.slot_name: entry for entry in entries}
-        self._save_browser_path_lbl.config(text=str(self._save_browser_root))
+
+    def _refresh_save_browser_source_labels(self):
+        if not hasattr(self, "_save_browser_nisa_radio"):
+            return
+        nisa_count = len(self._save_browser_entries_by_edition.get(EDITION_NISA, {}))
+        cle_count = len(self._save_browser_entries_by_edition.get(EDITION_CLE_KAI, {}))
+        self._save_browser_nisa_radio.config(text=f"NISA ({nisa_count})")
+        self._save_browser_cle_radio.config(text=f"CLE Kai ({cle_count})")
+
+    def _on_save_browser_edition_changed(self):
+        self._select_active_save_browser_entries()
+        self._save_browser_path_lbl.config(text=str(self._active_save_browser_root()))
         self._render_save_browser_entries()
 
     def _choose_save_browser_root(self):
-        initial = str(self._save_browser_root)
+        initial = str(self._active_save_browser_root())
         if not os.path.isdir(initial):
             initial = os.path.dirname(initial)
         selected = filedialog.askdirectory(
@@ -3348,7 +3535,7 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
             mustexist=True,
         )
         if selected:
-            self._save_browser_root = selected
+            self._save_browser_roots[self._active_save_browser_edition()] = selected
             self._refresh_save_browser()
 
     @staticmethod
@@ -3396,6 +3583,7 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
             return False
 
         self.save = candidate
+        self._apply_format_capabilities()
         self._refresh_all()
         fname = os.path.basename(fp)
         fdir = os.path.basename(os.path.dirname(fp))
@@ -3411,7 +3599,12 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
     def _open_file(self):
         fp = filedialog.askopenfilename(
             title=self._t("选择 savedata.dat"),
-            filetypes=[("savedata.dat", "*.dat"), ("所有文件", "*.*")]
+            filetypes=[
+                ("NISA / CLE Kai", "*.dat *.bin"),
+                ("NISA savedata.dat", "*.dat"),
+                ("CLE Kai NNN_save.bin", "*.bin"),
+                ("所有文件", "*.*"),
+            ]
         )
         if not fp:
             return
@@ -3422,11 +3615,12 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
             messagebox.showwarning(self._t("提示"), self._t("请先打开存档文件"))
             return
         self._write_all_from_gui()
+        is_cle = self.save.container_format == FORMAT_CLE_KAI
         fp = filedialog.asksaveasfilename(
             title=self._t("保存为"),
-            defaultextension=".dat",
-            filetypes=[("savedata.dat", "*.dat")],
-            initialfile="savedata.dat"
+            defaultextension=".bin" if is_cle else ".dat",
+            filetypes=[("CLE Kai NNN_save.bin", "*.bin")] if is_cle else [("NISA savedata.dat", "*.dat")],
+            initialfile=os.path.basename(self.save.filepath) if self.save.filepath else ("000_save.bin" if is_cle else "savedata.dat"),
         )
         if not fp:
             return
@@ -3440,6 +3634,28 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
             self._refresh_save_audit()
         self._set_status("已保存到: {fp}", fp=fp)
         messagebox.showinfo(self._t("完成"), self._t("存档已保存到:\n{fp}\n\n备份已自动创建为 .bak\n请将文件放回游戏存档目录替换原文件。", fp=fp))
+
+    def _convert_save(self, target_format):
+        if self.save.data is None:
+            messagebox.showwarning(self._t("提示"), self._t("请先打开存档文件"))
+            return
+        self._write_all_from_gui()
+        is_cle = target_format == FORMAT_CLE_KAI
+        fp = filedialog.asksaveasfilename(
+            title=self._t("转换为 CLE Kai 存档" if is_cle else "转换为 NISA 存档"),
+            defaultextension=".bin" if is_cle else ".dat",
+            filetypes=[("CLE Kai NNN_save.bin", "*.bin")] if is_cle else [("NISA savedata.dat", "*.dat")],
+            initialfile="001_save.bin" if is_cle else "savedata.dat",
+        )
+        if not fp:
+            return
+        try:
+            self.save.export(fp, target_format=target_format)
+        except (RuntimeError, ValueError, OSError) as exc:
+            messagebox.showerror(self._t("错误"), str(exc))
+            return
+        self._set_status("已转换到: {fp}", fp=fp)
+        messagebox.showinfo(self._t("完成"), self._t("已转换到: {fp}", fp=fp))
 
 
 def cli_quick_edit(filepath, mira=None, sepith=None, dp=None, max_chars=None, max_like=False):
@@ -3506,8 +3722,8 @@ def cli_quick_edit(filepath, mira=None, sepith=None, dp=None, max_chars=None, ma
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="碧之轨迹 NISA版 存档修改器")
-    parser.add_argument("file", nargs="?", help="savedata.dat 路径 (GUI模式可省略)")
+    parser = argparse.ArgumentParser(description="碧之轨迹 NISA / CLE Kai 存档修改器")
+    parser.add_argument("file", nargs="?", help="NISA / CLE Kai 存档路径 (GUI模式可省略)")
     parser.add_argument("--mira", help="设置 Mira")
     parser.add_argument("--dp", help="设置 DP")
     parser.add_argument("--sepith", choices=["max"], help="全耀晶片最大化")

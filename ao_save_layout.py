@@ -6,11 +6,13 @@ This module deliberately contains no mutation behaviour.
 
 EXPECTED_SIZE = 0x2643C
 
+
 CHECKSUM_USER_SIZE = 0x00026438
 CHECKSUM_USER = 0x00026434
 
 ITEMS_START = 0x00000E2C
 ITEMS_END = 0x0000194C
+
 
 # Equipment is five contiguous u16 item IDs. Orbments are seven pairs of
 # (u16 item ID, u16 slot-enhancement level).

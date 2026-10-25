@@ -2,13 +2,22 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from ao_save_browser import default_ao_save_root, discover_save_slots
+from ao_save_browser import (
+    EDITION_CLE_KAI,
+    default_ao_save_root,
+    default_cle_kai_save_root,
+    discover_save_slots,
+)
 
 
 class SaveBrowserTests(unittest.TestCase):
     def test_default_root_is_under_saved_games(self):
         root = default_ao_save_root(Path("C:/Users/Test/Saved Games"))
         self.assertEqual(root, Path("C:/Users/Test/Saved Games/FALCOM/Ao"))
+
+    def test_default_cle_root_matches_executable_path_components(self):
+        root = default_cle_kai_save_root(Path("C:/Users/Test/Saved Games"))
+        self.assertEqual(root, Path("C:/Users/Test/Saved Games/Falcom/Ao_no_Kiseki_Kai"))
 
     def test_discovers_only_numbered_slots_with_savedata(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -49,6 +58,21 @@ class SaveBrowserTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             missing = Path(temp) / "missing"
             self.assertEqual(discover_save_slots(missing), [])
+
+    def test_discovers_cle_bin_slots_in_root_and_savedata_subfolder(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "savedata").mkdir()
+            (root / "039_save.bin").write_bytes(b"root")
+            (root / "savedata" / "006_SAVE.BIN").write_bytes(b"nested")
+            (root / "6_save.bin").write_bytes(b"ignored")
+            (root / "006_save.ico").write_bytes(b"ignored")
+
+            entries = discover_save_slots(root, edition=EDITION_CLE_KAI)
+
+        self.assertEqual([entry.slot for entry in entries], [6, 39])
+        self.assertEqual([entry.slot_name for entry in entries], ["006_save.bin", "039_save.bin"])
+        self.assertTrue(all(entry.edition == EDITION_CLE_KAI for entry in entries))
 
 
 if __name__ == "__main__":

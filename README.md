@@ -2,26 +2,26 @@
 
 [中文说明 / README_CN.md](README_CN.md)
 
-A Python/Tkinter save editor for the NISA PC release of **Ao no Kiseki / Trails to Azure**.
+A Python/Tkinter save editor for the NISA PC release of **Trails to Azure** and Clouded Leopard's PC Kai release of **Ao no Kiseki KAI**. It reads and writes NISA zstd `savedata.dat` and CLE AES-encrypted `NNN_save.bin` files directly.
 
-This project adapts the offset tables and item definitions from [`424778940z/BZH_AO_NO_KISEKI_Savedata_Editor`](https://github.com/424778940z/BZH_AO_NO_KISEKI_Savedata_Editor) to NISA `savedata.dat` files. The key discovery is that the NISA save is zstd-compressed, not encrypted. After decompression it is `0x2643C` bytes and is compatible with the original BZH offsets.
+This project adapts the offset tables and item definitions from [`424778940z/BZH_AO_NO_KISEKI_Savedata_Editor`](https://github.com/424778940z/BZH_AO_NO_KISEKI_Savedata_Editor). CLE uses one AES-128-CBC stream containing a length header and a 0x27448-byte Ao payload. The editor maps the scene thread, 128 actors and full tail to NISA offsets. This implementation supports Azure/Ao only.
 
 ## Important Version And Translation Notes
 
-This editor was built and tested for the NISA PC release, **Trails to Azure**, whose executable/save layout differs from the older mainland Chinese PC release.
+This editor was built for the NISA PC release, **Trails to Azure**, and Clouded Leopard's PC Kai release. It is not an editor for the older mainland Chinese PC save container.
 
 The in-editor Chinese item names and labels use the Joyoland/欢乐百世 Simplified Chinese PC release of **碧之轨迹** as the default runtime layer. Item names are keyed by save item ID and follow [Ouroboros/Falcom ItemNameMap.py](https://github.com/Ouroboros/Falcom/blob/master/ED7/Decompiler/GameData/ItemNameMap.py), alongside the original BZH editor data. The structured item index also preserves conservative CLE/Clouded Leopard Chinese variants for reference, but the GUI does not currently switch to them. The GUI supports a global Chinese/English/Japanese language switch for tabs, buttons, character labels, sepith labels, battle counters, achievements, appearance names, quick actions, and item/achievement names where matching localization data exists. Missing translations fall back to Chinese. These names may still differ from the NISA English text or community Simplified Chinese localization produced with [`J31why/zeroTool`](https://github.com/J31why/zeroTool). If you are playing NISA Trails to Azure with a zeroTool-based Chinese patch, treat this editor as a save-format tool first and a name database second.
 
 ## Features
 
-- Directly open and save zstd-compressed NISA `savedata.dat` files.
-- Automatically locate FALCOM/Ao through the Windows Saved Games known folder and list dataNNNN/savedata.dat slots with checksum status, modification time, size, folder switching, and safe single-save loading. The sidebar can be collapsed, and compact locale-specific tab titles avoid high-DPI truncation.
+- Read/write complete NISA and CLE Ao saves. Cross-edition conversion maps the scene thread, all 128 actors and full tail. Same-format CLE saves preserve edition-only bytes. Conversion exports list metadata and available thumbnails, using the actual difficulty field and source clear-state information instead of chapter-based guesses.
+- Detect the NISA and CLE Kai Saved Games locations independently, show each source's count, and switch the sidebar between their slot lists. Each source supports a custom folder. The sidebar can be collapsed, and compact locale-specific tab titles avoid high-DPI truncation.
 - Edit Mira, DP, medals, sepith, play time, and difficulty.
 - Edit character stat snapshots for 11 characters.
 - Edit character equipment and seven orbment slots with inventory-synchronized transactional writes. Dropdowns enforce weapon/slot categories, core uniqueness, duplicate-normal-quartz rules, and the NISA `t_orb` element locks derived from `t_quartz` primary elements.
 - Edit party slots and 12 bonding values.
 - Switch the GUI globally between Chinese, English, and Japanese for implemented labels and data names.
-- Browse and search the full 713-item inventory table, replace an item by ID/name, and set any quantity from 0 to 99, with Chinese/English/Japanese item-name display where available.
+- Browse and search the full 713-item inventory table through one normalized view for both editions.
 - Edit all 24 learned-recipe flags through individual checkboxes or Select All/Clear All, with globally switched Joyoland Chinese, NISA English, and Falcom Japanese recipe names.
 - View all 31 fishing-notebook entries with registration, maximum/natural size, catch count, and localized reward/bait names; edit registration or maximum size while reward and bait history remain read-only.
 - Edit the NISA per-slot 56-bit achievement bitmap at `0x1F454-0x1F45A`, with unlocked-count display, all-unlock/all-lock buttons, and Chinese/English/Japanese achievement names.
@@ -58,7 +58,7 @@ Validation performed on the publish package:
 - The monster-detail generator parses and numerically compares 333/333 files in all three locales, links 305/305 save monsters, and resolves action-script sources for 333/333 entries. Unexplained extensions in `ms60000/ms60001` are recorded only by size and hash. The 2.3 MB detail JSON is now loaded on first use.
 - The reference-index generator independently and bounds-safely parses the three `t_name._dt` tables and effective `as*.dat` headers/action tables without disassembling or executing action instructions. It emits 6,173 nodes, 6,835 relations, and seven same-name candidate-variant groups. The 5.4 MB graph is lazy-loaded and an empty GUI search is capped at 500 rows.
 - The chest generator verifies all 280 flags, 44 localized maps, and 93 NISA scenario files. Two local NISA sample saves both report 117/280 obtained chests, and the feature never writes save flags.
-- All 130 unit tests pass, including five Windows-packaging contract checks and four layout-contract checks for the `tools/` and `docs/` structure. Achievement regressions cover the known 47/56 bitmap, complete/unique IDs, localized-name matching, and the exact seven-byte write boundary. Eight user-identified party samples match their raw slot order; 122 valid local saves have no unknown party/appearance IDs, and validation leaves their hashes unchanged. Element-lock validation found zero conflicts across 128 valid local saves, and a hidden Windows Python 3.13 Tk smoke test confirmed that the GUI filters a locked slot to compatible quartz. The local save browser found 134 slots: 133 passed full decompression/checksum validation and the 80-byte data0255 entry was correctly marked invalid; scanning took about 530 ms.
+- 2026-10-26: 41 focused regressions passed. CLE 039 repacks byte-identically with no edits; loadout edits alter only requested payload fields. Three NISA samples match the external reference conversion, and data0060 round-trips through CLE without changes. On 2026-10-26 the user tested both conversion directions in the NISA and CLE games and confirmed that functionality is basically working.
 - PyInstaller 6.21.0 builds were verified with Python 3.13 x64 in both onedir and onefile modes. The onefile artifact with the custom `kea.ico` is about 12.36 MiB; a frozen build successfully edited and reloaded a temporary save copy, created its `.bak`, and passed a hidden GUI-startup smoke test without touching the original save.
 
 The Codex bundled Python runtime lacks Tcl/Tk; GUI construction and language switching were instead smoke-tested with Windows Python 3.13.

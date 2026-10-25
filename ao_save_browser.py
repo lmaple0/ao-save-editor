@@ -1,4 +1,4 @@
-"""Discover NISA Ao save slots without depending on Tkinter."""
+"""Discover NISA and CLE Kai Ao save slots without depending on Tkinter."""
 
 from __future__ import annotations
 
@@ -13,7 +13,11 @@ from pathlib import Path
 from typing import Callable
 
 
-_SLOT_PATTERN = re.compile(r"^data(\d{4})$", re.IGNORECASE)
+EDITION_NISA = "nisa"
+EDITION_CLE_KAI = "cle_kai"
+
+_NISA_SLOT_PATTERN = re.compile(r"^data(\d{4})$", re.IGNORECASE)
+_CLE_SLOT_PATTERN = re.compile(r"^(\d{3})_save\.bin$", re.IGNORECASE)
 _SAVED_GAMES_FOLDER_ID = uuid.UUID("4c5c32ff-bb9d-43b0-b5b4-2d72e54eaaa4")
 
 
@@ -43,9 +47,12 @@ class SaveSlotEntry:
     size: int
     modified: float
     status: str
+    edition: str = EDITION_NISA
 
     @property
     def slot_name(self) -> str:
+        if self.edition == EDITION_CLE_KAI:
+            return f"{self.slot:03d}_save.bin"
         return f"data{self.slot:04d}"
 
     @property
@@ -97,28 +104,71 @@ def default_ao_save_root(saved_games: Path | str | None = None) -> Path:
     return base / "FALCOM" / "Ao"
 
 
+def default_cle_kai_save_root(saved_games: Path | str | None = None) -> Path:
+    """Return the path assembled by the CLE executable."""
+    base = Path(saved_games) if saved_games is not None else saved_games_folder()
+    return base / "Falcom" / "Ao_no_Kiseki_Kai"
+
+
 def discover_save_slots(
     root: Path | str,
     validator: Callable[[Path], bool] | None = None,
+    edition: str = EDITION_NISA,
 ) -> list[SaveSlotEntry]:
-    """Find ``dataNNNN/savedata.dat`` entries, sorted by numeric slot ID."""
+    """Find save entries for one edition, sorted by numeric slot ID."""
     root_path = Path(root)
     if not root_path.is_dir():
         return []
 
-    entries: list[SaveSlotEntry] = []
+    if edition == EDITION_CLE_KAI:
+        candidates: list[tuple[int, Path]] = []
+        search_roots = (root_path, root_path / "savedata")
+        for search_root in search_roots:
+            if not search_root.is_dir():
+                continue
+            try:
+                files = tuple(search_root.iterdir())
+            except OSError:
+                continue
+            for path in files:
+                match = _CLE_SLOT_PATTERN.fullmatch(path.name)
+                if match is not None and path.is_file():
+                    candidates.append((int(match.group(1)), path))
+        return _build_entries(candidates, validator, edition)
+
+    if edition != EDITION_NISA:
+        raise ValueError(f"Unsupported save edition: {edition}")
+
+    entries: list[tuple[int, Path]] = []
     try:
         children = tuple(root_path.iterdir())
     except OSError:
         return []
 
     for folder in children:
-        match = _SLOT_PATTERN.fullmatch(folder.name)
+        match = _NISA_SLOT_PATTERN.fullmatch(folder.name)
         if match is None or not folder.is_dir():
             continue
         save_path = folder / "savedata.dat"
         if not save_path.is_file():
             continue
+        entries.append((int(match.group(1)), save_path))
+
+    return _build_entries(entries, validator, edition)
+
+
+def _build_entries(
+    candidates: list[tuple[int, Path]],
+    validator: Callable[[Path], bool] | None,
+    edition: str,
+) -> list[SaveSlotEntry]:
+    entries: list[SaveSlotEntry] = []
+    seen_paths: set[Path] = set()
+    for slot, save_path in candidates:
+        normalized = save_path.resolve()
+        if normalized in seen_paths:
+            continue
+        seen_paths.add(normalized)
         try:
             stat = save_path.stat()
         except OSError:
@@ -132,11 +182,12 @@ def discover_save_slots(
                 status = "invalid"
         entries.append(
             SaveSlotEntry(
-                slot=int(match.group(1)),
+                slot=slot,
                 path=save_path,
                 size=stat.st_size,
                 modified=stat.st_mtime,
                 status=status,
+                edition=edition,
             )
         )
 

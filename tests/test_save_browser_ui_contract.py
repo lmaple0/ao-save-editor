@@ -2,7 +2,13 @@ import inspect
 import unittest
 
 from ao_save_browser import SAVE_BROWSER_TRANSLATIONS
-from ao_save_editor import SaveEditor, TAB_TITLE_I18N, UI_TRANSLATIONS, tab_title
+from ao_save_editor import (
+    CLE_DISABLED_TABS,
+    SaveEditor,
+    TAB_TITLE_I18N,
+    UI_TRANSLATIONS,
+    tab_title,
+)
 
 
 class SaveBrowserUiContractTests(unittest.TestCase):
@@ -14,6 +20,9 @@ class SaveBrowserUiContractTests(unittest.TestCase):
             "_load_selected_save",
             "_load_save_path",
             "_toggle_save_browser",
+            "_on_save_browser_edition_changed",
+            "_convert_save",
+            "_apply_format_capabilities",
             "_apply_compact_tab_titles",
         ):
             self.assertTrue(hasattr(SaveEditor, method))
@@ -33,6 +42,9 @@ class SaveBrowserUiContractTests(unittest.TestCase):
             self.assertEqual(set(TAB_TITLE_I18N[locale]), expected_keys)
             self.assertTrue(all(tab_title(key, locale) for key in expected_keys))
         self.assertLessEqual(max(map(len, TAB_TITLE_I18N["en"].values())), 12)
+
+    def test_cle_disables_unmapped_semantic_editors(self):
+        self.assertEqual(set(), CLE_DISABLED_TABS)
 
 if __name__ == "__main__":
     unittest.main()
