@@ -47,13 +47,33 @@ KNOWN_ROLE_DISPLAY_IDS = frozenset((
 MONSTER_START = 0x0001B370
 MONSTER_END = 0x0001BCF0
 MONSTER_RECORD_SIZE = 8
-MONSTER_COMPLETE_PAYLOAD = bytes((0x08, 0xFE, 0xFF, 0xFF))
+# New entries have no fabricated defeats, higher-element flag or drop-presence
+# flags. All seven element observations and both drop observations are known.
+MONSTER_COMPLETE_PAYLOAD = bytes((0x00, 0x7F, 0x7F, 0x03))
 
 
 def monster_record_is_complete(payload):
-    """Apply the verified NISA rule while retaining legacy BZH compatibility."""
+    """Match the NISA/CLE game's notebook completion/checkmark predicate.
+
+    Record +4 is the defeat counter; +5 is element observation flags; +6 has
+    seven information flags and the higher-elements marker (bit 7). At +7,
+    bits 4/5 indicate existing drops and bits 0/1 indicate observed drops.
+    NISA ao.exe: 0x1404772F1; retained CLE baseline: 0x140183BF4.
+    """
     payload = bytes(payload)
-    return (
-        payload == MONSTER_COMPLETE_PAYLOAD
-        or len(payload) == 4 and (payload[2] & 0x7F) == 0x7F and payload[3] == 0xFF
-    )
+    if len(payload) != 4:
+        return False
+    _, elements, information, drops = payload
+    element_mask = 0x7F if information & 0x80 else 0x0F
+    required_drops = (drops >> 4) & 0x03
+    return ((information & 0x7F) == 0x7F
+            and (elements & element_mask) == element_mask
+            and (drops & required_drops) == required_drops)
+
+
+def complete_monster_payload(payload):
+    """Fill observations while retaining the counter and edition/game flags."""
+    counter, elements, information, drops = payload
+    if monster_record_is_complete(payload):
+        return bytes(payload)
+    return bytes((counter, elements | 0x7F, information | 0x7F, drops | 0x03))

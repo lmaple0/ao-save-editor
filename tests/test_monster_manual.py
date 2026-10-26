@@ -11,6 +11,7 @@ from ao_save_editor import (
     SaveData,
     ui_text,
 )
+from ao_save_layout import monster_record_is_complete
 
 
 class MonsterCatalogTests(unittest.TestCase):
@@ -95,12 +96,55 @@ class MonsterRecordTests(unittest.TestCase):
     def test_nisa_record_missing_information_or_items_is_partial(self):
         code_a, code_b = MONSTER_CODES[:2]
         self._write_record(0, code_a, (1, 0x0F, 0x3F, 0xFF))
-        self._write_record(1, code_b, (1, 0x0F, 0x7F, 0x00))
+        self._write_record(1, code_b, (1, 0x0F, 0x7F, 0x10))
 
         diag = self.save.monster_diagnostics()
 
         self.assertEqual(diag["complete"], 0)
         self.assertEqual(diag["partial"], 2)
+
+    def test_game_completion_cases_include_elements_and_conditional_drops(self):
+        # Expected results from the two executables' checkmark branches, not
+        # the editor's former hard-coded full-data payload.
+        cases = (
+            ((8, 0xFE, 0xFF, 0xFF), False),  # Player report: Earth missing.
+            ((9, 0x0E, 0x7F, 0x00), False),
+            ((9, 0x0F, 0x7F, 0x00), True),   # No drops: nothing to investigate.
+            ((9, 0x0F, 0xFF, 0x00), False),  # Higher elements required.
+            ((9, 0x7F, 0xFF, 0x00), True),
+            ((9, 0x7F, 0x3F, 0x03), False),  # Information still missing.
+            ((9, 0x0F, 0x7F, 0x10), False),  # Drop 1 exists, not observed.
+            ((9, 0x0F, 0x7F, 0x11), True),
+            ((9, 0x0F, 0x7F, 0x20), False),  # Drop 2 exists, not observed.
+            ((9, 0x0F, 0x7F, 0x22), True),
+            ((9, 0x0F, 0x7F, 0x31), False),
+            ((9, 0x0F, 0x7F, 0x33), True),
+        )
+        for payload, expected in cases:
+            with self.subTest(payload=payload):
+                self.assertEqual(monster_record_is_complete(payload), expected)
+
+    def test_legacy_full_payload_is_repaired_by_changing_only_earth_bit(self):
+        code = MONSTER_CODES[0]
+        self._write_record(0, code, (8, 0xFE, 0xFF, 0xFF))
+        self.assertFalse(self.save.read_monster_records()[0].is_complete)
+        self.save.set_monsters_unlocked((code,), True)
+        record = self.save.read_monster_records()[0]
+        self.assertEqual(record.payload, b"\x08\xFF\xFF\xFF")
+        self.assertTrue(record.is_complete)
+
+    def test_completion_preserves_counters_flags_duplicates_and_complete_entries(self):
+        a, b = MONSTER_CODES[:2]
+        self._write_record(0, a, (0x2A, 0x80, 0x80, 0xD0))
+        self._write_record(1, a, (0x19, 0, 0, 0x20))
+        self._write_record(2, b, (0x40, 0x0F, 0x7F, 0))
+        original = self.save.read_monster_records()[2].binary()
+        self.save.set_monsters_unlocked((a, b), True)
+        records = self.save.read_monster_records()
+        self.assertEqual(records[0].payload, bytes((0x2A, 0xFF, 0xFF, 0xD3)))
+        self.assertEqual(records[1].payload, bytes((0x19, 0x7F, 0x7F, 0x23)))
+        self.assertEqual(records[2].binary(), original)
+        self.assertEqual(len(records), 3)
 
     def test_unlock_all_fills_every_known_slot(self):
         self.save.unlock_all_monsters()

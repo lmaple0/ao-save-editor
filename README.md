@@ -4,6 +4,8 @@
 
 A Python/Tkinter save editor for the NISA PC release of **Trails to Azure** and Clouded Leopard's PC Kai release of **Ao no Kiseki KAI**. It reads and writes NISA zstd `savedata.dat` and CLE AES-encrypted `NNN_save.bin` files directly.
 
+**v1.1.1 monster-manual fix:** resolves entries labeled Full data without the in-game checkmark, with Earth efficacy still shown as `???`. For affected saves edited with older versions, apply Full data again and save. See the [bilingual release notes](docs/releases/v1.1.1.md).
+
 This project adapts the offset tables and item definitions from [`424778940z/BZH_AO_NO_KISEKI_Savedata_Editor`](https://github.com/424778940z/BZH_AO_NO_KISEKI_Savedata_Editor). CLE uses one AES-128-CBC stream containing a length header and a 0x27448-byte Ao payload. The editor maps the scene thread, 128 actors and full tail to NISA offsets. This implementation supports Azure/Ao only.
 
 ## Important Version And Translation Notes
@@ -44,7 +46,7 @@ The latest review fixed several data-safety and localization bugs:
 - Quick actions, item refresh, achievement lock/unlock, and monster-manual unlock now report a clear status when no save file is loaded.
 - The global language switch no longer uses duplicate translation keys for sepith Time and play-time hours.
 - Party slot labels and quick-action character names are refreshed through the global language selector.
-- Monster records are parsed and rewritten as complete 8-byte records. Unknown and unselected records are preserved, and writes fail safely if capacity is insufficient. The four payload bytes are only classified against the verified full-data value `08 FE FF FF`; sub-bit meanings are not guessed.
+- Monster completeness follows the NISA/CLE game predicate: information flags, required element observations and existing-drop observations. Completing a record preserves its defeat counter and monster-specific flags. Legacy `08 FE FF FF` records are now partial; applying Full data again restores the missing Earth observation bit.
 
 Validation performed on the publish package:
 

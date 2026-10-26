@@ -30,6 +30,7 @@ from ao_save_layout import (
     RECIPE_BOOK_OFFSETS,
     ROLE_DISPLAY_OFFSETS,
     TEAM_SLOTS,
+    complete_monster_payload,
     monster_record_is_complete,
 )
 import tkinter as tk
@@ -1351,12 +1352,7 @@ class MonsterRecord:
 
     @property
     def is_complete(self):
-        # NISA PC does not use the old Joyoland 08 FE FF FF payload as a
-        # canonical value. Its first byte is the defeat counter and the second
-        # byte also changes during normal play. A fully investigated entry
-        # consistently exposes all seven information bits and both item fields;
-        # bit 7 of stats varies by monster. Keep accepting the old payload so
-        # imported/previously edited saves remain compatible.
+        # The same game predicate drives the list, diagnostics and save audit.
         return monster_record_is_complete(self.payload)
 
     def binary(self):
@@ -1743,17 +1739,25 @@ class SaveData:
             values = ", ".join(f"0x{code:08X}" for code in sorted(unknown_requested))
             raise ValueError(f"未知怪物代码: {values}")
 
-        preserved = [record for record in self.read_monster_records() if record.code not in requested]
+        records = self.read_monster_records()
+        present = {record.code for record in records}
+        updated = []
+        for record in records:
+            if record.code not in requested:
+                updated.append(record)
+            elif unlocked:
+                updated.append(MonsterRecord(
+                    record.slot, record.code, *complete_monster_payload(record.payload)
+                ))
         if unlocked:
-            requested_in_order = [code for code in MONSTER_CODES if code in requested]
-            preserved.extend(
+            updated.extend(
                 MonsterRecord(-1, code, *MONSTER_COMPLETE_PAYLOAD)
-                for code in requested_in_order
+                for code in MONSTER_CODES if code in requested and code not in present
             )
-        self._write_monster_records(preserved)
+        self._write_monster_records(updated)
 
     def unlock_all_monsters(self):
-        """按 BZH 已验证的完整资料 payload 解锁全部已知怪物，并保留未知记录。"""
+        """补齐已知怪物的调查位，保留原始击破次数与怪物特有标记。"""
         self.set_monsters_unlocked(MONSTER_CODES, True)
 
 
