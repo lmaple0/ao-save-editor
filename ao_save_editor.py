@@ -37,6 +37,8 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
 from ao_loadout_ui import LoadoutUiMixin
+from ao_item_add_ui import AddItemDialog, ITEM_ADD_TRANSLATIONS
+from ao_preferences import preferences_path, load_language, save_language
 from ao_save_formats import checksums, cle_to_nisa, nisa_to_cle
 from ao_save_metadata import source_metadata, cle_info, nisa_info
 from ao_fishing_ui import FishingUiMixin
@@ -1011,6 +1013,8 @@ def achievement_name(part, bit, zh_name, lang="zh_cn"):
     return localized or zh_name
 
 
+for _language, _translations in ITEM_ADD_TRANSLATIONS.items():
+    UI_TRANSLATIONS.setdefault(_language, {}).update(_translations)
 for _language, _translations in FISHING_UI_TRANSLATIONS.items():
     UI_TRANSLATIONS.setdefault(_language, {}).update(_translations)
 for _language, _translations in SAVE_BROWSER_TRANSLATIONS.items():
@@ -1605,6 +1609,20 @@ class SaveData:
             pos += 4
         return items
 
+    def add_item(self, code, quantity):
+        """Add a quantity without consuming/replacing any existing item."""
+        if not 1 <= code <= 0xFFFF:
+            raise ValueError("Item ID must be between 1 and 65535")
+        if not 1 <= quantity <= ITEM_QUANTITY_MAX:
+            raise ValueError("Quantity to add must be between 1 and 99")
+        items = self.read_items()
+        total = items.get(code, 0) + quantity
+        if total > ITEM_QUANTITY_MAX:
+            raise ValueError("The resulting quantity cannot exceed 99")
+        items[code] = total
+        self.write_items(items)
+        return total
+
     def write_items(self, items):
         """按游戏表顺序写入当前版本的紧凑物品列表。"""
         entries = []
@@ -1766,9 +1784,11 @@ class SaveData:
 # ============================================================
 
 class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
-    def __init__(self):
+    def __init__(self, settings_path=None, system_locale=None):
+        self._settings_path = Path(settings_path) if settings_path is not None else preferences_path()
+        self._initial_language = load_language(self._settings_path, system_locale)
         super().__init__()
-        self.title(APP_TITLES["zh_cn"])
+        self.title(APP_TITLES[self._initial_language])
         self.geometry("1320x700")
         self.resizable(True, True)
         self.save = SaveData()
@@ -1807,7 +1827,8 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         self._save_browser_toggle_btn.pack(side="left", padx=3)
         self._ui_lang_label = ttk.Label(toolbar, text="语言")
         self._ui_lang_label.pack(side="left", padx=(16, 2))
-        self._ui_lang_var = tk.StringVar(value="zh_cn:中文")
+        # Capture canonical widget labels before applying the startup locale.
+        self._ui_lang_var = tk.StringVar(value="zh_cn")
         self._ui_lang_combo = ttk.Combobox(
             toolbar,
             textvariable=self._ui_lang_var,
@@ -1926,6 +1947,7 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
 
         self._register_localizable_widgets(self)
         self._nb.bind("<<NotebookTabChanged>>", self._on_tab_changed)
+        self._ui_lang_var.set(self._initial_language)
         self._apply_ui_language(initial=True)
     def _build_save_browser(self, parent):
         parent.grid_rowconfigure(4, weight=1)
@@ -2083,11 +2105,12 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         return e
 
     def _current_ui_language(self):
-        value = self._ui_lang_var.get() if hasattr(self, "_ui_lang_var") else "zh_cn"
+        value = self._ui_lang_var.get() if hasattr(self, "_ui_lang_var") else self._initial_language
         return value.split(":", 1)[0]
 
     def _on_ui_language_changed(self, _event=None):
         self._apply_ui_language()
+        save_language(self._settings_path, self._current_ui_language())
 
     def _t(self, text, **kwargs):
         msg = ui_text(text, self._current_ui_language())
@@ -2136,7 +2159,7 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
             self._refresh_save_browser_toggle_text()
         if hasattr(self, "_save_browser_tree"):
             self._refresh_save_browser_language()
-        if hasattr(self, "status_lbl") and not initial:
+        if hasattr(self, "status_lbl"):
             self._render_status()
         if hasattr(self, "_tab_defs"):
             for frame, key in self._tab_defs:
@@ -2339,7 +2362,8 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
         self._search_var = tk.StringVar()
         ttk.Entry(bar, textvariable=self._search_var, width=20).pack(side="left", padx=5)
         ttk.Button(bar, text=self._t("过滤"), command=self._filter_items).pack(side="left", padx=2)
-        ttk.Button(bar, text=self._t("全部显示"), command=self._refresh_items).pack(side="left", padx=2)
+        ttk.Button(bar, text=self._t("清除筛选"), command=self._refresh_items).pack(side="left", padx=2)
+        ttk.Button(bar, text=self._t("添加物品"), command=self._open_add_item_dialog).pack(side="left", padx=8)
         ttk.Button(bar, text=self._t("选中 → 99"), command=self._items_set_selected).pack(side="right", padx=2)
         ttk.Button(bar, text=self._t("选中 → 0"), command=lambda: self._items_set_selected(0)).pack(side="right", padx=2)
 
@@ -2381,6 +2405,24 @@ class SaveEditor(LoadoutUiMixin, FishingUiMixin, ReferenceIndexUiMixin, tk.Tk):
 
     def _current_item_language(self):
         return self._current_ui_language()
+
+    def _open_add_item_dialog(self):
+        if self.save.data is None:
+            self._set_status("请先打开存档文件")
+            return
+        catalog = [(code, item_name(code, self._current_item_language()), item_search_text(code))
+                   for code in sorted(set(ITEM_DB) | ITEM_ORDERED_SET)]
+        return AddItemDialog(self, self._t, catalog, self.save.read_items(), self._items_add)
+
+    def _items_add(self, code, quantity):
+        total = self.save.add_item(code, quantity)
+        self._items_data = self.save.read_items()
+        self._search_var.set("")
+        self._refresh_items_ui()
+        self._select_item_code(code)
+        self._set_status("已添加 {name} ×{quantity}，现持有 {total} · 请保存存档",
+                         name=item_name(code, self._current_item_language()), quantity=quantity, total=total)
+        return total
 
     def _update_item_name_heading(self):
         if hasattr(self, "_tree"):

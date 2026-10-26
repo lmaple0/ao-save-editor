@@ -16,6 +16,8 @@ The in-editor Chinese item names and labels use the Joyoland/欢乐百世 Simpli
 
 ## Features
 
+- On first launch, use Chinese or Japanese for matching system UI languages and English for other languages. Manual language choices are remembered. Windows preferences are stored separately from game saves at `%LOCALAPPDATA%\AoSaveEditor\settings.json`.
+- The Items tab has a dedicated **Add Item** dialog. Search the full catalog, inspect owned quantities, and add missing items without replacing anything. Adding an owned item increases its quantity; the total cannot exceed 99. Save the file after adding items. **Clear Filter** only clears the inventory list's search filter.
 - Read/write complete NISA and CLE Ao saves. Cross-edition conversion maps the scene thread, all 128 actors and full tail. Same-format CLE saves preserve edition-only bytes. Conversion exports list metadata and available thumbnails, using the actual difficulty field and source clear-state information instead of chapter-based guesses.
 - Detect the NISA and CLE Kai Saved Games locations independently, show each source's count, and switch the sidebar between their slot lists. Each source supports a custom folder. The sidebar can be collapsed, and compact locale-specific tab titles avoid high-DPI truncation.
 - Edit Mira, DP, medals, sepith, play time, and difficulty.
